@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aegis.Model\Aegis.Model.csproj" />
+    <ProjectReference Include="..\Aegis.Helpers\Aegis.Helpers.csproj" />
+    <ProjectReference Include="..\Aegis.Utility\Aegis.Utility.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

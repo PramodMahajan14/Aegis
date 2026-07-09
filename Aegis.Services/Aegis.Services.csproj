@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aegis.DataAccess\Aegis.DataAccess.csproj" />
+    <ProjectReference Include="..\Aegis.Model\Aegis.Model.csproj" />
+    <ProjectReference Include="..\Aegis.Helpers\Aegis.Helpers.csproj" />
+    <ProjectReference Include="..\Aegis.Utility\Aegis.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

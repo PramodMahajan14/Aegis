@@ -1,10 +1,30 @@
+using Aegis.Model.Auth;
+using Aegis.DataAccess.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Aegis.Services.Services;
+using Aegis.Services.Services.Interfaces;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllers();
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    );
+});
+
+builder.Services.AddIdentity<ApplicationUser,IdentityRole>().
+                AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 
+builder.Services.AddScoped<IAuthService,AuthService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -19,6 +39,8 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection();
+
+
 
 app.UseAuthentication();
 app.UseAuthorization();

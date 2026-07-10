@@ -1,3 +1,5 @@
+using Aegis.Model.DTO.Auth;
+using Aegis.Services.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -9,13 +11,18 @@ namespace Aegis.Services.Controllers;
 
 public class AuthController  : ControllerBase
 {
+
+    private readonly IAuthService _authService;
+
+    public AuthController(IAuthService authService)
+    {
+        _authService = authService;
+    }
     
     [HttpPost("login")]
-    public async Task<IActionResult> Login()
+    public async Task<IActionResult> Login([FromBody] LoginDto login )
     {
-        await Task.CompletedTask;
-
-        return Ok(new
+       return Ok(new
         {
             success = true,
             message = "Login successful."
@@ -24,14 +31,9 @@ public class AuthController  : ControllerBase
 
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(){
-         await Task.CompletedTask;
-
-        return Ok(new
-        {
-            success = true,
-            message = "Login successful."
-        });
+    public async Task<IActionResult> Register([FromBody] RegisterDto register){
+          var reponse = await _authService.RegisterAsync(register);
+          return StatusCode(reponse.StatusCode,reponse.Message);
     }
 
 

@@ -9,7 +9,7 @@ namespace Aegis.Services.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 
-public class AuthController  : ControllerBase
+public class AuthController : ControllerBase
 {
 
     private readonly IAuthService _authService;
@@ -18,11 +18,11 @@ public class AuthController  : ControllerBase
     {
         _authService = authService;
     }
-    
+
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] LoginDto login )
+    public async Task<IActionResult> Login([FromBody] LoginDto login)
     {
-       return Ok(new
+        return Ok(new
         {
             success = true,
             message = "Login successful."
@@ -31,9 +31,15 @@ public class AuthController  : ControllerBase
 
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterDto register){
-          var reponse = await _authService.RegisterAsync(register);
-          return StatusCode(reponse.StatusCode,reponse.Message);
+    public async Task<IActionResult> Register([FromBody] RegisterDto register)
+    {
+        var response = await _authService.RegisterAsync(register);
+
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+        return BadRequest(response);
     }
 
 

@@ -1,8 +1,8 @@
 
 using Aegis.Model.Auth;
 using Aegis.Model.DTO.Auth;
-using Aegis.Model.Vm.Auth;
 using Aegis.Services.Services.Interfaces;
+using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
 
 namespace Aegis.Services.Services
@@ -21,26 +21,21 @@ namespace Aegis.Services.Services
             _roleManager = roleManager;
         }
 
-        public async Task<RegisterResponse> RegisterAsync(RegisterDto model)
+        public async Task<ApiResponse<object>> RegisterAsync(RegisterDto model)
         {
             if (model == null)
                 throw new ArgumentNullException(nameof(model));
-
+            if (string.IsNullOrWhiteSpace(model.FirstName) || string.IsNullOrWhiteSpace(model.LastName))
+            {
+                return ApiResponse<object>.ErrorResponse("Invalid request", "FirstName and LastName is required", 404);
+            }
             try
             {
 
-
                 var existingUser = await _userManager.FindByEmailAsync(model.Email.Trim());
-
                 if (existingUser != null)
                 {
-                    return new RegisterResponse
-                    {
-                        Success = false,
-                        Errors = true,
-                        Message = "Email already exists.",
-                        StatusCode = StatusCodes.Status409Conflict
-                    };
+                    return ApiResponse<object>.ErrorResponse("Email already exists.", null, 409);
                 }
 
                 var user = new ApplicationUser
@@ -52,37 +47,17 @@ namespace Aegis.Services.Services
                     IsActive = true,
                     CreatedAt = DateTime.UtcNow
                 };
-
                 var result = await _userManager.CreateAsync(user, model.Password);
-
                 if (!result.Succeeded)
                 {
-                    return new RegisterResponse
-                    {
-                        Success = false,
-                        Errors = true,
-                        Message = string.Join(", ", result.Errors.Select(x => x.Description)),
-                        StatusCode = StatusCodes.Status400BadRequest
-                    };
+                    return ApiResponse<object>.ErrorResponse(string.Join(", ", result.Errors.Select(x => x.Description)), result.Errors, 404);
                 }
 
-                return new RegisterResponse
-                {
-                    Success = true,
-                    Errors = false,
-                    Message = "User registered successfully.",
-                    StatusCode = StatusCodes.Status201Created
-                };
+                return ApiResponse<object>.SuccessResponse(user, "User registered successfully.", 201);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return new RegisterResponse
-                {
-                    Success = false,
-                    Errors = true,
-                    Message = "An unexpected error occurred.",
-                    StatusCode = StatusCodes.Status500InternalServerError
-                };
+                return ApiResponse<object>.ErrorResponse("Internal Server Error.", ex.Message, 500);
             }
         }
     }

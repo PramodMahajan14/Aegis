@@ -9,16 +9,18 @@ namespace Aegis.Services.Services
 {
     public class AuthService : IAuthService
     {
+        private readonly RefreshTokenService _refreshTokenService;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
 
-        public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager)
+        public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, RefreshTokenService refreshTokenService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _refreshTokenService = refreshTokenService;
         }
 
         public async Task<ApiResponse<object>> RegisterAsync(RegisterDto model)
@@ -58,6 +60,87 @@ namespace Aegis.Services.Services
             catch (Exception ex)
             {
                 return ApiResponse<object>.ErrorResponse("Internal Server Error.", ex.Message, 500);
+            }
+        }
+
+
+        public async Task<ApiResponse<object>> LoginAsync(LoginDto model)
+        {
+            if (model == null)
+                throw new ArgumentNullException(nameof(model));
+
+            if (string.IsNullOrWhiteSpace(model.Email) ||
+                string.IsNullOrWhiteSpace(model.Password))
+            {
+                return ApiResponse<object>.ErrorResponse(
+                    "Invalid credentials",
+                    "Email and Password are required.",
+                    400);
+            }
+
+            try
+            {
+                // Find user
+                var user = await _userManager.FindByEmailAsync(model.Email.Trim());
+
+                if (user == null)
+                {
+                    return ApiResponse<object>.ErrorResponse(
+                        "Invalid credentials",
+                        "Invalid email or password.",
+                        401);
+                }
+
+                // Check user status
+                if (!user.IsActive)
+                {
+                    return ApiResponse<object>.ErrorResponse(
+                        "Account disabled",
+                        "Your account has been deactivated.",
+                        403);
+                }
+
+                // Verify password
+                var passwordResult = await _signInManager.CheckPasswordSignInAsync(
+                    user,
+                    model.Password,
+                    lockoutOnFailure: false);
+
+                if (!passwordResult.Succeeded)
+                {
+                    return ApiResponse<object>.ErrorResponse(
+                        "Invalid credentials",
+                        "Invalid email or password.",
+                        401);
+                }
+
+                // Generate tokens
+                var accessToken = _refreshTokenService.GenerateAccessToken(user);
+
+                var refreshToken = _refreshTokenService.GenerateRefreshToken();
+
+                // Save refresh token
+                await _refreshTokenService.SaveRefreshTokenAsync(user, refreshToken);
+
+                // Response
+                var response = new
+                {
+
+                    AccessToken = accessToken,
+                    RefreshToken = refreshToken
+                };
+
+                return ApiResponse<object>.SuccessResponse(
+                    response,
+                    "Login successful.",
+                    200);
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<object>.ErrorResponse(
+                    "Internal server error.",
+                    ex.Message,
+                    500);
             }
         }
     }

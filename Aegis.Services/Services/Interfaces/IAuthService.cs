@@ -14,6 +14,6 @@ namespace Aegis.Services.Services.Interfaces
 
         Task<ApiResponse<object>> RegisterAsync(RegisterDto model);
 
-        //  Task<AuthResponse> LoginAsync(LoginDto model);
+        Task<ApiResponse<object>> LoginAsync(LoginDto model);
     }
 }

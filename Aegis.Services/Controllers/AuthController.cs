@@ -22,11 +22,13 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDto login)
     {
-        return Ok(new
+        var response = await _authService.LoginAsync(login);
+
+        if (response.Success)
         {
-            success = true,
-            message = "Login successful."
-        });
+            return Ok(response);
+        }
+        return BadRequest(response);
     }
 
 

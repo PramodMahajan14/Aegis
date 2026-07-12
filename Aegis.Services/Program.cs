@@ -1,18 +1,21 @@
-using Aegis.Model.Auth;
+using System.Text;
 using Aegis.DataAccess.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+using Aegis.Model.Auth;
 using Aegis.Services.Services;
 using Aegis.Services.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+#region Add Services
 
-// Add services to the container.
+// Controllers
 builder.Services.AddControllers();
 
+// Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseMySql(
@@ -21,26 +24,75 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     );
 });
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>().
-                AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+// ASP.NET Identity
+builder.Services
+    .AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
-builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
+#endregion
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-});
+#region JWT Configuration
 
-builder.Services.AddScoped<RefreshTokenService>();
+// Bind JwtSettings from appsettings.json
+builder.Services.Configure<JwtSettings>(
+    builder.Configuration.GetSection("Jwt"));
+
+// Read JwtSettings once for JWT Authentication
+var jwtSettings = builder.Configuration
+    .GetSection("Jwt")
+    .Get<JwtSettings>()
+    ?? throw new InvalidOperationException("Jwt settings are missing.");
+
+builder.Services.AddSingleton(jwtSettings);
+
+// Authentication
+builder.Services
+    .AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+
+            ValidIssuer = jwtSettings.Issuer,
+            ValidAudience = jwtSettings.Audience,
+
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(jwtSettings.Key))
+        };
+    });
+
+// Authorization
+builder.Services.AddAuthorization();
+
+#endregion
+
+#region Dependency Injection
+
 builder.Services.AddScoped<IAuthService, AuthService>();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddScoped<RefreshTokenService>();
+
+#endregion
+
+#region Swagger
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+#endregion
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+#region Middleware
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -49,12 +101,12 @@ if (app.Environment.IsDevelopment())
 
 // app.UseHttpsRedirection();
 
-
-
 app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
 
+#endregion

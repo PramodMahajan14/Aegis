@@ -1,5 +1,6 @@
 using Aegis.Model.DTO.Auth;
 using Aegis.Services.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -21,7 +22,7 @@ public class AuthController : ControllerBase
 
 
 
-    [HttpGet]
+    [HttpGet("profile")]
     public async Task<IActionResult> Profile()
     {
         var response = await _authService.Profile();

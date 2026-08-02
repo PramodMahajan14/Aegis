@@ -1,8 +1,11 @@
 using System.Text;
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
+using Aegis.Services.Helper;
+using Aegis.Services.Middleware;
 using Aegis.Services.Services;
 using Aegis.Services.Services.Interfaces;
+using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +41,8 @@ builder.Services
     .AddDefaultTokenProviders();
 
 #endregion
+
+builder.Services.AddHttpContextAccessor();
 
 #region JWT Configuration
 
@@ -75,6 +80,23 @@ builder.Services
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(jwtSettings.Key))
         };
+            options.Events = new JwtBearerEvents
+    {
+        OnChallenge = async context =>
+        {
+            context.HandleResponse();
+
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            context.Response.ContentType = "application/json";
+
+            var response = ApiResponse<object>.ErrorResponse(
+                "Unauthorized",
+                "Access token is invalid or expired.",
+                StatusCodes.Status401Unauthorized);
+
+            await context.Response.WriteAsJsonAsync(response);
+        }
+    };
     });
 
 // Authorization
@@ -82,14 +104,15 @@ builder.Services.AddAuthorization();
 
 #endregion
 
-#region Dependency Injection
+#region ===================Dependency Injection
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<RefreshTokenService>();
+builder.Services.AddScoped<UserHelper>();
 
 #endregion
 
-#region Swagger
+#region ===================== Swagger
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -98,13 +121,15 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-#region Middleware
+#region ==================== Middleware
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // app.UseHttpsRedirection();
 

@@ -1,6 +1,7 @@
 
 using Aegis.Model.Auth;
 using Aegis.Model.DTO.Auth;
+using Aegis.Services.Helper;
 using Aegis.Services.Services.Interfaces;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
@@ -14,23 +15,26 @@ namespace Aegis.Services.Services
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
+        private readonly UserHelper _userHelper;
 
-        public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, RefreshTokenService refreshTokenService)
+
+        public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, RefreshTokenService refreshTokenService, UserHelper userHelper)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _refreshTokenService = refreshTokenService;
+            _userHelper = userHelper;
         }
-        public async Task<ApiResponse<object>> Profile()
-        {
-            var user = await _userManager.()
-            
-        }
+       
+
         public async Task<ApiResponse<object>> RegisterAsync(RegisterDto model)
         {
             if (model == null)
+            {
                 throw new ArgumentNullException(nameof(model));
+            }
+                
             if (string.IsNullOrWhiteSpace(model.FirstName) || string.IsNullOrWhiteSpace(model.LastName))
             {
                 return ApiResponse<object>.ErrorResponse("Invalid request", "FirstName and LastName is required", 404);
@@ -147,5 +151,32 @@ namespace Aegis.Services.Services
                     500);
             }
         }
+
+       public async Task<ApiResponse<object>> Profile()
+        {
+            var currentuser = await _userHelper.GetCurrentUserAsync();
+
+            if(currentuser == null)
+             return ApiResponse<object>.ErrorResponse("Invalid request","Please login again - 1",404);
+
+            var user = await _userManager.FindByIdAsync(currentuser.Id);
+
+            if(user == null)
+            {
+                return ApiResponse<object>.ErrorResponse("User not found","Please login again - 2",404);
+            }
+
+            var response = new UserProfileVm()
+            {
+                Id = GuidUtility.ToGuid(user.Id),
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+            };
+
+            return ApiResponse<object>.SuccessResponse(response,"user Fetch successfully",200);
+        }
+
+        
     }
 }

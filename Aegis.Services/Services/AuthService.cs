@@ -22,7 +22,11 @@ namespace Aegis.Services.Services
             _roleManager = roleManager;
             _refreshTokenService = refreshTokenService;
         }
-
+        public async Task<ApiResponse<object>> Profile()
+        {
+            var user = await _userManager.()
+            
+        }
         public async Task<ApiResponse<object>> RegisterAsync(RegisterDto model)
         {
             if (model == null)
@@ -87,7 +91,7 @@ namespace Aegis.Services.Services
                 {
                     return ApiResponse<object>.ErrorResponse(
                         "Invalid credentials",
-                        "Invalid email or password.",
+                        "User not found.",
                         401);
                 }
 

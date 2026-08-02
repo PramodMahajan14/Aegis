@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Aegis.Model.DTO.Auth;
-using Aegis.Model.Vm.Auth;
 using Aegis.Utility.Common;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Aegis.Services.Services.Interfaces
 {
@@ -15,5 +9,7 @@ namespace Aegis.Services.Services.Interfaces
         Task<ApiResponse<object>> RegisterAsync(RegisterDto model);
 
         Task<ApiResponse<object>> LoginAsync(LoginDto model);
+
+        Task<ApiResponse<object>> Profile();
     }
 }

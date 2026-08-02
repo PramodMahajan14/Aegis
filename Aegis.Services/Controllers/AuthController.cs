@@ -19,6 +19,19 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
+
+
+    [HttpGet]
+    public async Task<IActionResult> Profile()
+    {
+        var response = await _authService.Profile();
+
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+        return BadRequest(response);
+    }
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDto login)
     {

@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.19" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Aegis.Utility\Aegis.Utility.csproj" />
+  </ItemGroup>
+
 </Project>

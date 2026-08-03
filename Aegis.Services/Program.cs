@@ -108,6 +108,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<RefreshTokenService>();
+builder.Services.AddScoped<IEmployee, EmployeeService>();
 builder.Services.AddScoped<UserHelper>();
 
 #endregion

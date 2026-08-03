@@ -1,4 +1,5 @@
 using Aegis.Model.Auth;
+using Aegis.Model.Employee;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
 
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
+    public DbSet<Employee> Employees {get;set;} 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

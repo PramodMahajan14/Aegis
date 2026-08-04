@@ -132,44 +132,51 @@ namespace Aegis.Services.Services
 
             if (string.IsNullOrWhiteSpace(model.Email))
             {
-                return ApiResponse<object>.ErrorResponse("Invalid Email address", "Please provide valid email address", 404);
+                return ApiResponse<object>.ErrorResponse(
+                    "Invalid Email address",
+                    "Please provide a valid email address",
+                    400);
             }
 
             if (model.DateOfBirth == null)
             {
-                return ApiResponse<object>.ErrorResponse("BirthDate should be required", "Please provide BirthDate", 404);
+                return ApiResponse<object>.ErrorResponse(
+                    "BirthDate is required",
+                    "Please provide BirthDate",
+                    400);
             }
 
+            // Validate Age
             var today = DateTime.UtcNow.Date;
             var age = today.Year - model.DateOfBirth.Year;
 
             if (model.DateOfBirth.Date > today.AddYears(-age))
-            {
                 age--;
-            }
 
             if (age < 18)
             {
                 return ApiResponse<object>.ErrorResponse(
                     "Employee must be at least 18 years old",
                     "Please provide a valid birth date",
-                    400
-                );
+                    400);
             }
 
             try
             {
+                // Load Employee
+                var employee = await _context.Employees
+                    .FirstOrDefaultAsync(x => x.Id == model.Id);
 
-                var exist = await _context.Employees.FirstOrDefaultAsync(x => x.Id == model.Id);
-
-                if (exist == null)
+                if (employee == null)
                 {
-                    return ApiResponse<object>.ErrorResponse("Employee not found", "Invalid request", 404);
-
+                    return ApiResponse<object>.ErrorResponse(
+                        "Employee not found",
+                        "Invalid employee id",
+                        404);
                 }
 
-                // Load Identity user
-                var user = await _userManger.FindByIdAsync(exist.UserId);
+                // Load Identity User
+                var user = await _userManger.FindByIdAsync(employee.UserId);
 
                 if (user == null)
                 {
@@ -178,69 +185,102 @@ namespace Aegis.Services.Services
                         "Identity user does not exist",
                         404);
                 }
-                // Update Identity fields
-                user.FirstName = model.FirstName;
-                user.LastName = model.LastName;
-                user.Email = model.Email;
-                user.UserName = model.Email;
-                user.NormalizedEmail = model.Email.ToUpper();
-                user.NormalizedUserName = model.Email.ToUpper();
-                user.UpdatedAt = DateTime.UtcNow;
 
-                var identityResult = await _userManger.UpdateAsync(user);
+                // Begin Transaction
+                await using var transaction = await _context.Database.BeginTransactionAsync();
 
-                if (!identityResult.Succeeded)
+                try
                 {
-                    var errors = string.Join(", ", identityResult.Errors.Select(e => e.Description));
+                    // -----------------------------
+                    // Update Identity User
+                    // -----------------------------
+                    user.FirstName = model.FirstName;
+                    user.LastName = model.LastName;
+                    user.Email = model.Email;
+                    user.UserName = model.Email;
+                    user.UpdatedAt = DateTime.UtcNow;
+                    
 
-                    return ApiResponse<object>.ErrorResponse(
-                        "Failed to update user",
-                        errors,
-                        400);
+                    var identityResult = await _userManger.UpdateAsync(user);
+
+                    if (!identityResult.Succeeded)
+                    {
+                        await transaction.RollbackAsync();
+
+                        var errors = string.Join(", ",
+                            identityResult.Errors.Select(e => e.Description));
+
+                        return ApiResponse<object>.ErrorResponse(
+                            "Failed to update user",
+                            errors,
+                            400);
+                    }
+
+                    // -----------------------------
+                    // Update Employee
+                    // -----------------------------
+                    employee.FirstName = model.FirstName;
+                    employee.LastName = model.LastName;
+                    employee.Email = model.Email;
+                    employee.DateOfBirth = model.DateOfBirth;
+                    employee.JoiningDate = model.JoiningDate;
+                    employee.Gender = model.Gender;
+                    employee.UpdatedAt = DateTime.UtcNow;
+
+                    await _context.SaveChangesAsync();
+
+                    await transaction.CommitAsync();
+
+                    var response = new EmployeeDto
+                    {
+                        Id = employee.Id,
+                        FirstName = employee.FirstName,
+                        LastName = employee.LastName,
+                        Email = employee.Email,
+                        JoiningDate = employee.JoiningDate
+                    };
+
+                    return ApiResponse<object>.SuccessResponse(
+                        response,
+                        "Employee updated successfully",
+                        200);
+
                 }
-
-                var UpdateAppUser = new ApplicationUser
+                catch
                 {
-                    Email = model.Email.Trim(),
-                    FirstName = model.FirstName.Trim(),
-                    LastName = model.LastName.Trim(),
-                    IsActive = true,
-                    UpdatedAt = DateTime.UtcNow,
-                };
-
-                var result = await _userManger.UpdateAsync(UpdateAppUser);
-                if (!result.Succeeded)
-                {
-                    var errors = string.Join(", ", result.Errors.Select(e => e.Description));
-                    return ApiResponse<object>.ErrorResponse(
-                        "Failed to create user",
-                        errors,
-                        400
-                    );
+                    await transaction.RollbackAsync();
+                    throw;
                 }
-
-
-                // Update Employee table
-                exist.FirstName = model.FirstName;
-                exist.LastName = model.LastName;
-                exist.Email = model.Email;
-                exist.DateOfBirth = model.DateOfBirth;
-                exist.JoiningDate = model.JoiningDate;
-                exist.Gender = model.Gender;
-                exist.UpdatedAt = DateTime.UtcNow;
-
-                await _context.SaveChangesAsync();
-                return ApiResponse<object>.SuccessResponse(
-       exist,
-       "Employee updated successfully",
-       200);
-
             }
             catch (Exception ex)
             {
-                return ApiResponse<object>.ErrorResponse("Internal Server Error.", ex.Message, 500);
+
+
+                return ApiResponse<object>.ErrorResponse(
+                    "Internal Server Error",
+                    ex.Message,
+                    500);
             }
         }
 
+
+
+        public async Task<ApiResponse<object>> GetListEmployee()
+        {
+            List<EmployeeDto> employees = await _context.Employees
+             .Select(x => new EmployeeDto
+             {
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                Email = x.Email,
+                DateOfBirth = x.DateOfBirth,
+                JoiningDate = x.JoiningDate,
+                Gender = x.Gender
+             })
+            .ToListAsync();
+
+            return ApiResponse<object>.SuccessResponse(employees, "Employee List", 200);
+        }
     }
 }

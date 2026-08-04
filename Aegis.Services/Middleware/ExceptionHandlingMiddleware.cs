@@ -35,9 +35,12 @@ namespace Aegis.Services.Middleware
                 var response = ApiResponse<object>.ErrorResponse("Internal Server Error",
                                   "An unexpected error occurred.",
                                    StatusCodes.Status500InternalServerError);
+                                   
                                      
                 await httpContext.Response.WriteAsJsonAsync(response);
+
             }
+            
         }
 
 

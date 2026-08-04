@@ -20,7 +20,7 @@ namespace Aegis.Model.Employee
 
         public DateTime DateOfBirth {get;set;}
 
-        public Gender Gender;
+        public Gender Gender  {get;set;}  = Gender.Male;
 
         public DateTime JoiningDate {get;set;}
 

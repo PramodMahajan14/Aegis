@@ -41,5 +41,17 @@ namespace Aegis.Services.Controllers
             }
             return BadRequest(response);
         }
+
+        [HttpGet("/list")]
+        public async Task<IActionResult> GetListEmployee()
+        {
+            var response = await _employee.GetListEmployee();
+
+            if (response.Success)
+            {
+                return Ok(response);
+            }
+            return BadRequest(response);
+        }
     }
 }

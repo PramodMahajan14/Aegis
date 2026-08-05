@@ -3,6 +3,7 @@ using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
 using Aegis.Model.DTO.Employee;
 using Aegis.Model.Employee;
+using Aegis.Model.Vm.Employee;
 using Aegis.Services.Services.Interfaces;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
@@ -13,13 +14,16 @@ namespace Aegis.Services.Services
 {
     public class EmployeeService : IEmployee
     {
+      
         private readonly UserManager<ApplicationUser> _userManger;
         private readonly ApplicationDbContext _context;
-
-        public EmployeeService(UserManager<ApplicationUser> userManager, ApplicationDbContext applicationDbContext)
+        
+        private readonly ILoggingService _logger;
+        public EmployeeService(UserManager<ApplicationUser> userManager, ApplicationDbContext applicationDbContext,ILoggingService logger)
         {
             _context = applicationDbContext;
             _userManger = userManager;
+            _logger = logger;
         }
 
 
@@ -255,7 +259,6 @@ namespace Aegis.Services.Services
             catch (Exception ex)
             {
 
-
                 return ApiResponse<object>.ErrorResponse(
                     "Internal Server Error",
                     ex.Message,
@@ -267,8 +270,8 @@ namespace Aegis.Services.Services
 
         public async Task<ApiResponse<object>> GetListEmployee()
         {
-            List<EmployeeDto> employees = await _context.Employees
-             .Select(x => new EmployeeDto
+            List<EmployeeVm> employees = await _context.Employees
+             .Select(x => new EmployeeVm
              {
                 Id = x.Id,
                 FirstName = x.FirstName,
@@ -279,7 +282,7 @@ namespace Aegis.Services.Services
                 Gender = x.Gender
              })
             .ToListAsync();
-
+             _logger.LogInfo("Successfull fetched employee List",employees);
             return ApiResponse<object>.SuccessResponse(employees, "Employee List", 200);
         }
     }

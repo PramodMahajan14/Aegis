@@ -1,0 +1,3 @@
+2026-08-06 00:21:39.396 [INF] HTTP POST /api/auth/register responded 400 in 886.7280 ms
+2026-08-06 00:21:43.929 [INF] Successfull fetched employee List
+2026-08-06 00:21:43.948 [INF] HTTP GET /list responded 200 in 99.1780 ms

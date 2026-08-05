@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +44,15 @@ builder.Services
 #endregion
 
 builder.Services.AddHttpContextAccessor();
+
+# region Looger
+
+builder.Host.UseSerilog((context, config) =>
+{
+   config.ReadFrom.Configuration(context.Configuration); 
+});
+
+#endregion
 
 #region JWT Configuration
 
@@ -109,6 +119,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<RefreshTokenService>();
 builder.Services.AddScoped<IEmployee, EmployeeService>();
+builder.Services.AddScoped<ILoggingService, LoggingService>();
 builder.Services.AddScoped<UserHelper>();
 
 #endregion
@@ -129,6 +140,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSerilogRequestLogging();
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 

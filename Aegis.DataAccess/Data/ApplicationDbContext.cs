@@ -1,5 +1,6 @@
 using Aegis.Model.Auth;
 using Aegis.Model.Employee;
+using Aegis.Model.Tenant;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
     public DbSet<Employee> Employees {get;set;} 
+
+    public DbSet<Tenant> Tenants {get;set;}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

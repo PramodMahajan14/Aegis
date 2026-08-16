@@ -16,7 +16,7 @@ namespace Aegis.Model.Employee
         [MaxLength(100)]
         public string LastName {get;set;} = String.Empty;
 
-        public string Email  {get;set;}
+        public string Email  {get;set;} = string.Empty;
 
         public DateTime DateOfBirth {get;set;}
 

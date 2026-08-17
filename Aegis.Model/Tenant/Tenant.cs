@@ -52,6 +52,8 @@ namespace Aegis.Model.Tenant
         public DateTime? UpdatedAt { get; set; }
 
         public ICollection<ApplicationRole> ApplicationRoles {get;set;} = new List<ApplicationRole>();
+
+        public ICollection<JobRole> JobRoles {get;set;} = new List<JobRole>();
     }
 
 }

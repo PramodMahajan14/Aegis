@@ -1,5 +1,6 @@
 using Aegis.Model.Auth;
 using Aegis.Model.Employee;
+using Aegis.Model.Master;
 using Aegis.Model.Tenant;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -16,8 +17,17 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
     public DbSet<Employee> Employees {get;set;} 
-
     public DbSet<Tenant> Tenants {get;set;}
+
+    #region Master
+    public DbSet<Module> Modules {get;set;}
+    public DbSet<Feature> Features {get;set;}
+    public DbSet<FeaturePermission> FeaturePermissions {get;set;}
+    public DbSet<ApplicationRole> ApplicationRoles {get;set;}
+    public DbSet<JobRole> JobRoles {get;set;}
+    public DbSet<ApplicationRolePermisson> ApplicationRolePermissons {get;set;}
+
+    #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

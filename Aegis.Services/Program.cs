@@ -19,6 +19,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Controllers
 builder.Services.AddControllers();
 
+
+
+
 // Database
 builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
 {
@@ -42,6 +45,18 @@ builder.Services
     .AddDefaultTokenProviders();
 
 #endregion
+
+
+
+// await using (var scope = app.Services.CreateAsyncScope())
+// {
+//     var seeder = scope.ServiceProvider
+//         .GetRequiredService<IDatabaseSeeder>();
+
+//     await seeder.SeedAsync();
+// }
+
+
 
 builder.Services.AddHttpContextAccessor();
 

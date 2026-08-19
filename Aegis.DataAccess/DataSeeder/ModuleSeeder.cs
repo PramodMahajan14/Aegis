@@ -90,13 +90,13 @@ namespace Aegis.DataAccess.DataSeeder
                     Description = "Manage documents associated with CRM records."
                 },
 
-                new Module
-                {
-                    Id = ModuleMaster.Calendar,
-                    Key = "calendar",
-                    Name = "Calendar",
-                    Description = "Manage CRM schedules and events."
-                },
+                // new Module
+                // {
+                //     Id = ModuleMaster.Calendar,
+                //     Key = "calendar",
+                //     Name = "Calendar",
+                //     Description = "Manage CRM schedules and events."
+                // },
 
                 new Module
                 {

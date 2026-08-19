@@ -2,10 +2,16 @@ namespace Aegis.Utility.Common
 {
     public static class AppConstants
     {
+
+        public const string CONFIG_SECTION_NAME = "SuperAdminAccount";
+        public static string Email { get; set; } = "admin@marcoaiot.com";
+        public static string Password { get; set; } = "User@123";
         public const string SuperAdminRole = "SUPER_ADMIN";
         public static readonly Guid TenantId =
             Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
     }
+
+   
 
     public static class ModuleMaster
     {

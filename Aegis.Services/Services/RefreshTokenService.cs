@@ -8,6 +8,7 @@ using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
+using Aegis.Utility.Common;
 
 namespace Aegis.Services.Services
 {
@@ -59,21 +60,59 @@ namespace Aegis.Services.Services
 
         }
 
-        public async Task SaveRefreshTokenAsync(ApplicationUser user, string refreshToken)
+
+
+        public string GenerateAccessTokenWithTenanat(ApplicationUser user,Guid TenantId)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub,user.Id),
+                new Claim(JwtRegisteredClaimNames.Email,user.Email),
+                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
+                new Claim("organization",TenantId.ToString()),
+
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+            var credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
+                claims: claims,
+                signingCredentials: credential,
+                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpiresInMinutes)
+            );
+
+            var jwtTokenHandler = new JwtSecurityTokenHandler();
+
+            return jwtTokenHandler.WriteToken(token);
+
+        }
+        public async Task SaveRefreshTokenAsync(string userId, string refreshToken)
         {
             var token = new RefreshToken
             {
                 Id = Guid.NewGuid(),
-                UserId = user.Id,
+                UserId = userId,
                 Token = refreshToken,
                 CreatedAt = DateTime.UtcNow,
                 ExpiresAt = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpiresInDays),
                 IsRevoked = false
             };
+             
+             var existing = _context.RefreshTokens.Any(x=>x.Id == GuidUtility.ToGuid(userId));
+            if (existing)
+            {
+                _context.RefreshTokens.Update(token);
+            }
+            else
+            {
+                _context.RefreshTokens.Add(token);
+            }
+             
 
-            await _context.RefreshTokens.AddAsync(token);
-
-            await _context.SaveChangesAsync();
+             await _context.SaveChangesAsync();
         }
 
         public async Task<RefreshToken?> ValidateRefreshTokenAsync(string refreshToken)

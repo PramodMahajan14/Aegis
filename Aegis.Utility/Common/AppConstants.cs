@@ -1,17 +1,32 @@
 namespace Aegis.Utility.Common
 {
-    public static class AppConstants
+    public  class SystemConfig
     {
 
-        public const string CONFIG_SECTION_NAME = "SuperAdminAccount";
-        public static string Email { get; set; } = "admin@marcoaiot.com";
-        public static string Password { get; set; } = "User@123";
-        public const string SuperAdminRole = "SUPER_ADMIN";
-        public static readonly Guid TenantId =
+        public  string CONFIG_SECTION_NAME = "SuperAdminAccount";
+        public  string Email { get; set; } = "codedev90@gmail.com";
+        public  string Password { get; set; } = "User@123";
+        public  string JobRole = "Admin";
+        public  string SuperAdminRole = "SUPER_ADMIN";
+        public  readonly Guid TenantId =
             Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
     }
 
-   
+     public static class SystemConfigInstance
+    {
+
+        public  const string CONFIG_SECTION_NAME = "SuperAdminAccount";
+        public const string Email = "codedev90@gmail.com";
+        public  const string Password  = "User@123";
+        public const  string JobRole = "Admin";
+        public const string SuperAdminRole = "SUPER_ADMIN";
+        public const string ContactPerson = "Pramod Mahajan";
+        public const string ContactNumber = "9022471779";
+        public const string DomainName = "codedev.in";
+        public const string Name = "Code Dev";
+        public static readonly Guid TenantId =
+            Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
+    }
 
     public static class ModuleMaster
     {
@@ -67,13 +82,13 @@ namespace Aegis.Utility.Common
         #region Opportunities
 
         public static readonly Guid OpportunityManagement =
-            Guid.Parse("3c510e3-7baf-45c7-8008-e3287cf8f3f5");
+            Guid.Parse("50ab36d8-5211-495d-88a9-db3de9d7fd2f");
 
         public static readonly Guid OpportunityStages =
             Guid.Parse("775c0750-9dae-4bf7-a5e0-c77c50d0866a");
 
         public static readonly Guid OpportunityValue =
-            Guid.Parse("c4de154-4f75-4373-a8b0-9705b6a1e06e");
+            Guid.Parse("94b04436-fccd-46ae-847f-04edfc5da6c7");
 
         public static readonly Guid OpportunityProbability =
             Guid.Parse("450a0e10-1f35-4883-b2a2-1cc45110b6af");
@@ -93,7 +108,7 @@ namespace Aegis.Utility.Common
         #region Contacts
 
         public static readonly Guid ContactManagement =
-            Guid.Parse("27a56e31-5a1a-4992-b01f-1e309220e9cb");
+            Guid.Parse("88293270-5873-4b8f-a4e4-1065ce494ae0");
 
         public static readonly Guid ContactRelationships =
             Guid.Parse("27a56e31-5a1a-4992-b01f-1e309220e9cb");
@@ -179,19 +194,19 @@ namespace Aegis.Utility.Common
         #region Meetings
 
         public static readonly Guid MeetingManagement =
-            Guid.Parse("10000007-0001-4000-8000-000000000001");
+            Guid.Parse("b4e7c404-78f8-4a9d-8471-6174dd8e5ce3");
 
         public static readonly Guid MeetingAttendees =
-            Guid.Parse("10000007-0001-4000-8000-000000000002");
+            Guid.Parse("491e70af-d8bc-41ad-983c-0c38b24cebb5");
 
         public static readonly Guid MeetingAgenda =
-            Guid.Parse("10000007-0001-4000-8000-000000000003");
+            Guid.Parse("7e730dd8-42f3-4382-8ff2-a5b6b042630d");
 
         public static readonly Guid MeetingNotes =
-            Guid.Parse("10000007-0001-4000-8000-000000000004");
+            Guid.Parse("48795578-ec33-4f11-b620-c990a79a0bcd");
 
         public static readonly Guid MeetingReminders =
-            Guid.Parse("10000007-0001-4000-8000-000000000005");
+            Guid.Parse("2e54a66d-9100-4dc1-8cf2-4db40c4a927e");
 
         #endregion
 
@@ -199,22 +214,22 @@ namespace Aegis.Utility.Common
         #region Site Visits
 
         public static readonly Guid SiteVisitManagement =
-            Guid.Parse("10000008-0001-4000-8000-000000000001");
+            Guid.Parse("5ca16678-e0d3-4bf4-a4fe-36cd965526a8");
 
         public static readonly Guid SiteVisitCheckin =
-            Guid.Parse("10000008-0001-4000-8000-000000000002");
+            Guid.Parse("62e0172e-32d8-4d49-b680-3dea19c05281");
 
         public static readonly Guid SiteVisitMedia =
-            Guid.Parse("10000008-0001-4000-8000-000000000003");
+            Guid.Parse("e0e0dcac-9dda-4ba1-82b5-94629f54dc08");
 
         public static readonly Guid SiteVisitNotes =
-            Guid.Parse("10000008-0001-4000-8000-000000000004");
+            Guid.Parse("128b4c10-2bd0-4f30-971c-6f51e3891eb7");
 
         public static readonly Guid SiteVisitChecklists =
-            Guid.Parse("10000008-0001-4000-8000-000000000005");
+            Guid.Parse("19c4c6af-fd77-4b97-99ee-de1583dcdb38");
 
         public static readonly Guid SiteVisitFollowup =
-            Guid.Parse("10000008-0001-4000-8000-000000000006");
+            Guid.Parse("d5ca37f4-5a2d-44f2-8415-62aeb2d58893");
 
         #endregion
 
@@ -222,22 +237,22 @@ namespace Aegis.Utility.Common
         #region Requirements
 
         public static readonly Guid RequirementManagement =
-            Guid.Parse("10000009-0001-4000-8000-000000000001");
+            Guid.Parse("fecbedae-c392-499b-bc9c-ac9dc0a23eaf");
 
         public static readonly Guid RequirementTemplates =
-            Guid.Parse("10000009-0001-4000-8000-000000000002");
+            Guid.Parse("922624d0-7daf-4917-a535-61885a6d32f1");
 
         public static readonly Guid RequirementSections =
-            Guid.Parse("10000009-0001-4000-8000-000000000003");
+            Guid.Parse("5d3033e0-7909-4bef-b920-ed6a4c0f4764");
 
         public static readonly Guid RequirementQuestions =
-            Guid.Parse("10000009-0001-4000-8000-000000000004");
+            Guid.Parse("17e69f35-bf9a-4b68-815a-16ab7d8da183");
 
         public static readonly Guid RequirementResponses =
-            Guid.Parse("10000009-0001-4000-8000-000000000005");
+            Guid.Parse("e1900440-3625-41ed-bce6-eec1f924d3df");
 
         public static readonly Guid RequirementAttachments =
-            Guid.Parse("10000009-0001-4000-8000-000000000006");
+            Guid.Parse("d39f9687-8482-4fba-adf2-b269a09400e7");
 
         #endregion
 
@@ -245,16 +260,16 @@ namespace Aegis.Utility.Common
         #region Documents
 
         public static readonly Guid DocumentManagement =
-            Guid.Parse("10000010-0001-4000-8000-000000000001");
+            Guid.Parse("b837a859-ed3d-4c03-95a1-72864e4fb2eb");
 
         public static readonly Guid DocumentUpload =
-            Guid.Parse("10000010-0001-4000-8000-000000000002");
+            Guid.Parse("6030081d-3ab0-4f5d-a477-b357cfc7f6b6");
 
         public static readonly Guid DocumentVersioning =
-            Guid.Parse("10000010-0001-4000-8000-000000000003");
+            Guid.Parse("2aa7e974-0721-4837-8c4c-4c6f35b565a7");
 
         public static readonly Guid DocumentSharing =
-            Guid.Parse("10000010-0001-4000-8000-000000000004");
+            Guid.Parse("b4ae0775-f77c-45bd-8329-621f515bb9d8");
 
         #endregion
 
@@ -282,19 +297,19 @@ namespace Aegis.Utility.Common
         #region Campaigns
 
         public static readonly Guid CampaignManagement =
-            Guid.Parse("10000012-0001-4000-8000-000000000001");
+            Guid.Parse("01a7613f-e840-4932-a3da-5cdafeb43198");
 
         public static readonly Guid CampaignAudiences =
-            Guid.Parse("10000012-0001-4000-8000-000000000002");
+            Guid.Parse("932f5a14-0cc3-4012-b030-926578c48017");
 
         public static readonly Guid CampaignSources =
-            Guid.Parse("10000012-0001-4000-8000-000000000003");
+            Guid.Parse("7ff9cbed-25e1-4bcb-adee-391be9e558e1");
 
         public static readonly Guid CampaignAttribution =
-            Guid.Parse("10000012-0001-4000-8000-000000000004");
+            Guid.Parse("2353aac8-0935-423d-8ee9-b6981f30111a");
 
         public static readonly Guid CampaignPerformance =
-            Guid.Parse("10000012-0001-4000-8000-000000000005");
+            Guid.Parse("bb7972f1-63b0-4c6f-859c-7bf28abf98fc");
 
         #endregion
 
@@ -302,34 +317,34 @@ namespace Aegis.Utility.Common
         #region Reports
 
         public static readonly Guid ReportBuilder =
-            Guid.Parse("10000013-0001-4000-8000-000000000001");
+            Guid.Parse("6f25bf12-7b11-44bc-aecc-3f03b9567bd8");
 
         public static readonly Guid ReportFilters =
-            Guid.Parse("10000013-0001-4000-8000-000000000002");
+            Guid.Parse("83e49858-6246-4b88-b9f3-36fe5021544c");
 
         public static readonly Guid ReportGrouping =
-            Guid.Parse("10000013-0001-4000-8000-000000000003");
+            Guid.Parse("c3fe64f5-1604-4d26-9477-a0039aa58004");
 
         public static readonly Guid ReportCharts =
-            Guid.Parse("10000013-0001-4000-8000-000000000004");
+            Guid.Parse("9d31cf55-8f81-4ff8-9548-acf8e6ab31a4");
 
         public static readonly Guid PipelineReports =
-            Guid.Parse("10000013-0001-4000-8000-000000000005");
+            Guid.Parse("11e87daf-0b2d-474f-91f8-1f639529bcac");
 
         public static readonly Guid ConversionReports =
-            Guid.Parse("10000013-0001-4000-8000-000000000006");
+            Guid.Parse("83144137-5268-4bc5-953f-df5223933abb");
 
         public static readonly Guid ActivityReports =
-            Guid.Parse("10000013-0001-4000-8000-000000000007");
+            Guid.Parse("06a470df-66d0-46e3-a7e4-407be3c6205f");
 
         public static readonly Guid TeamReports =
-            Guid.Parse("10000013-0001-4000-8000-000000000008");
+            Guid.Parse("babc7309-b920-41ea-b3fa-57957a683c3e");
 
         public static readonly Guid ReportExport =
-            Guid.Parse("10000013-0001-4000-8000-000000000009");
+            Guid.Parse("0cc30bd0-22a2-49f6-8bb2-4747283a5b63");
 
         public static readonly Guid ScheduledReports =
-            Guid.Parse("10000013-0001-4000-8000-000000000010");
+            Guid.Parse("4a0882ae-2e67-4484-8f4b-c0954b730364");
 
         #endregion
 
@@ -337,18 +352,19 @@ namespace Aegis.Utility.Common
         #region Notifications
 
         public static readonly Guid NotificationManagement =
-            Guid.Parse("10000014-0001-4000-8000-000000000001");
+            Guid.Parse("d84def16-0452-4869-bff8-c7e8578223b2");
 
         public static readonly Guid AssignmentNotifications =
-            Guid.Parse("10000014-0001-4000-8000-000000000002");
+            Guid.Parse("e3252074-231b-49f3-8286-1fb2220c0c85");
 
         public static readonly Guid ReminderNotifications =
-            Guid.Parse("10000014-0001-4000-8000-000000000003");
+            Guid.Parse("6eb3c2c6-cf82-4b7d-9aed-e41c49b62741");
 
         public static readonly Guid MentionNotifications =
-            Guid.Parse("10000014-0001-4000-8000-000000000004");
+            Guid.Parse("9e70fec6-9a25-48a2-b21a-cce5c17c7d3e");
 
         #endregion
     }
 }
+
 

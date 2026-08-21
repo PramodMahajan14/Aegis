@@ -15,5 +15,7 @@ public class ApplicationUser : IdentityUser
 
     public DateTime? UpdatedAt { get; set; }
 
+    public Boolean IsRootUser {get;set;}
+
     public Aegis.Model.Employee.Employee? Employee {get;set;}
 }

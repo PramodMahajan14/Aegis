@@ -2,7 +2,8 @@ using Aegis.DataAccess.DataSeeder;
 using Aegis.Model.Auth;
 using Aegis.Model.Employee;
 using Aegis.Model.Master;
-using Aegis.Model.Tenant;
+using Aegis.Model.TenantModels;
+using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,6 +38,21 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
         ModuleSeeder.Seed(modelBuilder);
         FeatureSeeder.Seed(modelBuilder);
+
+        modelBuilder.Entity<Tenant>().HasData(
+            new Tenant
+            {
+                Id = SystemConfigInstance.TenantId,
+                Name = SystemConfigInstance.Name,
+                Email = SystemConfigInstance.Email,
+                ContactPerson = SystemConfigInstance.ContactPerson,
+                ContactNumber = SystemConfigInstance.ContactPerson,
+                DomainName = SystemConfigInstance.DomainName,
+                OnboardingDate = DateTime.UtcNow,
+                IsSystemTenant = true,
+                
+            }
+        );
 
     }
 

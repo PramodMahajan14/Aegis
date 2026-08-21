@@ -4,6 +4,7 @@ using Aegis.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aegis.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260820175144_adding_master_data")]
+    partial class adding_master_data
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,9 +52,6 @@ namespace Aegis.DataAccess.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("IsRootUser")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("LastName")
@@ -174,9 +174,6 @@ namespace Aegis.DataAccess.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<Guid>("TenantId")
-                        .HasColumnType("char(36)");
-
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
@@ -185,8 +182,6 @@ namespace Aegis.DataAccess.Migrations
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TenantId");
 
                     b.HasIndex("UserId")
                         .IsUnique();
@@ -1130,7 +1125,7 @@ namespace Aegis.DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Aegis.Model.TenantModels.Tenant", b =>
+            modelBuilder.Entity("Aegis.Model.Tenant.Tenant", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -1158,9 +1153,6 @@ namespace Aegis.DataAccess.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsSystemTenant")
                         .HasColumnType("tinyint(1)");
@@ -1201,25 +1193,6 @@ namespace Aegis.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tenants");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("c84c9fae-750c-4327-b3fd-338517be8161"),
-                            ContactNumber = "Pramod Mahajan",
-                            ContactPerson = "Pramod Mahajan",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Currency = "INR",
-                            DomainName = "codedev.in",
-                            Email = "codedev90@gmail.com",
-                            IsActive = false,
-                            IsSystemTenant = true,
-                            Locale = "en-IN",
-                            Name = "Code Dev",
-                            OnboardingDate = new DateTime(2026, 8, 21, 20, 24, 34, 178, DateTimeKind.Utc).AddTicks(3415),
-                            Status = 1,
-                            TimeZone = "Asia/Kolkata"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1367,26 +1340,18 @@ namespace Aegis.DataAccess.Migrations
 
             modelBuilder.Entity("Aegis.Model.Employee.Employee", b =>
                 {
-                    b.HasOne("Aegis.Model.TenantModels.Tenant", "Tenant")
-                        .WithMany()
-                        .HasForeignKey("TenantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Aegis.Model.Auth.ApplicationUser", "User")
                         .WithOne("Employee")
                         .HasForeignKey("Aegis.Model.Employee.Employee", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Tenant");
-
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("Aegis.Model.Master.ApplicationRole", b =>
                 {
-                    b.HasOne("Aegis.Model.TenantModels.Tenant", "Tenant")
+                    b.HasOne("Aegis.Model.Tenant.Tenant", "Tenant")
                         .WithMany("ApplicationRoles")
                         .HasForeignKey("TenantId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1438,7 +1403,7 @@ namespace Aegis.DataAccess.Migrations
 
             modelBuilder.Entity("Aegis.Model.Master.JobRole", b =>
                 {
-                    b.HasOne("Aegis.Model.TenantModels.Tenant", "Tenant")
+                    b.HasOne("Aegis.Model.Tenant.Tenant", "Tenant")
                         .WithMany("JobRoles")
                         .HasForeignKey("TenantId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1513,7 +1478,7 @@ namespace Aegis.DataAccess.Migrations
                     b.Navigation("Features");
                 });
 
-            modelBuilder.Entity("Aegis.Model.TenantModels.Tenant", b =>
+            modelBuilder.Entity("Aegis.Model.Tenant.Tenant", b =>
                 {
                     b.Navigation("ApplicationRoles");
 

@@ -69,6 +69,9 @@ builder.Host.UseSerilog((context, config) =>
 
 #endregion
 
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
 #region JWT Configuration
 
 // Bind JwtSettings from appsettings.json

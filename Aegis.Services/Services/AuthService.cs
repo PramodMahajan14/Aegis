@@ -128,7 +128,7 @@ namespace Aegis.Services.Services
                 var refreshToken = _refreshTokenService.GenerateRefreshToken();
 
                 // Save refresh token
-                await _refreshTokenService.SaveRefreshTokenAsync(user, refreshToken);
+                await _refreshTokenService.SaveRefreshTokenAsync(user.Id, refreshToken);
 
                 // Response
                 var response = new
@@ -171,7 +171,7 @@ namespace Aegis.Services.Services
                 Id = GuidUtility.ToGuid(user.Id),
                 FirstName = user.FirstName,
                 LastName = user.LastName,
-                Email = user.Email,
+                Email = user.Email ?? string.Empty,
             };
 
             return ApiResponse<object>.SuccessResponse(response,"user Fetch successfully",200);

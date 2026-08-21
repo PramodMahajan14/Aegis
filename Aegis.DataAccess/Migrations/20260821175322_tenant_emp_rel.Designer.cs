@@ -4,6 +4,7 @@ using Aegis.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aegis.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260821175322_tenant_emp_rel")]
+    partial class tenant_emp_rel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,9 +52,6 @@ namespace Aegis.DataAccess.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("IsRootUser")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("LastName")
@@ -1159,9 +1159,6 @@ namespace Aegis.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("tinyint(1)");
-
                     b.Property<bool>("IsSystemTenant")
                         .HasColumnType("tinyint(1)");
 
@@ -1201,25 +1198,6 @@ namespace Aegis.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tenants");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("c84c9fae-750c-4327-b3fd-338517be8161"),
-                            ContactNumber = "Pramod Mahajan",
-                            ContactPerson = "Pramod Mahajan",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Currency = "INR",
-                            DomainName = "codedev.in",
-                            Email = "codedev90@gmail.com",
-                            IsActive = false,
-                            IsSystemTenant = true,
-                            Locale = "en-IN",
-                            Name = "Code Dev",
-                            OnboardingDate = new DateTime(2026, 8, 21, 20, 24, 34, 178, DateTimeKind.Utc).AddTicks(3415),
-                            Status = 1,
-                            TimeZone = "Asia/Kolkata"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

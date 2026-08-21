@@ -1,5 +1,7 @@
 using System.Security.Claims;
 using Aegis.Model.Auth;
+using Aegis.Model.Employee;
+using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
 namespace Aegis.Services.Helper
 {
@@ -16,10 +18,15 @@ namespace Aegis.Services.Helper
       _userManager = userManager;
     }
 
+    public Guid GetCurrentTenant()
+    {
+       var tenant = _httpContextAccessor.HttpContext?.User.FindFirst("organization")?.Value;
+       return (tenant != null ? GuidUtility.ToGuid(tenant) : Guid.Empty);
+    }
     public async Task<IdentityUser?> GetCurrentUserAsync()
     {
       var userId = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
-      Console.WriteLine("User Log :",userId , _httpContextAccessor.HttpContext);
+
       if (string.IsNullOrEmpty(userId))
         return null;
 
@@ -27,6 +34,17 @@ namespace Aegis.Services.Helper
       return user;
 
     }
+
+    // public async Task<Employee> GetCurrentEmployeeAsync()
+    // {
+    //   var user = GetCurrentUserAsync();
+    //   var tenantId  = GetCurrentTenant();
+
+    //   if(user == null || tenantId ==  Guid.Empty) return new Employee {};
+
+
+
+    // }
 
 
 

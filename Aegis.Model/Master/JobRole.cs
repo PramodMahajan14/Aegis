@@ -1,4 +1,4 @@
-using Aegis.Model.Tenant;
+using Aegis.Model.TenantModels;
 
 namespace Aegis.Model.Master
 {

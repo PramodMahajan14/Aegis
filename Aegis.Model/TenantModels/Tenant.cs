@@ -1,6 +1,6 @@
 using Aegis.Model.Master;
 using Aegis.Utility.Enum;
-namespace Aegis.Model.Tenant
+namespace Aegis.Model.TenantModels
 {
     public class Tenant
     {
@@ -45,6 +45,8 @@ namespace Aegis.Model.Tenant
 
         // Special tenant
         public bool IsSystemTenant { get; set; }
+
+        public bool IsActive {get;set;}
 
         // Audit
         public DateTime CreatedAt { get; set; }

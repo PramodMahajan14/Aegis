@@ -4,6 +4,7 @@ using Aegis.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aegis.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260821202009_seed_system_tenant")]
+    partial class seed_system_tenant
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1211,12 +1214,12 @@ namespace Aegis.DataAccess.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "INR",
                             DomainName = "codedev.in",
-                            Email = "codedev90@gmail.com",
+                            Email = "",
                             IsActive = false,
                             IsSystemTenant = true,
                             Locale = "en-IN",
                             Name = "Code Dev",
-                            OnboardingDate = new DateTime(2026, 8, 21, 20, 24, 34, 178, DateTimeKind.Utc).AddTicks(3415),
+                            OnboardingDate = new DateTime(2026, 8, 21, 20, 20, 8, 652, DateTimeKind.Utc).AddTicks(2703),
                             Status = 1,
                             TimeZone = "Asia/Kolkata"
                         });

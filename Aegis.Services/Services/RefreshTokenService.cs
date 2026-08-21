@@ -38,10 +38,15 @@ namespace Aegis.Services.Services
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub,user.Id),
-                new Claim(JwtRegisteredClaimNames.Email,user.Email),
+                new Claim(JwtRegisteredClaimNames.Email,user.Email ?? string.Empty),
                 new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
 
             };
+
+            if (string.IsNullOrWhiteSpace(_jwtSettings.Key))
+            {
+                throw new Exception("JWT key is not configured.");
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
             var credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -62,16 +67,20 @@ namespace Aegis.Services.Services
 
 
 
-        public string GenerateAccessTokenWithTenanat(ApplicationUser user,Guid TenantId)
+        public string GenerateAccessTokenWithTenanat(ApplicationUser user, Guid TenantId)
         {
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub,user.Id),
-                new Claim(JwtRegisteredClaimNames.Email,user.Email),
+                new Claim(JwtRegisteredClaimNames.Email,user.Email ?? string.Empty),
                 new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
                 new Claim("organization",TenantId.ToString()),
 
             };
+            if (string.IsNullOrWhiteSpace(_jwtSettings.Key))
+            {
+                throw new Exception("JWT key is not configured.");
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
             var credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -100,8 +109,8 @@ namespace Aegis.Services.Services
                 ExpiresAt = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpiresInDays),
                 IsRevoked = false
             };
-             
-             var existing = _context.RefreshTokens.Any(x=>x.Id == GuidUtility.ToGuid(userId));
+
+            var existing = _context.RefreshTokens.Any(x => x.Id == GuidUtility.ToGuid(userId));
             if (existing)
             {
                 _context.RefreshTokens.Update(token);
@@ -110,9 +119,9 @@ namespace Aegis.Services.Services
             {
                 _context.RefreshTokens.Add(token);
             }
-             
 
-             await _context.SaveChangesAsync();
+
+            await _context.SaveChangesAsync();
         }
 
         public async Task<RefreshToken?> ValidateRefreshTokenAsync(string refreshToken)
@@ -159,7 +168,7 @@ namespace Aegis.Services.Services
             var newRefreshToken = GenerateRefreshToken();
 
             // Save new refresh token
-            await SaveRefreshTokenAsync(refreshToken.User, newRefreshToken);
+            await SaveRefreshTokenAsync(refreshToken.User.Id, newRefreshToken);
 
             // Return new token to client
             return newRefreshToken;

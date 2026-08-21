@@ -37,11 +37,6 @@ namespace Aegis.Services.Services
                 return ApiResponse<object>.ErrorResponse("Invalid Email address", "Please provide valid email address", 404);
             }
 
-            if (model.DateOfBirth == null)
-            {
-                return ApiResponse<object>.ErrorResponse("BirthDate should be required", "Please provide BirthDate", 404);
-            }
-
             var today = DateTime.UtcNow.Date;
             var age = today.Year - model.DateOfBirth.Year;
 
@@ -142,13 +137,7 @@ namespace Aegis.Services.Services
                     400);
             }
 
-            if (model.DateOfBirth == null)
-            {
-                return ApiResponse<object>.ErrorResponse(
-                    "BirthDate is required",
-                    "Please provide BirthDate",
-                    400);
-            }
+            
 
             // Validate Age
             var today = DateTime.UtcNow.Date;

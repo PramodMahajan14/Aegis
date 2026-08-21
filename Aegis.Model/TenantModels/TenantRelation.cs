@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Aegis.Model.Tenant
+namespace Aegis.Model.TenantModels
 {
     public class TenantRelation
     {

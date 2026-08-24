@@ -10,6 +10,38 @@ namespace Aegis.DataAccess.DataSeeder
         {
             modelBuilder.Entity<Feature>().HasData(
 
+
+                #region Clients
+
+                 new Feature
+                {
+                    Id = FeatureMaster.ClientManagement,
+                    Name = "Client Management",
+                    ModuleId = ModuleMaster.Clients,
+                    Key = "client_management",
+                    Description = "Create, view, update and manage client."
+                },
+
+                 new Feature
+                {
+                    Id = FeatureMaster.ClientRelationships,
+                    Name = "Client Relationship",
+                    ModuleId = ModuleMaster.Clients,
+                    Key = "client_relationship",
+                    Description = "Create, view, update and manage client relation."
+                },
+
+                 new Feature
+                {
+                    Id = FeatureMaster.ClientActivities,
+                    Name = "Client Activities",
+                    ModuleId = ModuleMaster.Clients,
+                    Key = "client_activities",
+                    Description = "Create, view, update and manage client activites."
+                },
+
+                #endregion
+
                 #region LEADS
                 new Feature
                 {

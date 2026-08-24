@@ -10,6 +10,15 @@ namespace Aegis.DataAccess.DataSeeder
         {
             modelBuilder.Entity<Module>().HasData(
 
+
+                  new Module
+                {
+                    Id = ModuleMaster.Clients,
+                    Key = "client",
+                    Name = "Clients",
+                    Description = "Manage potential customers and business opportunities."
+                },
+
                 new Module
                 {
                     Id = ModuleMaster.Leads,

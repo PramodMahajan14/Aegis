@@ -18,7 +18,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
 
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
-    public DbSet<Employee> Employees { get; set; }
+   
     public DbSet<Tenant> Tenants { get; set; }
 
     #region Master
@@ -30,6 +30,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ApplicationRolePermisson> ApplicationRolePermissons { get; set; }
 
     #endregion
+   
+    #region Employee
+    public DbSet<Employee> Employees { get; set; }
+    public DbSet<EmployeeAppRoleMap> EmployeeAppRoleMaps {get;set;}
+
+    #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -38,7 +44,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
         ModuleSeeder.Seed(modelBuilder);
         FeatureSeeder.Seed(modelBuilder);
-
+        PermissionSeeder.Seed(modelBuilder);
+        
         modelBuilder.Entity<Tenant>().HasData(
             new Tenant
             {
@@ -53,6 +60,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 
             }
         );
+
+       
+
+
 
     }
 

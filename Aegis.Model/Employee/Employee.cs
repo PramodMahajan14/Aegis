@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Aegis.Model.Auth;
 using Aegis.Utility.Enum;
 using Aegis.Model.TenantModels;
+using Aegis.Model.Master;
 
 namespace Aegis.Model.Employee
 {
@@ -29,6 +30,14 @@ namespace Aegis.Model.Employee
         public bool IsActive { get; set; }
         [Required]
         public string UserId { get; set; } = string.Empty;
+
+        public string ContactNumber {get;set;} =  string.Empty;
+
+        public bool IsSystem {get;set;} = false;
+
+        public Guid JobRoleId {get;set;}
+        [ForeignKey(nameof(JobRoleId))]
+        public JobRole JobRole {get;set;} = null!;
 
         [ForeignKey(nameof(UserId))]
         public ApplicationUser User { get; set; } = null!;

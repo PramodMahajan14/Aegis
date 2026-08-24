@@ -1,25 +1,25 @@
 namespace Aegis.Utility.Common
 {
-    public  class SystemConfig
+    public class SystemConfig
     {
 
-        public  string CONFIG_SECTION_NAME = "SuperAdminAccount";
-        public  string Email { get; set; } = "codedev90@gmail.com";
-        public  string Password { get; set; } = "User@123";
-        public  string JobRole = "Admin";
-        public  string SuperAdminRole = "SUPER_ADMIN";
-        public  readonly Guid TenantId =
+        public string CONFIG_SECTION_NAME = "SuperAdminAccount";
+        public string Email { get; set; } = "codedev90@gmail.com";
+        public string Password { get; set; } = "User@123";
+        public string JobRole = "Admin";
+        public string SuperAdminRole = "SUPER_ADMIN";
+        public readonly Guid TenantId =
             Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
     }
 
-     public static class SystemConfigInstance
+    public static class SystemConfigInstance
     {
 
-        public  const string CONFIG_SECTION_NAME = "SuperAdminAccount";
+        public const string CONFIG_SECTION_NAME = "SuperAdminAccount";
         public const string Email = "codedev90@gmail.com";
-        public  const string Password  = "User@123";
-        public const  string JobRole = "Admin";
-        public const string SuperAdminRole = "SUPER_ADMIN";
+        public const string Password = "User@123";
+        public const string JobRole = "Admin";
+        public const string AppRole = "SUPER_ADMIN";
         public const string ContactPerson = "Pramod Mahajan";
         public const string ContactNumber = "9022471779";
         public const string DomainName = "codedev.in";
@@ -30,6 +30,7 @@ namespace Aegis.Utility.Common
 
     public static class ModuleMaster
     {
+        public static readonly Guid Clients = Guid.Parse("ecddab43-7ba2-4b17-b5f3-5f3639b5a1bd");
         public static readonly Guid Leads = Guid.Parse("6b4c01ba-8aa4-47ed-8ea2-1dc7fa5cd638");
         public static readonly Guid Opportunities = Guid.Parse("a009cd33-faf4-4e8a-bde4-fc2562c2198e");
         public static readonly Guid Contacts = Guid.Parse("1f65bb9f-4f28-4530-99f1-e20cbaf9b344");
@@ -52,7 +53,24 @@ namespace Aegis.Utility.Common
     }
 
     public static class FeatureMaster
+
     {
+
+
+
+        #region Companies
+
+        public static readonly Guid ClientManagement =
+            Guid.Parse("604fb10f-8b94-45d4-a2fc-914a4e4fe021");
+
+        public static readonly Guid ClientRelationships =
+            Guid.Parse("eea8aad9-986e-4372-89ee-9027c0c6ded5");
+
+        public static readonly Guid ClientActivities =
+            Guid.Parse("3a5f1730-e80a-4502-80d3-9cb07d30891b");
+
+
+        #endregion
         #region Leads
 
         public static readonly Guid LeadManagement =

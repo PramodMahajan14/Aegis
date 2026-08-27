@@ -1,0 +1,25 @@
+2026-08-27 09:13:57.404 [INF] HTTP OPTIONS /api/auth/login responded 405 in 23.3883 ms
+2026-08-27 09:14:32.837 [INF] HTTP OPTIONS /api/auth/login responded 405 in 15.7061 ms
+2026-08-27 09:14:45.633 [INF] HTTP OPTIONS /api/auth/login responded 405 in 1.1077 ms
+2026-08-27 09:15:46.864 [INF] HTTP OPTIONS /api/auth/login responded 405 in 14.6511 ms
+2026-08-27 09:17:33.020 [INF] HTTP POST /api/auth/login responded 400 in 965.5610 ms
+2026-08-27 18:21:31.551 [INF] HTTP POST /api/auth/login responded 400 in 936.4009 ms
+2026-08-27 18:54:16.683 [INF] HTTP POST /api/auth/refresh responded 404 in 2.7139 ms
+2026-08-27 18:54:18.602 [INF] HTTP POST /api/auth/login responded 400 in 77.6442 ms
+2026-08-27 18:54:28.001 [INF] HTTP POST /api/auth/login responded 400 in 22.3240 ms
+2026-08-27 18:55:01.779 [INF] HTTP POST /api/auth/login responded 400 in 6.6705 ms
+2026-08-27 18:55:18.123 [INF] HTTP POST /api/auth/login responded 400 in 5.7929 ms
+2026-08-27 18:57:12.308 [INF] HTTP POST /api/auth/register responded 200 in 238.6287 ms
+2026-08-27 18:58:47.623 [INF] HTTP POST /api/auth/login responded 200 in 132.5799 ms
+2026-08-27 18:59:00.153 [INF] HTTP POST /api/auth/login responded 200 in 71.2890 ms
+2026-08-27 19:00:30.904 [INF] HTTP POST /api/auth/login responded 200 in 73.3817 ms
+2026-08-27 19:00:35.269 [INF] HTTP POST /api/auth/login responded 200 in 76.9914 ms
+2026-08-27 19:25:05.765 [INF] HTTP POST /api/auth/refresh responded 404 in 16.4594 ms
+2026-08-27 19:25:33.620 [INF] HTTP POST /api/auth/login responded 200 in 1187.6163 ms
+2026-08-27 19:25:42.345 [INF] HTTP POST /api/auth/login responded 200 in 123.2465 ms
+2026-08-27 19:26:13.464 [INF] HTTP POST /api/auth/login responded 200 in 87.5201 ms
+2026-08-27 19:26:13.600 [INF] HTTP POST /api/auth/login responded 200 in 69.8099 ms
+2026-08-27 23:18:52.679 [INF] Starting database seeding process...
+2026-08-27 23:21:45.419 [INF] Starting database seeding process...
+2026-08-27 23:23:24.071 [INF] Starting database seeding process...
+2026-08-27 23:26:42.954 [INF] Starting database seeding process...

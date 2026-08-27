@@ -21,16 +21,16 @@ namespace Aegis.Model.Employee
 
         public bool IsEnabled {get;set;}
 
-        public DateTime AssignedAt {get;set;}
-        public Guid AssignedById {get;set;}
+        public DateTime? AssignedAt {get;set;}
+        public Guid? AssignedById {get;set;}
         [ValidateNever]
         [ForeignKey(nameof(AssignedById))]
         public Employee? AssignedBy {get;set;}
 
-        public DateTime ReassignedAt {get;set;}
-        public Guid ReassignedById {get;set;}
+        public DateTime? UnassignedAt {get;set;}
+        public Guid? UnassignedById {get;set;}
         [ValidateNever]
-        [ForeignKey(nameof(ReassignedById))]
+        [ForeignKey(nameof(UnassignedById))]
         public Employee? ReassignedBy {get;set;}
    
     }

@@ -1,0 +1,59 @@
+2026-08-26 20:57:25.807 [FTL] Application startup exception
+System.InvalidOperationException: Cannot resolve scoped service 'Aegis.Services.Services.ILoggingService' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2026-08-26 20:57:25.816 [ERR] Hosting failed to start
+System.InvalidOperationException: Cannot resolve scoped service 'Aegis.Services.Services.ILoggingService' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2026-08-26 22:35:28.852 [INF] HTTP POST /api/auth/refresh responded 404 in 37.0364 ms
+2026-08-26 22:36:01.757 [INF] HTTP POST /api/auth/refresh responded 404 in 1.0506 ms
+2026-08-26 23:22:47.078 [INF] HTTP POST /api/auth/refresh responded 404 in 19.1506 ms
+2026-08-26 23:29:11.924 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.9979 ms
+2026-08-26 23:29:52.412 [INF] HTTP OPTIONS /api/auth/login responded 405 in 1.7256 ms
+2026-08-26 23:31:00.845 [INF] HTTP POST /api/auth/login responded 400 in 930.7359 ms
+2026-08-26 23:34:15.992 [INF] HTTP OPTIONS /api/auth/login responded 405 in 13.4164 ms
+2026-08-26 23:34:21.080 [INF] HTTP OPTIONS /api/auth/login responded 405 in 1.3657 ms
+2026-08-26 23:37:57.905 [INF] HTTP OPTIONS /api/auth/login responded 405 in 1.8300 ms
+2026-08-26 23:38:11.808 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1823 ms
+2026-08-26 23:38:26.046 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1367 ms
+2026-08-26 23:41:59.669 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1783 ms
+2026-08-26 23:42:00.073 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1927 ms
+2026-08-26 23:42:00.272 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1814 ms
+2026-08-26 23:42:00.454 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1812 ms
+2026-08-26 23:44:01.811 [INF] HTTP OPTIONS /api/auth/login responded 405 in 13.9338 ms
+2026-08-26 23:44:10.215 [INF] HTTP OPTIONS /api/auth/login responded 405 in 1.0433 ms
+2026-08-26 23:48:10.417 [INF] HTTP OPTIONS /api/auth/login responded 405 in 1.4704 ms
+2026-08-26 23:48:10.669 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.2051 ms
+2026-08-26 23:48:10.958 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.2098 ms
+2026-08-26 23:48:11.139 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1713 ms
+2026-08-26 23:48:33.153 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1472 ms
+2026-08-26 23:48:33.341 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1142 ms
+2026-08-26 23:48:33.562 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1350 ms
+2026-08-26 23:48:33.738 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.2395 ms
+2026-08-26 23:48:33.926 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.1410 ms
+2026-08-26 23:48:34.104 [INF] HTTP OPTIONS /api/auth/login responded 405 in 0.2134 ms

@@ -1,8 +1,11 @@
 using System.Security.Claims;
+using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
 using Aegis.Model.Employee;
+using Aegis.Model.Master;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 namespace Aegis.Services.Helper
 {
 
@@ -12,16 +15,19 @@ namespace Aegis.Services.Helper
 
     public readonly IHttpContextAccessor _httpContextAccessor;
 
-    public UserHelper(UserManager<ApplicationUser> userManager, IHttpContextAccessor httpContextAccessor)
+    public readonly ApplicationDbContext _context;
+
+    public UserHelper(UserManager<ApplicationUser> userManager, IHttpContextAccessor httpContextAccessor, ApplicationDbContext conetxt)
     {
       _httpContextAccessor = httpContextAccessor;
       _userManager = userManager;
+      _context = conetxt;
     }
 
     public Guid GetCurrentTenant()
     {
-       var tenant = _httpContextAccessor.HttpContext?.User.FindFirst("organization")?.Value;
-       return (tenant != null ? GuidUtility.ToGuid(tenant) : Guid.Empty);
+      var tenant = _httpContextAccessor.HttpContext?.User.FindFirst("organization")?.Value;
+      return (tenant != null ? GuidUtility.ToGuid(tenant) : Guid.Empty);
     }
     public async Task<IdentityUser?> GetCurrentUserAsync()
     {
@@ -35,18 +41,32 @@ namespace Aegis.Services.Helper
 
     }
 
-    // public async Task<Employee> GetCurrentEmployeeAsync()
-    // {
-    //   var user = GetCurrentUserAsync();
-    //   var tenantId  = GetCurrentTenant();
+    public async Task<Employee> GetCurrentEmployeeAsync()
+    {
+      var user = await GetCurrentUserAsync();
+      var tenantId = GetCurrentTenant();
 
-    //   if(user == null || tenantId ==  Guid.Empty) return new Employee {};
+      if (user == null || tenantId == Guid.Empty) return new Employee { };
+
+      var Employee = await _context.Employees.AsNoTracking()
+      .Include(a => a.User)
+      .Include(a => a.JobRole)
+      .FirstOrDefaultAsync(a => a.UserId == user.Id && a.IsActive && a.TenantId == tenantId);
+      return Employee ?? new Employee { };
+
+    }
 
 
-
-    // }
-
-
-
+    public async Task<object?> GetCurrentUserProfile()
+    {
+      var user = await GetCurrentUserAsync();
+      return user == null ? null : new
+      {
+        user.Id,
+        user.UserName,
+        user.Email,
+        user.PhoneNumber
+      };
+    }
   }
 }

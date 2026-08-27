@@ -12,7 +12,7 @@ namespace Aegis.Services.Services
 
         public void LogInfo(string? message, params object[]? args)
         {
-            using (LogContext.PushProperty("LogLevel", "Infromation")) ;
+            using (LogContext.PushProperty("LogLevel", "Infromation")) 
             if (args != null)
             {
                 _logger.LogInformation(message, args);
@@ -25,7 +25,7 @@ namespace Aegis.Services.Services
 
         public void LogError(Exception? ex, string? message, params object[]? args)
         {
-            using (LogContext.PushProperty("LogLevel", "Error")) ;
+            using (LogContext.PushProperty("LogLevel", "Error")) 
             if (args != null)
             {
                 _logger.LogError(ex, message, args);
@@ -38,7 +38,7 @@ namespace Aegis.Services.Services
 
         public void LogError(string? message,params object[]? args)
         {
-            using (LogContext.PushProperty("LogLevel","Error"));
+            using (LogContext.PushProperty("LogLevel","Error"))
             if(args != null)
             {
                 _logger.LogError(message,args);

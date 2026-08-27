@@ -1,6 +1,7 @@
 
 
 
+using System.Globalization;
 using System.Linq.Expressions;
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
@@ -15,17 +16,13 @@ using Microsoft.Extensions.Options;
 
 namespace Aegis.Services.Services
 {
-    public class ConfigSystemUser : ISystemConfig
+    public class ConfigSystemUser(IServiceProvider serviceProvider, ILogger<ConfigSystemUser> logger) : IHostedService
     {
+        public readonly IServiceProvider _service = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
+        public readonly ILogger<ConfigSystemUser> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
-        public readonly ApplicationUser _application;
-        public readonly IServiceProvider _service;
-        public readonly ILogger<ConfigSystemUser> _logger;
-        public ConfigSystemUser(IServiceProvider serviceProvider, ILogger<ConfigSystemUser> logger)
-        {
-            _logger = logger;
-            _service = serviceProvider;
-        }
+
+
 
         public async Task StartAsync(CancellationToken cancellation)
         {
@@ -106,13 +103,24 @@ namespace Aegis.Services.Services
                         EmployeeId = employee.Id,
                         AppRoleId = applicationRole.Id,
                         TenantId = SystemConfigInstance.TenantId,
-                        IsEnabled = true
+                        IsEnabled = true,
+
+                        //  Force explicit nulls so EF Core passes standard NULL to MySQL
+                        AssignedById = employee.Id, 
+                        UnassignedById = null,
+                        AssignedAt = DateTime.UtcNow
                     });
 
+                // 6. seed Permission to Application
 
+                await SeedAllPermissionsToApplicationRole(dbContext, applicationRole.Id);
+                // All entities are now tracked by the DbContext.
+                // A single SaveChanges call is more efficient.
+                await dbContext.SaveChangesAsync(cancellation);
 
-
-
+                // If all operations were successful, commit the transaction.
+                await transaction.CommitAsync(cancellation);
+                _logger.LogInformation("Super Admin user created successfully.");
             }
             catch (Exception ex)
             {
@@ -161,7 +169,29 @@ namespace Aegis.Services.Services
         {
             var allPermissons = await context.FeaturePermissions.Select(x => x.Id).ToListAsync();
 
-            var AssignedPermissons = await context.ApplicationRolePermissons.Where(x => x.ApplicationRoleId == ApplicationRoleId).Select(a => a.FeaturePermissionId).ToListAsync();
+            var assignedPermissons = await context.ApplicationRolePermissons.Where(x => x.ApplicationRoleId == ApplicationRoleId).Select(a => a.FeaturePermissionId).ToListAsync();
+
+            var missingPermission = allPermissons.Except(assignedPermissons).ToList();
+
+            if (missingPermission.Any())
+            {
+                var newMapp = missingPermission.Select(Permission => new ApplicationRolePermisson
+                {
+                    ApplicationRoleId = ApplicationRoleId,
+                    FeaturePermissionId = Permission
+                });
+
+                await context.ApplicationRolePermissons.AddRangeAsync(newMapp);
+                _logger.LogInformation("Added {count} new permissons to Supper ApplicationRole", missingPermission.Count());
+
+            }
+            else
+            {
+                _logger.LogInformation("Super Application Role already has all permisson");
+
+            }
+
+
         }
         /// <summary>
         /// A generic helper to find an entity by a predicate or create, add, and return it if not found.

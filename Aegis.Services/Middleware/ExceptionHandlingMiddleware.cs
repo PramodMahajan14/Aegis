@@ -1,3 +1,4 @@
+using Aegis.Services.Services;
 using Aegis.Utility.Common;
 
 namespace Aegis.Services.Middleware
@@ -6,6 +7,8 @@ namespace Aegis.Services.Middleware
     {
 
         public readonly RequestDelegate _next;
+    
+
 
         public ExceptionHandlingMiddleware(RequestDelegate next)
         {
@@ -23,24 +26,20 @@ namespace Aegis.Services.Middleware
             }
             catch (Exception ex)
             {
-                if (httpContext.Response.HasStarted)
-                {
-                    throw;
-                }
-
-                httpContext.Response.Clear();
-                httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                httpContext.Response.ContentType = "application/json";
-
-                var response = ApiResponse<object>.ErrorResponse("Internal Server Error",
-                                  "An unexpected error occurred.",
-                                   StatusCodes.Status500InternalServerError);
-                                   
-                                     
-                await httpContext.Response.WriteAsJsonAsync(response);
+                await HandleExceptionAsync(httpContext, ex);
 
             }
-            
+
+        }
+
+        private Task HandleExceptionAsync(HttpContext context, Exception exception)
+        {
+            var response = ApiResponse<object>.ErrorResponse("Internal Server Error", "An unexpected error occurred.", StatusCodes.Status500InternalServerError);
+
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+            return context.Response.WriteAsJsonAsync(response);
         }
 
 

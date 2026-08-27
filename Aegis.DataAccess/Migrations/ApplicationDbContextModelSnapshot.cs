@@ -145,6 +145,10 @@ namespace Aegis.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
@@ -166,6 +170,12 @@ namespace Aegis.DataAccess.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<bool>("IsSystem")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<Guid>("JobRoleId")
+                        .HasColumnType("char(36)");
+
                     b.Property<DateTime>("JoiningDate")
                         .HasColumnType("datetime(6)");
 
@@ -186,12 +196,59 @@ namespace Aegis.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("JobRoleId");
+
                     b.HasIndex("TenantId");
 
                     b.HasIndex("UserId")
                         .IsUnique();
 
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("Aegis.Model.Employee.EmployeeAppRoleMap", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("AppRoleId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime?>("AssignedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid?>("AssignedById")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("EmployeeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<bool>("IsEnabled")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime?>("UnassignedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid?>("UnassignedById")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppRoleId");
+
+                    b.HasIndex("AssignedById");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("TenantId");
+
+                    b.HasIndex("UnassignedById");
+
+                    b.ToTable("EmployeeAppRoleMaps");
                 });
 
             modelBuilder.Entity("Aegis.Model.Master.ApplicationRole", b =>
@@ -1295,7 +1352,7 @@ namespace Aegis.DataAccess.Migrations
                             IsSystemTenant = true,
                             Locale = "en-IN",
                             Name = "Code Dev",
-                            OnboardingDate = new DateTime(2026, 8, 24, 17, 41, 56, 676, DateTimeKind.Utc).AddTicks(8739),
+                            OnboardingDate = new DateTime(2026, 8, 27, 19, 12, 57, 636, DateTimeKind.Utc).AddTicks(5395),
                             Status = 1,
                             TimeZone = "Asia/Kolkata"
                         });
@@ -1446,6 +1503,12 @@ namespace Aegis.DataAccess.Migrations
 
             modelBuilder.Entity("Aegis.Model.Employee.Employee", b =>
                 {
+                    b.HasOne("Aegis.Model.Master.JobRole", "JobRole")
+                        .WithMany()
+                        .HasForeignKey("JobRoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Aegis.Model.TenantModels.Tenant", "Tenant")
                         .WithMany()
                         .HasForeignKey("TenantId")
@@ -1458,9 +1521,50 @@ namespace Aegis.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("JobRole");
+
                     b.Navigation("Tenant");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Aegis.Model.Employee.EmployeeAppRoleMap", b =>
+                {
+                    b.HasOne("Aegis.Model.Master.ApplicationRole", "ApplicationRole")
+                        .WithMany()
+                        .HasForeignKey("AppRoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aegis.Model.Employee.Employee", "AssignedBy")
+                        .WithMany()
+                        .HasForeignKey("AssignedById");
+
+                    b.HasOne("Aegis.Model.Employee.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aegis.Model.TenantModels.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aegis.Model.Employee.Employee", "ReassignedBy")
+                        .WithMany()
+                        .HasForeignKey("UnassignedById");
+
+                    b.Navigation("ApplicationRole");
+
+                    b.Navigation("AssignedBy");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("ReassignedBy");
+
+                    b.Navigation("Tenant");
                 });
 
             modelBuilder.Entity("Aegis.Model.Master.ApplicationRole", b =>

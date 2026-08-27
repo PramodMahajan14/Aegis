@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aegis.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260821202434_seed_system_tenant_e")]
-    partial class seed_system_tenant_e
+    [Migration("20260827191257_MakeUnassignedColumnsNullable")]
+    partial class MakeUnassignedColumnsNullable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -148,6 +148,10 @@ namespace Aegis.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
@@ -169,6 +173,12 @@ namespace Aegis.DataAccess.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<bool>("IsSystem")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<Guid>("JobRoleId")
+                        .HasColumnType("char(36)");
+
                     b.Property<DateTime>("JoiningDate")
                         .HasColumnType("datetime(6)");
 
@@ -189,12 +199,59 @@ namespace Aegis.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("JobRoleId");
+
                     b.HasIndex("TenantId");
 
                     b.HasIndex("UserId")
                         .IsUnique();
 
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("Aegis.Model.Employee.EmployeeAppRoleMap", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("AppRoleId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime?>("AssignedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid?>("AssignedById")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("EmployeeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<bool>("IsEnabled")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime?>("UnassignedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid?>("UnassignedById")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppRoleId");
+
+                    b.HasIndex("AssignedById");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("TenantId");
+
+                    b.HasIndex("UnassignedById");
+
+                    b.ToTable("EmployeeAppRoleMaps");
                 });
 
             modelBuilder.Entity("Aegis.Model.Master.ApplicationRole", b =>
@@ -206,6 +263,9 @@ namespace Aegis.DataAccess.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<bool>("IsSystem")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -273,6 +333,33 @@ namespace Aegis.DataAccess.Migrations
                     b.ToTable("Features");
 
                     b.HasData(
+                        new
+                        {
+                            Id = new Guid("604fb10f-8b94-45d4-a2fc-914a4e4fe021"),
+                            Description = "Create, view, update and manage client.",
+                            IsActive = false,
+                            Key = "client_management",
+                            ModuleId = new Guid("ecddab43-7ba2-4b17-b5f3-5f3639b5a1bd"),
+                            Name = "Client Management"
+                        },
+                        new
+                        {
+                            Id = new Guid("eea8aad9-986e-4372-89ee-9027c0c6ded5"),
+                            Description = "Create, view, update and manage client relation.",
+                            IsActive = false,
+                            Key = "client_relationship",
+                            ModuleId = new Guid("ecddab43-7ba2-4b17-b5f3-5f3639b5a1bd"),
+                            Name = "Client Relationship"
+                        },
+                        new
+                        {
+                            Id = new Guid("3a5f1730-e80a-4502-80d3-9cb07d30891b"),
+                            Description = "Create, view, update and manage client activites.",
+                            IsActive = false,
+                            Key = "client_activities",
+                            ModuleId = new Guid("ecddab43-7ba2-4b17-b5f3-5f3639b5a1bd"),
+                            Name = "Client Activities"
+                        },
                         new
                         {
                             Id = new Guid("9ce21b3c-baf9-4ebe-9219-ff08cae22f1b"),
@@ -991,6 +1078,48 @@ namespace Aegis.DataAccess.Migrations
                     b.HasIndex("FeatureId");
 
                     b.ToTable("FeaturePermissions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("90d434d9-e3cb-4c79-b155-b1101a584f32"),
+                            DefaultValue = true,
+                            Description = "Create Client",
+                            FeatureId = new Guid("604fb10f-8b94-45d4-a2fc-914a4e4fe021"),
+                            IsEnabled = true,
+                            Key = "client.create",
+                            Name = "Client Create"
+                        },
+                        new
+                        {
+                            Id = new Guid("1030e239-23a1-47c7-bdb6-92697d119ecf"),
+                            DefaultValue = true,
+                            Description = "Update Client",
+                            FeatureId = new Guid("604fb10f-8b94-45d4-a2fc-914a4e4fe021"),
+                            IsEnabled = true,
+                            Key = "client.update",
+                            Name = "Client Update"
+                        },
+                        new
+                        {
+                            Id = new Guid("b67d67a8-1acf-4cef-b15d-0bda20ab0212"),
+                            DefaultValue = true,
+                            Description = "Delete Client",
+                            FeatureId = new Guid("604fb10f-8b94-45d4-a2fc-914a4e4fe021"),
+                            IsEnabled = true,
+                            Key = "client.update",
+                            Name = "Client Delete"
+                        },
+                        new
+                        {
+                            Id = new Guid("b0d0e81f-7ca5-49e4-81f9-52174674c766"),
+                            DefaultValue = true,
+                            Description = "View Client",
+                            FeatureId = new Guid("604fb10f-8b94-45d4-a2fc-914a4e4fe021"),
+                            IsEnabled = true,
+                            Key = "client.view",
+                            Name = "Client View"
+                        });
                 });
 
             modelBuilder.Entity("Aegis.Model.Master.JobRole", b =>
@@ -1040,6 +1169,13 @@ namespace Aegis.DataAccess.Migrations
                     b.ToTable("Modules");
 
                     b.HasData(
+                        new
+                        {
+                            Id = new Guid("ecddab43-7ba2-4b17-b5f3-5f3639b5a1bd"),
+                            Description = "Manage potential customers and business opportunities.",
+                            Key = "client",
+                            Name = "Clients"
+                        },
                         new
                         {
                             Id = new Guid("6b4c01ba-8aa4-47ed-8ea2-1dc7fa5cd638"),
@@ -1219,7 +1355,7 @@ namespace Aegis.DataAccess.Migrations
                             IsSystemTenant = true,
                             Locale = "en-IN",
                             Name = "Code Dev",
-                            OnboardingDate = new DateTime(2026, 8, 21, 20, 24, 34, 178, DateTimeKind.Utc).AddTicks(3415),
+                            OnboardingDate = new DateTime(2026, 8, 27, 19, 12, 57, 636, DateTimeKind.Utc).AddTicks(5395),
                             Status = 1,
                             TimeZone = "Asia/Kolkata"
                         });
@@ -1370,6 +1506,12 @@ namespace Aegis.DataAccess.Migrations
 
             modelBuilder.Entity("Aegis.Model.Employee.Employee", b =>
                 {
+                    b.HasOne("Aegis.Model.Master.JobRole", "JobRole")
+                        .WithMany()
+                        .HasForeignKey("JobRoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Aegis.Model.TenantModels.Tenant", "Tenant")
                         .WithMany()
                         .HasForeignKey("TenantId")
@@ -1382,9 +1524,50 @@ namespace Aegis.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("JobRole");
+
                     b.Navigation("Tenant");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Aegis.Model.Employee.EmployeeAppRoleMap", b =>
+                {
+                    b.HasOne("Aegis.Model.Master.ApplicationRole", "ApplicationRole")
+                        .WithMany()
+                        .HasForeignKey("AppRoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aegis.Model.Employee.Employee", "AssignedBy")
+                        .WithMany()
+                        .HasForeignKey("AssignedById");
+
+                    b.HasOne("Aegis.Model.Employee.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aegis.Model.TenantModels.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aegis.Model.Employee.Employee", "ReassignedBy")
+                        .WithMany()
+                        .HasForeignKey("UnassignedById");
+
+                    b.Navigation("ApplicationRole");
+
+                    b.Navigation("AssignedBy");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("ReassignedBy");
+
+                    b.Navigation("Tenant");
                 });
 
             modelBuilder.Entity("Aegis.Model.Master.ApplicationRole", b =>

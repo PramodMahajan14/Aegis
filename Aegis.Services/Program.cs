@@ -14,6 +14,40 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+#region Logger
+
+builder.Host.UseSerilog((context, config) =>
+{
+    config.ReadFrom.Configuration(context.Configuration);
+});
+
+#endregion
+
+#region CORS
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("DevCorsPolicy", policy =>
+    {
+
+        var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? Array.Empty<string>();
+        policy.WithOrigins(allowedOrigins) // Your exact frontend origin
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // Required if your login endpoint sets cookies
+    });
+});
+
+
+#endregion
+
+builder.Services.AddHostedService<ConfigSystemUser>();
+
+
+
+// This scans your current project for any Handlers and registers them automatically.
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
 #region Add Services
 
 // Controllers
@@ -48,26 +82,13 @@ builder.Services
 
 
 
-// await using (var scope = app.Services.CreateAsyncScope())
-// {
-//     var seeder = scope.ServiceProvider
-//         .GetRequiredService<IDatabaseSeeder>();
 
-//     await seeder.SeedAsync();
-// }
 
 
 
 builder.Services.AddHttpContextAccessor();
 
-# region Looger
 
-builder.Host.UseSerilog((context, config) =>
-{
-   config.ReadFrom.Configuration(context.Configuration); 
-});
-
-#endregion
 
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
@@ -108,23 +129,23 @@ builder.Services
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(jwtSettings.Key))
         };
-            options.Events = new JwtBearerEvents
-    {
-        OnChallenge = async context =>
+        options.Events = new JwtBearerEvents
         {
-            context.HandleResponse();
+            OnChallenge = async context =>
+            {
+                context.HandleResponse();
 
-            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-            context.Response.ContentType = "application/json";
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                context.Response.ContentType = "application/json";
 
-            var response = ApiResponse<object>.ErrorResponse(
-                "Unauthorized",
-                "Access token is invalid or expired.",
-                StatusCodes.Status401Unauthorized);
+                var response = ApiResponse<object>.ErrorResponse(
+                    "Unauthorized",
+                    "Access token is invalid or expired.",
+                    StatusCodes.Status401Unauthorized);
 
-            await context.Response.WriteAsJsonAsync(response);
-        }
-    };
+                await context.Response.WriteAsJsonAsync(response);
+            }
+        };
     });
 
 // Authorization
@@ -158,7 +179,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+// CRITICAL: Must be exactly here (after routing, before auth)
+app.UseCors("DevCorsPolicy"); 
 app.UseSerilogRequestLogging();
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();

@@ -1,6 +1,6 @@
 using Aegis.DataAccess.DataSeeder;
 using Aegis.Model.Auth;
-using Aegis.Model.Employee;
+using Aegis.Model.EmployeeModels;
 using Aegis.Model.Master;
 using Aegis.Model.OrganizationModel;
 using Aegis.Utility.Common;
@@ -19,7 +19,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
    
+   #region Organization 
     public DbSet<Organization> Organizations { get; set; }
+    public DbSet<EmployeeOrganization> EmployeeOrganizations {get;set;}
+
+    #endregion
 
     #region Master
     public DbSet<Module> Modules { get; set; }
@@ -28,6 +32,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ApplicationRole> ApplicationRoles { get; set; }
     public DbSet<JobRole> JobRoles { get; set; }
     public DbSet<ApplicationRolePermisson> ApplicationRolePermissons { get; set; }
+    public DbSet<OrganizationType> OrganizationTypes {get;set;}
 
     #endregion
    
@@ -45,6 +50,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         ModuleSeeder.Seed(modelBuilder);
         FeatureSeeder.Seed(modelBuilder);
         PermissionSeeder.Seed(modelBuilder);
+        OrganizationTypeSeeder.Seed(modelBuilder);
         
         modelBuilder.Entity<Organization>().HasData(
             new Organization
@@ -57,6 +63,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 DomainName = SystemConfigInstance.DomainName,
                 OnboardingDate = DateTime.UtcNow,
                 IsSystemTenant = true,
+                OrganizationTypeId = OrganizationTypeMaser.Direct
                 
             }
         );

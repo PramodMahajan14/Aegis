@@ -1,10 +1,14 @@
 
+using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
 using Aegis.Model.DTO.Auth;
+using Aegis.Model.EmployeeModels;
+using Aegis.Model.OrganizationModel;
 using Aegis.Services.Helper;
 using Aegis.Services.Services.Interfaces;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aegis.Services.Services
 {
@@ -17,10 +21,11 @@ namespace Aegis.Services.Services
         private readonly EmployeeHelper _employeeHelper;
         private readonly UserHelper _userHelper;
         private readonly ILoggingService _logger;
+        private readonly ApplicationDbContext _context;
 
 
         public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager,
-        RefreshTokenService refreshTokenService, UserHelper userHelper, EmployeeHelper emphelper, ILoggingService logger)
+        RefreshTokenService refreshTokenService, UserHelper userHelper, EmployeeHelper emphelper, ApplicationDbContext context, ILoggingService logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -28,6 +33,7 @@ namespace Aegis.Services.Services
             _refreshTokenService = refreshTokenService;
             _userHelper = userHelper;
             _employeeHelper = emphelper;
+            _context = context;
             _logger = logger;
         }
 
@@ -169,6 +175,38 @@ namespace Aegis.Services.Services
             }
         }
 
+
+        public async Task<ApiResponse<object>> GetWorkSpacesAsync(string userId)
+        {
+
+            var employee = await _employeeHelper.GetEmployeeByUserId(userId);
+
+            if(employee == null)
+            {
+                return ApiResponse<object>.ErrorResponse("Employee not found");
+            }
+            var assignedOrganizationIds =
+                await _employeeHelper.GetOrganizationsByEmployeeAsync(employee.Id);
+
+            if (!assignedOrganizationIds.Any())
+           
+            {
+                assignedOrganizationIds.Add(employee.OrganizationId);
+            }
+
+            var workspaces = await _context.Organizations
+                .Where(o => assignedOrganizationIds.Contains(o.Id))
+                .Select(o => new
+                {
+                    Id = o.Id,
+                    Name = o.Name
+                })
+                .ToListAsync();
+
+            return ApiResponse<object>.SuccessResponse(
+                workspaces,
+                "Workspaces retrieved successfully.");
+        }
         public async Task<ApiResponse<object>> Profile()
         {
             var currentuser = await _userHelper.GetCurrentUserAsync();

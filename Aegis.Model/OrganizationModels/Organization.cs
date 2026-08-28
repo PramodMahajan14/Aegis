@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using Aegis.Model.Master;
 using Aegis.Utility.Enum;
 namespace Aegis.Model.OrganizationModel
@@ -32,6 +33,11 @@ namespace Aegis.Model.OrganizationModel
 
         public DateTime OnboardingDate { get; set; }
 
+        public Guid OrganizationTypeId { get; set; }
+
+        [ForeignKey(nameof(OrganizationTypeId))]
+        public OrganizationType OrganizationType { get; set; } = null!;
+
         public DateTime? SuspendedAt { get; set; }
 
         public DateTime? DeactivatedAt { get; set; }
@@ -46,16 +52,16 @@ namespace Aegis.Model.OrganizationModel
         // Special tenant
         public bool IsSystemTenant { get; set; }
 
-        public bool IsActive {get;set;}
+        public bool IsActive { get; set; }
 
         // Audit
         public DateTime CreatedAt { get; set; }
 
         public DateTime? UpdatedAt { get; set; }
 
-        public ICollection<ApplicationRole> ApplicationRoles {get;set;} = new List<ApplicationRole>();
+        public ICollection<ApplicationRole> ApplicationRoles { get; set; } = new List<ApplicationRole>();
 
-        public ICollection<JobRole> JobRoles {get;set;} = new List<JobRole>();
+        public ICollection<JobRole> JobRoles { get; set; } = new List<JobRole>();
     }
 
 }

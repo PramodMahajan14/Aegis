@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Linq.Expressions;
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
-using Aegis.Model.Employee;
+using Aegis.Model.EmployeeModels;
 using Aegis.Model.Master;
 using Aegis.Services.Services.Interfaces;
 using Aegis.Utility.Common;

@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
-using Aegis.Model.Employee;
+using Aegis.Model.EmployeeModels;
 using Aegis.Model.Master;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
@@ -44,14 +44,14 @@ namespace Aegis.Services.Helper
     public async Task<Employee> GetCurrentEmployeeAsync()
     {
       var user = await GetCurrentUserAsync();
-      var tenantId = GetCurrentTenant();
+      var OrganizationId = GetCurrentTenant();
 
-      if (user == null || tenantId == Guid.Empty) return new Employee { };
+      if (user == null || OrganizationId == Guid.Empty) return new Employee { };
 
       var Employee = await _context.Employees.AsNoTracking()
       .Include(a => a.User)
       .Include(a => a.JobRole)
-      .FirstOrDefaultAsync(a => a.UserId == user.Id && a.IsActive && a.OrganizationId == tenantId);
+      .FirstOrDefaultAsync(a => a.UserId == user.Id && a.IsActive && a.OrganizationId == OrganizationId);
       return Employee ?? new Employee { };
 
     }

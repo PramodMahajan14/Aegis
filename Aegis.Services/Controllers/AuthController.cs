@@ -1,4 +1,5 @@
 using Aegis.Model.DTO.Auth;
+using Aegis.Services.Helper;
 using Aegis.Services.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,12 @@ public class AuthController : ControllerBase
 {
 
     private readonly IAuthService _authService;
+    public readonly UserHelper _helper;
 
-    public AuthController(IAuthService authService)
+    public AuthController(IAuthService authService, UserHelper helper)
     {
         _authService = authService;
+        _helper = helper;
     }
 
 
@@ -36,6 +39,28 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login([FromBody] LoginDto login)
     {
         var response = await _authService.LoginAsync(login);
+
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+        return BadRequest(response);
+    }
+
+
+    [Authorize]
+    [HttpGet("get/workspace")]
+    public async Task<IActionResult> WorkSpace()
+    {
+
+
+        var user = await _helper.GetCurrentUserAsync();
+
+        if (user == null)
+        {
+            return BadRequest("Employee not found");
+        }
+        var response = await _authService.GetWorkSpacesAsync(user.Id);
 
         if (response.Success)
         {

@@ -3,7 +3,7 @@ using Aegis.Model.Master;
 using Aegis.Model.OrganizationModel;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Aegis.Model.Employee
+namespace Aegis.Model.EmployeeModels
 {
     public class EmployeeAppRoleMap:OrganizationRelation
     {

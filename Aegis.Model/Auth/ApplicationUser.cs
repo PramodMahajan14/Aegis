@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Identity;
-using Aegis.Model.Employee;
+using Aegis.Model.EmployeeModels;
 namespace Aegis.Model.Auth;
 
 public class ApplicationUser : IdentityUser
@@ -17,5 +17,5 @@ public class ApplicationUser : IdentityUser
 
     public Boolean IsRootUser {get;set;}
 
-    public Aegis.Model.Employee.Employee? Employee {get;set;}
+    public Aegis.Model.EmployeeModels.Employee? Employee {get;set;}
 }

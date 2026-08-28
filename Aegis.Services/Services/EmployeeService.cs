@@ -2,7 +2,7 @@ using System.Net.Mail;
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
 using Aegis.Model.DTO.Employee;
-using Aegis.Model.Employee;
+using Aegis.Model.EmployeeModels;
 using Aegis.Model.Vm.Employee;
 using Aegis.Services.Services.Interfaces;
 using Aegis.Utility.Common;

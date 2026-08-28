@@ -26,6 +26,12 @@ namespace Aegis.Utility.Common
         public static Guid OrganizationId => Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
     }
 
+    public static class OrganizationTypeMaser
+    {
+        public static readonly Guid Direct = Guid.Parse("1f22266a-9a9d-4768-a9b8-c328dc9bdd7b");
+        public static readonly Guid Agency = Guid.Parse("50da9d49-1386-4268-b45f-b7e8a103fd78");
+    }
+
     public static class ModuleMaster
     {
         public static readonly Guid Clients = Guid.Parse("ecddab43-7ba2-4b17-b5f3-5f3639b5a1bd");

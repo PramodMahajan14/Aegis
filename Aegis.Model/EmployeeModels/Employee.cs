@@ -6,7 +6,7 @@ using Aegis.Utility.Enum;
 using Aegis.Model.OrganizationModel;
 using Aegis.Model.Master;
 
-namespace Aegis.Model.Employee
+namespace Aegis.Model.EmployeeModels
 {
     public class Employee : BaseCreateUpdate
     {

@@ -51,7 +51,7 @@ namespace Aegis.Services.Helper
       var Employee = await _context.Employees.AsNoTracking()
       .Include(a => a.User)
       .Include(a => a.JobRole)
-      .FirstOrDefaultAsync(a => a.UserId == user.Id && a.IsActive && a.TenantId == tenantId);
+      .FirstOrDefaultAsync(a => a.UserId == user.Id && a.IsActive && a.OrganizationId == tenantId);
       return Employee ?? new Employee { };
 
     }

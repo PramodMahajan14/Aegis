@@ -1,8 +1,9 @@
-using Aegis.Model.TenantModels;
+
+using Aegis.Model.OrganizationModel;
 
 namespace Aegis.Model.Master
 {
-    public class JobRole : TenantRelation
+    public class JobRole : OrganizationRelation
     {
         public Guid Id {get;set;}
 

@@ -1,8 +1,10 @@
-using Aegis.Model.TenantModels;
+
+
+using Aegis.Model.OrganizationModel;
 
 namespace Aegis.Model.Master
 {
-    public class ApplicationRole : TenantRelation
+    public class ApplicationRole : OrganizationRelation
     {
         public Guid Id {get;set;}
 

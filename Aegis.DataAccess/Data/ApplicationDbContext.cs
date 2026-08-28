@@ -2,7 +2,7 @@ using Aegis.DataAccess.DataSeeder;
 using Aegis.Model.Auth;
 using Aegis.Model.Employee;
 using Aegis.Model.Master;
-using Aegis.Model.TenantModels;
+using Aegis.Model.OrganizationModel;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
    
-    public DbSet<Tenant> Tenants { get; set; }
+    public DbSet<Organization> Organizations { get; set; }
 
     #region Master
     public DbSet<Module> Modules { get; set; }
@@ -46,10 +46,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         FeatureSeeder.Seed(modelBuilder);
         PermissionSeeder.Seed(modelBuilder);
         
-        modelBuilder.Entity<Tenant>().HasData(
-            new Tenant
+        modelBuilder.Entity<Organization>().HasData(
+            new Organization
             {
-                Id = SystemConfigInstance.TenantId,
+                Id = SystemConfigInstance.OrganizationId,
                 Name = SystemConfigInstance.Name,
                 Email = SystemConfigInstance.Email,
                 ContactPerson = SystemConfigInstance.ContactPerson,

@@ -1,8 +1,8 @@
 using Aegis.Model.Master;
 using Aegis.Utility.Enum;
-namespace Aegis.Model.TenantModels
+namespace Aegis.Model.OrganizationModel
 {
-    public class Tenant
+    public class Organization
     {
         // Identity
         public Guid Id { get; set; }

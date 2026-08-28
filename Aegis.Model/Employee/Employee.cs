@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Aegis.Model.Auth;
 using Aegis.Utility.Enum;
-using Aegis.Model.TenantModels;
+using Aegis.Model.OrganizationModel;
 using Aegis.Model.Master;
 
 namespace Aegis.Model.Employee
@@ -42,11 +42,11 @@ namespace Aegis.Model.Employee
         [ForeignKey(nameof(UserId))]
         public ApplicationUser User { get; set; } = null!;
 
-        public Guid TenantId { get; set; }
+        public Guid OrganizationId { get; set; }
 
         [ValidateNever]
-        [ForeignKey("TenantId")]
-        public Tenant? Tenant { get; set; } = null!;
+        [ForeignKey("OrganizationId")]
+        public Organization? Organization { get; set; } = null!;
 
 
     }

@@ -8,7 +8,7 @@ namespace Aegis.Utility.Common
         public string Password { get; set; } = "User@123";
         public string JobRole = "Admin";
         public string SuperAdminRole = "SUPER_ADMIN";
-        public Guid TenantId { get; set; } = Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
+        public Guid OrganizationId { get; set; } = Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
     }
 
     public static class SystemConfigInstance
@@ -23,7 +23,7 @@ namespace Aegis.Utility.Common
         public const string ContactNumber = "9022471779";
         public const string DomainName = "codedev.in";
         public const string Name = "Code Dev";
-        public static Guid TenantId => Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
+        public static Guid OrganizationId => Guid.Parse("c84c9fae-750c-4327-b3fd-338517be8161");
     }
 
     public static class ModuleMaster

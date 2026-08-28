@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Aegis.Model.Master;
-using Aegis.Model.TenantModels;
+using Aegis.Model.OrganizationModel;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Aegis.Model.Employee
 {
-    public class EmployeeAppRoleMap:TenantRelation
+    public class EmployeeAppRoleMap:OrganizationRelation
     {
         public Guid Id {get;set;}
 

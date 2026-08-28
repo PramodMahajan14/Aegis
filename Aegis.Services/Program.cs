@@ -105,62 +105,68 @@ var jwtSettings = builder.Configuration
     .Get<JwtSettings>()
     ?? throw new InvalidOperationException("Jwt settings are missing.");
 
-builder.Services.AddSingleton(jwtSettings);
+if (jwtSettings != null && jwtSettings.Key != null)
+{
+    builder.Services.AddSingleton(jwtSettings);
 
-// Authentication
-builder.Services
-    .AddAuthentication(options =>
-    {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
+    // Authentication
+    builder.Services
+        .AddAuthentication(options =>
         {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-
-            ValidIssuer = jwtSettings.Issuer,
-            ValidAudience = jwtSettings.Audience,
-
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(jwtSettings.Key))
-        };
-        options.Events = new JwtBearerEvents
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer(options =>
         {
-            OnChallenge = async context =>
+            options.TokenValidationParameters = new TokenValidationParameters
             {
-                context.HandleResponse();
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
 
-                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                context.Response.ContentType = "application/json";
+                ValidIssuer = jwtSettings.Issuer,
+                ValidAudience = jwtSettings.Audience,
 
-                var response = ApiResponse<object>.ErrorResponse(
-                    "Unauthorized",
-                    "Access token is invalid or expired.",
-                    StatusCodes.Status401Unauthorized);
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(jwtSettings.Key))
+            };
+            options.Events = new JwtBearerEvents
+            {
+                OnChallenge = async context =>
+                {
+                    context.HandleResponse();
 
-                await context.Response.WriteAsJsonAsync(response);
-            }
-        };
-    });
+                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    context.Response.ContentType = "application/json";
 
-// Authorization
+                    var response = ApiResponse<object>.ErrorResponse(
+                        "Unauthorized",
+                        "Access token is invalid or expired.",
+                        StatusCodes.Status401Unauthorized);
+
+                    await context.Response.WriteAsJsonAsync(response);
+                }
+            };
+        });
+
+    // Authorization
+}
 builder.Services.AddAuthorization();
 
 #endregion
 
-#region ===================Dependency Injection
+#region Services
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<RefreshTokenService>();
 builder.Services.AddScoped<IEmployee, EmployeeService>();
-builder.Services.AddScoped<ILoggingService, LoggingService>();
+// builder.Services.AddScoped<ILoggingService, LoggingService>();
 builder.Services.AddScoped<UserHelper>();
+builder.Services.AddScoped<EmployeeHelper>();
 
+
+builder.Services.AddSingleton<ILoggingService, LoggingService>();
 #endregion
 
 #region ===================== Swagger
@@ -180,7 +186,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 // CRITICAL: Must be exactly here (after routing, before auth)
-app.UseCors("DevCorsPolicy"); 
+app.UseCors("DevCorsPolicy");
 app.UseSerilogRequestLogging();
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();

@@ -14,19 +14,23 @@ namespace Aegis.Services.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-
+        private readonly EmployeeHelper _employeeHelper;
         private readonly UserHelper _userHelper;
+        private readonly ILoggingService _logger;
 
 
-        public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, RefreshTokenService refreshTokenService, UserHelper userHelper)
+        public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager,
+        RefreshTokenService refreshTokenService, UserHelper userHelper, EmployeeHelper emphelper, ILoggingService logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _refreshTokenService = refreshTokenService;
             _userHelper = userHelper;
+            _employeeHelper = emphelper;
+            _logger = logger;
         }
-       
+
 
         public async Task<ApiResponse<object>> RegisterAsync(RegisterDto model)
         {
@@ -34,7 +38,7 @@ namespace Aegis.Services.Services
             {
                 throw new ArgumentNullException(nameof(model));
             }
-                
+
             if (string.IsNullOrWhiteSpace(model.FirstName) || string.IsNullOrWhiteSpace(model.LastName))
             {
                 return ApiResponse<object>.ErrorResponse("Invalid request", "FirstName and LastName is required", 404);
@@ -102,6 +106,7 @@ namespace Aegis.Services.Services
                 // Check user status
                 if (!user.IsActive)
                 {
+                    _logger.LogWarning("Login failed: User is blocked: {email} ", model.Email);
                     return ApiResponse<object>.ErrorResponse(
                         "Account disabled",
                         "Your account has been deactivated.",
@@ -116,11 +121,22 @@ namespace Aegis.Services.Services
 
                 if (!passwordResult.Succeeded)
                 {
+                    _logger.LogWarning("Login failed: Invalid credentials for UserName or Email: {email}", model.Email);
                     return ApiResponse<object>.ErrorResponse(
                         "Invalid credentials",
                         "Invalid email or password.",
                         401);
                 }
+
+
+                var employee = await _employeeHelper.GetEmployeeByUserId(user.Id);
+
+                if (employee == null)
+                {
+                    _logger.LogWarning("Login failed: No employee record found for UserId: {UserId}", user.Id);
+                    return ApiResponse<object>.ErrorResponse("Employee not found", 404);
+                }
+
 
                 // Generate tokens
                 var accessToken = _refreshTokenService.GenerateAccessToken(user);
@@ -133,11 +149,10 @@ namespace Aegis.Services.Services
                 // Response
                 var response = new
                 {
-
                     AccessToken = accessToken,
                     RefreshToken = refreshToken
                 };
-
+                _logger.LogInfo("Login Successfully, Employee : {EmployeeId} , UserId :{UserId}", employee.Id, user.Id);
                 return ApiResponse<object>.SuccessResponse(
                     response,
                     "Login successful.",
@@ -145,6 +160,8 @@ namespace Aegis.Services.Services
             }
             catch (Exception ex)
             {
+
+                _logger.LogError(ex, "Unexpected error during login");
                 return ApiResponse<object>.ErrorResponse(
                     "Internal server error.",
                     ex.Message,
@@ -152,18 +169,18 @@ namespace Aegis.Services.Services
             }
         }
 
-       public async Task<ApiResponse<object>> Profile()
+        public async Task<ApiResponse<object>> Profile()
         {
             var currentuser = await _userHelper.GetCurrentUserAsync();
 
-            if(currentuser == null)
-             return ApiResponse<object>.ErrorResponse("Invalid request","Please login again - 1",404);
+            if (currentuser == null)
+                return ApiResponse<object>.ErrorResponse("Invalid request", "Please login again - 1", 404);
 
             var user = await _userManager.FindByIdAsync(currentuser.Id);
 
-            if(user == null)
+            if (user == null)
             {
-                return ApiResponse<object>.ErrorResponse("User not found","Please login again - 2",404);
+                return ApiResponse<object>.ErrorResponse("User not found", "Please login again - 2", 404);
             }
 
             var response = new UserProfileVm()
@@ -174,9 +191,9 @@ namespace Aegis.Services.Services
                 Email = user.Email ?? string.Empty,
             };
 
-            return ApiResponse<object>.SuccessResponse(response,"user Fetch successfully",200);
+            return ApiResponse<object>.SuccessResponse(response, "user Fetch successfully", 200);
         }
 
-        
+
     }
 }

@@ -620,3 +620,22 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
 2026-08-28 00:43:29.149 [INF] Added 4 new permissons to Supper ApplicationRole
 2026-08-28 00:43:29.327 [INF] Super Admin user created successfully.
 2026-08-28 01:23:55.811 [INF] HTTP POST /api/auth/login responded 400 in 359.2829 ms
+2026-08-28 22:29:37.020 [INF] Starting database seeding process...
+2026-08-28 22:30:08.884 [INF] HTTP POST /api/auth/login responded 400 in 238.1725 ms
+2026-08-28 22:30:44.087 [WRN] Login failed: User is blocked: codedev90@gmail.com 
+2026-08-28 22:30:44.089 [INF] HTTP POST /api/auth/login responded 400 in 103.3982 ms
+2026-08-28 22:31:50.556 [WRN] Login failed: Invalid credentials for UserName or Email: codedev90@gmail.com
+2026-08-28 22:31:50.557 [INF] HTTP POST /api/auth/login responded 400 in 99.4387 ms
+2026-08-28 22:32:02.691 [WRN] Login failed: Invalid credentials for UserName or Email: codedev90@gmail.com
+2026-08-28 22:32:02.692 [INF] HTTP POST /api/auth/login responded 400 in 71.7376 ms
+2026-08-28 22:32:48.253 [WRN] Login failed: No employee record found for UserId: c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-28 22:32:48.257 [INF] HTTP POST /api/auth/login responded 400 in 119.2066 ms
+2026-08-28 22:33:52.799 [WRN] Login failed: No employee record found for UserId: c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-28 22:33:52.800 [INF] HTTP POST /api/auth/login responded 400 in 69.3009 ms
+2026-08-28 22:42:45.155 [INF] Starting database seeding process...
+2026-08-28 22:43:26.943 [WRN] Login failed: No employee record found for UserId: c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-28 22:43:26.998 [INF] HTTP POST /api/auth/login responded 400 in 591.4541 ms
+2026-08-28 22:49:55.215 [WRN] Login failed: No employee record found for UserId: c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-28 22:49:55.220 [INF] HTTP POST /api/auth/login responded 400 in 339304.0429 ms
+2026-08-28 22:50:12.472 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-28 22:50:12.477 [INF] HTTP POST /api/auth/login responded 200 in 708.7836 ms

@@ -32,7 +32,7 @@ namespace Aegis.Services.Services
 
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
             var dbContext = serviceProvider.GetRequiredService<ApplicationDbContext>();
-            var tenant = serviceProvider.GetRequiredService<IOptions<SystemConfig>>().Value;
+            var organization = serviceProvider.GetRequiredService<IOptions<SystemConfig>>().Value;
 
             await using var transaction = await dbContext.Database.BeginTransactionAsync(cancellation);
 
@@ -40,13 +40,13 @@ namespace Aegis.Services.Services
             try
             {
 
-                var configured = await dbContext.Tenants.AnyAsync(x => x.Id == tenant.TenantId && x.IsSystemTenant && x.IsActive);
+                var configured = await dbContext.Organizations.AnyAsync(x => x.Id == organization.OrganizationId && x.IsSystemTenant && x.IsActive);
                 if (!configured)
                 {
                     return;
                 }
 
-                var user = await SeedSuperAdminUserAsync(userManager, tenant);
+                var user = await SeedSuperAdminUserAsync(userManager, organization);
 
                 if (user == null)
                 {
@@ -58,34 +58,34 @@ namespace Aegis.Services.Services
                 // 2. Seed the Job Role
                 var jobRole = await GetOrCreateAsync(
                     dbContext.JobRoles,
-                    j => j.Name == SystemConfigInstance.JobRole && j.TenantId == SystemConfigInstance.TenantId,
+                    j => j.Name == SystemConfigInstance.JobRole && j.OrganizationId == SystemConfigInstance.OrganizationId,
                     () => new JobRole
                     {
                         Name = SystemConfigInstance.JobRole,
                         Description = "Administrator with full system access.",
-                        TenantId = SystemConfigInstance.TenantId
+                        OrganizationId = SystemConfigInstance.OrganizationId
                     });
 
-                var applicationRole = await GetOrCreateAsync(dbContext.ApplicationRoles, a => a.Name == SystemConfigInstance.AppRole && a.TenantId == SystemConfigInstance.TenantId,
+                var applicationRole = await GetOrCreateAsync(dbContext.ApplicationRoles, a => a.Name == SystemConfigInstance.AppRole && a.OrganizationId == SystemConfigInstance.OrganizationId,
                 () => new ApplicationRole
                 {
                     Name = SystemConfigInstance.AppRole,
                     Description = "Administrator with full system access.",
                     IsSystem = true,
-                    TenantId = SystemConfigInstance.TenantId
+                    OrganizationId = SystemConfigInstance.OrganizationId
 
                 });
                 // 4. Seed the Employee record linked to the user and job role
                 var employee = await GetOrCreateAsync(
                     dbContext.Employees,
-                    e => e.Email == SystemConfigInstance.Email && e.TenantId == SystemConfigInstance.TenantId,
+                    e => e.Email == SystemConfigInstance.Email && e.OrganizationId == SystemConfigInstance.OrganizationId,
                     () => new Employee
                     {
                         UserId = user.Id,
                         FirstName = "Admin",
                         LastName = "User",
                         Email = SystemConfigInstance.Email,
-                        TenantId = SystemConfigInstance.TenantId,
+                        OrganizationId = SystemConfigInstance.OrganizationId,
                         ContactNumber = SystemConfigInstance.ContactNumber,
                         JobRoleId = jobRole.Id,
                         IsSystem = true,
@@ -102,7 +102,7 @@ namespace Aegis.Services.Services
                     {
                         EmployeeId = employee.Id,
                         AppRoleId = applicationRole.Id,
-                        TenantId = SystemConfigInstance.TenantId,
+                        OrganizationId = SystemConfigInstance.OrganizationId,
                         IsEnabled = true,
 
                         //  Force explicit nulls so EF Core passes standard NULL to MySQL

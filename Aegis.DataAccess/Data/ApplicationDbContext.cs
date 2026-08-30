@@ -3,6 +3,7 @@ using Aegis.Model.Auth;
 using Aegis.Model.EmployeeModels;
 using Aegis.Model.Master;
 using Aegis.Model.OrganizationModel;
+using Aegis.Model.ProspectModel;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -16,12 +17,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     }
 
-
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
-   
-   #region Organization 
+
+    #region Organization 
     public DbSet<Organization> Organizations { get; set; }
-    public DbSet<EmployeeOrganization> EmployeeOrganizations {get;set;}
+    public DbSet<EmployeeOrganization> EmployeeOrganizations { get; set; }
 
     #endregion
 
@@ -32,14 +32,20 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ApplicationRole> ApplicationRoles { get; set; }
     public DbSet<JobRole> JobRoles { get; set; }
     public DbSet<ApplicationRolePermisson> ApplicationRolePermissons { get; set; }
-    public DbSet<OrganizationType> OrganizationTypes {get;set;}
+    public DbSet<OrganizationType> OrganizationTypes { get; set; }
+
+    public DbSet<ProspectStatus> ProspectsStatus { get; set; }
 
     #endregion
-   
+
     #region Employee
     public DbSet<Employee> Employees { get; set; }
-    public DbSet<EmployeeAppRoleMap> EmployeeAppRoleMaps {get;set;}
+    public DbSet<EmployeeAppRoleMap> EmployeeAppRoleMaps { get; set; }
+    #endregion
 
+
+    #region Prospect
+    public DbSet<Prospect> Prospects { get; set; }
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -47,11 +53,13 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
         base.OnModelCreating(modelBuilder);
 
+
+        #region  System Config 
         ModuleSeeder.Seed(modelBuilder);
         FeatureSeeder.Seed(modelBuilder);
         PermissionSeeder.Seed(modelBuilder);
         OrganizationTypeSeeder.Seed(modelBuilder);
-        
+
         modelBuilder.Entity<Organization>().HasData(
             new Organization
             {
@@ -64,12 +72,16 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 OnboardingDate = DateTime.UtcNow,
                 IsSystemTenant = true,
                 OrganizationTypeId = OrganizationTypeMaser.Direct
-                
+
             }
         );
+        #endregion
 
-       
+        #region System Core Master 
 
+        ProspectStatusSeeder.Seed(modelBuilder);
+
+        #endregion
 
 
     }

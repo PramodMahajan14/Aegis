@@ -387,6 +387,23 @@ namespace Aegis.Utility.Common
 
         #endregion
     }
+
+
+
+
+
+
+    public static class ProspectsStatusMaster
+    {
+        public static readonly Guid NEW = Guid.Parse("5a311c2d-671f-4d6a-bc66-d986cba061e7");
+        public static readonly Guid ACTIVE = Guid.Parse("acb3fe0e-ab51-4303-87e9-26cb6806e81a");
+        public static readonly Guid FOLLOW_UP = Guid.Parse("1d3cb190-8420-4abd-af1f-1d1fb051be83");
+        public static readonly Guid QUALIFICATION = Guid.Parse("41474b0b-659a-4086-af0e-52a3d885dce0");
+        public static readonly Guid QUALIFIED = Guid.Parse("be1dde6e-7e16-4b75-8420-ad4e65eaae30");
+        public static readonly Guid DORMANT = Guid.Parse("506e3866-7f08-4ca5-aaad-8125bc7bb9a7");
+        public static readonly Guid DISQUALIFIED = Guid.Parse("1006820d-883e-4a5f-b607-79f368097f50");
+        public static readonly Guid CONVERTED = Guid.Parse("c5c108f2-a764-41e3-9e63-9afb7f21ea23");
+    }
 }
 
 

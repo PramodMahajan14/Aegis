@@ -1,6 +1,7 @@
 
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
+using Aegis.Model.DTO;
 using Aegis.Model.DTO.Auth;
 using Aegis.Model.EmployeeModels;
 using Aegis.Model.OrganizationModel;
@@ -8,6 +9,7 @@ using Aegis.Services.Helper;
 using Aegis.Services.Services.Interfaces;
 using Aegis.Utility.Common;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aegis.Services.Services
@@ -155,8 +157,8 @@ namespace Aegis.Services.Services
                 // Response
                 var response = new
                 {
-                    AccessToken = accessToken,
-                    RefreshToken = refreshToken
+                    accessToken = accessToken,
+                    refreshToken = refreshToken
                 };
                 _logger.LogInfo("Login Successfully, Employee : {EmployeeId} , UserId :{UserId}", employee.Id, user.Id);
                 return ApiResponse<object>.SuccessResponse(
@@ -227,7 +229,7 @@ namespace Aegis.Services.Services
                .FirstOrDefaultAsync(o => o.Id == workspaceId && o.IsActive == true);
                 if (organization == null)
                 {
-                    _logger.LogWarning( "Workspace selection failed: Organization not found or inactive. WorkspaceId {WorkspaceId}", workspaceId);
+                    _logger.LogWarning("Workspace selection failed: Organization not found or inactive. WorkspaceId {WorkspaceId}", workspaceId);
                     return ApiResponse<object>.ErrorResponse("WorkSpace not found");
                 }
 
@@ -239,7 +241,7 @@ namespace Aegis.Services.Services
                 var response = new
                 {
                     accessToken = accessToken,
-                    refreshtoken = refreshtoken
+                    refreshToken = refreshtoken
                 };
 
                 _logger.LogInfo("Workspace selection successfuly open - {organizationdId}", workspaceId);
@@ -248,6 +250,49 @@ namespace Aegis.Services.Services
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected erro occured during selection workspace");
+                return ApiResponse<object>.ErrorResponse("Internal server error", ex.Message, 500);
+
+            }
+        }
+
+        public async Task<ApiResponse<object>> RefreshToken(string refreshToken)
+        {
+            try
+            {
+                var token = await _refreshTokenService.ValidateRefreshTokenAsync(refreshToken);
+
+               
+
+                if (token == null)
+                {
+                    _logger.LogWarning("Refresh token Rotation failed: Token not found {refreshToken}", refreshToken);
+                    return ApiResponse<object>.ErrorResponse("Session is expired, Please login !", null, 401);
+                }
+                var user = await _userManager.FindByIdAsync(token.UserId);
+
+                 if (token == null)
+                {
+                    _logger.LogWarning("Refresh token Rotation failed: User not found {user}", user);
+                    return ApiResponse<object>.ErrorResponse("Session is expired, Please login !", null, 401);
+                }
+                var accessToken = _refreshTokenService.GenerateAccessToken(user);
+                var refreshtoken = _refreshTokenService.GenerateRefreshToken();
+
+                await _refreshTokenService.SaveRefreshTokenAsync(token.UserId, refreshtoken);
+
+                var response = new
+                {
+                    accessToken = accessToken,
+                    refreshtoken = refreshtoken
+                };
+
+                _logger.LogInfo("Gernerate new refresh token- " );
+                return ApiResponse<object>.SuccessResponse(response, "aaaRefresh token", 200);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected erro occured during refresToken");
                 return ApiResponse<object>.ErrorResponse("Internal server error", ex.Message, 500);
 
             }

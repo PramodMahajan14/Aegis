@@ -154,3 +154,435 @@
 2026-08-30 16:32:42.733 [INF] HTTP GET /api/auth/get-workspace responded 200 in 167.2284 ms
 2026-08-30 16:32:44.666 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
 2026-08-30 16:32:44.667 [INF] HTTP POST /api/auth/select-workspace responded 200 in 73.0302 ms
+2026-08-30 17:17:12.528 [INF] Starting database seeding process...
+2026-08-30 17:17:14.083 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-08-30 17:17:14.254 [INF] Super Admin user already exists.
+2026-08-30 17:17:14.660 [INF] Super Application Role already has all permisson
+2026-08-30 17:17:14.803 [INF] Super Admin user created successfully.
+2026-08-30 17:17:38.514 [INF] HTTP GET /api/auth/csrf responded 404 in 35.9725 ms
+2026-08-30 17:17:38.642 [INF] HTTP POST /api/auth/refresh responded 401 in 93.8231 ms
+2026-08-30 17:17:54.649 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:17:54.664 [INF] HTTP POST /api/auth/login responded 200 in 710.9721 ms
+2026-08-30 17:17:55.399 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:17:55.416 [INF] HTTP GET /api/auth/get-workspace responded 200 in 704.3012 ms
+2026-08-30 17:17:56.953 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:17:56.956 [INF] HTTP POST /api/auth/select-workspace responded 200 in 464.1607 ms
+2026-08-30 17:18:07.844 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1813 ms
+2026-08-30 17:18:07.933 [INF] HTTP POST /api/auth/refresh responded 401 in 1.0083 ms
+2026-08-30 17:19:31.259 [INF] HTTP POST /api/auth/login responded 400 in 202.0888 ms
+2026-08-30 17:19:44.759 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:19:44.759 [INF] HTTP POST /api/auth/login responded 200 in 490.6083 ms
+2026-08-30 17:19:45.154 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:19:45.154 [INF] HTTP GET /api/auth/get-workspace responded 200 in 339.2286 ms
+2026-08-30 17:20:15.748 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:20:15.749 [INF] HTTP POST /api/auth/select-workspace responded 200 in 329.6329 ms
+2026-08-30 17:20:18.524 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1136 ms
+2026-08-30 17:20:18.551 [INF] HTTP POST /api/auth/refresh responded 401 in 0.4120 ms
+2026-08-30 17:22:36.199 [INF] Starting database seeding process...
+2026-08-30 17:22:37.502 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-08-30 17:22:37.698 [INF] Super Admin user already exists.
+2026-08-30 17:22:38.106 [INF] Super Application Role already has all permisson
+2026-08-30 17:22:38.283 [INF] Super Admin user created successfully.
+2026-08-30 17:22:57.844 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:22:57.888 [INF] HTTP POST /api/auth/login responded 200 in 796.3206 ms
+2026-08-30 17:22:58.676 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:22:58.698 [INF] HTTP GET /api/auth/get-workspace responded 200 in 745.5601 ms
+2026-08-30 17:23:00.664 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:23:00.666 [INF] HTTP POST /api/auth/select-workspace responded 200 in 492.5909 ms
+2026-08-30 17:23:04.723 [INF] HTTP GET /api/auth/csrf responded 404 in 0.5109 ms
+2026-08-30 17:23:04.871 [WRN] Refresh token Rotation failed: Token not found T82L9i1CGKZT0R95_vwJ0Kvwhg2ENaE01ptn4RdchmSDgNgPok0bNKmcokk_QS1JVA7N0ghSLvnhZokxS4W_3w
+2026-08-30 17:23:04.873 [INF] HTTP POST /api/auth/refresh responded 400 in 91.3471 ms
+2026-08-30 17:23:42.890 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2377 ms
+2026-08-30 17:23:43.020 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 17:23:43.021 [INF] HTTP POST /api/auth/refresh responded 400 in 3.2579 ms
+2026-08-30 17:24:22.102 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:24:22.103 [INF] HTTP POST /api/auth/login responded 200 in 410.9923 ms
+2026-08-30 17:24:22.370 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:24:22.370 [INF] HTTP GET /api/auth/get-workspace responded 200 in 202.6001 ms
+2026-08-30 17:24:23.716 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:24:23.717 [INF] HTTP POST /api/auth/select-workspace responded 200 in 369.6538 ms
+2026-08-30 17:24:26.129 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1883 ms
+2026-08-30 17:32:48.567 [WRN] Refresh token Rotation failed: Token not found a2BaQbhIYQTjzw1eUJeZ5dxUnoy0DeeOVwauc_tmUWlozeP5c8_4ZriFkzI_aU1Yc_hcQGKpmWIqvx0j1FzTFQ
+2026-08-30 17:32:48.568 [INF] HTTP POST /api/auth/refresh responded 400 in 502344.8396 ms
+2026-08-30 17:34:52.799 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:34:56.458 [INF] HTTP POST /api/auth/login responded 200 in 85006.7985 ms
+2026-08-30 17:34:56.842 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:34:56.843 [INF] HTTP GET /api/auth/get-workspace responded 200 in 268.5057 ms
+2026-08-30 17:37:40.366 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:37:40.368 [INF] HTTP POST /api/auth/select-workspace responded 200 in 79934.1070 ms
+2026-08-30 17:38:01.937 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1209 ms
+2026-08-30 17:43:09.436 [WRN] Refresh token Rotation failed: Token not found DtqODjTMjZrcuC91Sw1OemJuEuIEQEnM2xOjshOQLC1SnnJC2dIOvbSn_WhdKrPtwDdPeUi7FJoAu3wh4H3_sA
+2026-08-30 17:43:09.481 [INF] HTTP POST /api/auth/refresh responded 400 in 307434.7648 ms
+2026-08-30 17:43:09.523 [INF] HTTP GET /api/auth/csrf responded 404 in 21.1910 ms
+2026-08-30 17:43:09.565 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1806 ms
+2026-08-30 17:43:09.565 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1188 ms
+2026-08-30 17:43:12.063 [WRN] Refresh token Rotation failed: Token not found DtqODjTMjZrcuC91Sw1OemJuEuIEQEnM2xOjshOQLC1SnnJC2dIOvbSn_WhdKrPtwDdPeUi7FJoAu3wh4H3_sA
+2026-08-30 17:43:12.064 [INF] HTTP POST /api/auth/refresh responded 400 in 2479.6149 ms
+2026-08-30 17:43:26.707 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:43:26.707 [INF] HTTP POST /api/auth/login responded 200 in 3899.0729 ms
+2026-08-30 17:43:26.838 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:43:26.839 [INF] HTTP GET /api/auth/get-workspace responded 200 in 50.6023 ms
+2026-08-30 17:43:43.060 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:43:43.061 [INF] HTTP POST /api/auth/select-workspace responded 200 in 6141.0271 ms
+2026-08-30 17:43:43.326 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:43:43.326 [INF] HTTP GET /api/auth/get-workspace responded 200 in 237.7202 ms
+2026-08-30 17:43:49.817 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1316 ms
+2026-08-30 17:43:53.911 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 17:43:53.912 [INF] HTTP POST /api/auth/refresh responded 400 in 4003.7787 ms
+2026-08-30 17:44:15.301 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:44:15.301 [INF] HTTP POST /api/auth/login responded 200 in 347.5075 ms
+2026-08-30 17:44:15.578 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:44:15.578 [INF] HTTP GET /api/auth/get-workspace responded 200 in 218.8412 ms
+2026-08-30 17:44:17.027 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:44:17.028 [INF] HTTP POST /api/auth/select-workspace responded 200 in 194.5749 ms
+2026-08-30 17:44:17.219 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:44:17.220 [INF] HTTP GET /api/auth/get-workspace responded 200 in 158.4815 ms
+2026-08-30 17:44:20.010 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2667 ms
+2026-08-30 17:44:20.119 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 17:44:20.119 [INF] HTTP POST /api/auth/refresh responded 400 in 1.3598 ms
+2026-08-30 17:47:45.692 [INF] HTTP GET /api/auth/csrf responded 404 in 0.7652 ms
+2026-08-30 17:47:45.846 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 17:47:45.847 [INF] HTTP POST /api/auth/refresh responded 400 in 2.0703 ms
+2026-08-30 17:48:07.962 [INF] HTTP GET /api/auth/csrf responded 404 in 0.9546 ms
+2026-08-30 17:48:08.079 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 17:48:08.079 [INF] HTTP POST /api/auth/refresh responded 400 in 1.3023 ms
+2026-08-30 17:50:13.466 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 17:50:13.467 [INF] HTTP POST /api/auth/login responded 200 in 454.4553 ms
+2026-08-30 17:50:13.759 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:50:13.759 [INF] HTTP GET /api/auth/get-workspace responded 200 in 219.1646 ms
+2026-08-30 17:50:14.911 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 17:50:14.911 [INF] HTTP POST /api/auth/select-workspace responded 200 in 108.0542 ms
+2026-08-30 17:50:15.181 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 17:50:15.181 [INF] HTTP GET /api/auth/get-workspace responded 200 in 251.8387 ms
+2026-08-30 17:50:19.363 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1195 ms
+2026-08-30 17:50:19.521 [WRN] Refresh token Rotation failed: Token not found VKonuTmIn4F2gjOSiZXHHXuqIU_V09Tc9FI8of0jw8eayWLmnVvFI9tr1eAMglz5QVtuxNCKp5T3jOfN0ExPdA
+2026-08-30 17:50:19.610 [INF] HTTP POST /api/auth/refresh responded 400 in 145.2380 ms
+2026-08-30 17:52:49.972 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0899 ms
+2026-08-30 17:52:49.981 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 17:52:49.982 [INF] HTTP POST /api/auth/refresh responded 400 in 0.9713 ms
+2026-08-30 17:52:51.474 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1911 ms
+2026-08-30 17:52:51.503 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 17:52:51.504 [INF] HTTP POST /api/auth/refresh responded 400 in 1.8472 ms
+2026-08-30 17:54:11.622 [INF] HTTP POST /api/auth/refreshtoken responded 404 in 0.7457 ms
+2026-08-30 17:54:30.207 [ERR] Unexpected erro occured during refresToken
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Aegis.Services.Services.RefreshTokenService.GenerateAccessToken(ApplicationUser user) in /home/admin1/Projects/Aegis/Aegis.Services/Services/RefreshTokenService.cs:line 38
+   at Aegis.Services.Services.AuthService.RefreshToken(String refreshToken) in /home/admin1/Projects/Aegis/Aegis.Services/Services/AuthService.cs:line 270
+2026-08-30 17:54:30.217 [INF] HTTP POST /api/auth/refresh responded 400 in 125.9448 ms
+2026-08-30 17:57:00.954 [ERR] Unexpected erro occured during refresToken
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Aegis.Services.Services.RefreshTokenService.GenerateAccessToken(ApplicationUser user) in /home/admin1/Projects/Aegis/Aegis.Services/Services/RefreshTokenService.cs:line 38
+   at Aegis.Services.Services.AuthService.RefreshToken(String refreshToken) in /home/admin1/Projects/Aegis/Aegis.Services/Services/AuthService.cs:line 270
+2026-08-30 17:57:00.954 [INF] HTTP POST /api/auth/refresh responded 400 in 126714.7066 ms
+2026-08-30 17:58:52.648 [ERR] Unexpected erro occured during refresToken
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Aegis.Services.Services.RefreshTokenService.GenerateAccessToken(ApplicationUser user) in /home/admin1/Projects/Aegis/Aegis.Services/Services/RefreshTokenService.cs:line 38
+   at Aegis.Services.Services.AuthService.RefreshToken(String refreshToken) in /home/admin1/Projects/Aegis/Aegis.Services/Services/AuthService.cs:line 270
+2026-08-30 17:58:52.649 [INF] HTTP POST /api/auth/refresh responded 400 in 100544.2288 ms
+2026-08-30 17:59:30.907 [ERR] Unexpected erro occured during refresToken
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Aegis.Services.Services.RefreshTokenService.GenerateAccessToken(ApplicationUser user) in /home/admin1/Projects/Aegis/Aegis.Services/Services/RefreshTokenService.cs:line 38
+   at Aegis.Services.Services.AuthService.RefreshToken(String refreshToken) in /home/admin1/Projects/Aegis/Aegis.Services/Services/AuthService.cs:line 270
+2026-08-30 17:59:30.950 [INF] HTTP POST /api/auth/refresh responded 400 in 30523.4668 ms
+2026-08-30 18:04:13.480 [INF] Starting database seeding process...
+2026-08-30 18:04:14.692 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-08-30 18:04:14.876 [INF] Super Admin user already exists.
+2026-08-30 18:04:15.293 [INF] Super Application Role already has all permisson
+2026-08-30 18:04:15.379 [INF] Super Admin user created successfully.
+2026-08-30 18:05:11.130 [INF] Gernerate new refresh token- 
+2026-08-30 18:05:12.556 [INF] HTTP POST /api/auth/refresh responded 200 in 50005.6999 ms
+2026-08-30 18:05:50.679 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:05:50.683 [INF] HTTP POST /api/auth/login responded 200 in 730.7639 ms
+2026-08-30 18:05:51.405 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:05:51.419 [INF] HTTP GET /api/auth/get-workspace responded 200 in 661.9088 ms
+2026-08-30 18:05:52.912 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:05:52.913 [INF] HTTP POST /api/auth/select-workspace responded 200 in 353.8724 ms
+2026-08-30 18:05:53.189 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:05:53.190 [INF] HTTP GET /api/auth/get-workspace responded 200 in 260.2974 ms
+2026-08-30 18:05:56.557 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2884 ms
+2026-08-30 18:05:56.751 [WRN] Refresh token Rotation failed: Token not found Vw5RmMoJZXpRNcTVuwoI1KP04VBKqMP__l_2Lq5gfizKFSFRexI7xDWeXyyJCKQGEDNllxm9tKjwwBul9v6_Tg
+2026-08-30 18:05:56.752 [INF] HTTP POST /api/auth/refresh responded 400 in 96.9958 ms
+2026-08-30 18:06:43.007 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1372 ms
+2026-08-30 18:08:10.060 [INF] Starting database seeding process...
+2026-08-30 18:08:11.408 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-08-30 18:08:11.550 [INF] Super Admin user already exists.
+2026-08-30 18:08:12.060 [INF] Super Application Role already has all permisson
+2026-08-30 18:08:12.173 [INF] Super Admin user created successfully.
+2026-08-30 18:08:26.906 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:08:26.952 [INF] HTTP POST /api/auth/login responded 200 in 827.7515 ms
+2026-08-30 18:08:27.610 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:08:27.632 [INF] HTTP GET /api/auth/get-workspace responded 200 in 609.8263 ms
+2026-08-30 18:08:29.419 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:08:29.421 [INF] HTTP POST /api/auth/select-workspace responded 200 in 602.3588 ms
+2026-08-30 18:08:29.798 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:08:29.799 [INF] HTTP GET /api/auth/get-workspace responded 200 in 360.3093 ms
+2026-08-30 18:09:15.669 [INF] HTTP GET /api/auth/csrf responded 404 in 0.5004 ms
+2026-08-30 18:10:12.896 [WRN] Refresh token Rotation failed: Token not found zWsixf8EpqNDQJvw8ewAqypGO7Rirb6SVmAG_4yD565HgsgNJ2cbwb8N0Fu93whUj3KhVwf1bGoxO5fYtm3p4A
+2026-08-30 18:10:12.921 [INF] HTTP POST /api/auth/refresh responded 400 in 57222.5753 ms
+2026-08-30 18:10:18.429 [INF] HTTP POST /api/auth/login responded 400 in 142.3069 ms
+2026-08-30 18:10:27.497 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:10:27.498 [INF] HTTP POST /api/auth/login responded 200 in 367.4679 ms
+2026-08-30 18:10:27.915 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:10:27.916 [INF] HTTP GET /api/auth/get-workspace responded 200 in 361.2400 ms
+2026-08-30 18:10:29.202 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:10:29.203 [INF] HTTP POST /api/auth/select-workspace responded 200 in 260.8061 ms
+2026-08-30 18:10:29.447 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:10:29.448 [INF] HTTP GET /api/auth/get-workspace responded 200 in 229.3310 ms
+2026-08-30 18:11:27.398 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2107 ms
+2026-08-30 18:17:16.598 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1592 ms
+2026-08-30 18:17:16.598 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1825 ms
+2026-08-30 18:17:16.598 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1031 ms
+2026-08-30 18:17:18.961 [WRN] Refresh token Rotation failed: Token not found Uq_u2B1AGqs0NKZGkvacEdJYyuixp6YSFWtdMam7TcMcAXqJsyhpaH_8rny1ikYaLYbvHwgDuaqPysIrjXMpqA
+2026-08-30 18:17:19.044 [INF] HTTP POST /api/auth/refresh responded 400 in 2430.3950 ms
+2026-08-30 18:17:19.086 [WRN] Refresh token Rotation failed: Token not found Uq_u2B1AGqs0NKZGkvacEdJYyuixp6YSFWtdMam7TcMcAXqJsyhpaH_8rny1ikYaLYbvHwgDuaqPysIrjXMpqA
+2026-08-30 18:17:19.092 [INF] HTTP POST /api/auth/refresh responded 400 in 351600.5337 ms
+2026-08-30 18:17:34.829 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:17:34.830 [INF] HTTP POST /api/auth/login responded 200 in 490.7616 ms
+2026-08-30 18:17:35.149 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:17:35.149 [INF] HTTP GET /api/auth/get-workspace responded 200 in 253.7439 ms
+2026-08-30 18:17:36.483 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:17:36.483 [INF] HTTP POST /api/auth/select-workspace responded 200 in 415.9781 ms
+2026-08-30 18:17:38.840 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1866 ms
+2026-08-30 18:18:25.245 [WRN] Refresh token Rotation failed: Token not found 2SW5eNhtpv9h6Ssx9j1T16DK_jdOd_Op28Ioy6o6Je8U_Ajd95yWH_75dShkpJAUvZgwlE9sKpiPq97f6bVaRw
+2026-08-30 18:18:25.246 [INF] HTTP POST /api/auth/refresh responded 400 in 46306.4209 ms
+2026-08-30 18:18:57.102 [INF] Gernerate new refresh token- 
+2026-08-30 18:18:57.103 [INF] HTTP POST /api/auth/refresh responded 200 in 2867.2853 ms
+2026-08-30 18:20:21.342 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:20:21.343 [INF] HTTP POST /api/auth/login responded 200 in 426.6388 ms
+2026-08-30 18:20:21.645 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:20:21.646 [INF] HTTP GET /api/auth/get-workspace responded 200 in 244.5049 ms
+2026-08-30 18:20:24.888 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:20:24.889 [INF] HTTP POST /api/auth/select-workspace responded 200 in 215.5670 ms
+2026-08-30 18:20:54.262 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1891 ms
+2026-08-30 18:28:02.241 [INF] HTTP GET /api/auth/csrf responded 404 in 20.7083 ms
+2026-08-30 18:28:02.241 [INF] HTTP GET /api/auth/csrf responded 404 in 20.7450 ms
+2026-08-30 18:28:04.015 [WRN] Refresh token Rotation failed: Token not found bdqullYfAkS804PuUauEOBWJWcJ3wOUWlMz5WMkXJ84iY35CWq6o1o1OjaciMZVo6JcVwknWlDoF5vXz6ev6nA
+2026-08-30 18:28:04.016 [WRN] Refresh token Rotation failed: Token not found bdqullYfAkS804PuUauEOBWJWcJ3wOUWlMz5WMkXJ84iY35CWq6o1o1OjaciMZVo6JcVwknWlDoF5vXz6ev6nA
+2026-08-30 18:28:04.016 [INF] HTTP POST /api/auth/refresh responded 400 in 1683.6259 ms
+2026-08-30 18:28:04.016 [INF] HTTP POST /api/auth/refresh responded 400 in 429668.2597 ms
+2026-08-30 18:28:18.514 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:28:18.514 [INF] HTTP POST /api/auth/login responded 200 in 297.6271 ms
+2026-08-30 18:28:18.751 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:28:18.752 [INF] HTTP GET /api/auth/get-workspace responded 200 in 172.2991 ms
+2026-08-30 18:28:23.832 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:28:23.832 [INF] HTTP POST /api/auth/select-workspace responded 200 in 194.7448 ms
+2026-08-30 18:29:03.653 [INF] HTTP GET /api/auth/csrf responded 404 in 20.8624 ms
+2026-08-30 18:29:09.064 [WRN] Refresh token Rotation failed: Token not found I3EQY8_QOVACeu7txGSEvGAhBLj2lRh2V_KADBalxXlhIrhLy9ZyOV5gV8rs6bz3tZPu7CtlM_w39rWYEW_1Ew
+2026-08-30 18:29:09.065 [INF] HTTP POST /api/auth/refresh responded 400 in 5346.0303 ms
+2026-08-30 18:29:41.891 [INF] HTTP GET /api/auth/csrf responded 404 in 20.9846 ms
+2026-08-30 18:29:44.498 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:29:44.499 [INF] HTTP POST /api/auth/refresh responded 400 in 2525.1181 ms
+2026-08-30 18:29:58.716 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1175 ms
+2026-08-30 18:30:01.445 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:30:01.446 [INF] HTTP POST /api/auth/refresh responded 400 in 2607.1233 ms
+2026-08-30 18:30:20.003 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:30:20.003 [INF] HTTP POST /api/auth/login responded 200 in 368.8640 ms
+2026-08-30 18:30:20.237 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:30:20.237 [INF] HTTP GET /api/auth/get-workspace responded 200 in 165.8684 ms
+2026-08-30 18:30:21.673 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:30:21.674 [INF] HTTP POST /api/auth/select-workspace responded 200 in 241.4969 ms
+2026-08-30 18:32:21.652 [INF] Starting database seeding process...
+2026-08-30 18:32:23.174 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-08-30 18:32:23.303 [INF] Super Admin user already exists.
+2026-08-30 18:32:23.774 [INF] Super Application Role already has all permisson
+2026-08-30 18:32:23.905 [INF] Super Admin user created successfully.
+2026-08-30 18:32:31.400 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:32:31.446 [INF] HTTP POST /api/auth/login responded 200 in 881.8093 ms
+2026-08-30 18:32:32.126 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:32:32.143 [INF] HTTP GET /api/auth/get-workspace responded 200 in 650.4190 ms
+2026-08-30 18:32:33.907 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:32:33.908 [INF] HTTP POST /api/auth/select-workspace responded 200 in 537.2022 ms
+2026-08-30 18:32:35.821 [INF] HTTP GET /api/auth/csrf responded 404 in 0.5608 ms
+2026-08-30 18:32:38.998 [INF] Gernerate new refresh token- 
+2026-08-30 18:32:39.004 [INF] HTTP POST /api/auth/refresh responded 200 in 3155.4314 ms
+2026-08-30 18:32:39.335 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:32:39.336 [INF] HTTP GET /api/auth/get-workspace responded 200 in 304.4494 ms
+2026-08-30 18:32:45.325 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:32:45.325 [INF] HTTP POST /api/auth/select-workspace responded 200 in 304.3665 ms
+2026-08-30 18:32:47.196 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2105 ms
+2026-08-30 18:32:47.426 [INF] Gernerate new refresh token- 
+2026-08-30 18:32:47.426 [INF] HTTP POST /api/auth/refresh responded 200 in 216.0072 ms
+2026-08-30 18:32:47.742 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:32:47.743 [INF] HTTP GET /api/auth/get-workspace responded 200 in 275.3622 ms
+2026-08-30 18:32:56.750 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:32:56.750 [INF] HTTP POST /api/auth/select-workspace responded 200 in 267.1266 ms
+2026-08-30 18:32:58.976 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2997 ms
+2026-08-30 18:32:59.227 [INF] Gernerate new refresh token- 
+2026-08-30 18:32:59.227 [INF] HTTP POST /api/auth/refresh responded 200 in 233.4023 ms
+2026-08-30 18:32:59.528 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:32:59.529 [INF] HTTP GET /api/auth/get-workspace responded 200 in 255.6098 ms
+2026-08-30 18:33:14.395 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1290 ms
+2026-08-30 18:33:14.626 [WRN] Refresh token Rotation failed: Token not found PWmrkzqjWfkW_VIKEEoT6rFilFg7rBDMdk7XpjixLsEldTMBJn4yOM2meiwtavZ4i5Q9B92mtLQCZMDiSwmqqA
+2026-08-30 18:33:14.627 [INF] HTTP POST /api/auth/refresh responded 400 in 132.3721 ms
+2026-08-30 18:33:27.347 [INF] HTTP POST /api/auth/login responded 400 in 102.5386 ms
+2026-08-30 18:33:37.675 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:33:37.676 [INF] HTTP POST /api/auth/login responded 200 in 374.4390 ms
+2026-08-30 18:33:37.962 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:33:37.962 [INF] HTTP GET /api/auth/get-workspace responded 200 in 223.3235 ms
+2026-08-30 18:35:15.761 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1211 ms
+2026-08-30 18:35:16.173 [INF] Gernerate new refresh token- 
+2026-08-30 18:35:16.174 [INF] HTTP POST /api/auth/refresh responded 200 in 361.5912 ms
+2026-08-30 18:35:16.369 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:35:16.370 [INF] HTTP GET /api/auth/get-workspace responded 200 in 171.7913 ms
+2026-08-30 18:36:03.758 [INF] Starting database seeding process...
+2026-08-30 18:36:05.260 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-08-30 18:36:05.537 [INF] Super Admin user already exists.
+2026-08-30 18:36:06.026 [INF] Super Application Role already has all permisson
+2026-08-30 18:36:06.227 [INF] Super Admin user created successfully.
+2026-08-30 18:36:06.684 [INF] HTTP GET /api/auth/csrf responded 404 in 54.9952 ms
+2026-08-30 18:36:07.581 [INF] Gernerate new refresh token- 
+2026-08-30 18:36:07.630 [INF] HTTP POST /api/auth/refresh responded 200 in 846.7458 ms
+2026-08-30 18:36:08.562 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:36:08.584 [INF] HTTP GET /api/auth/get-workspace responded 200 in 898.5603 ms
+2026-08-30 18:36:10.356 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:36:10.357 [INF] HTTP POST /api/auth/select-workspace responded 200 in 494.2124 ms
+2026-08-30 18:36:13.296 [INF] HTTP GET /api/auth/csrf responded 404 in 0.4645 ms
+2026-08-30 18:36:13.523 [INF] Gernerate new refresh token- 
+2026-08-30 18:36:13.524 [INF] HTTP POST /api/auth/refresh responded 200 in 115.3824 ms
+2026-08-30 18:36:13.874 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:36:13.875 [INF] HTTP GET /api/auth/get-workspace responded 200 in 292.3723 ms
+2026-08-30 18:36:19.211 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1303 ms
+2026-08-30 18:36:19.372 [WRN] Refresh token Rotation failed: Token not found FmuPmbc3IdB2O6T5hg9GArwFii7B74mPoPTYM7e0MX9Pp6kU7ZexGp3cJFobqWoRPnYSOJsugORsxFr2FyBitQ
+2026-08-30 18:36:19.373 [INF] HTTP POST /api/auth/refresh responded 400 in 133.5045 ms
+2026-08-30 18:36:39.401 [INF] HTTP POST /api/auth/login responded 400 in 147.9709 ms
+2026-08-30 18:36:41.325 [INF] HTTP POST /api/auth/login responded 400 in 78.0594 ms
+2026-08-30 18:36:44.560 [INF] HTTP POST /api/auth/login responded 400 in 112.3656 ms
+2026-08-30 18:36:44.913 [INF] HTTP POST /api/auth/login responded 400 in 109.8793 ms
+2026-08-30 18:36:45.291 [INF] HTTP POST /api/auth/login responded 400 in 152.2374 ms
+2026-08-30 18:36:45.506 [INF] HTTP POST /api/auth/login responded 400 in 50.0585 ms
+2026-08-30 18:36:46.536 [INF] HTTP POST /api/auth/login responded 400 in 153.5794 ms
+2026-08-30 18:36:46.871 [INF] HTTP POST /api/auth/login responded 400 in 118.4030 ms
+2026-08-30 18:36:47.275 [INF] HTTP POST /api/auth/login responded 400 in 155.3394 ms
+2026-08-30 18:36:47.697 [INF] HTTP POST /api/auth/login responded 400 in 112.7874 ms
+2026-08-30 18:36:48.053 [INF] HTTP POST /api/auth/login responded 400 in 110.3406 ms
+2026-08-30 18:36:48.460 [INF] HTTP POST /api/auth/login responded 400 in 151.3653 ms
+2026-08-30 18:36:48.711 [INF] HTTP POST /api/auth/login responded 400 in 47.5851 ms
+2026-08-30 18:36:56.757 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1220 ms
+2026-08-30 18:36:56.790 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:36:56.791 [INF] HTTP POST /api/auth/refresh responded 400 in 1.5186 ms
+2026-08-30 18:37:04.849 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:37:04.849 [INF] HTTP POST /api/auth/login responded 200 in 385.8127 ms
+2026-08-30 18:37:05.145 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:37:05.145 [INF] HTTP GET /api/auth/get-workspace responded 200 in 206.5328 ms
+2026-08-30 18:37:26.159 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:37:26.159 [INF] HTTP POST /api/auth/select-workspace responded 200 in 384.5757 ms
+2026-08-30 18:37:29.838 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1176 ms
+2026-08-30 18:37:30.126 [INF] Gernerate new refresh token- 
+2026-08-30 18:37:30.127 [INF] HTTP POST /api/auth/refresh responded 200 in 265.7749 ms
+2026-08-30 18:37:30.430 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:37:30.431 [INF] HTTP GET /api/auth/get-workspace responded 200 in 205.4469 ms
+2026-08-30 18:37:37.842 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1028 ms
+2026-08-30 18:37:37.950 [WRN] Refresh token Rotation failed: Token not found gTPMX_fQ9ok1JxrjA60s9KUpxoCAr6N54llVXlCWRBTFgtEgOyIGe3M_OcE0c4_5BxAmsCHGQDx2AXROcMZLHg
+2026-08-30 18:37:37.950 [INF] HTTP POST /api/auth/refresh responded 400 in 8.1483 ms
+2026-08-30 18:37:54.387 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2689 ms
+2026-08-30 18:37:54.519 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:37:54.519 [INF] HTTP POST /api/auth/refresh responded 400 in 2.0937 ms
+2026-08-30 18:38:08.952 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:38:08.953 [INF] HTTP POST /api/auth/login responded 200 in 400.1621 ms
+2026-08-30 18:38:56.083 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:38:56.084 [INF] HTTP GET /api/auth/get-workspace responded 200 in 232.8687 ms
+2026-08-30 18:39:33.951 [INF] HTTP GET /api/auth/csrf responded 404 in 21.7153 ms
+2026-08-30 18:39:34.333 [INF] Gernerate new refresh token- 
+2026-08-30 18:39:34.333 [INF] HTTP POST /api/auth/refresh responded 200 in 268.9798 ms
+2026-08-30 18:39:34.514 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:39:34.515 [INF] HTTP GET /api/auth/get-workspace responded 200 in 161.7049 ms
+2026-08-30 18:39:47.476 [INF] HTTP GET /api/auth/csrf responded 404 in 0.3112 ms
+2026-08-30 18:39:47.513 [WRN] Refresh token Rotation failed: Token not found ZEFiFh5inMTrW0_y42hqDEsUyj5riyOFSZTbK91kL_71Xcuz8EVeg45LbmYJY_atYum_pVTYoDqkZO2eyI_V0w
+2026-08-30 18:39:47.514 [INF] HTTP POST /api/auth/refresh responded 400 in 9.8306 ms
+2026-08-30 18:40:38.642 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0776 ms
+2026-08-30 18:40:38.666 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:40:38.667 [INF] HTTP POST /api/auth/refresh responded 400 in 1.8998 ms
+2026-08-30 18:40:41.420 [INF] HTTP GET /api/auth/csrf responded 404 in 20.8057 ms
+2026-08-30 18:40:41.431 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:40:41.431 [INF] HTTP POST /api/auth/refresh responded 400 in 0.8726 ms
+2026-08-30 18:40:51.671 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:40:51.671 [INF] HTTP POST /api/auth/login responded 200 in 422.8322 ms
+2026-08-30 18:41:00.422 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:41:00.422 [INF] HTTP GET /api/auth/get-workspace responded 200 in 189.2091 ms
+2026-08-30 18:41:09.075 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2400 ms
+2026-08-30 18:41:09.342 [INF] Gernerate new refresh token- 
+2026-08-30 18:41:09.343 [INF] HTTP POST /api/auth/refresh responded 200 in 245.2357 ms
+2026-08-30 18:41:09.503 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:41:09.503 [INF] HTTP GET /api/auth/get-workspace responded 200 in 121.2828 ms
+2026-08-30 18:41:27.563 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1010 ms
+2026-08-30 18:41:27.606 [WRN] Refresh token Rotation failed: Token not found g2ysqb7w3ZfrgwAFBy2Vur1KsB8YF5X1pHSuyBkAM_TR_KiVdHoDPSfHpmKlffb1ajW89JNuv9iDg8t5UYSd8Q
+2026-08-30 18:41:27.606 [INF] HTTP POST /api/auth/refresh responded 400 in 8.8924 ms
+2026-08-30 18:42:09.080 [INF] HTTP POST /api/auth/login responded 400 in 116.6204 ms
+2026-08-30 18:42:13.558 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:42:13.559 [INF] HTTP POST /api/auth/login responded 200 in 300.3941 ms
+2026-08-30 18:42:16.625 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:42:16.626 [INF] HTTP GET /api/auth/get-workspace responded 200 in 172.3439 ms
+2026-08-30 18:44:35.961 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1030 ms
+2026-08-30 18:44:36.079 [INF] Gernerate new refresh token- 
+2026-08-30 18:44:36.087 [INF] HTTP POST /api/auth/refresh responded 200 in 73.2945 ms
+2026-08-30 18:44:36.512 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:44:36.512 [INF] HTTP GET /api/auth/get-workspace responded 200 in 215.2581 ms
+2026-08-30 18:44:39.404 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1194 ms
+2026-08-30 18:44:39.433 [WRN] Refresh token Rotation failed: Token not found Mi6FCPG___jTE1ECvxqePgaGKUYffsYswGPGumCQjDJ95Jygy6CP5nreGvlqytTG6AbGwqXmUzP2EcbLJUNE5g
+2026-08-30 18:44:39.435 [INF] HTTP POST /api/auth/refresh responded 400 in 11.9289 ms
+2026-08-30 18:46:50.693 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0911 ms
+2026-08-30 18:46:50.714 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:46:50.714 [INF] HTTP POST /api/auth/refresh responded 400 in 0.6243 ms
+2026-08-30 18:47:14.461 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1852 ms
+2026-08-30 18:47:14.514 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-30 18:47:14.514 [INF] HTTP POST /api/auth/refresh responded 400 in 1.1192 ms
+2026-08-30 18:47:34.952 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-30 18:47:34.952 [INF] HTTP POST /api/auth/login responded 200 in 390.1441 ms
+2026-08-30 18:47:35.166 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:47:35.167 [INF] HTTP GET /api/auth/get-workspace responded 200 in 147.4105 ms
+2026-08-30 18:47:49.711 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0622 ms
+2026-08-30 18:47:49.802 [INF] Gernerate new refresh token- 
+2026-08-30 18:47:49.803 [INF] HTTP POST /api/auth/refresh responded 200 in 45.8240 ms
+2026-08-30 18:47:50.198 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:47:50.198 [INF] HTTP GET /api/auth/get-workspace responded 200 in 180.3836 ms
+2026-08-30 18:48:19.238 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:48:19.238 [INF] HTTP POST /api/auth/select-workspace responded 200 in 216.2135 ms
+2026-08-30 18:48:21.447 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1046 ms
+2026-08-30 18:48:21.617 [INF] Gernerate new refresh token- 
+2026-08-30 18:48:21.617 [INF] HTTP POST /api/auth/refresh responded 200 in 147.3361 ms
+2026-08-30 18:48:21.829 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:48:21.829 [INF] HTTP GET /api/auth/get-workspace responded 200 in 144.8232 ms
+2026-08-30 18:48:25.145 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:48:25.145 [INF] HTTP POST /api/auth/select-workspace responded 200 in 130.7076 ms
+2026-08-30 18:48:27.929 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1472 ms
+2026-08-30 18:48:28.128 [INF] Gernerate new refresh token- 
+2026-08-30 18:48:28.128 [INF] HTTP POST /api/auth/refresh responded 200 in 103.8244 ms
+2026-08-30 18:48:28.282 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:48:28.282 [INF] HTTP GET /api/auth/get-workspace responded 200 in 89.4528 ms
+2026-08-30 18:48:30.059 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:48:30.059 [INF] HTTP POST /api/auth/select-workspace responded 200 in 212.2322 ms
+2026-08-30 18:48:33.968 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0741 ms
+2026-08-30 18:48:34.178 [INF] Gernerate new refresh token- 
+2026-08-30 18:48:34.178 [INF] HTTP POST /api/auth/refresh responded 200 in 93.0442 ms
+2026-08-30 18:48:34.387 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:48:34.387 [INF] HTTP GET /api/auth/get-workspace responded 200 in 121.1372 ms
+2026-08-30 18:48:35.507 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:48:35.507 [INF] HTTP POST /api/auth/select-workspace responded 200 in 88.2083 ms
+2026-08-30 18:48:36.973 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0959 ms
+2026-08-30 18:48:37.202 [INF] Gernerate new refresh token- 
+2026-08-30 18:48:37.202 [INF] HTTP POST /api/auth/refresh responded 200 in 143.3892 ms
+2026-08-30 18:48:37.403 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:48:37.403 [INF] HTTP GET /api/auth/get-workspace responded 200 in 165.2583 ms
+2026-08-30 18:48:38.831 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:48:38.831 [INF] HTTP POST /api/auth/select-workspace responded 200 in 129.9812 ms
+2026-08-30 18:55:49.130 [INF] HTTP GET /api/auth/csrf responded 404 in 0.5196 ms
+2026-08-30 18:55:49.391 [INF] Gernerate new refresh token- 
+2026-08-30 18:55:49.391 [INF] HTTP POST /api/auth/refresh responded 200 in 199.3806 ms
+2026-08-30 18:55:49.507 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:55:49.507 [INF] HTTP GET /api/auth/get-workspace responded 200 in 80.2222 ms
+2026-08-30 18:55:50.905 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:55:50.905 [INF] HTTP POST /api/auth/select-workspace responded 200 in 109.1982 ms
+2026-08-30 18:59:56.540 [INF] HTTP GET /api/auth/csrf responded 404 in 21.0125 ms
+2026-08-30 18:59:56.866 [INF] Gernerate new refresh token- 
+2026-08-30 18:59:56.867 [INF] HTTP POST /api/auth/refresh responded 200 in 295.9440 ms
+2026-08-30 18:59:57.021 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 18:59:57.021 [INF] HTTP GET /api/auth/get-workspace responded 200 in 125.5829 ms
+2026-08-30 18:59:58.418 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 18:59:58.419 [INF] HTTP POST /api/auth/select-workspace responded 200 in 157.6119 ms
+2026-08-30 19:01:02.888 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0883 ms
+2026-08-30 19:01:03.087 [INF] Gernerate new refresh token- 
+2026-08-30 19:01:03.088 [INF] HTTP POST /api/auth/refresh responded 200 in 188.5563 ms
+2026-08-30 19:01:03.152 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-30 19:01:03.152 [INF] HTTP GET /api/auth/get-workspace responded 200 in 38.2022 ms
+2026-08-30 19:01:04.413 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-30 19:01:04.413 [INF] HTTP POST /api/auth/select-workspace responded 200 in 129.6506 ms

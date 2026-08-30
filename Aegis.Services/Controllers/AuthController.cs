@@ -95,6 +95,26 @@ public class AuthController : ControllerBase
     }
 
 
+    // [Authorize]
+    [HttpPost("refresh")]
+    public async Task<IActionResult> RefreshToken(RefreshTokenDto model)
+    {
+
+        if(model.RefreshToken == null)
+        {
+             return BadRequest("Invalid not found");
+        }
+     
+        var response = await _authService.RefreshToken(model.RefreshToken);
+
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+        return BadRequest(response);
+    }
+
+
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterDto register)
     {

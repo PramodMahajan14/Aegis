@@ -16,6 +16,8 @@ namespace Aegis.Services.Services.Interfaces
 
         Task<ApiResponse<object>> SelectWorkSpacesAsync(Guid workspaceId,ApplicationUser user);
 
+        Task<ApiResponse<object>> RefreshToken(string refreshToken);
+
         Task<ApiResponse<object>> Profile();
     }
 }

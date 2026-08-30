@@ -84,3 +84,10 @@ MySqlConnector.MySqlException (0x80004005): Table 'AegisDb.EmployeeOrganizations
 2026-08-29 02:28:19.800 [INF] HTTP GET /api/auth/get/workspace responded 200 in 84791.5773 ms
 2026-08-29 02:28:40.871 [INF] HTTP GET /api/auth/get/workspace responded 401 in 70.5105 ms
 2026-08-29 02:28:58.698 [INF] HTTP GET /api/auth/get/workspace responded 200 in 5909.8854 ms
+2026-08-29 22:40:55.321 [INF] Starting database seeding process...
+2026-08-29 22:58:32.861 [INF] HTTP GET /api/auth/get/workspace responded 401 in 170.2281 ms
+2026-08-29 22:58:39.914 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-29 22:58:39.930 [INF] HTTP POST /api/auth/login responded 200 in 1032.5403 ms
+2026-08-29 22:59:03.584 [INF] HTTP GET /api/auth/get/workspace responded 401 in 9.5857 ms
+2026-08-29 22:59:10.497 [INF] HTTP GET /api/auth/get/workspace responded 401 in 4.1568 ms
+2026-08-29 22:59:49.483 [INF] HTTP GET /api/auth/get/workspace responded 200 in 7183.9841 ms

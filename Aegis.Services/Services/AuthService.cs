@@ -181,15 +181,16 @@ namespace Aegis.Services.Services
 
             var employee = await _employeeHelper.GetEmployeeByUserId(userId);
 
-            if(employee == null)
+            if (employee == null)
             {
+                _logger.LogWarning("Get Workspace List failed : Employee not found {user}", userId);
                 return ApiResponse<object>.ErrorResponse("Employee not found");
             }
             var assignedOrganizationIds =
                 await _employeeHelper.GetOrganizationsByEmployeeAsync(employee.Id);
 
             if (!assignedOrganizationIds.Any())
-           
+
             {
                 assignedOrganizationIds.Add(employee.OrganizationId);
             }
@@ -203,9 +204,53 @@ namespace Aegis.Services.Services
                 })
                 .ToListAsync();
 
+            _logger.LogInfo("Workspace List fetched successfully : For Emplyee {employee}", employee.Id);
             return ApiResponse<object>.SuccessResponse(
                 workspaces,
                 "Workspaces retrieved successfully.");
+        }
+
+        public async Task<ApiResponse<object>> SelectWorkSpacesAsync(Guid workspaceId, ApplicationUser user)
+        {
+            try
+            {
+
+                var employee = await _employeeHelper.GetEmployeeByUserId(user.Id);
+
+                if (employee == null)
+                {
+                    _logger.LogWarning("Workspace selection faild : Employee not found - {user}", user.Id);
+                    return ApiResponse<object>.ErrorResponse("Employee not found");
+                }
+
+                var organization = await _context.Organizations.AsNoTracking()
+               .FirstOrDefaultAsync(o => o.Id == workspaceId && o.IsActive == true);
+                if (organization == null)
+                {
+                    _logger.LogWarning( "Workspace selection failed: Organization not found or inactive. WorkspaceId {WorkspaceId}", workspaceId);
+                    return ApiResponse<object>.ErrorResponse("WorkSpace not found");
+                }
+
+                var accessToken = _refreshTokenService.GenerateAccessTokenWithTenanat(user, organization.Id);
+                var refreshtoken = _refreshTokenService.GenerateRefreshToken();
+
+                await _refreshTokenService.SaveRefreshTokenAsync(user.Id, refreshtoken);
+
+                var response = new
+                {
+                    accessToken = accessToken,
+                    refreshtoken = refreshtoken
+                };
+
+                _logger.LogInfo("Workspace selection successfuly open - {organizationdId}", workspaceId);
+                return ApiResponse<object>.SuccessResponse(response, "Workspace opend successfully", 200);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected erro occured during selection workspace");
+                return ApiResponse<object>.ErrorResponse("Internal server error", ex.Message, 500);
+
+            }
         }
         public async Task<ApiResponse<object>> Profile()
         {

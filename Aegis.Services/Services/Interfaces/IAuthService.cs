@@ -1,3 +1,4 @@
+using Aegis.Model.Auth;
 using Aegis.Model.DTO.Auth;
 using Aegis.Model.EmployeeModels;
 using Aegis.Utility.Common;
@@ -12,6 +13,8 @@ namespace Aegis.Services.Services.Interfaces
         Task<ApiResponse<object>> LoginAsync(LoginDto model);
 
         Task<ApiResponse<object>> GetWorkSpacesAsync(string userId);
+
+        Task<ApiResponse<object>> SelectWorkSpacesAsync(Guid workspaceId,ApplicationUser user);
 
         Task<ApiResponse<object>> Profile();
     }

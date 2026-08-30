@@ -1,3 +1,4 @@
+using Aegis.Model.DTO;
 using Aegis.Model.DTO.Auth;
 using Aegis.Services.Helper;
 using Aegis.Services.Services.Interfaces;
@@ -49,7 +50,7 @@ public class AuthController : ControllerBase
 
 
     [Authorize]
-    [HttpGet("get/workspace")]
+    [HttpGet("get-workspace")]
     public async Task<IActionResult> WorkSpace()
     {
 
@@ -58,9 +59,33 @@ public class AuthController : ControllerBase
 
         if (user == null)
         {
-            return BadRequest("Employee not found");
+            return BadRequest("User not found");
         }
         var response = await _authService.GetWorkSpacesAsync(user.Id);
+
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+        return BadRequest(response);
+    }
+
+    [Authorize]
+    [HttpPost("select-workspace")]
+    public async Task<IActionResult> SelectWorkSpace([FromBody] WorkSpaceSelectDto model)
+    {
+     
+       if(model == null)
+        {
+            return BadRequest("Invalid request");
+        }
+        var user = await _helper.GetCurrentUserAsync();
+
+        if (user == null)
+        {
+            return BadRequest("User not found");
+        }
+        var response = await _authService.SelectWorkSpacesAsync(model.WorkspaceId,user);
 
         if (response.Success)
         {

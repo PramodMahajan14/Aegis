@@ -29,7 +29,7 @@ namespace Aegis.Services.Helper
       var tenant = _httpContextAccessor.HttpContext?.User.FindFirst("organization")?.Value;
       return (tenant != null ? GuidUtility.ToGuid(tenant) : Guid.Empty);
     }
-    public async Task<IdentityUser?> GetCurrentUserAsync()
+    public async Task<ApplicationUser?> GetCurrentUserAsync()
     {
       var userId = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
@@ -37,7 +37,7 @@ namespace Aegis.Services.Helper
         return null;
 
       var user = await _userManager.FindByIdAsync(userId);
-      return user;
+      return user ?? null;
 
     }
 

@@ -98,28 +98,36 @@ namespace Aegis.Services.Services
             return jwtTokenHandler.WriteToken(token);
 
         }
+
         public async Task SaveRefreshTokenAsync(string userId, string refreshToken)
         {
-            var token = new RefreshToken
-            {
-                Id = Guid.NewGuid(),
-                UserId = userId,
-                Token = refreshToken,
-                CreatedAt = DateTime.UtcNow,
-                ExpiresAt = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpiresInDays),
-                IsRevoked = false
-            };
+            var now = DateTime.UtcNow;
 
-            var existing = _context.RefreshTokens.Any(x => x.Id == GuidUtility.ToGuid(userId));
-            if (existing)
+            var existingToken = await _context.RefreshTokens
+                .FirstOrDefaultAsync(x => x.UserId == userId && !x.IsRevoked);
+
+            if (existingToken != null)
             {
-                _context.RefreshTokens.Update(token);
+                existingToken.Token = refreshToken;
+                existingToken.CreatedAt = now;
+                existingToken.ExpiresAt = now.AddDays(_jwtSettings.RefreshTokenExpiresInDays);
+                existingToken.IsRevoked = false;
+                existingToken.RevokedAt = null;
             }
             else
             {
-                _context.RefreshTokens.Add(token);
-            }
+                var token = new RefreshToken
+                {
+                    Id = Guid.NewGuid(),
+                    UserId = userId,
+                    Token = refreshToken,
+                    CreatedAt = now,
+                    ExpiresAt = now.AddDays(_jwtSettings.RefreshTokenExpiresInDays),
+                    IsRevoked = false
+                };
 
+                await _context.RefreshTokens.AddAsync(token);
+            }
 
             await _context.SaveChangesAsync();
         }
@@ -129,49 +137,55 @@ namespace Aegis.Services.Services
             if (string.IsNullOrWhiteSpace(refreshToken))
                 return null;
 
-            var token = await _context.RefreshTokens.FirstOrDefaultAsync(x => x.Token == refreshToken);
-
-            if (token == null)
-                return null;
-
-            if (token.IsRevoked)
-                return null;
-
-            if (token.ExpiresAt <= DateTime.UtcNow)
-                return null;
+            var token = await _context.RefreshTokens
+                .FirstOrDefaultAsync(x =>
+                    x.Token == refreshToken &&
+                    !x.IsRevoked &&
+                    x.ExpiresAt > DateTime.UtcNow);
 
             return token;
         }
 
         public async Task RevokeRefreshTokenAsync(RefreshToken refreshToken)
         {
-            if (refreshToken == null)
-                throw new ArgumentNullException(nameof(refreshToken));
+            ArgumentNullException.ThrowIfNull(refreshToken);
 
             refreshToken.IsRevoked = true;
             refreshToken.RevokedAt = DateTime.UtcNow;
-
-            _context.RefreshTokens.Update(refreshToken);
 
             await _context.SaveChangesAsync();
         }
 
         public async Task<string> RotateRefreshTokenAsync(RefreshToken refreshToken)
         {
-            if (refreshToken == null)
-                throw new ArgumentNullException(nameof(refreshToken));
+            ArgumentNullException.ThrowIfNull(refreshToken);
 
-            // Revoke old refresh token
-            await RevokeRefreshTokenAsync(refreshToken);
+            // Revoke old token
+            refreshToken.IsRevoked = true;
+            refreshToken.RevokedAt = DateTime.UtcNow;
 
-            // Generate new refresh token
+            // Generate new token
             var newRefreshToken = GenerateRefreshToken();
 
-            // Save new refresh token
-            await SaveRefreshTokenAsync(refreshToken.User.Id, newRefreshToken);
+            // Save new token
+            var now = DateTime.UtcNow;
 
-            // Return new token to client
+            var newToken = new RefreshToken
+            {
+                Id = Guid.NewGuid(),
+                UserId = refreshToken.UserId,
+                Token = newRefreshToken,
+                CreatedAt = now,
+                ExpiresAt = now.AddDays(_jwtSettings.RefreshTokenExpiresInDays),
+                IsRevoked = false
+            };
+
+            await _context.RefreshTokens.AddAsync(newToken);
+            await _context.SaveChangesAsync();
+
             return newRefreshToken;
         }
+
+
     }
 }

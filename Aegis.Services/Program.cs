@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text;
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
@@ -43,7 +44,10 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddHostedService<ConfigSystemUser>();
 
-
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly());
+});
 
 // This scans your current project for any Handlers and registers them automatically.
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));

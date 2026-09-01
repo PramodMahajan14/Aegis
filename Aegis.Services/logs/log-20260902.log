@@ -1,0 +1,80 @@
+2026-09-02 00:25:02.555 [INF] Starting database seeding process...
+2026-09-02 00:25:03.987 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:25:04.124 [INF] Super Admin user already exists.
+2026-09-02 00:25:04.520 [INF] Super Application Role already has all permisson
+2026-09-02 00:25:04.661 [INF] Super Admin user created successfully.
+2026-09-02 00:25:35.614 [INF] HTTP GET /api/auth/csrf responded 404 in 21.7781 ms
+2026-09-02 00:25:36.149 [INF] Gernerate new refresh token- 
+2026-09-02 00:25:36.185 [INF] HTTP POST /api/auth/refresh responded 200 in 553.1211 ms
+2026-09-02 00:25:36.787 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:25:36.799 [INF] HTTP GET /api/auth/get-workspace responded 200 in 596.8968 ms
+2026-09-02 00:26:24.649 [INF] Starting database seeding process...
+2026-09-02 00:26:25.949 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:26:26.065 [INF] Super Admin user already exists.
+2026-09-02 00:26:26.493 [INF] Super Application Role already has all permisson
+2026-09-02 00:26:26.623 [INF] Super Admin user created successfully.
+2026-09-02 00:26:36.930 [INF] HTTP GET /api/Master/get-joberole responded 401 in 60.1819 ms
+2026-09-02 00:27:20.530 [INF] Starting database seeding process...
+2026-09-02 00:27:21.644 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:27:21.785 [INF] Super Admin user already exists.
+2026-09-02 00:27:22.262 [INF] Super Application Role already has all permisson
+2026-09-02 00:27:22.388 [INF] Super Admin user created successfully.
+2026-09-02 00:41:20.710 [INF] HTTP GET /api/master/get-joberoles responded 404 in 53.3299 ms
+2026-09-02 00:41:48.761 [INF] HTTP GET /api/master/get-joberoles responded 404 in 1.9512 ms
+2026-09-02 00:41:53.890 [INF] HTTP GET /api/auth/csrf responded 404 in 2.4302 ms
+2026-09-02 00:41:54.268 [WRN] Refresh token Rotation failed: Token not found 5OZX98kS1pkaAt62l5SS47sYwv3Dm7CDMVotI037qC_Q5n7tuTFF0UQ_sWv4E8JeiaF_0rO_HbSOdpc7eFP4IQ
+2026-09-02 00:41:54.297 [INF] HTTP POST /api/auth/refresh responded 400 in 391.0998 ms
+2026-09-02 00:41:56.286 [INF] HTTP POST /api/auth/login responded 400 in 160.4398 ms
+2026-09-02 00:42:06.313 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-02 00:42:06.318 [INF] HTTP POST /api/auth/login responded 200 in 732.0656 ms
+2026-09-02 00:42:06.764 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:42:06.781 [INF] HTTP GET /api/auth/get-workspace responded 200 in 434.6605 ms
+2026-09-02 00:42:08.769 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:42:08.770 [INF] HTTP POST /api/auth/select-workspace responded 200 in 530.8126 ms
+2026-09-02 00:42:11.141 [INF] HTTP GET /api/master/get-joberoles responded 404 in 0.3860 ms
+2026-09-02 00:42:12.150 [INF] HTTP GET /api/master/get-joberoles responded 404 in 0.5377 ms
+2026-09-02 00:43:08.218 [INF] Starting database seeding process...
+2026-09-02 00:43:09.264 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:43:09.335 [INF] Super Admin user already exists.
+2026-09-02 00:43:09.697 [INF] Super Application Role already has all permisson
+2026-09-02 00:43:09.777 [INF] Super Admin user created successfully.
+2026-09-02 00:43:11.515 [INF] HTTP GET /api/auth/csrf responded 404 in 26.0312 ms
+2026-09-02 00:43:12.173 [INF] Gernerate new refresh token- 
+2026-09-02 00:43:12.206 [INF] HTTP POST /api/auth/refresh responded 200 in 638.6163 ms
+2026-09-02 00:43:12.848 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:43:12.869 [INF] HTTP GET /api/auth/get-workspace responded 200 in 644.4656 ms
+2026-09-02 00:43:14.443 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:43:14.448 [INF] HTTP POST /api/auth/select-workspace responded 200 in 658.8787 ms
+2026-09-02 00:43:17.252 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-02 00:43:17.363 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:43:17.368 [INF] HTTP GET /api/master/get-joberoles responded 200 in 134.7485 ms
+2026-09-02 00:44:24.069 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:44:24.070 [INF] HTTP GET /api/master/get-joberoles responded 200 in 239.4331 ms
+2026-09-02 00:45:12.995 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:45:12.996 [INF] HTTP GET /api/master/get-joberoles responded 200 in 159.0268 ms
+2026-09-02 00:48:02.620 [INF] HTTP POST /api/Master/create-joberole responded 401 in 10.4795 ms
+2026-09-02 00:49:45.852 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:49:45.852 [INF] HTTP GET /api/master/get-joberoles responded 200 in 187.9417 ms
+2026-09-02 00:51:50.638 [INF] JobeRole created successfully : For organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:51:50.650 [INF] HTTP POST /api/master/create-joberole responded 201 in 348.0169 ms
+2026-09-02 00:51:50.723 [INF] Fetched 2 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:51:50.724 [INF] HTTP GET /api/master/get-joberoles responded 200 in 67.7499 ms
+2026-09-02 00:52:40.219 [INF] JobeRole created successfully : For organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:40.220 [INF] HTTP POST /api/master/create-joberole responded 201 in 303.8696 ms
+2026-09-02 00:52:40.303 [INF] Fetched 3 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:40.303 [INF] HTTP GET /api/master/get-joberoles responded 200 in 69.5167 ms
+2026-09-02 00:52:44.499 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1350 ms
+2026-09-02 00:52:44.807 [INF] Gernerate new refresh token- 
+2026-09-02 00:52:44.808 [INF] HTTP POST /api/auth/refresh responded 200 in 294.9570 ms
+2026-09-02 00:52:45.068 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:52:45.069 [INF] HTTP GET /api/auth/get-workspace responded 200 in 233.9335 ms
+2026-09-02 00:52:46.491 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:46.492 [INF] HTTP POST /api/auth/select-workspace responded 200 in 348.7295 ms
+2026-09-02 00:52:48.400 [INF] Fetched 3 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:48.400 [INF] HTTP GET /api/master/get-joberoles responded 200 in 69.7816 ms
+2026-09-02 00:55:13.469 [INF] JobeRole created successfully : For organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:55:13.470 [INF] HTTP POST /api/master/create-joberole responded 201 in 213.7097 ms
+2026-09-02 00:55:13.547 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:55:13.548 [INF] HTTP GET /api/master/get-joberoles responded 200 in 70.1635 ms
+2026-09-02 00:59:53.937 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:59:53.938 [INF] HTTP GET /api/master/get-joberoles responded 200 in 184.3900 ms

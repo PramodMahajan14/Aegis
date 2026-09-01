@@ -1,0 +1,145 @@
+2026-08-31 21:26:13.414 [INF] Starting database seeding process...
+2026-08-31 21:26:14.596 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-08-31 21:26:14.748 [INF] Super Admin user already exists.
+2026-08-31 21:26:14.943 [INF] Super Application Role already has all permisson
+2026-08-31 21:26:15.040 [INF] Super Admin user created successfully.
+2026-08-31 21:26:37.430 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-31 21:26:37.461 [INF] HTTP POST /api/auth/login responded 200 in 328.5891 ms
+2026-08-31 21:26:37.609 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 21:26:37.619 [INF] HTTP GET /api/auth/get-workspace responded 200 in 120.9552 ms
+2026-08-31 21:26:42.016 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 21:26:42.017 [INF] HTTP POST /api/auth/select-workspace responded 200 in 44.7215 ms
+2026-08-31 21:30:37.103 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2884 ms
+2026-08-31 21:30:37.188 [INF] Gernerate new refresh token- 
+2026-08-31 21:30:37.189 [INF] HTTP POST /api/auth/refresh responded 200 in 54.4968 ms
+2026-08-31 21:30:40.882 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1555 ms
+2026-08-31 21:30:40.891 [WRN] Refresh token Rotation failed: Token not found xOq0ttMG0EL31AJHb442vt6zMKQdvE453_hPxc5QXlFT0UapxiPiTKAY_x2JVaQNZgZYcNrxT9Yeh7nQlvRTjw
+2026-08-31 21:30:40.893 [INF] HTTP POST /api/auth/refresh responded 400 in 6.9223 ms
+2026-08-31 21:31:36.026 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1002 ms
+2026-08-31 21:31:36.054 [WRN] Refresh token Rotation failed: Token not found 
+2026-08-31 21:31:36.055 [INF] HTTP POST /api/auth/refresh responded 400 in 1.5292 ms
+2026-08-31 21:31:38.970 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-08-31 21:31:38.970 [INF] HTTP POST /api/auth/login responded 200 in 67.2922 ms
+2026-08-31 21:31:39.003 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 21:31:39.004 [INF] HTTP GET /api/auth/get-workspace responded 200 in 9.5007 ms
+2026-08-31 21:31:40.507 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 21:31:40.508 [INF] HTTP POST /api/auth/select-workspace responded 200 in 15.3695 ms
+2026-08-31 21:44:11.993 [INF] HTTP GET /api/auth/csrf responded 404 in 0.3465 ms
+2026-08-31 21:44:12.048 [INF] Gernerate new refresh token- 
+2026-08-31 21:44:12.048 [INF] HTTP POST /api/auth/refresh responded 200 in 47.0218 ms
+2026-08-31 21:44:12.187 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 21:44:12.187 [INF] HTTP GET /api/auth/get-workspace responded 200 in 10.4968 ms
+2026-08-31 21:44:13.938 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 21:44:13.938 [INF] HTTP POST /api/auth/select-workspace responded 200 in 10.5439 ms
+2026-08-31 21:46:27.601 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0851 ms
+2026-08-31 21:46:27.620 [INF] Gernerate new refresh token- 
+2026-08-31 21:46:27.620 [INF] HTTP POST /api/auth/refresh responded 200 in 13.9373 ms
+2026-08-31 21:46:27.671 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 21:46:27.672 [INF] HTTP GET /api/auth/get-workspace responded 200 in 6.0617 ms
+2026-08-31 21:46:28.712 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 21:46:28.712 [INF] HTTP POST /api/auth/select-workspace responded 200 in 9.4956 ms
+2026-08-31 21:50:42.011 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0786 ms
+2026-08-31 21:50:42.060 [INF] Gernerate new refresh token- 
+2026-08-31 21:50:42.061 [INF] HTTP POST /api/auth/refresh responded 200 in 40.5568 ms
+2026-08-31 21:50:42.086 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 21:50:42.087 [INF] HTTP GET /api/auth/get-workspace responded 200 in 4.3540 ms
+2026-08-31 21:50:43.367 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 21:50:43.368 [INF] HTTP POST /api/auth/select-workspace responded 200 in 8.1797 ms
+2026-08-31 22:04:07.113 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1098 ms
+2026-08-31 22:04:07.154 [INF] Gernerate new refresh token- 
+2026-08-31 22:04:07.154 [INF] HTTP POST /api/auth/refresh responded 200 in 33.0258 ms
+2026-08-31 22:04:07.180 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:04:07.180 [INF] HTTP GET /api/auth/get-workspace responded 200 in 4.3902 ms
+2026-08-31 22:04:08.640 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:04:08.641 [INF] HTTP POST /api/auth/select-workspace responded 200 in 10.1625 ms
+2026-08-31 22:07:38.329 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0973 ms
+2026-08-31 22:07:38.350 [INF] Gernerate new refresh token- 
+2026-08-31 22:07:38.350 [INF] HTTP POST /api/auth/refresh responded 200 in 10.7913 ms
+2026-08-31 22:07:38.399 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:07:38.400 [INF] HTTP GET /api/auth/get-workspace responded 200 in 3.5860 ms
+2026-08-31 22:07:40.989 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:07:40.989 [INF] HTTP POST /api/auth/select-workspace responded 200 in 9.5228 ms
+2026-08-31 22:09:42.550 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1242 ms
+2026-08-31 22:09:42.569 [INF] Gernerate new refresh token- 
+2026-08-31 22:09:42.570 [INF] HTTP POST /api/auth/refresh responded 200 in 12.6368 ms
+2026-08-31 22:09:42.621 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:09:42.621 [INF] HTTP GET /api/auth/get-workspace responded 200 in 5.7040 ms
+2026-08-31 22:09:43.565 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:09:43.565 [INF] HTTP POST /api/auth/select-workspace responded 200 in 12.0587 ms
+2026-08-31 22:10:14.552 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1071 ms
+2026-08-31 22:10:14.569 [INF] Gernerate new refresh token- 
+2026-08-31 22:10:14.569 [INF] HTTP POST /api/auth/refresh responded 200 in 7.0190 ms
+2026-08-31 22:10:14.590 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:10:14.590 [INF] HTTP GET /api/auth/get-workspace responded 200 in 7.8817 ms
+2026-08-31 22:10:15.651 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:10:15.651 [INF] HTTP POST /api/auth/select-workspace responded 200 in 10.2708 ms
+2026-08-31 22:13:18.729 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1172 ms
+2026-08-31 22:13:18.746 [INF] Gernerate new refresh token- 
+2026-08-31 22:13:18.746 [INF] HTTP POST /api/auth/refresh responded 200 in 10.4750 ms
+2026-08-31 22:13:18.818 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:13:18.818 [INF] HTTP GET /api/auth/get-workspace responded 200 in 7.1806 ms
+2026-08-31 22:13:19.815 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:13:19.815 [INF] HTTP POST /api/auth/select-workspace responded 200 in 10.0778 ms
+2026-08-31 22:20:38.139 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1280 ms
+2026-08-31 22:20:38.179 [INF] Gernerate new refresh token- 
+2026-08-31 22:20:38.179 [INF] HTTP POST /api/auth/refresh responded 200 in 30.8809 ms
+2026-08-31 22:20:38.208 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:20:38.209 [INF] HTTP GET /api/auth/get-workspace responded 200 in 4.6252 ms
+2026-08-31 22:20:39.239 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:20:39.240 [INF] HTTP POST /api/auth/select-workspace responded 200 in 8.4727 ms
+2026-08-31 22:29:44.520 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0902 ms
+2026-08-31 22:29:44.559 [INF] Gernerate new refresh token- 
+2026-08-31 22:29:44.559 [INF] HTTP POST /api/auth/refresh responded 200 in 31.9977 ms
+2026-08-31 22:29:44.591 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:29:44.591 [INF] HTTP GET /api/auth/get-workspace responded 200 in 7.2906 ms
+2026-08-31 22:29:45.572 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:29:45.572 [INF] HTTP POST /api/auth/select-workspace responded 200 in 7.9836 ms
+2026-08-31 22:36:27.798 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0609 ms
+2026-08-31 22:36:27.840 [INF] Gernerate new refresh token- 
+2026-08-31 22:36:27.841 [INF] HTTP POST /api/auth/refresh responded 200 in 39.6812 ms
+2026-08-31 22:36:27.863 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 22:36:27.863 [INF] HTTP GET /api/auth/get-workspace responded 200 in 4.8161 ms
+2026-08-31 22:36:29.192 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 22:36:29.193 [INF] HTTP POST /api/auth/select-workspace responded 200 in 11.0917 ms
+2026-08-31 23:04:32.974 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1690 ms
+2026-08-31 23:04:33.016 [INF] Gernerate new refresh token- 
+2026-08-31 23:04:33.017 [INF] HTTP POST /api/auth/refresh responded 200 in 38.1809 ms
+2026-08-31 23:04:33.044 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 23:04:33.044 [INF] HTTP GET /api/auth/get-workspace responded 200 in 3.4009 ms
+2026-08-31 23:04:34.601 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 23:04:34.602 [INF] HTTP POST /api/auth/select-workspace responded 200 in 11.7758 ms
+2026-08-31 23:10:52.071 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1018 ms
+2026-08-31 23:10:52.111 [INF] Gernerate new refresh token- 
+2026-08-31 23:10:52.111 [INF] HTTP POST /api/auth/refresh responded 200 in 32.9247 ms
+2026-08-31 23:10:52.130 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 23:10:52.131 [INF] HTTP GET /api/auth/get-workspace responded 200 in 6.3199 ms
+2026-08-31 23:10:52.975 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 23:10:52.975 [INF] HTTP POST /api/auth/select-workspace responded 200 in 10.1279 ms
+2026-08-31 23:14:00.206 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0478 ms
+2026-08-31 23:14:00.480 [INF] Gernerate new refresh token- 
+2026-08-31 23:14:00.481 [INF] HTTP POST /api/auth/refresh responded 200 in 251.5064 ms
+2026-08-31 23:14:00.510 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 23:14:00.510 [INF] HTTP GET /api/auth/get-workspace responded 200 in 6.6010 ms
+2026-08-31 23:14:01.331 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 23:14:01.331 [INF] HTTP POST /api/auth/select-workspace responded 200 in 17.8687 ms
+2026-08-31 23:14:53.453 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0780 ms
+2026-08-31 23:14:53.693 [INF] Gernerate new refresh token- 
+2026-08-31 23:14:53.693 [INF] HTTP POST /api/auth/refresh responded 200 in 199.4242 ms
+2026-08-31 23:14:53.709 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 23:14:53.710 [INF] HTTP GET /api/auth/get-workspace responded 200 in 3.5477 ms
+2026-08-31 23:14:57.193 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 23:14:57.193 [INF] HTTP POST /api/auth/select-workspace responded 200 in 176.1281 ms
+2026-08-31 23:36:52.989 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0595 ms
+2026-08-31 23:36:53.097 [INF] Gernerate new refresh token- 
+2026-08-31 23:36:53.097 [INF] HTTP POST /api/auth/refresh responded 200 in 44.4977 ms
+2026-08-31 23:36:53.190 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 23:36:53.190 [INF] HTTP GET /api/auth/get-workspace responded 200 in 3.4269 ms
+2026-08-31 23:36:54.704 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 23:36:54.705 [INF] HTTP POST /api/auth/select-workspace responded 200 in 8.4601 ms
+2026-08-31 23:46:50.184 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1034 ms
+2026-08-31 23:46:50.226 [INF] Gernerate new refresh token- 
+2026-08-31 23:46:50.227 [INF] HTTP POST /api/auth/refresh responded 200 in 32.9935 ms
+2026-08-31 23:46:50.257 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-08-31 23:46:50.258 [INF] HTTP GET /api/auth/get-workspace responded 200 in 2.9527 ms
+2026-08-31 23:46:54.582 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-08-31 23:46:54.583 [INF] HTTP POST /api/auth/select-workspace responded 200 in 9.3430 ms

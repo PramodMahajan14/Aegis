@@ -1,0 +1,17 @@
+2026-09-04 00:52:42.299 [INF] Starting database seeding process...
+2026-09-04 00:52:43.634 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-04 00:52:43.730 [INF] Super Admin user already exists.
+2026-09-04 00:52:43.878 [INF] Super Application Role already has all permisson
+2026-09-04 00:52:43.978 [INF] Super Admin user created successfully.
+2026-09-04 00:52:49.754 [INF] HTTP GET /api/auth/csrf responded 404 in 44.4591 ms
+2026-09-04 00:52:49.960 [WRN] Refresh token Rotation failed: Token not found UFoGTuqftQMFDUxvn0NuZKZ1M8UrtfrWEsgAlVssuAo6t_jm66eUaZC5MkXd7qmT003_GN_zk0UXROayaFF7Cw
+2026-09-04 00:52:50.021 [INF] HTTP POST /api/auth/refresh responded 400 in 243.0349 ms
+2026-09-04 00:52:53.146 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-04 00:52:53.151 [INF] HTTP POST /api/auth/login responded 200 in 1060.3876 ms
+2026-09-04 00:52:53.658 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-04 00:52:53.671 [INF] HTTP GET /api/auth/get-workspace responded 200 in 480.9732 ms
+2026-09-04 00:52:55.602 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-04 00:52:55.602 [INF] HTTP POST /api/auth/select-workspace responded 200 in 424.0338 ms
+2026-09-04 00:53:03.786 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-04 00:53:03.922 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-04 00:53:03.926 [INF] HTTP GET /api/master/get-jobroles responded 200 in 150.3868 ms

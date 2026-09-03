@@ -100,3 +100,137 @@
 2026-09-03 00:28:17.184 [INF] HTTP DELETE /api/master/delete-jobrole/f6e5081f-e0d8-4e2a-a8d5-fd94e3a561f8 responded 200 in 54.5996 ms
 2026-09-03 00:28:17.261 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
 2026-09-03 00:28:17.263 [INF] HTTP GET /api/master/get-jobroles responded 200 in 71.3045 ms
+2026-09-03 00:35:49.272 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:35:49.273 [INF] HTTP GET /api/master/get-jobroles responded 200 in 188.9881 ms
+2026-09-03 00:39:30.473 [INF] HTTP GET /api/auth/csrf responded 404 in 0.3593 ms
+2026-09-03 00:39:30.929 [INF] Gernerate new refresh token- 
+2026-09-03 00:39:30.935 [INF] HTTP POST /api/auth/refresh responded 200 in 454.4650 ms
+2026-09-03 00:39:31.312 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 00:39:31.321 [INF] HTTP GET /api/auth/get-workspace responded 200 in 364.7771 ms
+2026-09-03 00:39:31.488 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1407 ms
+2026-09-03 00:39:31.547 [WRN] Refresh token Rotation failed: Token not found eRi2zR12mR6rFs0HQ7hhTS__EZHErADy6_nw2_6HEMsV6IqVOhyPFzoFYqIhvwlYjd2syjc_YKfEbW_fecbyMA
+2026-09-03 00:39:31.548 [INF] HTTP POST /api/auth/refresh responded 400 in 14.4514 ms
+2026-09-03 00:39:32.846 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1224 ms
+2026-09-03 00:39:32.869 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-03 00:39:32.870 [INF] HTTP POST /api/auth/refresh responded 400 in 2.1215 ms
+2026-09-03 00:39:34.220 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-03 00:39:34.221 [INF] HTTP POST /api/auth/login responded 200 in 499.8447 ms
+2026-09-03 00:39:34.517 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 00:39:34.517 [INF] HTTP GET /api/auth/get-workspace responded 200 in 276.9514 ms
+2026-09-03 00:39:35.836 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:39:35.836 [INF] HTTP POST /api/auth/select-workspace responded 200 in 341.4655 ms
+2026-09-03 00:50:10.330 [INF] HTTP GET /api/auth/csrf responded 404 in 41.9327 ms
+2026-09-03 00:50:10.614 [INF] Gernerate new refresh token- 
+2026-09-03 00:50:10.615 [INF] HTTP POST /api/auth/refresh responded 200 in 263.5918 ms
+2026-09-03 00:50:10.837 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 00:50:10.838 [INF] HTTP GET /api/auth/get-workspace responded 200 in 193.3454 ms
+2026-09-03 00:50:12.666 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:50:12.689 [INF] HTTP POST /api/auth/select-workspace responded 200 in 350.8496 ms
+2026-09-03 00:51:19.953 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1960 ms
+2026-09-03 00:51:20.220 [INF] Gernerate new refresh token- 
+2026-09-03 00:51:20.220 [INF] HTTP POST /api/auth/refresh responded 200 in 240.1185 ms
+2026-09-03 00:51:20.470 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 00:51:20.470 [INF] HTTP GET /api/auth/get-workspace responded 200 in 235.4463 ms
+2026-09-03 00:51:22.327 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:51:22.328 [INF] HTTP POST /api/auth/select-workspace responded 200 in 221.8997 ms
+2026-09-03 00:52:23.099 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1110 ms
+2026-09-03 00:52:23.347 [INF] Gernerate new refresh token- 
+2026-09-03 00:52:23.347 [INF] HTTP POST /api/auth/refresh responded 200 in 200.6552 ms
+2026-09-03 00:52:23.573 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 00:52:23.574 [INF] HTTP GET /api/auth/get-workspace responded 200 in 209.9050 ms
+2026-09-03 00:52:25.038 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:52:25.038 [INF] HTTP POST /api/auth/select-workspace responded 200 in 61.2466 ms
+2026-09-03 00:53:04.013 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0903 ms
+2026-09-03 00:53:04.183 [INF] Gernerate new refresh token- 
+2026-09-03 00:53:04.204 [INF] HTTP POST /api/auth/refresh responded 200 in 164.5025 ms
+2026-09-03 00:53:04.457 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 00:53:04.458 [INF] HTTP GET /api/auth/get-workspace responded 200 in 216.1071 ms
+2026-09-03 00:53:05.497 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:53:05.497 [INF] HTTP POST /api/auth/select-workspace responded 200 in 131.4515 ms
+2026-09-03 00:53:37.410 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0799 ms
+2026-09-03 00:53:37.557 [INF] Gernerate new refresh token- 
+2026-09-03 00:53:37.558 [INF] HTTP POST /api/auth/refresh responded 200 in 117.9211 ms
+2026-09-03 00:53:37.758 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 00:53:37.758 [INF] HTTP GET /api/auth/get-workspace responded 200 in 182.4155 ms
+2026-09-03 00:53:38.672 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:53:38.673 [INF] HTTP POST /api/auth/select-workspace responded 200 in 59.3439 ms
+2026-09-03 00:54:32.290 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 00:54:32.354 [INF] HTTP GET /api/master/get-jobroles responded 200 in 130.7319 ms
+2026-09-03 01:02:24.215 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0627 ms
+2026-09-03 01:02:24.455 [INF] Gernerate new refresh token- 
+2026-09-03 01:02:24.456 [INF] HTTP POST /api/auth/refresh responded 200 in 210.4999 ms
+2026-09-03 01:02:24.553 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:02:24.553 [INF] HTTP GET /api/auth/get-workspace responded 200 in 78.3408 ms
+2026-09-03 01:02:26.172 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:02:26.173 [INF] HTTP POST /api/auth/select-workspace responded 200 in 235.6820 ms
+2026-09-03 01:02:50.079 [INF] HTTP GET /api/auth/csrf responded 404 in 20.8000 ms
+2026-09-03 01:02:50.323 [INF] Gernerate new refresh token- 
+2026-09-03 01:02:50.323 [INF] HTTP POST /api/auth/refresh responded 200 in 237.2809 ms
+2026-09-03 01:02:50.465 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:02:50.465 [INF] HTTP GET /api/auth/get-workspace responded 200 in 128.1364 ms
+2026-09-03 01:02:52.087 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:02:52.087 [INF] HTTP POST /api/auth/select-workspace responded 200 in 153.5691 ms
+2026-09-03 01:03:27.808 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:03:27.808 [INF] HTTP GET /api/master/get-jobroles responded 200 in 70.5834 ms
+2026-09-03 01:11:36.092 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0684 ms
+2026-09-03 01:11:36.329 [INF] Gernerate new refresh token- 
+2026-09-03 01:11:36.330 [INF] HTTP POST /api/auth/refresh responded 200 in 169.5875 ms
+2026-09-03 01:11:36.654 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:11:36.655 [INF] HTTP GET /api/auth/get-workspace responded 200 in 309.7559 ms
+2026-09-03 01:11:37.301 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0899 ms
+2026-09-03 01:11:37.393 [WRN] Refresh token Rotation failed: Token not found gCA3mzxLYEOqVCeHT29zIH9f9lGbiYiC37dArk4MoDi8XT9FV3GqTFUq6gmObA1Zv8Fp_qIWfKe_wYV32OxmFQ
+2026-09-03 01:11:37.414 [INF] HTTP POST /api/auth/refresh responded 400 in 90.8296 ms
+2026-09-03 01:12:01.225 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-03 01:12:01.226 [INF] HTTP POST /api/auth/login responded 200 in 330.6312 ms
+2026-09-03 01:12:01.418 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:12:01.419 [INF] HTTP GET /api/auth/get-workspace responded 200 in 160.3520 ms
+2026-09-03 01:12:02.269 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:12:02.270 [INF] HTTP POST /api/auth/select-workspace responded 200 in 110.1103 ms
+2026-09-03 01:12:07.177 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:12:07.177 [INF] HTTP GET /api/master/get-jobroles responded 200 in 71.7044 ms
+2026-09-03 01:14:24.105 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0652 ms
+2026-09-03 01:14:24.417 [INF] Gernerate new refresh token- 
+2026-09-03 01:14:24.417 [INF] HTTP POST /api/auth/refresh responded 200 in 297.3539 ms
+2026-09-03 01:14:24.605 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:14:24.605 [INF] HTTP GET /api/auth/get-workspace responded 200 in 168.4725 ms
+2026-09-03 01:14:32.795 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:14:32.795 [INF] HTTP POST /api/auth/select-workspace responded 200 in 244.0702 ms
+2026-09-03 01:14:37.028 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:14:37.029 [INF] HTTP GET /api/master/get-jobroles responded 200 in 67.4149 ms
+2026-09-03 01:15:25.218 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0860 ms
+2026-09-03 01:15:25.527 [INF] Gernerate new refresh token- 
+2026-09-03 01:15:25.527 [INF] HTTP POST /api/auth/refresh responded 200 in 252.1722 ms
+2026-09-03 01:15:25.763 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:15:25.763 [INF] HTTP GET /api/auth/get-workspace responded 200 in 206.0359 ms
+2026-09-03 01:15:27.835 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:15:27.836 [INF] HTTP POST /api/auth/select-workspace responded 200 in 317.9697 ms
+2026-09-03 01:15:34.866 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:15:34.908 [INF] HTTP GET /api/master/get-jobroles responded 200 in 66.9523 ms
+2026-09-03 01:16:21.627 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:16:21.647 [INF] HTTP GET /api/master/get-jobroles responded 200 in 232.2849 ms
+2026-09-03 01:18:16.662 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0732 ms
+2026-09-03 01:18:16.996 [INF] Gernerate new refresh token- 
+2026-09-03 01:18:16.996 [INF] HTTP POST /api/auth/refresh responded 200 in 293.4209 ms
+2026-09-03 01:18:17.154 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:18:17.155 [INF] HTTP GET /api/auth/get-workspace responded 200 in 143.2582 ms
+2026-09-03 01:19:40.083 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:19:40.106 [INF] HTTP POST /api/auth/select-workspace responded 200 in 324.6774 ms
+2026-09-03 01:19:44.107 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:19:44.107 [INF] HTTP GET /api/master/get-jobroles responded 200 in 45.8307 ms
+2026-09-03 01:22:08.903 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1112 ms
+2026-09-03 01:22:09.214 [INF] Gernerate new refresh token- 
+2026-09-03 01:22:09.215 [INF] HTTP POST /api/auth/refresh responded 200 in 241.3472 ms
+2026-09-03 01:22:09.444 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-03 01:22:09.444 [INF] HTTP GET /api/auth/get-workspace responded 200 in 181.4852 ms
+2026-09-03 01:22:10.832 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:22:10.832 [INF] HTTP POST /api/auth/select-workspace responded 200 in 166.3666 ms
+2026-09-03 01:22:14.240 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:22:14.240 [INF] HTTP GET /api/master/get-jobroles responded 200 in 66.4998 ms
+2026-09-03 01:29:18.262 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:29:18.262 [INF] HTTP GET /api/master/get-jobroles responded 200 in 103.4240 ms
+2026-09-03 01:30:21.466 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:30:21.466 [INF] HTTP GET /api/master/get-jobroles responded 200 in 89.1428 ms
+2026-09-03 01:30:56.451 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:30:56.514 [INF] HTTP GET /api/master/get-jobroles responded 200 in 108.8756 ms
+2026-09-03 01:52:46.000 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-03 01:52:46.000 [INF] HTTP GET /api/master/get-jobroles responded 200 in 140.3387 ms

@@ -1,57 +1,60 @@
-
 using Aegis.Model.DTO.Employee;
-using Aegis.Services.Services.Interfaces;
+using Aegis.Services.Features.EmployeeManagement;
+using Aegis.Services.Helper;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Aegis.Services.Controllers
-{  
-    
+namespace Aegis.Services.Controllers.EmployeeController
+{
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
     public class EmployeeController : ControllerBase
-    { 
-        private readonly IEmployee _employee;
-        public EmployeeController(IEmployee employee)
+    {
+        private readonly UserHelper _helper;
+        private readonly IMediator _mediator;
+
+        public EmployeeController(
+            UserHelper helper,
+            IMediator mediator)
         {
-           _employee = employee;   
+            _helper = helper ?? throw new ArgumentNullException(nameof(helper));
+            _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
-        
+
+
         [HttpPost("create")]
-        public async Task<IActionResult> CreateEMployee([FromBody] EmployeeDto model)
+        public async Task<IActionResult> CreateEmployeeAsync(
+            [FromBody] EmployeeDto model,
+            CancellationToken cancellationToken)
         {
-            var response = await _employee.CreateEmployee(model);
+            // Get current organization from logged-in user's context
+            var organizationId = _helper.GetCurrentTenant();
 
-            if (response.Success)
-            {
-                return Ok(response);
-            }
-            return BadRequest(response);
-        }
+            // Get currently logged-in employee
+            var currentEmployee =
+                await _helper.GetCurrentEmployeeAsync();
 
-        [HttpPut("update")]
-        public async Task<IActionResult> UpdateEmployee([FromBody] EmployeeDto model)
-        {
-            var response = await _employee.UpdateEmployee(model);
 
-            if (response.Success)
-            {
-                return Ok(response);
-            }
-            return BadRequest(response);
-        }
+            // Create MediatR command
+            var command =
+                new CreateEmployee.CreateEmployeeCommand(
+                    organizationId,
+                    model,
+                    currentEmployee);
 
-        [HttpGet("/list")]
-        public async Task<IActionResult> GetListEmployee()
-        {
-            var response = await _employee.GetListEmployee();
 
-            if (response.Success)
-            {
-                return Ok(response);
-            }
-            return BadRequest(response);
+            // Send command to handler
+            var response =
+                await _mediator.Send(
+                    command,
+                    cancellationToken);
+
+
+            return StatusCode(
+                response.StatusCode,
+                response);
         }
     }
 }

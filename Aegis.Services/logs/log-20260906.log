@@ -1,0 +1,370 @@
+2026-09-06 10:47:13.540 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0980 ms
+2026-09-06 10:47:13.767 [INF] Gernerate new refresh token- 
+2026-09-06 10:47:13.769 [INF] HTTP POST /api/auth/refresh responded 200 in 192.3916 ms
+2026-09-06 10:47:13.932 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 10:47:13.933 [INF] HTTP GET /api/auth/get-workspace responded 200 in 98.6392 ms
+2026-09-06 10:50:47.685 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 10:50:47.685 [INF] HTTP POST /api/auth/select-workspace responded 200 in 127.9136 ms
+2026-09-06 11:17:26.585 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:17:26.585 [INF] HTTP GET /api/master/get-jobroles responded 200 in 63.9133 ms
+2026-09-06 11:23:49.770 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:23:49.770 [INF] HTTP GET /api/master/get-jobroles responded 200 in 118.7899 ms
+2026-09-06 11:26:23.762 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:26:23.763 [INF] HTTP GET /api/master/get-jobroles responded 200 in 74.0366 ms
+2026-09-06 11:26:48.261 [INF] JobeRole created successfully : For organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:26:48.265 [INF] HTTP PUT /api/master/update-jobrole/a55bd896-26e5-47c8-abd1-c6aa93cdccab responded 200 in 213.7377 ms
+2026-09-06 11:26:48.273 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:26:48.317 [INF] HTTP GET /api/master/get-jobroles responded 200 in 46.2736 ms
+2026-09-06 11:32:24.719 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2108 ms
+2026-09-06 11:32:25.140 [INF] Gernerate new refresh token- 
+2026-09-06 11:32:25.141 [INF] HTTP POST /api/auth/refresh responded 200 in 354.0910 ms
+2026-09-06 11:32:25.336 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 11:32:25.337 [INF] HTTP GET /api/auth/get-workspace responded 200 in 162.4035 ms
+2026-09-06 11:32:27.483 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:32:27.484 [INF] HTTP POST /api/auth/select-workspace responded 200 in 200.7236 ms
+2026-09-06 11:32:32.730 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:32:32.774 [INF] HTTP GET /api/master/get-jobroles responded 200 in 69.0241 ms
+2026-09-06 11:33:09.818 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:33:09.819 [INF] HTTP GET /api/master/get-jobroles responded 200 in 151.3560 ms
+2026-09-06 11:36:47.630 [INF] Employee created successfully. EmployeeId="622cde86-135e-4d14-8ff2-410ff190c907", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:36:52.299 [ERR] HTTP POST /api/employee/create responded 500 in 5160.3329 ms
+2026-09-06 11:36:59.244 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@marcoaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:36:59.266 [INF] HTTP POST /api/employee/create responded 404 in 184.2887 ms
+2026-09-06 11:37:10.542 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@marcoaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:37:10.543 [INF] HTTP POST /api/employee/create responded 404 in 123.4458 ms
+2026-09-06 11:37:18.899 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@marcoaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:37:18.900 [INF] HTTP POST /api/employee/create responded 404 in 123.2111 ms
+2026-09-06 11:37:39.566 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:37:39.566 [INF] HTTP GET /api/master/get-jobroles responded 200 in 74.4554 ms
+2026-09-06 11:38:10.595 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:38:10.595 [INF] HTTP GET /api/master/get-jobroles responded 200 in 117.1568 ms
+2026-09-06 11:47:29.236 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:47:29.237 [INF] HTTP GET /api/master/get-jobroles responded 200 in 129.0174 ms
+2026-09-06 11:48:09.609 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:48:09.610 [INF] HTTP GET /api/master/get-jobroles responded 200 in 73.1035 ms
+2026-09-06 11:48:58.780 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@marcoaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 11:48:58.781 [INF] HTTP POST /api/employee/create responded 404 in 24404.4168 ms
+2026-09-06 12:01:23.813 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 12:01:23.813 [INF] HTTP GET /api/master/get-jobroles responded 200 in 175.5600 ms
+2026-09-06 12:02:32.073 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 12:02:32.073 [INF] HTTP GET /api/master/get-jobroles responded 200 in 113.0581 ms
+2026-09-06 12:05:53.541 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 12:05:53.541 [INF] HTTP GET /api/master/get-jobroles responded 200 in 49.6542 ms
+2026-09-06 12:23:35.879 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 12:23:35.879 [INF] HTTP GET /api/master/get-jobroles responded 200 in 233.8156 ms
+2026-09-06 13:01:32.399 [INF] HTTP GET /api/master/get-jobroles responded 401 in 13.7769 ms
+2026-09-06 13:01:32.802 [INF] Gernerate new refresh token- 
+2026-09-06 13:01:32.804 [INF] HTTP POST /api/auth/refresh responded 200 in 396.4362 ms
+2026-09-06 13:01:32.843 [INF] Fetched 0 job roles for organization "00000000-0000-0000-0000-000000000000"
+2026-09-06 13:01:32.905 [INF] HTTP GET /api/master/get-jobroles responded 200 in 90.9369 ms
+2026-09-06 13:06:50.558 [INF] Fetched 0 job roles for organization "00000000-0000-0000-0000-000000000000"
+2026-09-06 13:06:50.558 [INF] HTTP GET /api/master/get-jobroles responded 200 in 185.9938 ms
+2026-09-06 13:11:28.176 [INF] Fetched 0 job roles for organization "00000000-0000-0000-0000-000000000000"
+2026-09-06 13:11:28.176 [INF] HTTP GET /api/master/get-jobroles responded 200 in 32.2403 ms
+2026-09-06 13:13:53.378 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1032 ms
+2026-09-06 13:13:53.545 [WRN] Refresh token Rotation failed: Token not found KNOOfPlUDpzR_DoErsJM_a5Oq48p3VpXIL3pF2OoIx7C3RYM2PxGj_EHCSN2FL9_vu1nAxkRZsLFzBXIbhn7BA
+2026-09-06 13:13:53.566 [INF] HTTP POST /api/auth/refresh responded 400 in 181.5524 ms
+2026-09-06 13:13:57.931 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-06 13:13:57.932 [INF] HTTP POST /api/auth/login responded 200 in 138.6053 ms
+2026-09-06 13:13:58.036 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 13:13:58.036 [INF] HTTP GET /api/auth/get-workspace responded 200 in 76.5475 ms
+2026-09-06 13:13:59.323 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 13:13:59.323 [INF] HTTP POST /api/auth/select-workspace responded 200 in 169.0974 ms
+2026-09-06 13:15:43.885 [INF] HTTP GET /api/employee/get-employees responded 200 in 185.6667 ms
+2026-09-06 13:16:35.205 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0709 ms
+2026-09-06 13:16:35.568 [INF] Gernerate new refresh token- 
+2026-09-06 13:16:35.568 [INF] HTTP POST /api/auth/refresh responded 200 in 279.1655 ms
+2026-09-06 13:16:35.752 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 13:16:35.753 [INF] HTTP GET /api/auth/get-workspace responded 200 in 159.3018 ms
+2026-09-06 13:16:36.946 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 13:16:36.946 [INF] HTTP POST /api/auth/select-workspace responded 200 in 207.9864 ms
+2026-09-06 13:17:11.968 [INF] HTTP GET /api/employee/get-employees responded 200 in 30988.6825 ms
+2026-09-06 13:21:40.927 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0580 ms
+2026-09-06 13:21:41.273 [INF] Gernerate new refresh token- 
+2026-09-06 13:21:41.273 [INF] HTTP POST /api/auth/refresh responded 200 in 266.4263 ms
+2026-09-06 13:21:41.689 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 13:21:41.690 [INF] HTTP GET /api/auth/get-workspace responded 200 in 372.8522 ms
+2026-09-06 13:21:43.026 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 13:21:43.027 [INF] HTTP POST /api/auth/select-workspace responded 200 in 257.3667 ms
+2026-09-06 13:21:49.786 [INF] HTTP GET /api/employee/get-employees responded 200 in 3052.4581 ms
+2026-09-06 13:22:30.044 [INF] HTTP GET /api/employee/get-employees responded 200 in 4610.7440 ms
+2026-09-06 13:45:38.895 [INF] Starting database seeding process...
+2026-09-06 13:45:40.147 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-06 13:45:40.334 [INF] Super Admin user already exists.
+2026-09-06 13:45:40.872 [INF] Super Application Role already has all permisson
+2026-09-06 13:45:40.985 [INF] Super Admin user created successfully.
+2026-09-06 14:52:03.750 [INF] HTTP GET /api/master/get-jobroles responded 401 in 11666.9785 ms
+2026-09-06 14:52:07.121 [INF] Gernerate new refresh token- 
+2026-09-06 14:52:07.136 [INF] HTTP POST /api/auth/refresh responded 200 in 3366.6494 ms
+2026-09-06 14:52:12.813 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-06 14:52:12.966 [INF] Fetched 0 job roles for organization "00000000-0000-0000-0000-000000000000"
+2026-09-06 14:52:12.978 [INF] HTTP GET /api/master/get-jobroles responded 200 in 5832.6341 ms
+2026-09-06 15:11:31.565 [INF] HTTP GET /api/auth/csrf responded 404 in 0.6842 ms
+2026-09-06 15:11:31.789 [WRN] Refresh token Rotation failed: Token not found xarxrKMGFoUAyxwzPJl8lM6qJR3SGrgFAi7XgQDsfg2jIXJLs_KFLf_coU9oLTkiZgNdTxxE_pmwceAxlm79cw
+2026-09-06 15:11:31.790 [INF] HTTP POST /api/auth/refresh responded 400 in 216.0590 ms
+2026-09-06 15:11:33.856 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-06 15:11:33.858 [INF] HTTP POST /api/auth/login responded 200 in 594.5215 ms
+2026-09-06 15:11:34.296 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 15:11:34.306 [INF] HTTP GET /api/auth/get-workspace responded 200 in 411.2958 ms
+2026-09-06 15:11:35.583 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 15:11:35.584 [INF] HTTP POST /api/auth/select-workspace responded 200 in 345.7552 ms
+2026-09-06 15:11:38.087 [INF] HTTP GET /api/employee/get-employees responded 200 in 128.3980 ms
+2026-09-06 15:17:54.331 [INF] Starting database seeding process...
+2026-09-06 15:17:56.144 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-06 15:17:56.485 [INF] Super Admin user already exists.
+2026-09-06 15:17:57.130 [INF] Super Application Role already has all permisson
+2026-09-06 15:17:57.288 [INF] Super Admin user created successfully.
+2026-09-06 15:19:46.774 [INF] HTTP GET /api/auth/csrf responded 404 in 48.3146 ms
+2026-09-06 15:19:47.055 [WRN] Refresh token Rotation failed: Token not found gELbbD4GQxKRvYCtmNnc4ckTSqJ6ACTPsTVA7Gvj92ppVFIjgLtAmGC1vZtF8sPv4TvjwRWrGHn9vCjuNFgXyg
+2026-09-06 15:19:47.103 [INF] HTTP POST /api/auth/refresh responded 400 in 298.9414 ms
+2026-09-06 15:24:49.005 [INF] HTTP GET /api/auth/csrf responded 404 in 5.2422 ms
+2026-09-06 15:24:49.029 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-06 15:24:49.030 [INF] HTTP POST /api/auth/refresh responded 400 in 7.2846 ms
+2026-09-06 15:33:22.473 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-06 15:33:22.843 [INF] HTTP GET /api/employee/get-employees responded 200 in 550.2786 ms
+2026-09-06 15:33:55.333 [INF] Starting database seeding process...
+2026-09-06 15:33:57.133 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-06 15:33:57.300 [INF] Super Admin user already exists.
+2026-09-06 15:33:57.775 [INF] Super Application Role already has all permisson
+2026-09-06 15:33:57.867 [INF] Super Admin user created successfully.
+2026-09-06 15:34:00.615 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-06 15:34:00.759 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 15:34:00.919 [INF] HTTP GET /api/master/get-jobroles responded 200 in 463.2705 ms
+2026-09-06 15:34:01.459 [INF] HTTP GET /api/employee/get-employees responded 200 in 370.3413 ms
+2026-09-06 15:34:48.740 [INF] HTTP GET /api/employee/get-employees responded 200 in 285.6363 ms
+2026-09-06 15:35:57.567 [INF] HTTP GET /api/employee/get-employees responded 200 in 243.7686 ms
+2026-09-06 15:37:21.699 [INF] HTTP GET /api/employee/get-employees responded 200 in 281.1449 ms
+2026-09-06 15:39:03.609 [INF] HTTP GET /api/employee/get-employees responded 200 in 198.4781 ms
+2026-09-06 15:59:27.394 [INF] Starting database seeding process...
+2026-09-06 15:59:28.776 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-06 15:59:28.931 [INF] Super Admin user already exists.
+2026-09-06 15:59:29.396 [INF] Super Application Role already has all permisson
+2026-09-06 15:59:29.533 [INF] Super Admin user created successfully.
+2026-09-06 15:59:37.725 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-06 15:59:37.977 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 15:59:38.112 [INF] HTTP GET /api/master/get-jobroles responded 200 in 496.4094 ms
+2026-09-06 15:59:39.550 [INF] HTTP GET /api/employee/get-employees responded 200 in 371.6459 ms
+2026-09-06 16:00:11.162 [INF] Starting database seeding process...
+2026-09-06 16:00:12.724 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-06 16:00:12.854 [INF] Super Admin user already exists.
+2026-09-06 16:00:13.203 [INF] Super Application Role already has all permisson
+2026-09-06 16:00:13.315 [INF] Super Admin user created successfully.
+2026-09-06 16:00:19.454 [INF] HTTP GET /api/auth/csrf responded 404 in 56.7703 ms
+2026-09-06 16:00:20.132 [INF] Gernerate new refresh token- 
+2026-09-06 16:00:20.180 [INF] HTTP POST /api/auth/refresh responded 200 in 698.9075 ms
+2026-09-06 16:00:21.016 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 16:00:21.032 [INF] HTTP GET /api/auth/get-workspace responded 200 in 812.1813 ms
+2026-09-06 16:00:22.895 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:00:22.897 [INF] HTTP POST /api/auth/select-workspace responded 200 in 753.6954 ms
+2026-09-06 16:00:25.437 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-06 16:00:25.609 [INF] HTTP GET /api/employee/get-employees responded 200 in 198.4406 ms
+2026-09-06 16:05:34.445 [INF] Starting database seeding process...
+2026-09-06 16:05:36.519 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-06 16:05:36.720 [INF] Super Admin user already exists.
+2026-09-06 16:05:37.314 [INF] Super Application Role already has all permisson
+2026-09-06 16:05:37.435 [INF] Super Admin user created successfully.
+2026-09-06 16:05:43.553 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-06 16:05:43.635 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:05:43.785 [INF] HTTP GET /api/master/get-jobroles responded 200 in 389.9978 ms
+2026-09-06 16:05:44.980 [INF] HTTP GET /api/employee/get-employees responded 200 in 320.9547 ms
+2026-09-06 16:07:03.660 [INF] HTTP GET /api/employee/get-employees responded 200 in 381.6398 ms
+2026-09-06 16:08:29.555 [INF] HTTP GET /api/employee/get-employees responded 200 in 263.6718 ms
+2026-09-06 16:11:50.869 [INF] HTTP GET /api/employee/get-employees responded 200 in 313.9079 ms
+2026-09-06 16:13:16.189 [INF] HTTP GET /api/employee/get-employees responded 200 in 174.3696 ms
+2026-09-06 16:18:52.731 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:18:52.731 [INF] HTTP GET /api/master/get-jobroles responded 200 in 153.2170 ms
+2026-09-06 16:18:58.811 [INF] HTTP GET /api/employee/get-employees responded 200 in 93.1468 ms
+2026-09-06 16:19:32.157 [INF] HTTP GET /api/employee/get-employees responded 200 in 93.5063 ms
+2026-09-06 16:20:30.071 [INF] HTTP GET /api/employee/get-employees responded 200 in 199.9108 ms
+2026-09-06 16:26:56.512 [INF] HTTP GET /api/employee/get-employees responded 200 in 262.9278 ms
+2026-09-06 16:28:57.047 [INF] HTTP GET /api/employee/get-employees responded 200 in 112.5922 ms
+2026-09-06 16:30:13.265 [INF] HTTP GET /api/employee/get-employees responded 200 in 198.9562 ms
+2026-09-06 16:30:56.629 [INF] HTTP GET /api/employee/get-employees responded 200 in 154.6965 ms
+2026-09-06 16:32:46.288 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:32:46.289 [INF] HTTP GET /api/master/get-jobroles responded 200 in 139.1157 ms
+2026-09-06 16:36:57.631 [INF] HTTP GET /api/employee/get-employees responded 200 in 210.8561 ms
+2026-09-06 16:40:16.584 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:40:16.584 [INF] HTTP GET /api/master/get-jobroles responded 200 in 152.6172 ms
+2026-09-06 16:46:10.437 [INF] HTTP GET /api/auth/csrf responded 404 in 0.4561 ms
+2026-09-06 16:46:11.085 [INF] Gernerate new refresh token- 
+2026-09-06 16:46:11.089 [INF] HTTP POST /api/auth/refresh responded 200 in 591.4303 ms
+2026-09-06 16:46:11.517 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 16:46:11.521 [INF] HTTP GET /api/auth/get-workspace responded 200 in 404.4582 ms
+2026-09-06 16:46:13.522 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:46:13.525 [INF] HTTP POST /api/auth/select-workspace responded 200 in 248.0884 ms
+2026-09-06 16:46:15.402 [INF] HTTP GET /api/employee/get-employees responded 200 in 91.0479 ms
+2026-09-06 16:46:34.486 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:46:34.487 [INF] HTTP GET /api/master/get-jobroles responded 200 in 74.3470 ms
+2026-09-06 16:46:48.003 [INF] HTTP GET /api/employee/get-employees responded 200 in 71.4493 ms
+2026-09-06 16:50:40.634 [INF] HTTP GET /api/employee/get-employees responded 200 in 244.0450 ms
+2026-09-06 16:53:03.605 [INF] HTTP GET /api/employee/get-employees responded 200 in 220.9786 ms
+2026-09-06 16:53:39.810 [INF] HTTP DELETE /api/employee/delete-employee/093e1220-de53-4a45-a3fd-cbf4c85fb54a responded 200 in 190.3240 ms
+2026-09-06 16:53:39.885 [INF] HTTP GET /api/employee/get-employees responded 200 in 69.1863 ms
+2026-09-06 16:53:57.668 [INF] HTTP DELETE /api/employee/delete-employee/28eb760a-3585-4294-a4cb-3ef5344687fd responded 200 in 57.3140 ms
+2026-09-06 16:53:57.789 [INF] HTTP GET /api/employee/get-employees responded 200 in 95.7755 ms
+2026-09-06 16:54:06.563 [INF] HTTP GET /api/auth/csrf responded 404 in 0.7763 ms
+2026-09-06 16:54:06.763 [INF] Gernerate new refresh token- 
+2026-09-06 16:54:06.765 [INF] HTTP POST /api/auth/refresh responded 200 in 111.5638 ms
+2026-09-06 16:54:07.101 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 16:54:07.102 [INF] HTTP GET /api/auth/get-workspace responded 200 in 280.8103 ms
+2026-09-06 16:54:08.602 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:54:08.602 [INF] HTTP POST /api/auth/select-workspace responded 200 in 307.6815 ms
+2026-09-06 16:54:10.923 [INF] HTTP GET /api/employee/get-employees responded 200 in 74.6138 ms
+2026-09-06 16:54:20.392 [INF] HTTP DELETE /api/employee/delete-employee/cdf33796-00f1-44f6-832f-5c3f5e5a9848 responded 200 in 162.9896 ms
+2026-09-06 16:54:20.467 [INF] HTTP GET /api/employee/get-employees responded 200 in 68.9800 ms
+2026-09-06 16:54:43.040 [INF] HTTP DELETE /api/employee/delete-employee/b2e264ad-d625-4762-8940-39fe37ca77d1 responded 200 in 104.4593 ms
+2026-09-06 16:54:43.156 [INF] HTTP GET /api/employee/get-employees responded 200 in 110.0357 ms
+2026-09-06 16:54:47.078 [INF] HTTP DELETE /api/employee/delete-employee/848c93b1-d582-42e2-bc53-5dd95dc36a1e responded 200 in 182.1811 ms
+2026-09-06 16:54:47.129 [INF] HTTP GET /api/employee/get-employees responded 200 in 47.1373 ms
+2026-09-06 16:54:51.704 [INF] HTTP DELETE /api/employee/delete-employee/622cde86-135e-4d14-8ff2-410ff190c907 responded 200 in 12.2641 ms
+2026-09-06 16:54:51.809 [INF] HTTP GET /api/employee/get-employees responded 200 in 72.2091 ms
+2026-09-06 16:54:56.451 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:54:56.452 [INF] HTTP GET /api/master/get-jobroles responded 200 in 28.5643 ms
+2026-09-06 16:55:59.545 [INF] Employee created successfully. EmployeeId="576f5c36-0f8d-41f4-9314-628bf9dc8c93", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 16:55:59.549 [INF] HTTP POST /api/employee/create responded 200 in 5625.3696 ms
+2026-09-06 16:56:21.214 [INF] HTTP GET /api/employee/get-employees responded 200 in 137.0415 ms
+2026-09-06 16:59:19.240 [INF] HTTP GET /api/employee/get-employees responded 200 in 73.0241 ms
+2026-09-06 17:01:32.050 [INF] Starting database seeding process...
+2026-09-06 17:01:33.471 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-06 17:01:33.575 [INF] Super Admin user already exists.
+2026-09-06 17:01:34.058 [INF] Super Application Role already has all permisson
+2026-09-06 17:01:34.190 [INF] Super Admin user created successfully.
+2026-09-06 17:02:34.412 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-06 17:02:34.844 [INF] HTTP GET /api/employee/get-employees responded 200 in 580.3694 ms
+2026-09-06 17:02:57.643 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:02:57.656 [INF] HTTP GET /api/master/get-jobroles responded 200 in 326.7659 ms
+2026-09-06 17:03:39.761 [INF] Employee created successfully. EmployeeId="aba66c0d-82d5-4d0e-8e54-01138a75768f", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:03:39.763 [INF] HTTP POST /api/employee/create responded 200 in 1132.6061 ms
+2026-09-06 17:04:21.050 [INF] HTTP GET /api/employee/get-employees responded 200 in 301.6451 ms
+2026-09-06 17:04:45.170 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:04:45.171 [INF] HTTP GET /api/master/get-jobroles responded 200 in 54.5730 ms
+2026-09-06 17:05:37.168 [INF] HTTP POST /api/employee/create responded 400 in 31.3592 ms
+2026-09-06 17:05:37.371 [INF] HTTP GET /api/employee/get-employees responded 200 in 176.3538 ms
+2026-09-06 17:06:04.390 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:06:04.391 [INF] HTTP GET /api/master/get-jobroles responded 200 in 137.7726 ms
+2026-09-06 17:11:25.859 [INF] HTTP GET /api/auth/csrf responded 404 in 0.5617 ms
+2026-09-06 17:11:25.892 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-06 17:11:25.893 [INF] HTTP POST /api/auth/refresh responded 400 in 17.3264 ms
+2026-09-06 17:11:36.331 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:11:36.332 [INF] HTTP GET /api/master/get-jobroles responded 200 in 247.5181 ms
+2026-09-06 17:12:56.335 [INF] HTTP POST /api/employee/create responded 400 in 2.3501 ms
+2026-09-06 17:13:08.461 [INF] HTTP POST /api/employee/create responded 400 in 1.7033 ms
+2026-09-06 17:14:44.346 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:14:44.347 [INF] HTTP GET /api/master/get-jobroles responded 200 in 137.9139 ms
+2026-09-06 17:14:48.223 [INF] HTTP POST /api/employee/create responded 400 in 2.1983 ms
+2026-09-06 17:18:02.401 [INF] HTTP POST /api/employee/create responded 400 in 2.0763 ms
+2026-09-06 17:19:23.428 [INF] HTTP POST /api/employee/create responded 400 in 0.9461 ms
+2026-09-06 17:23:03.853 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:23:03.853 [INF] HTTP GET /api/master/get-jobroles responded 200 in 151.5397 ms
+2026-09-06 17:23:05.720 [INF] HTTP POST /api/employee/create responded 400 in 1.2926 ms
+2026-09-06 17:23:10.314 [INF] HTTP POST /api/employee/create responded 400 in 1.7286 ms
+2026-09-06 17:24:29.330 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:24:29.331 [INF] HTTP GET /api/master/get-jobroles responded 200 in 178.5003 ms
+2026-09-06 17:24:33.458 [INF] HTTP POST /api/employee/create responded 400 in 1.2554 ms
+2026-09-06 17:24:53.159 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmail.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:24:53.162 [INF] HTTP POST /api/employee/create responded 404 in 221.7213 ms
+2026-09-06 17:25:04.647 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmail.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:25:04.648 [INF] HTTP POST /api/employee/create responded 404 in 223.2693 ms
+2026-09-06 17:25:54.656 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmail.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:25:54.657 [INF] HTTP POST /api/employee/create responded 404 in 291.8624 ms
+2026-09-06 17:26:45.411 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:26:45.411 [INF] HTTP GET /api/master/get-jobroles responded 200 in 257.8976 ms
+2026-09-06 17:26:49.163 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmail.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:26:49.164 [INF] HTTP POST /api/employee/create responded 404 in 372.3582 ms
+2026-09-06 17:27:07.059 [INF] HTTP POST /api/employee/create responded 400 in 1.6154 ms
+2026-09-06 17:27:40.136 [INF] HTTP GET /api/employee/get-employees responded 200 in 73.4978 ms
+2026-09-06 17:31:11.226 [INF] HTTP GET /api/auth/csrf responded 404 in 0.8352 ms
+2026-09-06 17:31:11.798 [INF] Gernerate new refresh token- 
+2026-09-06 17:31:11.806 [INF] HTTP POST /api/auth/refresh responded 200 in 536.4667 ms
+2026-09-06 17:31:12.245 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 17:31:12.247 [INF] HTTP GET /api/auth/get-workspace responded 200 in 419.3374 ms
+2026-09-06 17:31:15.623 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:31:15.627 [INF] HTTP POST /api/auth/select-workspace responded 200 in 517.5860 ms
+2026-09-06 17:31:17.481 [INF] HTTP GET /api/employee/get-employees responded 200 in 88.6484 ms
+2026-09-06 17:32:14.711 [INF] HTTP GET /api/employee/get-employees responded 200 in 152.4850 ms
+2026-09-06 17:33:09.002 [INF] HTTP GET /api/employee/get-employees responded 200 in 74.4387 ms
+2026-09-06 17:33:10.864 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:33:10.864 [INF] HTTP GET /api/master/get-jobroles responded 200 in 24.9769 ms
+2026-09-06 17:34:10.262 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:34:10.263 [INF] HTTP GET /api/master/get-jobroles responded 200 in 218.6329 ms
+2026-09-06 17:34:10.456 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 369.0322 ms
+2026-09-06 17:34:49.273 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:34:49.274 [INF] HTTP GET /api/master/get-jobroles responded 200 in 232.8831 ms
+2026-09-06 17:34:49.485 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 444.1671 ms
+2026-09-06 17:35:54.722 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:35:54.723 [INF] HTTP GET /api/master/get-jobroles responded 200 in 116.9655 ms
+2026-09-06 17:35:54.839 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 232.9827 ms
+2026-09-06 17:36:25.896 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:36:25.939 [INF] HTTP GET /api/master/get-jobroles responded 200 in 272.5326 ms
+2026-09-06 17:36:25.974 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 306.4021 ms
+2026-09-06 17:37:14.453 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 163.4879 ms
+2026-09-06 17:37:14.454 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:37:14.455 [INF] HTTP GET /api/master/get-jobroles responded 200 in 143.4975 ms
+2026-09-06 17:38:02.917 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 218.7754 ms
+2026-09-06 17:38:02.959 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:38:02.960 [INF] HTTP GET /api/master/get-jobroles responded 200 in 261.9701 ms
+2026-09-06 17:39:58.355 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 189.9667 ms
+2026-09-06 17:39:58.417 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:39:58.479 [INF] HTTP GET /api/master/get-jobroles responded 200 in 314.2209 ms
+2026-09-06 17:40:35.352 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:40:35.414 [INF] HTTP GET /api/master/get-jobroles responded 200 in 281.4018 ms
+2026-09-06 17:40:35.458 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 305.0445 ms
+2026-09-06 17:40:46.208 [INF] HTTP GET /api/employee/get-employees responded 200 in 66.0014 ms
+2026-09-06 17:40:48.503 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 88.3253 ms
+2026-09-06 17:41:07.514 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan3@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:41:07.514 [INF] HTTP POST /api/employee/create responded 404 in 151.0928 ms
+2026-09-06 17:42:48.754 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:42:48.777 [INF] HTTP GET /api/master/get-jobroles responded 200 in 35.1022 ms
+2026-09-06 17:42:48.884 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 114.0302 ms
+2026-09-06 17:44:52.181 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:44:52.223 [INF] HTTP GET /api/master/get-jobroles responded 200 in 264.8825 ms
+2026-09-06 17:44:52.267 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 309.2122 ms
+2026-09-06 17:45:10.639 [INF] HTTP PUT /api/employee/update-employee/undefined responded 415 in 8.8153 ms
+2026-09-06 17:45:24.286 [INF] HTTP PUT /api/employee/update-employee/undefined responded 415 in 1.5361 ms
+2026-09-06 17:45:39.857 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:45:39.881 [INF] HTTP GET /api/master/get-jobroles responded 200 in 159.4085 ms
+2026-09-06 17:45:39.881 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 159.8329 ms
+2026-09-06 17:45:50.086 [INF] HTTP PUT /api/employee/update-employee/undefined responded 415 in 0.7316 ms
+2026-09-06 17:46:38.582 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:46:38.584 [INF] HTTP GET /api/master/get-jobroles responded 200 in 71.9049 ms
+2026-09-06 17:46:38.631 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 119.2690 ms
+2026-09-06 17:46:42.574 [INF] Employee updated successfully. EmployeeId="2b28d3e7-38b8-4f04-94fa-af1ac5b0af15", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:46:42.575 [INF] HTTP PUT /api/employee/update-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 205.2018 ms
+2026-09-06 17:46:42.671 [INF] HTTP GET /api/employee/get-employees responded 200 in 68.3183 ms
+2026-09-06 17:46:59.352 [INF] Employee updated successfully. EmployeeId="2b28d3e7-38b8-4f04-94fa-af1ac5b0af15", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:46:59.352 [INF] HTTP PUT /api/employee/update-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 171.5620 ms
+2026-09-06 17:46:59.478 [INF] HTTP GET /api/employee/get-employees responded 200 in 90.2359 ms
+2026-09-06 17:47:04.192 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0928 ms
+2026-09-06 17:47:04.439 [INF] Gernerate new refresh token- 
+2026-09-06 17:47:04.439 [INF] HTTP POST /api/auth/refresh responded 200 in 240.3714 ms
+2026-09-06 17:47:04.661 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-06 17:47:04.661 [INF] HTTP GET /api/auth/get-workspace responded 200 in 206.0168 ms
+2026-09-06 17:47:05.752 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:47:05.753 [INF] HTTP POST /api/auth/select-workspace responded 200 in 131.9457 ms
+2026-09-06 17:47:08.460 [INF] HTTP GET /api/employee/get-employees responded 200 in 111.3853 ms
+2026-09-06 17:47:18.300 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:47:18.300 [INF] HTTP GET /api/master/get-jobroles responded 200 in 136.0574 ms
+2026-09-06 17:47:18.303 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 138.3590 ms
+2026-09-06 17:47:39.789 [INF] HTTP GET /api/employee/get-employee/576f5c36-0f8d-41f4-9314-628bf9dc8c93 responded 200 in 52.2684 ms
+2026-09-06 17:47:59.549 [INF] HTTP GET /api/employee/get-employees responded 200 in 133.7493 ms
+2026-09-06 17:48:29.001 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:48:29.045 [INF] HTTP GET /api/master/get-jobroles responded 200 in 197.8456 ms
+2026-09-06 17:48:29.068 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 220.2573 ms
+2026-09-06 17:48:36.916 [INF] HTTP GET /api/employee/get-employees responded 200 in 4.8862 ms
+2026-09-06 17:48:45.850 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 5.2406 ms
+2026-09-06 17:49:09.681 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:49:09.703 [INF] HTTP GET /api/master/get-jobroles responded 200 in 24.4991 ms
+2026-09-06 17:49:11.581 [INF] HTTP GET /api/employee/get-employees responded 200 in 26.3156 ms
+2026-09-06 17:49:17.789 [INF] HTTP GET /api/employee/get-employee/2b28d3e7-38b8-4f04-94fa-af1ac5b0af15 responded 200 in 49.2602 ms
+2026-09-06 17:49:20.513 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 46.4089 ms
+2026-09-06 17:53:36.965 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:53:36.966 [INF] HTTP GET /api/master/get-jobroles responded 200 in 145.8752 ms
+2026-09-06 17:53:41.169 [INF] HTTP GET /api/employee/get-employees responded 200 in 89.9581 ms
+2026-09-06 17:54:46.252 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-06 17:54:46.253 [INF] HTTP GET /api/master/get-jobroles responded 200 in 111.7780 ms
+2026-09-06 17:55:01.541 [INF] HTTP GET /api/employee/get-employees responded 200 in 131.2095 ms
+2026-09-06 18:52:57.014 [INF] HTTP GET /api/master/get-jobroles responded 401 in 12.6120 ms
+2026-09-06 18:52:57.272 [INF] Gernerate new refresh token- 
+2026-09-06 18:52:57.272 [INF] HTTP POST /api/auth/refresh responded 200 in 251.8133 ms
+2026-09-06 18:52:57.320 [INF] Fetched 0 job roles for organization "00000000-0000-0000-0000-000000000000"
+2026-09-06 18:52:57.320 [INF] HTTP GET /api/master/get-jobroles responded 200 in 44.9554 ms

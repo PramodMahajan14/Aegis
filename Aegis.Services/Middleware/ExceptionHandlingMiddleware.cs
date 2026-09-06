@@ -34,6 +34,9 @@ namespace Aegis.Services.Middleware
 
         private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
+
+   Console.WriteLine(exception);
+
             var response = ApiResponse<object>.ErrorResponse("Internal Server Error", "An unexpected error occurred.", StatusCodes.Status500InternalServerError);
 
             context.Response.ContentType = "application/json";

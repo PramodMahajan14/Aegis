@@ -1,5 +1,7 @@
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Aegis.DataAccess.Data;
 using Aegis.Model.Auth;
 using Aegis.Services.Helper;
@@ -55,7 +57,11 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Progr
 #region Add Services
 
 // Controllers
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions((option) =>
+{
+    option.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+    option.JsonSerializerOptions.Converters.Add(new DateTimeUtcJsonConverter());
+});
 
 
 
@@ -205,4 +211,19 @@ app.MapControllers();
 
 app.Run();
 
+
+
+
+#endregion
+
+
+#region Helper
+public class DateTimeUtcJsonConverter : JsonConverter<DateTime>
+{
+    public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+        reader.GetDateTime().ToUniversalTime();
+
+    public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options) =>
+        writer.WriteStringValue(value.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ"));
+}
 #endregion

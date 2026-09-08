@@ -1,3 +1,5 @@
+using Aegis.Model.ProspectModel;
+
 namespace Aegis.Model.Master
 {
     public class ProspectStatus
@@ -13,6 +15,8 @@ namespace Aegis.Model.Master
         public int DisplayOrder { get; set; }
 
         public bool IsActive { get; set; }
+
+        public ICollection<Prospect> Prospects {get;set;} = new List<Prospect>();
 
     }
 }

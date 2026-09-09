@@ -31,10 +31,14 @@ namespace Aegis.Model.ProspectModel
         public string? OfficeLocation { get; set; }
 
         // public string? SourceId {get;set;}
+        
+        public Guid ProspectTemperatureId {get;set;}
+        [ForeignKey(nameof(ProspectTemperatureId))]
+        public ProspectTemperature ProspectTemperature {get;set;} = null!;
 
-        public ProspectTemperature ProspectTemperature {get;set;}
-
-        public ProspectSource ProspectSource {get;set;}
+        public Guid ProspectSourceId {get;set;}
+        [ForeignKey(nameof(ProspectSourceId))]
+        public ProspectSource ProspectSource {get;set;} = null!;
 
         public bool IsActive { get; set; }
 

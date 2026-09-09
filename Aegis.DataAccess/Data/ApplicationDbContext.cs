@@ -46,6 +46,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     #region Prospect
     public DbSet<Prospect> Prospects { get; set; }
+
+    public DbSet<ProspectSource> ProspectSources { get; set; }
+    public DbSet<ProspectTemperature> ProspectTemperatures { get; set; }
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -59,6 +62,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         FeatureSeeder.Seed(modelBuilder);
         PermissionSeeder.Seed(modelBuilder);
         OrganizationTypeSeeder.Seed(modelBuilder);
+
+        // Prospect
+        ProspectSourceSeeder.Seed(modelBuilder);
+        ProspectTemperatureSeeder.Seed(modelBuilder);
 
         modelBuilder.Entity<Organization>().HasData(
             new Organization

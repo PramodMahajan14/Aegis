@@ -146,3 +146,31 @@
 2026-09-09 02:23:32.226 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
 2026-09-09 02:23:32.226 [INF] HTTP GET /api/master/get-jobroles responded 200 in 5.6828 ms
 2026-09-09 02:23:32.896 [INF] HTTP GET /api/employee/get-employees responded 200 in 3.9606 ms
+2026-09-09 22:15:04.764 [INF] Starting database seeding process...
+2026-09-09 22:15:06.722 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-09 22:15:06.858 [INF] Super Admin user already exists.
+2026-09-09 22:15:07.012 [INF] Super Application Role already has all permisson
+2026-09-09 22:15:07.089 [INF] Super Admin user created successfully.
+2026-09-09 22:15:15.835 [INF] HTTP GET /api/auth/csrf responded 404 in 33.9801 ms
+2026-09-09 22:15:16.120 [INF] Gernerate new refresh token- 
+2026-09-09 22:15:16.160 [INF] HTTP POST /api/auth/refresh responded 200 in 297.2420 ms
+2026-09-09 22:15:16.413 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-09 22:15:16.428 [INF] HTTP GET /api/auth/get-workspace responded 200 in 245.2860 ms
+2026-09-09 22:15:22.053 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-09 22:15:22.055 [INF] HTTP POST /api/auth/select-workspace responded 200 in 66.8023 ms
+2026-09-09 22:20:53.765 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-09 22:20:53.820 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-09 22:20:53.824 [INF] HTTP GET /api/master/get-jobroles responded 200 in 69.8309 ms
+2026-09-09 22:43:05.434 [INF] HTTP GET /api/employee/get-employees responded 200 in 73.0460 ms
+2026-09-09 22:43:13.485 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-09 22:43:13.486 [INF] HTTP GET /api/master/get-jobroles responded 200 in 7.5795 ms
+2026-09-09 22:44:15.092 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-09 22:44:15.093 [INF] HTTP GET /api/master/get-jobroles responded 200 in 4.6221 ms
+2026-09-09 22:44:16.640 [INF] HTTP GET /api/employee/get-employees responded 200 in 4.8482 ms
+2026-09-09 22:47:58.591 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2505 ms
+2026-09-09 22:47:58.627 [INF] Gernerate new refresh token- 
+2026-09-09 22:47:58.628 [INF] HTTP POST /api/auth/refresh responded 200 in 24.0330 ms
+2026-09-09 22:47:58.687 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-09 22:47:58.687 [INF] HTTP GET /api/auth/get-workspace responded 200 in 6.7646 ms
+2026-09-09 22:48:00.910 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-09 22:48:00.910 [INF] HTTP POST /api/auth/select-workspace responded 200 in 12.0842 ms

@@ -18,13 +18,13 @@ namespace Aegis.Services.Controllers
     {
         private readonly UserHelper _userHelper;
         private readonly IMediator _mediator;
-        private readonly Guid OrganizationId;
+        private readonly Guid _organizationId;
         public MasterController(IMediator mediator, UserHelper userHelper)
         {
             _mediator = mediator;
             _userHelper = userHelper;
 
-            OrganizationId = userHelper.GetCurrentTenant();
+            _organizationId = userHelper.GetCurrentTenant();
         }
 
         [HttpPost("create-jobrole")]
@@ -32,7 +32,7 @@ namespace Aegis.Services.Controllers
         {
             var employee = await _userHelper.GetCurrentEmployeeAsync();
 
-            var command = new CreateJobeRoleCommand(employee, model, OrganizationId);
+            var command = new CreateJobeRoleCommand(employee, model, _organizationId);
 
             var response = await _mediator.Send(command);
 
@@ -44,7 +44,7 @@ namespace Aegis.Services.Controllers
         public async Task<IActionResult> GetJobRoleListAsync()
         {
 
-            var command = new GetJobRolesQuery(OrganizationId);
+            var command = new GetJobRolesQuery(_organizationId);
 
             var response = await _mediator.Send(command);
 
@@ -55,7 +55,7 @@ namespace Aegis.Services.Controllers
         public async Task<IActionResult> GetJobRoleAsync([FromRoute] Guid Id)
         {
 
-            var command = new GetJobRoleQuery(OrganizationId, Id);
+            var command = new GetJobRoleQuery(_organizationId, Id);
 
             var response = await _mediator.Send(command);
 
@@ -67,7 +67,7 @@ namespace Aegis.Services.Controllers
         public async Task<IActionResult> UpdateJobRoleAsync([FromBody] ManageJobRoleDto model,[FromRoute] Guid Id)
         {
             var employee = await _userHelper.GetCurrentEmployeeAsync();
-            var command = new UpdateJobRoleCommand( model, OrganizationId,Id);
+            var command = new UpdateJobRoleCommand( model, _organizationId,Id);
             var response = await _mediator.Send(command);
             return StatusCode(response.StatusCode, response);
         }
@@ -76,7 +76,7 @@ namespace Aegis.Services.Controllers
         public async Task<IActionResult> DeleteJobRoleAsync([FromRoute] Guid Id)
         {
 
-            var command = new DeleteJobRoleCommand(OrganizationId, Id);
+            var command = new DeleteJobRoleCommand(_organizationId, Id);
 
             var response = await _mediator.Send(command);
 

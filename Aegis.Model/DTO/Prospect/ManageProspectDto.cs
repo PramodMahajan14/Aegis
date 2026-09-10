@@ -5,8 +5,6 @@ namespace Aegis.Model.DTO.Prospect
     public class ManageProspectDto
     {
         public Guid? Id { get; set; }
-        
-        public string ProspectNo {get;set;} = null!;
 
         public string Name { get; set; } = string.Empty;
 
@@ -25,9 +23,9 @@ namespace Aegis.Model.DTO.Prospect
         public string? OfficeLocation { get; set; }
 
 
-        public ProspectTemperature ProspectTemperature {get;set;}
+        public Guid ProspectTemperatureId { get; set; }
 
-        public ProspectSource ProspectSource {get;set;}
+        public Guid ProspectSourceId { get; set; }
 
     }
 }

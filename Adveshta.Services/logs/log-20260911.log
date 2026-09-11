@@ -1,0 +1,13 @@
+2026-09-11 19:22:07.225 [INF] Starting database seeding process...
+2026-09-11 19:22:08.801 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-11 19:22:08.961 [INF] Super Admin user already exists.
+2026-09-11 19:22:09.138 [INF] Super Application Role already has all permisson
+2026-09-11 19:22:09.223 [INF] Super Admin user created successfully.
+2026-09-11 19:22:11.472 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-11 19:22:11.510 [INF] HTTP POST /api/auth/login responded 200 in 418.7882 ms
+2026-09-11 19:22:11.691 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-11 19:22:11.702 [INF] HTTP GET /api/auth/get-workspace responded 200 in 133.2626 ms
+2026-09-11 19:22:12.721 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-11 19:22:12.722 [INF] HTTP POST /api/auth/select-workspace responded 200 in 65.9462 ms
+2026-09-11 19:29:07.518 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-11 19:29:07.587 [INF] HTTP GET /api/employee/get-employees responded 200 in 77.2102 ms

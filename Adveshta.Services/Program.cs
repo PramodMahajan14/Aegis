@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Adveshta.DataAccess.Data;
+using Adveshta.Helpers.Prospect;
 using Adveshta.Model.Auth;
 using Adveshta.Services.Behaviors;
 using Adveshta.Services.Helper;
@@ -178,6 +179,8 @@ builder.Services.AddScoped<IEmployee, EmployeeService>();
 builder.Services.AddScoped<UserHelper>();
 builder.Services.AddScoped<EmployeeHelper>();
 
+
+builder.Services.AddScoped<ProspectStatusHelper>();
 
 builder.Services.AddSingleton<ILoggingService, LoggingService>();
 #endregion

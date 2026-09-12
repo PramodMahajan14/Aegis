@@ -1,4 +1,5 @@
 using Adveshta.Model.DTO.Prospect;
+using Adveshta.Services.Features.ProspectManagement;
 using Adveshta.Services.Features.ProspectManagement.CreateProspect;
 using Adveshta.Services.Helper;
 using MediatR;
@@ -32,6 +33,21 @@ namespace Adveshta.Services.Controllers
             var loggedEmployee = await _userHelper.GetCurrentEmployeeAsync();
 
             var command = new CreateProspectCommand(_organizationId, loggedEmployee, model);
+            var result = await _mediator.Send(command);
+
+            return StatusCode(result.StatusCode, result);
+        }
+
+
+         /// <summary>
+        /// Create a new prospect.
+        /// </summary>
+        [HttpPut]
+        public async Task<IActionResult> UpdateProspect([FromBody] ManageProspectDto model)
+        {
+            var loggedEmployee = await _userHelper.GetCurrentEmployeeAsync();
+
+            var command = new UpdateProspectCommand(_organizationId, loggedEmployee, model);
             var result = await _mediator.Send(command);
 
             return StatusCode(result.StatusCode, result);

@@ -1,0 +1,194 @@
+2026-09-02 00:25:02.555 [INF] Starting database seeding process...
+2026-09-02 00:25:03.987 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:25:04.124 [INF] Super Admin user already exists.
+2026-09-02 00:25:04.520 [INF] Super Application Role already has all permisson
+2026-09-02 00:25:04.661 [INF] Super Admin user created successfully.
+2026-09-02 00:25:35.614 [INF] HTTP GET /api/auth/csrf responded 404 in 21.7781 ms
+2026-09-02 00:25:36.149 [INF] Gernerate new refresh token- 
+2026-09-02 00:25:36.185 [INF] HTTP POST /api/auth/refresh responded 200 in 553.1211 ms
+2026-09-02 00:25:36.787 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:25:36.799 [INF] HTTP GET /api/auth/get-workspace responded 200 in 596.8968 ms
+2026-09-02 00:26:24.649 [INF] Starting database seeding process...
+2026-09-02 00:26:25.949 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:26:26.065 [INF] Super Admin user already exists.
+2026-09-02 00:26:26.493 [INF] Super Application Role already has all permisson
+2026-09-02 00:26:26.623 [INF] Super Admin user created successfully.
+2026-09-02 00:26:36.930 [INF] HTTP GET /api/Master/get-joberole responded 401 in 60.1819 ms
+2026-09-02 00:27:20.530 [INF] Starting database seeding process...
+2026-09-02 00:27:21.644 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:27:21.785 [INF] Super Admin user already exists.
+2026-09-02 00:27:22.262 [INF] Super Application Role already has all permisson
+2026-09-02 00:27:22.388 [INF] Super Admin user created successfully.
+2026-09-02 00:41:20.710 [INF] HTTP GET /api/master/get-joberoles responded 404 in 53.3299 ms
+2026-09-02 00:41:48.761 [INF] HTTP GET /api/master/get-joberoles responded 404 in 1.9512 ms
+2026-09-02 00:41:53.890 [INF] HTTP GET /api/auth/csrf responded 404 in 2.4302 ms
+2026-09-02 00:41:54.268 [WRN] Refresh token Rotation failed: Token not found 5OZX98kS1pkaAt62l5SS47sYwv3Dm7CDMVotI037qC_Q5n7tuTFF0UQ_sWv4E8JeiaF_0rO_HbSOdpc7eFP4IQ
+2026-09-02 00:41:54.297 [INF] HTTP POST /api/auth/refresh responded 400 in 391.0998 ms
+2026-09-02 00:41:56.286 [INF] HTTP POST /api/auth/login responded 400 in 160.4398 ms
+2026-09-02 00:42:06.313 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-02 00:42:06.318 [INF] HTTP POST /api/auth/login responded 200 in 732.0656 ms
+2026-09-02 00:42:06.764 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:42:06.781 [INF] HTTP GET /api/auth/get-workspace responded 200 in 434.6605 ms
+2026-09-02 00:42:08.769 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:42:08.770 [INF] HTTP POST /api/auth/select-workspace responded 200 in 530.8126 ms
+2026-09-02 00:42:11.141 [INF] HTTP GET /api/master/get-joberoles responded 404 in 0.3860 ms
+2026-09-02 00:42:12.150 [INF] HTTP GET /api/master/get-joberoles responded 404 in 0.5377 ms
+2026-09-02 00:43:08.218 [INF] Starting database seeding process...
+2026-09-02 00:43:09.264 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 00:43:09.335 [INF] Super Admin user already exists.
+2026-09-02 00:43:09.697 [INF] Super Application Role already has all permisson
+2026-09-02 00:43:09.777 [INF] Super Admin user created successfully.
+2026-09-02 00:43:11.515 [INF] HTTP GET /api/auth/csrf responded 404 in 26.0312 ms
+2026-09-02 00:43:12.173 [INF] Gernerate new refresh token- 
+2026-09-02 00:43:12.206 [INF] HTTP POST /api/auth/refresh responded 200 in 638.6163 ms
+2026-09-02 00:43:12.848 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:43:12.869 [INF] HTTP GET /api/auth/get-workspace responded 200 in 644.4656 ms
+2026-09-02 00:43:14.443 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:43:14.448 [INF] HTTP POST /api/auth/select-workspace responded 200 in 658.8787 ms
+2026-09-02 00:43:17.252 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-02 00:43:17.363 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:43:17.368 [INF] HTTP GET /api/master/get-joberoles responded 200 in 134.7485 ms
+2026-09-02 00:44:24.069 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:44:24.070 [INF] HTTP GET /api/master/get-joberoles responded 200 in 239.4331 ms
+2026-09-02 00:45:12.995 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:45:12.996 [INF] HTTP GET /api/master/get-joberoles responded 200 in 159.0268 ms
+2026-09-02 00:48:02.620 [INF] HTTP POST /api/Master/create-joberole responded 401 in 10.4795 ms
+2026-09-02 00:49:45.852 [INF] Fetched 1 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:49:45.852 [INF] HTTP GET /api/master/get-joberoles responded 200 in 187.9417 ms
+2026-09-02 00:51:50.638 [INF] JobeRole created successfully : For organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:51:50.650 [INF] HTTP POST /api/master/create-joberole responded 201 in 348.0169 ms
+2026-09-02 00:51:50.723 [INF] Fetched 2 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:51:50.724 [INF] HTTP GET /api/master/get-joberoles responded 200 in 67.7499 ms
+2026-09-02 00:52:40.219 [INF] JobeRole created successfully : For organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:40.220 [INF] HTTP POST /api/master/create-joberole responded 201 in 303.8696 ms
+2026-09-02 00:52:40.303 [INF] Fetched 3 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:40.303 [INF] HTTP GET /api/master/get-joberoles responded 200 in 69.5167 ms
+2026-09-02 00:52:44.499 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1350 ms
+2026-09-02 00:52:44.807 [INF] Gernerate new refresh token- 
+2026-09-02 00:52:44.808 [INF] HTTP POST /api/auth/refresh responded 200 in 294.9570 ms
+2026-09-02 00:52:45.068 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 00:52:45.069 [INF] HTTP GET /api/auth/get-workspace responded 200 in 233.9335 ms
+2026-09-02 00:52:46.491 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:46.492 [INF] HTTP POST /api/auth/select-workspace responded 200 in 348.7295 ms
+2026-09-02 00:52:48.400 [INF] Fetched 3 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:52:48.400 [INF] HTTP GET /api/master/get-joberoles responded 200 in 69.7816 ms
+2026-09-02 00:55:13.469 [INF] JobeRole created successfully : For organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:55:13.470 [INF] HTTP POST /api/master/create-joberole responded 201 in 213.7097 ms
+2026-09-02 00:55:13.547 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:55:13.548 [INF] HTTP GET /api/master/get-joberoles responded 200 in 70.1635 ms
+2026-09-02 00:59:53.937 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 00:59:53.938 [INF] HTTP GET /api/master/get-joberoles responded 200 in 184.3900 ms
+2026-09-02 21:31:04.445 [INF] Starting database seeding process...
+2026-09-02 21:31:05.595 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 21:31:05.689 [INF] Super Admin user already exists.
+2026-09-02 21:31:05.795 [INF] Super Application Role already has all permisson
+2026-09-02 21:31:05.884 [INF] Super Admin user created successfully.
+2026-09-02 21:31:19.316 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-02 21:31:19.351 [INF] HTTP POST /api/auth/login responded 200 in 798.0657 ms
+2026-09-02 21:31:20.012 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 21:31:20.027 [INF] HTTP GET /api/auth/get-workspace responded 200 in 647.3617 ms
+2026-09-02 21:31:22.107 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 21:31:22.107 [INF] HTTP POST /api/auth/select-workspace responded 200 in 601.5746 ms
+2026-09-02 21:31:25.011 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-02 21:31:25.198 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 21:31:25.201 [INF] HTTP GET /api/master/get-joberoles responded 200 in 202.5519 ms
+2026-09-02 21:36:24.419 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 21:36:24.420 [INF] HTTP GET /api/master/get-joberoles responded 200 in 203.4746 ms
+2026-09-02 21:39:06.774 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 21:39:06.774 [INF] HTTP GET /api/master/get-joberoles responded 200 in 301.9412 ms
+2026-09-02 21:42:26.436 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 21:42:26.462 [INF] HTTP GET /api/master/get-joberoles responded 200 in 300.3831 ms
+2026-09-02 22:46:38.824 [INF] HTTP POST /api/master/create-joberole responded 401 in 21.4756 ms
+2026-09-02 22:46:39.183 [INF] Gernerate new refresh token- 
+2026-09-02 22:46:39.184 [INF] HTTP POST /api/auth/refresh responded 200 in 353.8895 ms
+2026-09-02 22:46:39.332 [ERR] Failed executing DbCommand (31ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `JobRoles` (`Id`, `Description`, `Name`, `OrganizationId`)
+VALUES (@p0, @p1, @p2, @p3);
+2026-09-02 22:46:39.349 [ERR] An exception occurred in the database while saving changes for context type 'Aegis.DataAccess.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`AegisDb`.`JobRoles`, CONSTRAINT `FK_JobRoles_Organizations_OrganizationId` FOREIGN KEY (`OrganizationId`) REFERENCES `Organizations` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`AegisDb`.`JobRoles`, CONSTRAINT `FK_JobRoles_Organizations_OrganizationId` FOREIGN KEY (`OrganizationId`) REFERENCES `Organizations` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Aegis.Services.Features.MasterManagement.CreateJobRole.CreateJobeRole.CreateJobeRoleHandler.Handle(CreateJobeRoleCommand request, CancellationToken cancellationToken) in /home/admin1/Projects/Aegis/Aegis.Services/Features/MasterManagement/CreateJobeRole.cs:line 67
+   at Aegis.Services.Controllers.MasterController.CreateJobRoleAsync(ManageJobRoleDto model) in /home/admin1/Projects/Aegis/Aegis.Services/Controllers/MasterController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Aegis.Services.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext httpContext) in /home/admin1/Projects/Aegis/Aegis.Services/Middleware/ExceptionHandlingMiddleware.cs:line 25
+2026-09-02 22:46:39.454 [ERR] HTTP POST /api/master/create-joberole responded 500 in 266.1759 ms
+2026-09-02 22:46:51.187 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2493 ms
+2026-09-02 22:46:51.315 [WRN] Refresh token Rotation failed: Token not found VUb5qcLAV83614ADCJtgMOY0x0YsRZWS1i5GG_uqst1TEa85j9_cxkxwqQJpeev_bsFH0ZzzCOdBT_m5nXmA9g
+2026-09-02 22:46:51.316 [INF] HTTP POST /api/auth/refresh responded 400 in 119.5430 ms
+2026-09-02 22:46:53.345 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-02 22:46:53.346 [INF] HTTP POST /api/auth/login responded 200 in 316.5857 ms
+2026-09-02 22:46:53.606 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 22:46:53.607 [INF] HTTP GET /api/auth/get-workspace responded 200 in 231.9574 ms
+2026-09-02 22:46:55.045 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 22:46:55.045 [INF] HTTP POST /api/auth/select-workspace responded 200 in 258.2148 ms
+2026-09-02 22:46:57.450 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 22:46:57.471 [INF] HTTP GET /api/master/get-joberoles responded 200 in 90.3670 ms
+2026-09-02 22:47:38.117 [INF] Fetched 4 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-02 22:47:38.118 [INF] HTTP GET /api/master/get-joberoles responded 200 in 113.0572 ms
+2026-09-02 23:34:56.956 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1816 ms
+2026-09-02 23:34:57.218 [INF] Gernerate new refresh token- 
+2026-09-02 23:34:57.219 [INF] HTTP POST /api/auth/refresh responded 200 in 247.8791 ms
+2026-09-02 23:34:57.448 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-02 23:34:57.449 [INF] HTTP GET /api/auth/get-workspace responded 200 in 203.8018 ms
+2026-09-02 23:52:34.814 [INF] Starting database seeding process...
+2026-09-02 23:52:36.128 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 23:52:36.287 [INF] Super Admin user already exists.
+2026-09-02 23:52:36.594 [INF] Super Application Role already has all permisson
+2026-09-02 23:52:36.676 [INF] Super Admin user created successfully.
+2026-09-02 23:59:45.124 [INF] Starting database seeding process...
+2026-09-02 23:59:46.436 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-02 23:59:46.595 [INF] Super Admin user already exists.
+2026-09-02 23:59:46.864 [INF] Super Application Role already has all permisson
+2026-09-02 23:59:46.929 [INF] Super Admin user created successfully.

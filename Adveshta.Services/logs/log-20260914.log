@@ -1,0 +1,89 @@
+2026-09-14 00:00:08.817 [INF] HTTP GET /api/auth/csrf responded 404 in 0.4149 ms
+2026-09-14 00:00:10.215 [INF] Gernerate new refresh token- 
+2026-09-14 00:00:10.215 [INF] HTTP POST /api/auth/refresh responded 200 in 204.4736 ms
+2026-09-14 00:00:11.227 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 00:00:11.228 [INF] HTTP GET /api/auth/get-workspace responded 200 in 162.5493 ms
+2026-09-14 00:00:13.297 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:00:13.298 [INF] HTTP POST /api/auth/select-workspace responded 200 in 381.4507 ms
+2026-09-14 00:01:53.718 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:01:53.763 [INF] HTTP GET /api/prospects responded 200 in 97430.9603 ms
+2026-09-14 00:15:15.785 [INF] Starting database seeding process...
+2026-09-14 00:15:17.061 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-14 00:15:17.196 [INF] Super Admin user already exists.
+2026-09-14 00:15:17.635 [INF] Super Application Role already has all permisson
+2026-09-14 00:15:17.759 [INF] Super Admin user created successfully.
+2026-09-14 00:15:17.851 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-14 00:15:25.619 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 00:15:31.371 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 00:15:31.514 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:15:31.603 [INF] HTTP GET /api/prospects responded 200 in 6092.4636 ms
+2026-09-14 00:35:17.326 [INF] Starting database seeding process...
+2026-09-14 00:35:18.474 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-14 00:35:18.622 [INF] Super Admin user already exists.
+2026-09-14 00:35:19.046 [INF] Super Application Role already has all permisson
+2026-09-14 00:35:19.159 [INF] Super Admin user created successfully.
+2026-09-14 00:35:19.252 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-14 00:35:29.413 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 00:35:33.743 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 00:35:33.983 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:35:34.067 [INF] HTTP GET /api/prospects responded 200 in 4814.8504 ms
+2026-09-14 00:38:08.535 [INF] Starting database seeding process...
+2026-09-14 00:38:09.721 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-14 00:38:09.844 [INF] Super Admin user already exists.
+2026-09-14 00:38:10.240 [INF] Super Application Role already has all permisson
+2026-09-14 00:38:10.329 [INF] Super Admin user created successfully.
+2026-09-14 00:38:10.413 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-14 00:38:40.947 [INF] HTTP GET /api/auth/csrf responded 404 in 31.2335 ms
+2026-09-14 00:38:42.584 [INF] Gernerate new refresh token- 
+2026-09-14 00:38:42.623 [INF] HTTP POST /api/auth/refresh responded 200 in 919.0744 ms
+2026-09-14 00:38:43.312 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 00:38:43.326 [INF] HTTP GET /api/auth/get-workspace responded 200 in 669.3202 ms
+2026-09-14 00:38:45.469 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:38:45.471 [INF] HTTP POST /api/auth/select-workspace responded 200 in 478.1840 ms
+2026-09-14 00:38:48.494 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 00:38:48.622 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 00:38:48.871 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:38:48.884 [INF] HTTP GET /api/prospects responded 200 in 403.2302 ms
+2026-09-14 00:45:31.836 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:45:31.837 [INF] HTTP GET /api/prospects responded 200 in 300.3000 ms
+2026-09-14 00:45:44.544 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1349 ms
+2026-09-14 00:45:45.633 [INF] Gernerate new refresh token- 
+2026-09-14 00:45:45.633 [INF] HTTP POST /api/auth/refresh responded 200 in 289.2493 ms
+2026-09-14 00:45:46.667 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 00:45:46.667 [INF] HTTP GET /api/auth/get-workspace responded 200 in 399.8805 ms
+2026-09-14 00:45:50.477 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:45:50.477 [INF] HTTP POST /api/auth/select-workspace responded 200 in 366.5009 ms
+2026-09-14 00:45:56.376 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:45:56.377 [INF] HTTP GET /api/prospects responded 200 in 110.6740 ms
+2026-09-14 00:54:45.249 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0752 ms
+2026-09-14 00:54:45.822 [INF] Gernerate new refresh token- 
+2026-09-14 00:54:45.822 [INF] HTTP POST /api/auth/refresh responded 200 in 545.4614 ms
+2026-09-14 00:54:46.032 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 00:54:46.033 [INF] HTTP GET /api/auth/get-workspace responded 200 in 188.2950 ms
+2026-09-14 00:54:47.648 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:54:47.649 [INF] HTTP POST /api/auth/select-workspace responded 200 in 177.2831 ms
+2026-09-14 00:56:26.129 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1629 ms
+2026-09-14 00:56:27.595 [INF] Gernerate new refresh token- 
+2026-09-14 00:56:27.596 [INF] HTTP POST /api/auth/refresh responded 200 in 596.6332 ms
+2026-09-14 00:56:28.194 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 00:56:28.194 [INF] HTTP GET /api/auth/get-workspace responded 200 in 229.0500 ms
+2026-09-14 00:56:30.481 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:56:30.482 [INF] HTTP POST /api/auth/select-workspace responded 200 in 438.8041 ms
+2026-09-14 00:57:22.167 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:57:22.168 [INF] HTTP GET /api/prospects responded 200 in 73.7319 ms
+2026-09-14 00:58:35.586 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1184 ms
+2026-09-14 00:58:35.942 [INF] Gernerate new refresh token- 
+2026-09-14 00:58:35.942 [INF] HTTP POST /api/auth/refresh responded 200 in 347.0050 ms
+2026-09-14 00:58:36.230 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 00:58:36.230 [INF] HTTP GET /api/auth/get-workspace responded 200 in 268.5217 ms
+2026-09-14 00:58:40.548 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 00:58:40.548 [INF] HTTP POST /api/auth/select-workspace responded 200 in 237.7410 ms
+2026-09-14 01:01:37.742 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1361 ms
+2026-09-14 01:01:39.001 [INF] Gernerate new refresh token- 
+2026-09-14 01:01:39.001 [INF] HTTP POST /api/auth/refresh responded 200 in 384.2067 ms
+2026-09-14 01:01:39.655 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 01:01:39.655 [INF] HTTP GET /api/auth/get-workspace responded 200 in 137.0627 ms
+2026-09-14 01:01:41.678 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 01:01:41.678 [INF] HTTP POST /api/auth/select-workspace responded 200 in 283.7158 ms
+2026-09-14 01:04:25.173 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 01:04:25.174 [INF] HTTP GET /api/prospects responded 200 in 50.9808 ms

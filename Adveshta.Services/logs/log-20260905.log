@@ -1,0 +1,110 @@
+2026-09-05 18:52:01.663 [INF] Starting database seeding process...
+2026-09-05 18:52:03.456 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-05 18:52:03.552 [INF] Super Admin user already exists.
+2026-09-05 18:52:03.681 [INF] Super Application Role already has all permisson
+2026-09-05 18:52:03.772 [INF] Super Admin user created successfully.
+2026-09-05 18:52:09.069 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-05 18:52:09.115 [INF] HTTP POST /api/auth/login responded 200 in 583.6437 ms
+2026-09-05 18:52:09.424 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-05 18:52:09.441 [INF] HTTP GET /api/auth/get-workspace responded 200 in 220.6356 ms
+2026-09-05 18:52:10.608 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 18:52:10.608 [INF] HTTP POST /api/auth/select-workspace responded 200 in 53.8081 ms
+2026-09-05 18:52:13.496 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-05 18:52:13.505 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 18:52:13.506 [INF] HTTP GET /api/master/get-jobroles responded 200 in 19.7289 ms
+2026-09-05 18:52:55.358 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 18:52:55.359 [INF] HTTP GET /api/master/get-jobroles responded 200 in 7.1245 ms
+2026-09-05 18:56:00.933 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1786 ms
+2026-09-05 18:56:00.968 [INF] Gernerate new refresh token- 
+2026-09-05 18:56:00.969 [INF] HTTP POST /api/auth/refresh responded 200 in 26.0508 ms
+2026-09-05 18:56:01.006 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-05 18:56:01.007 [INF] HTTP GET /api/auth/get-workspace responded 200 in 6.5691 ms
+2026-09-05 21:13:53.206 [INF] Starting database seeding process...
+2026-09-05 21:13:54.693 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-05 21:13:54.877 [INF] Super Admin user already exists.
+2026-09-05 21:13:55.207 [INF] Super Application Role already has all permisson
+2026-09-05 21:13:55.292 [INF] Super Admin user created successfully.
+2026-09-05 21:13:58.078 [INF] HTTP GET /api/auth/csrf responded 404 in 42.3005 ms
+2026-09-05 21:13:58.381 [WRN] Refresh token Rotation failed: Token not found ii_DyveOwE9AP1RRtAIusxcp2J6D3_h7ruPrIWfRN8Opiz0uArjXNlXoDpLlqCtrdWsrAnUxqGqlzErbyii_DA
+2026-09-05 21:13:58.463 [INF] HTTP POST /api/auth/refresh responded 400 in 346.5385 ms
+2026-09-05 21:14:00.775 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-05 21:14:00.781 [INF] HTTP POST /api/auth/login responded 200 in 730.9387 ms
+2026-09-05 21:14:01.389 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-05 21:14:01.409 [INF] HTTP GET /api/auth/get-workspace responded 200 in 587.8211 ms
+2026-09-05 21:14:02.987 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:14:02.988 [INF] HTTP POST /api/auth/select-workspace responded 200 in 350.3179 ms
+2026-09-05 21:14:25.883 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-05 21:14:26.155 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:14:26.158 [INF] HTTP GET /api/master/get-jobroles responded 200 in 292.0493 ms
+2026-09-05 21:18:26.615 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:18:26.616 [INF] HTTP GET /api/master/get-jobroles responded 200 in 108.5914 ms
+2026-09-05 21:19:01.658 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:19:01.659 [INF] HTTP GET /api/master/get-jobroles responded 200 in 199.2429 ms
+2026-09-05 21:20:05.022 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:20:05.024 [INF] HTTP GET /api/master/get-jobroles responded 200 in 136.5410 ms
+2026-09-05 21:29:37.379 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:29:37.380 [INF] HTTP GET /api/master/get-jobroles responded 200 in 160.7861 ms
+2026-09-05 21:33:16.199 [INF] Employee created successfully. EmployeeId="848c93b1-d582-42e2-bc53-5dd95dc36a1e", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:33:30.647 [ERR] HTTP POST /api/employee/create responded 500 in 97981.5827 ms
+2026-09-05 21:35:17.759 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:35:17.760 [INF] HTTP GET /api/master/get-jobroles responded 200 in 58.4009 ms
+2026-09-05 21:37:31.841 [INF] Employee created successfully. EmployeeId="cdf33796-00f1-44f6-832f-5c3f5e5a9848", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:37:34.827 [ERR] HTTP POST /api/employee/create responded 500 in 91576.5099 ms
+2026-09-05 21:39:34.028 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmail.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:39:34.034 [INF] HTTP POST /api/employee/create responded 404 in 2892.1936 ms
+2026-09-05 21:43:12.316 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1662 ms
+2026-09-05 21:43:12.741 [INF] Gernerate new refresh token- 
+2026-09-05 21:43:12.743 [INF] HTTP POST /api/auth/refresh responded 200 in 306.8455 ms
+2026-09-05 21:43:12.922 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-05 21:43:12.922 [INF] HTTP GET /api/auth/get-workspace responded 200 in 144.9141 ms
+2026-09-05 21:43:14.611 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:43:14.611 [INF] HTTP POST /api/auth/select-workspace responded 200 in 270.5498 ms
+2026-09-05 21:43:23.662 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:43:23.727 [INF] HTTP GET /api/master/get-jobroles responded 200 in 154.6989 ms
+2026-09-05 21:43:57.178 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:43:57.179 [INF] HTTP POST /api/employee/create responded 404 in 213.6364 ms
+2026-09-05 21:44:28.017 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:44:28.017 [INF] HTTP GET /api/master/get-jobroles responded 200 in 134.8233 ms
+2026-09-05 21:44:31.876 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:44:31.877 [INF] HTTP POST /api/employee/create responded 404 in 108.2222 ms
+2026-09-05 21:46:44.531 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:46:44.533 [INF] HTTP GET /api/master/get-jobroles responded 200 in 136.1802 ms
+2026-09-05 21:46:47.850 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:46:47.851 [INF] HTTP POST /api/employee/create responded 404 in 256.5189 ms
+2026-09-05 21:47:07.201 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:47:07.202 [INF] HTTP POST /api/employee/create responded 404 in 57.5533 ms
+2026-09-05 21:48:28.567 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:48:28.569 [INF] HTTP GET /api/master/get-jobroles responded 200 in 138.8898 ms
+2026-09-05 21:48:32.087 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:48:32.087 [INF] HTTP POST /api/employee/create responded 404 in 147.7167 ms
+2026-09-05 21:49:27.320 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:49:27.320 [INF] HTTP GET /api/master/get-jobroles responded 200 in 26.6050 ms
+2026-09-05 21:50:24.590 [INF] Employee created successfully. EmployeeId="b2e264ad-d625-4762-8940-39fe37ca77d1", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:50:24.619 [ERR] HTTP POST /api/employee/create responded 500 in 391.0317 ms
+2026-09-05 21:59:57.991 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 21:59:57.991 [INF] HTTP GET /api/master/get-jobroles responded 200 in 205.5432 ms
+2026-09-05 22:02:24.280 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:02:24.281 [INF] HTTP GET /api/master/get-jobroles responded 200 in 8.5573 ms
+2026-09-05 22:04:36.056 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:04:36.057 [INF] HTTP GET /api/master/get-jobroles responded 200 in 47.2424 ms
+2026-09-05 22:06:01.815 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:06:01.815 [INF] HTTP GET /api/master/get-jobroles responded 200 in 93.1800 ms
+2026-09-05 22:06:22.680 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan1@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:06:22.681 [INF] HTTP POST /api/employee/create responded 404 in 158.6161 ms
+2026-09-05 22:06:32.670 [INF] Employee created successfully. EmployeeId="093e1220-de53-4a45-a3fd-cbf4c85fb54a", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:06:32.694 [ERR] HTTP POST /api/employee/create responded 500 in 413.9148 ms
+2026-09-05 22:08:56.695 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan2@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:08:56.695 [INF] HTTP POST /api/employee/create responded 404 in 114.3528 ms
+2026-09-05 22:10:40.615 [WRN] Employee creation failed: Email already exists. Email=pramod.mahajan2@gmaroaiot.com, OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:10:40.616 [INF] HTTP POST /api/employee/create responded 404 in 98.7451 ms
+2026-09-05 22:11:46.398 [INF] Employee created successfully. EmployeeId="2b28d3e7-38b8-4f04-94fa-af1ac5b0af15", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:11:46.426 [ERR] HTTP POST /api/employee/create responded 500 in 451.2000 ms
+2026-09-05 22:12:43.185 [INF] Employee created successfully. EmployeeId="28eb760a-3585-4294-a4cb-3ef5344687fd", OrganizationId="c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:13:02.675 [ERR] HTTP POST /api/employee/create responded 500 in 19923.7017 ms
+2026-09-05 22:17:47.186 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1094 ms
+2026-09-05 22:17:47.411 [INF] Gernerate new refresh token- 
+2026-09-05 22:17:47.413 [INF] HTTP POST /api/auth/refresh responded 200 in 197.1630 ms
+2026-09-05 22:17:47.623 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-05 22:17:47.624 [INF] HTTP GET /api/auth/get-workspace responded 200 in 144.7340 ms
+2026-09-05 22:17:50.641 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-05 22:17:50.641 [INF] HTTP POST /api/auth/select-workspace responded 200 in 201.7948 ms

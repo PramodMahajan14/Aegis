@@ -34,6 +34,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ApplicationRolePermisson> ApplicationRolePermissons { get; set; }
     public DbSet<OrganizationType> OrganizationTypes { get; set; }
 
+    public DbSet<ProjectStage> ProjectStages { get; set; }
     public DbSet<ProspectStatus> ProspectsStatus { get; set; }
 
     #endregion
@@ -89,6 +90,22 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         ProspectStatusSeeder.Seed(modelBuilder);
 
         #endregion
+
+
+        // convention to all decimal properties
+
+        foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+        {
+            foreach (var property in entityType.GetProperties())
+            {
+                if (property.ClrType == typeof(decimal) ||
+                    property.ClrType == typeof(decimal?))
+                {
+                    property.SetPrecision(18);
+                    property.SetScale(2);
+                }
+            }
+        }
 
 
     }

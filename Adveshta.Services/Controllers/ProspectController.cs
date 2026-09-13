@@ -1,6 +1,8 @@
 using Adveshta.Model.DTO.Prospect;
+using Adveshta.Services.Features.MasterManagement;
 using Adveshta.Services.Features.ProspectManagement;
 using Adveshta.Services.Features.ProspectManagement.CreateProspect;
+using Adveshta.Services.Features.ProspectManagement.ProspectList;
 using Adveshta.Services.Helper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -39,7 +41,7 @@ namespace Adveshta.Services.Controllers
         }
 
 
-         /// <summary>
+        /// <summary>
         /// Create a new prospect.
         /// </summary>
         [HttpPut]
@@ -51,6 +53,17 @@ namespace Adveshta.Services.Controllers
             var result = await _mediator.Send(command);
 
             return StatusCode(result.StatusCode, result);
+        }
+
+        /// <summary>
+        /// Create a new prospect.
+        /// </summary>
+        [HttpGet]
+        public async Task<IActionResult> GetProspects()
+        {
+              var command = new ProspectListQuery(_organizationId);
+              var response = await _mediator.Send(command);
+             return StatusCode(response.StatusCode, response);
         }
     }
 }

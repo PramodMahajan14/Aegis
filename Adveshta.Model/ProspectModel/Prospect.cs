@@ -40,6 +40,12 @@ namespace Adveshta.Model.ProspectModel
         [ForeignKey(nameof(ProspectSourceId))]
         public ProspectSource ProspectSource {get;set;} = null!;
 
+        public Guid? ProjectStageId {get;set;}
+
+
+       [ForeignKey(nameof(ProjectStageId))]
+        public ProjectStage? ProjectStage {get;set;}
+
         public bool IsActive { get; set; }
 
         public DateTime CreatedAt { get; set; }

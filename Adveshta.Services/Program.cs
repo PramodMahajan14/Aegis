@@ -7,6 +7,7 @@ using Adveshta.Helpers.Prospect;
 using Adveshta.Model.Auth;
 using Adveshta.Services.Behaviors;
 using Adveshta.Services.Helper;
+using Adveshta.Services.Mapper;
 using Adveshta.Services.Middleware;
 using Adveshta.Services.Services;
 using Adveshta.Services.Services.Interfaces;
@@ -54,6 +55,11 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
     // Plug in the ValidationBehavior so every command is validated before its handler runs
     cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
+});
+
+builder.Services.AddAutoMapper((cfg) =>
+{
+    cfg.AddProfile<ApplicationMapper>();
 });
 
 // Register all FluentValidation validators from this assembly automatically

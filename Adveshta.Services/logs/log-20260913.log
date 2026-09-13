@@ -25,3 +25,409 @@
 2026-09-13 02:46:18.293 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
 2026-09-13 02:46:19.077 [INF] Prospect Updaed successfully : "d1c5f12d-2088-46bf-98e9-87ef80cde006"
 2026-09-13 02:46:19.114 [INF] HTTP PUT /api/Prospects responded 200 in 922.7503 ms
+2026-09-13 02:50:50.106 [INF] HTTP GET /api/auth/csrf responded 404 in 1.0364 ms
+2026-09-13 02:50:50.374 [WRN] Refresh token Rotation failed: Token not found PZn0r6efYofnYhW7X5m2pqlPqdOcAOeQA7eRb50Md2BSRsbYVVsX_X0DJHWaZUO_ayFJw66iVFTwyOIhoUMBAw
+2026-09-13 02:50:50.377 [INF] HTTP POST /api/auth/refresh responded 400 in 236.4958 ms
+2026-09-13 02:50:51.994 [INF] HTTP POST /api/auth/login responded 400 in 159.8689 ms
+2026-09-13 02:50:59.227 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-13 02:50:59.267 [INF] HTTP POST /api/auth/login responded 200 in 626.5018 ms
+2026-09-13 02:50:59.717 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 02:50:59.725 [INF] HTTP GET /api/auth/get-workspace responded 200 in 428.2100 ms
+2026-09-13 02:51:01.277 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 02:51:01.278 [INF] HTTP POST /api/auth/select-workspace responded 200 in 279.3978 ms
+2026-09-13 03:10:56.070 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 03:10:56.072 [INF] HTTP GET /api/master/get-jobroles responded 200 in 306.7912 ms
+2026-09-13 03:11:02.854 [INF] HTTP GET /api/employee/get-employees responded 200 in 143.6437 ms
+2026-09-13 13:19:55.507 [INF] Starting database seeding process...
+2026-09-13 13:19:55.675 [ERR] Hosting failed to start
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1063
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 425
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 932
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 938
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 419
+   at MySqlConnector.MySqlConnection.Open() in /_/src/MySqlConnector/MySqlConnection.cs:line 381
+   at Microsoft.EntityFrameworkCore.ServerVersion.AutoDetect(String connectionString)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__4(DbContextOptionsBuilder options) in /home/admin1/Projects/Adveshta/Adveshta.Services/Program.cs:line 77
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass12_0`2.<AddDbContextFactory>b__0(IServiceProvider _, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CreateDbContextOptions[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass17_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__17`1.<AddCoreServices>b__17_1(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Adveshta.Services.Services.ConfigSystemUser.StartAsync(CancellationToken cancellation) in /home/admin1/Projects/Adveshta/Adveshta.Services/Services/ConfigSystemUser.cs:line 33
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2026-09-13 13:20:56.351 [INF] Starting database seeding process...
+2026-09-13 13:20:58.046 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 13:20:58.168 [INF] Super Admin user already exists.
+2026-09-13 13:20:58.476 [INF] Super Application Role already has all permisson
+2026-09-13 13:20:58.611 [INF] Super Admin user created successfully.
+2026-09-13 13:20:58.770 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 13:21:21.609 [INF] HTTP GET /api/auth/csrf responded 404 in 71.7561 ms
+2026-09-13 13:21:22.499 [INF] Gernerate new refresh token- 
+2026-09-13 13:21:22.549 [INF] HTTP POST /api/auth/refresh responded 200 in 895.6426 ms
+2026-09-13 13:21:23.389 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 13:21:23.409 [INF] HTTP GET /api/auth/get-workspace responded 200 in 827.8511 ms
+2026-09-13 13:21:32.838 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 13:21:32.840 [INF] HTTP POST /api/auth/select-workspace responded 200 in 553.8020 ms
+2026-09-13 13:21:39.188 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 13:21:39.253 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 13:21:39.258 [INF] HTTP GET /api/master/get-jobroles responded 200 in 84.8801 ms
+2026-09-13 13:46:16.786 [INF] HTTP GET /api/employee/get-employees responded 200 in 343.1180 ms
+2026-09-13 17:39:53.502 [INF] Starting database seeding process...
+2026-09-13 17:39:54.778 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 17:39:54.885 [INF] Super Admin user already exists.
+2026-09-13 17:39:55.302 [INF] Super Application Role already has all permisson
+2026-09-13 17:39:55.436 [INF] Super Admin user created successfully.
+2026-09-13 17:39:55.548 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 17:43:38.368 [INF] HTTP GET /api/auth/csrf responded 404 in 40.1934 ms
+2026-09-13 17:43:39.182 [INF] Gernerate new refresh token- 
+2026-09-13 17:43:39.218 [INF] HTTP POST /api/auth/refresh responded 200 in 805.5065 ms
+2026-09-13 17:43:40.052 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 17:43:40.071 [INF] HTTP GET /api/auth/get-workspace responded 200 in 829.3265 ms
+2026-09-13 17:46:16.222 [INF] Starting database seeding process...
+2026-09-13 17:46:17.508 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 17:46:17.661 [INF] Super Admin user already exists.
+2026-09-13 17:46:18.175 [INF] Super Application Role already has all permisson
+2026-09-13 17:46:18.326 [INF] Super Admin user created successfully.
+2026-09-13 17:46:18.435 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 17:48:40.874 [INF] Starting database seeding process...
+2026-09-13 17:48:42.107 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 17:48:42.239 [INF] Super Admin user already exists.
+2026-09-13 17:48:42.599 [INF] Super Application Role already has all permisson
+2026-09-13 17:48:42.707 [INF] Super Admin user created successfully.
+2026-09-13 17:48:42.814 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 17:49:42.706 [INF] Starting database seeding process...
+2026-09-13 17:49:44.022 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 17:49:44.158 [INF] Super Admin user already exists.
+2026-09-13 17:49:44.575 [INF] Super Application Role already has all permisson
+2026-09-13 17:49:44.703 [INF] Super Admin user created successfully.
+2026-09-13 17:49:44.799 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 17:51:37.032 [INF] Starting database seeding process...
+2026-09-13 17:51:38.195 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 17:51:38.303 [INF] Super Admin user already exists.
+2026-09-13 17:51:38.884 [INF] Super Application Role already has all permisson
+2026-09-13 17:51:39.014 [INF] Super Admin user created successfully.
+2026-09-13 17:51:39.127 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 17:58:37.440 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 66.4989 ms
+2026-09-13 17:58:37.485 [INF] HTTP GET /api/master/get-jobroles responded 401 in 115.6376 ms
+2026-09-13 17:58:37.810 [WRN] Refresh token Rotation failed: Token not found ArZa59Akyv4KTFTEvoFSPtmPTtSGsCjOYalUR2PLPogZZI5GincEkUyAFnGgFg_yrj5keB4mHS_THGLxxIEc9A
+2026-09-13 17:58:37.818 [INF] HTTP POST /api/auth/refresh responded 400 in 321.4943 ms
+2026-09-13 17:58:39.806 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-13 17:58:39.810 [INF] HTTP POST /api/auth/login responded 200 in 651.8654 ms
+2026-09-13 17:58:40.258 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 17:58:40.273 [INF] HTTP GET /api/auth/get-workspace responded 200 in 440.9334 ms
+2026-09-13 17:58:41.901 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 17:58:41.902 [INF] HTTP POST /api/auth/select-workspace responded 200 in 482.0821 ms
+2026-09-13 17:58:44.564 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 0.3532 ms
+2026-09-13 17:58:44.572 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 17:58:44.786 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 17:58:44.792 [INF] HTTP GET /api/master/get-jobroles responded 200 in 228.0014 ms
+2026-09-13 17:58:45.574 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 0.5850 ms
+2026-09-13 18:00:13.840 [INF] HTTP POST /api/Master/create-project-stage responded 422 in 47.9793 ms
+2026-09-13 18:00:16.168 [INF] HTTP POST /api/Master/create-project-stage responded 422 in 5.8732 ms
+2026-09-13 18:00:49.274 [INF] HTTP POST /api/Master/create-project-stage responded 422 in 3.5978 ms
+2026-09-13 18:02:03.420 [INF] Starting database seeding process...
+2026-09-13 18:02:04.640 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 18:02:04.775 [INF] Super Admin user already exists.
+2026-09-13 18:02:05.427 [INF] Super Application Role already has all permisson
+2026-09-13 18:02:05.543 [INF] Super Admin user created successfully.
+2026-09-13 18:02:05.631 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 18:02:10.335 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 18:02:10.486 [INF] HTTP POST /api/Master/create-project-stage responded 422 in 254.1955 ms
+2026-09-13 18:04:01.395 [INF] HTTP POST /api/Master/create-project-stage responded 422 in 76859.3288 ms
+2026-09-13 18:09:01.587 [INF] HTTP POST /api/Master/create-project-stage responded 422 in 93260.2462 ms
+2026-09-13 18:10:56.513 [INF] Starting database seeding process...
+2026-09-13 18:10:57.780 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 18:10:57.892 [INF] Super Admin user already exists.
+2026-09-13 18:10:58.392 [INF] Super Application Role already has all permisson
+2026-09-13 18:10:58.510 [INF] Super Admin user created successfully.
+2026-09-13 18:10:58.611 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 18:11:02.051 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 18:11:05.095 [WRN] Project Stage created succefully "ab0a8f3d-752c-4686-92fb-2f6ef3cb39d5"
+2026-09-13 18:11:05.136 [INF] HTTP POST /api/Master/create-project-stage responded 201 in 3172.2749 ms
+2026-09-13 18:11:05.166 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 2.3353 ms
+2026-09-13 18:11:06.194 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 5.9464 ms
+2026-09-13 18:11:17.800 [INF] HTTP GET /api/auth/csrf responded 404 in 0.3018 ms
+2026-09-13 18:11:18.487 [INF] Gernerate new refresh token- 
+2026-09-13 18:11:18.494 [INF] HTTP POST /api/auth/refresh responded 200 in 674.8148 ms
+2026-09-13 18:11:19.485 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 18:11:19.496 [INF] HTTP GET /api/auth/get-workspace responded 200 in 654.7856 ms
+2026-09-13 18:11:22.320 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:11:22.324 [INF] HTTP POST /api/auth/select-workspace responded 200 in 641.1513 ms
+2026-09-13 18:11:29.483 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 0.4735 ms
+2026-09-13 18:11:29.675 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:11:29.679 [INF] HTTP GET /api/master/get-jobroles responded 200 in 204.5253 ms
+2026-09-13 18:11:30.501 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 0.5506 ms
+2026-09-13 18:13:57.930 [INF] Starting database seeding process...
+2026-09-13 18:13:59.175 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 18:13:59.318 [INF] Super Admin user already exists.
+2026-09-13 18:13:59.750 [INF] Super Application Role already has all permisson
+2026-09-13 18:13:59.828 [INF] Super Admin user created successfully.
+2026-09-13 18:13:59.927 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 18:14:08.459 [INF] HTTP GET /api/auth/csrf responded 404 in 33.4627 ms
+2026-09-13 18:14:10.775 [INF] Gernerate new refresh token- 
+2026-09-13 18:14:10.806 [INF] HTTP POST /api/auth/refresh responded 200 in 631.2635 ms
+2026-09-13 18:14:11.602 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 18:14:11.614 [INF] HTTP GET /api/auth/get-workspace responded 200 in 780.7815 ms
+2026-09-13 18:14:14.020 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:14:14.024 [INF] HTTP POST /api/auth/select-workspace responded 200 in 710.2819 ms
+2026-09-13 18:14:20.619 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 2.1038 ms
+2026-09-13 18:14:20.625 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 18:14:20.835 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:14:20.862 [INF] HTTP GET /api/master/get-jobroles responded 200 in 253.2090 ms
+2026-09-13 18:14:21.633 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 0.5751 ms
+2026-09-13 18:15:27.009 [INF] HTTP GET /api/Master/get-project-stages responded 404 in 0.5780 ms
+2026-09-13 18:15:27.146 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:15:27.147 [INF] HTTP GET /api/master/get-jobroles responded 200 in 137.8907 ms
+2026-09-13 18:15:29.351 [WRN] Project Stages fetched successfully
+2026-09-13 18:15:29.358 [INF] HTTP GET /api/master/project-stages responded 200 in 251.0118 ms
+2026-09-13 18:16:19.033 [WRN] Project Stage created succefully "ab0a8f3d-752c-4686-92fb-2f6ef3cb39d5"
+2026-09-13 18:16:19.034 [INF] HTTP PUT /api/master/project-stage-update/ab0a8f3d-752c-4686-92fb-2f6ef3cb39d5 responded 201 in 355.5394 ms
+2026-09-13 18:16:19.174 [WRN] Project Stages fetched successfully
+2026-09-13 18:16:19.175 [INF] HTTP GET /api/master/project-stages responded 200 in 132.4841 ms
+2026-09-13 18:16:32.302 [INF] Project Stage deleted successfully. Id: "ab0a8f3d-752c-4686-92fb-2f6ef3cb39d5"
+2026-09-13 18:16:32.303 [INF] HTTP DELETE /api/master/project-stage-delete/ab0a8f3d-752c-4686-92fb-2f6ef3cb39d5 responded 200 in 220.6716 ms
+2026-09-13 18:16:32.460 [WRN] Project Stages not found
+2026-09-13 18:16:32.461 [INF] HTTP GET /api/master/project-stages responded 404 in 152.2615 ms
+2026-09-13 18:16:33.504 [WRN] Project Stages not found
+2026-09-13 18:16:33.505 [INF] HTTP GET /api/master/project-stages responded 404 in 32.8615 ms
+2026-09-13 18:16:36.592 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1203 ms
+2026-09-13 18:16:36.998 [INF] Gernerate new refresh token- 
+2026-09-13 18:16:36.999 [INF] HTTP POST /api/auth/refresh responded 200 in 366.2760 ms
+2026-09-13 18:16:37.187 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 18:16:37.187 [INF] HTTP GET /api/auth/get-workspace responded 200 in 166.4887 ms
+2026-09-13 18:16:38.539 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:16:38.539 [INF] HTTP POST /api/auth/select-workspace responded 200 in 451.5386 ms
+2026-09-13 18:16:40.844 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:16:40.845 [INF] HTTP GET /api/master/get-jobroles responded 200 in 225.1567 ms
+2026-09-13 18:16:40.868 [WRN] Project Stages not found
+2026-09-13 18:16:40.868 [INF] HTTP GET /api/master/project-stages responded 404 in 247.9737 ms
+2026-09-13 18:16:42.035 [WRN] Project Stages not found
+2026-09-13 18:16:42.035 [INF] HTTP GET /api/master/project-stages responded 404 in 157.6071 ms
+2026-09-13 18:17:11.054 [WRN] Project Stage created succefully "1697e4a6-ed46-4b9a-9991-aae3f772bc74"
+2026-09-13 18:17:11.056 [INF] HTTP POST /api/master/create-project-stage responded 201 in 2985.4302 ms
+2026-09-13 18:17:11.201 [WRN] Project Stages fetched successfully
+2026-09-13 18:17:11.202 [INF] HTTP GET /api/master/project-stages responded 200 in 136.9688 ms
+2026-09-13 18:17:49.950 [WRN] Project Stage created succefully "94903b98-3cca-4a48-8606-ba6d06a0316e"
+2026-09-13 18:17:49.950 [INF] HTTP POST /api/master/create-project-stage responded 201 in 330.7804 ms
+2026-09-13 18:17:50.046 [WRN] Project Stages fetched successfully
+2026-09-13 18:17:50.047 [INF] HTTP GET /api/master/project-stages responded 200 in 91.0525 ms
+2026-09-13 18:18:28.092 [WRN] Project Stage created succefully "8297c990-50ab-420c-bafe-2f197e1c5580"
+2026-09-13 18:18:28.093 [INF] HTTP POST /api/master/create-project-stage responded 201 in 163.8610 ms
+2026-09-13 18:18:28.230 [WRN] Project Stages fetched successfully
+2026-09-13 18:18:28.252 [INF] HTTP GET /api/master/project-stages responded 200 in 152.2408 ms
+2026-09-13 18:19:02.780 [WRN] Project Stage created succefully "7db78d14-467d-4185-ac46-2914a99822c7"
+2026-09-13 18:19:02.780 [INF] HTTP POST /api/master/create-project-stage responded 201 in 228.6764 ms
+2026-09-13 18:19:02.898 [WRN] Project Stages fetched successfully
+2026-09-13 18:19:02.940 [INF] HTTP GET /api/master/project-stages responded 200 in 151.7160 ms
+2026-09-13 18:19:21.029 [WRN] Project Stage created succefully "07254c11-4fba-428d-b20e-f8520701c20c"
+2026-09-13 18:19:21.029 [INF] HTTP POST /api/master/create-project-stage responded 201 in 244.7022 ms
+2026-09-13 18:19:21.120 [WRN] Project Stages fetched successfully
+2026-09-13 18:19:21.265 [INF] HTTP GET /api/master/project-stages responded 200 in 230.8985 ms
+2026-09-13 18:21:17.957 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:21:18.000 [INF] HTTP GET /api/master/get-jobroles responded 200 in 200.0060 ms
+2026-09-13 18:21:18.069 [WRN] Project Stages fetched successfully
+2026-09-13 18:21:18.112 [INF] HTTP GET /api/master/project-stages responded 200 in 308.1209 ms
+2026-09-13 18:21:23.376 [WRN] Project Stage created succefully "fb592291-803e-497d-a852-929946aada90"
+2026-09-13 18:21:23.377 [INF] HTTP POST /api/master/create-project-stage responded 201 in 122.1594 ms
+2026-09-13 18:21:23.432 [WRN] Project Stages fetched successfully
+2026-09-13 18:21:23.433 [INF] HTTP GET /api/master/project-stages responded 200 in 46.8952 ms
+2026-09-13 18:21:46.067 [WRN] Project Stage created succefully "ab8b77c8-d946-46cc-b26a-0592482086d8"
+2026-09-13 18:21:46.068 [INF] HTTP POST /api/master/create-project-stage responded 201 in 310.8137 ms
+2026-09-13 18:21:46.184 [WRN] Project Stages fetched successfully
+2026-09-13 18:21:46.185 [INF] HTTP GET /api/master/project-stages responded 200 in 109.3241 ms
+2026-09-13 18:21:59.441 [WRN] Project Stage created succefully "a2ab8d1f-5e61-433f-aa9c-8e497dd40a95"
+2026-09-13 18:21:59.441 [INF] HTTP POST /api/master/create-project-stage responded 201 in 99.3401 ms
+2026-09-13 18:21:59.538 [WRN] Project Stages fetched successfully
+2026-09-13 18:21:59.539 [INF] HTTP GET /api/master/project-stages responded 200 in 89.5465 ms
+2026-09-13 18:22:20.088 [WRN] Project Stage created succefully "e0ef755f-463f-4402-b5e8-6a8d45672ea8"
+2026-09-13 18:22:20.089 [INF] HTTP POST /api/master/create-project-stage responded 201 in 121.3759 ms
+2026-09-13 18:22:20.204 [WRN] Project Stages fetched successfully
+2026-09-13 18:22:20.206 [INF] HTTP GET /api/master/project-stages responded 200 in 109.3112 ms
+2026-09-13 18:22:30.985 [WRN] Project Stage created succefully "049ec4ad-b832-4275-a7a1-f9fef9091859"
+2026-09-13 18:22:30.985 [INF] HTTP POST /api/master/create-project-stage responded 201 in 161.1237 ms
+2026-09-13 18:22:31.101 [WRN] Project Stages fetched successfully
+2026-09-13 18:22:31.101 [INF] HTTP GET /api/master/project-stages responded 200 in 109.6995 ms
+2026-09-13 18:22:47.585 [WRN] Project Stage created succefully "0b5412be-a61c-48e7-b130-bbba5dad2d96"
+2026-09-13 18:22:47.586 [INF] HTTP POST /api/master/create-project-stage responded 201 in 197.1862 ms
+2026-09-13 18:22:47.704 [WRN] Project Stages fetched successfully
+2026-09-13 18:22:47.767 [INF] HTTP GET /api/master/project-stages responded 200 in 172.9156 ms
+2026-09-13 18:23:01.100 [WRN] Project Stage created succefully "ac73bd38-5a00-41b4-a84a-12791ea38fe3"
+2026-09-13 18:23:01.100 [INF] HTTP POST /api/master/create-project-stage responded 201 in 181.6129 ms
+2026-09-13 18:23:01.178 [WRN] Project Stages fetched successfully
+2026-09-13 18:23:01.179 [INF] HTTP GET /api/master/project-stages responded 200 in 68.7585 ms
+2026-09-13 18:23:17.079 [WRN] Project Stage created succefully "fab3e480-348a-4e19-8ef2-6521017a6c52"
+2026-09-13 18:23:17.079 [INF] HTTP POST /api/master/create-project-stage responded 201 in 161.1438 ms
+2026-09-13 18:23:17.236 [WRN] Project Stages fetched successfully
+2026-09-13 18:23:17.258 [INF] HTTP GET /api/master/project-stages responded 200 in 170.2490 ms
+2026-09-13 18:23:26.836 [WRN] Project Stage created succefully "e4a5b317-b522-4872-af92-873e0d69d4cf"
+2026-09-13 18:23:26.837 [INF] HTTP POST /api/master/create-project-stage responded 201 in 119.8988 ms
+2026-09-13 18:23:26.935 [WRN] Project Stages fetched successfully
+2026-09-13 18:23:26.935 [INF] HTTP GET /api/master/project-stages responded 200 in 91.4909 ms
+2026-09-13 18:23:35.890 [WRN] Project Stage created succefully "bb19686e-35a6-4343-8d96-2a961dc54e6b"
+2026-09-13 18:23:35.890 [INF] HTTP POST /api/master/create-project-stage responded 201 in 202.9614 ms
+2026-09-13 18:23:35.986 [WRN] Project Stages fetched successfully
+2026-09-13 18:23:35.986 [INF] HTTP GET /api/master/project-stages responded 200 in 88.2271 ms
+2026-09-13 18:24:55.849 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:24:55.871 [INF] HTTP GET /api/master/get-jobroles responded 200 in 177.6393 ms
+2026-09-13 18:25:31.577 [INF] HTTP GET /api/employee/get-employees responded 200 in 110.1890 ms
+2026-09-13 18:25:36.990 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:25:37.011 [INF] HTTP GET /api/master/get-jobroles responded 200 in 155.7471 ms
+2026-09-13 18:25:37.122 [INF] HTTP GET /api/employee/get-employee/08df046f-470d-4db0-8286-3135ffb6f6ce responded 200 in 265.8572 ms
+2026-09-13 18:26:02.906 [INF] HTTP GET /api/employee/get-employees responded 200 in 157.9598 ms
+2026-09-13 18:26:23.011 [WRN] Project Stages fetched successfully
+2026-09-13 18:26:23.011 [INF] HTTP GET /api/master/project-stages responded 200 in 200.1666 ms
+2026-09-13 18:26:23.144 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:26:23.145 [INF] HTTP GET /api/master/get-jobroles responded 200 in 333.7416 ms
+2026-09-13 18:28:25.207 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:28:25.212 [INF] HTTP GET /api/master/get-jobroles responded 200 in 141.5752 ms
+2026-09-13 18:29:03.606 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:29:03.690 [INF] HTTP GET /api/master/get-jobroles responded 200 in 174.5194 ms
+2026-09-13 18:29:42.379 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:29:42.400 [INF] HTTP GET /api/master/get-jobroles responded 200 in 109.9232 ms
+2026-09-13 18:30:39.791 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:30:39.792 [INF] HTTP GET /api/master/get-jobroles responded 200 in 156.7780 ms
+2026-09-13 18:30:57.045 [WRN] Project Stages fetched successfully
+2026-09-13 18:30:57.047 [INF] HTTP GET /api/master/project-stages responded 200 in 91.6518 ms
+2026-09-13 18:31:39.024 [WRN] Project Stages fetched successfully
+2026-09-13 18:31:39.108 [INF] HTTP GET /api/master/project-stages responded 200 in 129.8106 ms
+2026-09-13 18:32:43.802 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:32:43.802 [INF] HTTP GET /api/master/get-jobroles responded 200 in 49.9687 ms
+2026-09-13 18:33:16.726 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:33:16.771 [INF] HTTP GET /api/master/get-jobroles responded 200 in 172.9942 ms
+2026-09-13 18:34:00.054 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:34:00.055 [INF] HTTP GET /api/master/get-jobroles responded 200 in 156.1324 ms
+2026-09-13 18:34:00.085 [WRN] Project Stages fetched successfully
+2026-09-13 18:34:00.085 [INF] HTTP GET /api/master/project-stages responded 200 in 121.3161 ms
+2026-09-13 18:40:39.823 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0791 ms
+2026-09-13 18:40:40.332 [INF] Gernerate new refresh token- 
+2026-09-13 18:40:40.332 [INF] HTTP POST /api/auth/refresh responded 200 in 492.4612 ms
+2026-09-13 18:40:40.470 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 18:40:40.470 [INF] HTTP GET /api/auth/get-workspace responded 200 in 115.8571 ms
+2026-09-13 18:40:41.559 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:40:41.559 [INF] HTTP POST /api/auth/select-workspace responded 200 in 170.1303 ms
+2026-09-13 18:40:47.228 [INF] Fetched 5 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 18:40:47.254 [INF] HTTP GET /api/master/get-jobroles responded 200 in 194.4025 ms
+2026-09-13 18:40:47.306 [WRN] Project Stages fetched successfully
+2026-09-13 18:40:47.307 [INF] HTTP GET /api/master/project-stages responded 200 in 163.3601 ms
+2026-09-13 20:05:16.949 [INF] HTTP GET /api/master/project-stages responded 401 in 28.3868 ms
+2026-09-13 20:05:16.949 [INF] HTTP GET /api/master/get-jobroles responded 401 in 49.6023 ms
+2026-09-13 20:05:17.188 [INF] Gernerate new refresh token- 
+2026-09-13 20:05:17.189 [INF] HTTP POST /api/auth/refresh responded 200 in 229.5235 ms
+2026-09-13 20:05:17.268 [INF] Fetched 0 job roles for organization "00000000-0000-0000-0000-000000000000"
+2026-09-13 20:05:17.332 [INF] HTTP GET /api/master/get-jobroles responded 200 in 138.0218 ms
+2026-09-13 20:05:17.345 [WRN] Project Stages not found
+2026-09-13 20:05:17.345 [INF] HTTP GET /api/master/project-stages responded 404 in 151.5450 ms
+2026-09-13 20:05:18.381 [WRN] Project Stages not found
+2026-09-13 20:05:18.402 [INF] HTTP GET /api/master/project-stages responded 404 in 48.6841 ms
+2026-09-13 20:06:13.375 [INF] HTTP GET /api/employee/get-employees responded 404 in 8.5539 ms
+2026-09-13 20:06:14.385 [INF] HTTP GET /api/employee/get-employees responded 404 in 1.2666 ms
+2026-09-13 20:06:17.597 [WRN] Project Stages not found
+2026-09-13 20:06:17.622 [INF] Fetched 0 job roles for organization "00000000-0000-0000-0000-000000000000"
+2026-09-13 20:06:17.665 [INF] HTTP GET /api/master/project-stages responded 404 in 182.2725 ms
+2026-09-13 20:06:17.666 [INF] HTTP GET /api/master/get-jobroles responded 200 in 183.6018 ms
+2026-09-13 20:06:18.706 [WRN] Project Stages not found
+2026-09-13 20:06:18.707 [INF] HTTP GET /api/master/project-stages responded 404 in 30.2213 ms
+2026-09-13 23:02:32.293 [INF] Starting database seeding process...
+2026-09-13 23:02:33.494 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 23:02:33.599 [INF] Super Admin user already exists.
+2026-09-13 23:02:34.044 [INF] Super Application Role already has all permisson
+2026-09-13 23:02:34.115 [INF] Super Admin user created successfully.
+2026-09-13 23:02:34.209 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 23:43:02.483 [INF] HTTP GET /api/prospect responded 404 in 76.2559 ms
+2026-09-13 23:43:03.502 [INF] HTTP GET /api/prospect responded 404 in 4.0220 ms
+2026-09-13 23:43:07.454 [INF] HTTP GET /api/auth/csrf responded 404 in 2.0505 ms
+2026-09-13 23:43:07.814 [WRN] Refresh token Rotation failed: Token not found p4KXM2_yF5S2IcOqzgCqLq9uJlIKVJJfZFdC51qOIZQwQQNofHzi8SwTBSfpTdxtTRDjBkS5pupLPYTr8jtGBQ
+2026-09-13 23:43:07.843 [INF] HTTP POST /api/auth/refresh responded 400 in 372.5110 ms
+2026-09-13 23:43:09.992 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-13 23:43:09.997 [INF] HTTP POST /api/auth/login responded 200 in 682.4611 ms
+2026-09-13 23:43:10.477 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 23:43:10.489 [INF] HTTP GET /api/auth/get-workspace responded 200 in 463.7593 ms
+2026-09-13 23:43:12.143 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 23:43:12.143 [INF] HTTP POST /api/auth/select-workspace responded 200 in 482.0185 ms
+2026-09-13 23:43:14.456 [INF] HTTP GET /api/prospect responded 404 in 1.4084 ms
+2026-09-13 23:43:15.466 [INF] HTTP GET /api/prospect responded 404 in 0.7446 ms
+2026-09-13 23:43:26.510 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0986 ms
+2026-09-13 23:43:28.003 [INF] Gernerate new refresh token- 
+2026-09-13 23:43:28.004 [INF] HTTP POST /api/auth/refresh responded 200 in 556.5696 ms
+2026-09-13 23:43:28.757 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 23:43:28.758 [INF] HTTP GET /api/auth/get-workspace responded 200 in 324.4146 ms
+2026-09-13 23:43:30.890 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 23:43:30.890 [INF] HTTP POST /api/auth/select-workspace responded 200 in 317.7298 ms
+2026-09-13 23:44:02.826 [INF] Starting database seeding process...
+2026-09-13 23:44:03.906 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 23:44:04.062 [INF] Super Admin user already exists.
+2026-09-13 23:44:04.610 [INF] Super Application Role already has all permisson
+2026-09-13 23:44:04.685 [INF] Super Admin user created successfully.
+2026-09-13 23:44:04.767 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 23:44:19.033 [INF] HTTP GET /api/auth/csrf responded 404 in 23.9085 ms
+2026-09-13 23:44:20.631 [INF] Gernerate new refresh token- 
+2026-09-13 23:44:20.667 [INF] HTTP POST /api/auth/refresh responded 200 in 805.4959 ms
+2026-09-13 23:44:21.580 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 23:44:21.599 [INF] HTTP GET /api/auth/get-workspace responded 200 in 761.5215 ms
+2026-09-13 23:44:25.091 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 23:44:25.094 [INF] HTTP POST /api/auth/select-workspace responded 200 in 624.0970 ms
+2026-09-13 23:44:30.187 [INF] HTTP GET /api/prospect responded 404 in 1.8595 ms
+2026-09-13 23:44:31.214 [INF] HTTP GET /api/prospect responded 404 in 0.6253 ms
+2026-09-13 23:45:13.993 [INF] HTTP GET /api/prospect responded 404 in 0.3747 ms
+2026-09-13 23:45:17.266 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 23:45:17.813 [WRN] Project Stages fetched successfully
+2026-09-13 23:45:17.818 [INF] HTTP GET /api/prospects responded 200 in 585.7259 ms
+2026-09-13 23:55:26.117 [INF] Starting database seeding process...
+2026-09-13 23:55:27.263 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-13 23:55:27.389 [INF] Super Admin user already exists.
+2026-09-13 23:55:27.971 [INF] Super Application Role already has all permisson
+2026-09-13 23:55:28.092 [INF] Super Admin user created successfully.
+2026-09-13 23:55:28.187 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-13 23:55:34.009 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 23:55:34.073 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-13 23:55:34.253 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 23:55:34.338 [INF] HTTP GET /api/prospects responded 200 in 424.4625 ms
+2026-09-13 23:55:41.689 [INF] HTTP GET /api/auth/csrf responded 404 in 3.3534 ms
+2026-09-13 23:55:42.683 [INF] Gernerate new refresh token- 
+2026-09-13 23:55:42.691 [INF] HTTP POST /api/auth/refresh responded 200 in 979.7360 ms
+2026-09-13 23:55:44.170 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-13 23:55:44.174 [INF] HTTP GET /api/auth/get-workspace responded 200 in 517.3697 ms
+2026-09-13 23:55:47.473 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 23:55:47.476 [INF] HTTP POST /api/auth/select-workspace responded 200 in 374.4273 ms
+2026-09-13 23:55:53.650 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-13 23:55:53.651 [INF] HTTP GET /api/prospects responded 200 in 195.7203 ms

@@ -4,6 +4,7 @@ using Adveshta.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Adveshta.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260913173009_ProjectStage_Prospect")]
+    partial class ProjectStage_Prospect
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1547,7 +1550,7 @@ namespace Adveshta.DataAccess.Migrations
                             IsSystemTenant = true,
                             Locale = "en-IN",
                             Name = "Code Dev",
-                            OnboardingDate = new DateTime(2026, 9, 13, 19, 4, 5, 679, DateTimeKind.Utc).AddTicks(7754),
+                            OnboardingDate = new DateTime(2026, 9, 13, 17, 30, 9, 541, DateTimeKind.Utc).AddTicks(4519),
                             OrganizationTypeId = new Guid("1f22266a-9a9d-4768-a9b8-c328dc9bdd7b"),
                             Status = 1,
                             TimeZone = "Asia/Kolkata"
@@ -1574,8 +1577,7 @@ namespace Adveshta.DataAccess.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<decimal?>("EstimatedValue")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<DateTime?>("ExpectedDecisionDate")
                         .HasColumnType("datetime(6)");

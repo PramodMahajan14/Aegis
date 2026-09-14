@@ -1,89 +1,247 @@
-2026-09-14 00:00:08.817 [INF] HTTP GET /api/auth/csrf responded 404 in 0.4149 ms
-2026-09-14 00:00:10.215 [INF] Gernerate new refresh token- 
-2026-09-14 00:00:10.215 [INF] HTTP POST /api/auth/refresh responded 200 in 204.4736 ms
-2026-09-14 00:00:11.227 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
-2026-09-14 00:00:11.228 [INF] HTTP GET /api/auth/get-workspace responded 200 in 162.5493 ms
-2026-09-14 00:00:13.297 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:00:13.298 [INF] HTTP POST /api/auth/select-workspace responded 200 in 381.4507 ms
-2026-09-14 00:01:53.718 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:01:53.763 [INF] HTTP GET /api/prospects responded 200 in 97430.9603 ms
-2026-09-14 00:15:15.785 [INF] Starting database seeding process...
-2026-09-14 00:15:17.061 [INF] Seeding Super Admin user: codedev90@gmail.com
-2026-09-14 00:15:17.196 [INF] Super Admin user already exists.
-2026-09-14 00:15:17.635 [INF] Super Application Role already has all permisson
-2026-09-14 00:15:17.759 [INF] Super Admin user created successfully.
-2026-09-14 00:15:17.851 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
-2026-09-14 00:15:25.619 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
-2026-09-14 00:15:31.371 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
-2026-09-14 00:15:31.514 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:15:31.603 [INF] HTTP GET /api/prospects responded 200 in 6092.4636 ms
-2026-09-14 00:35:17.326 [INF] Starting database seeding process...
-2026-09-14 00:35:18.474 [INF] Seeding Super Admin user: codedev90@gmail.com
-2026-09-14 00:35:18.622 [INF] Super Admin user already exists.
-2026-09-14 00:35:19.046 [INF] Super Application Role already has all permisson
-2026-09-14 00:35:19.159 [INF] Super Admin user created successfully.
-2026-09-14 00:35:19.252 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
-2026-09-14 00:35:29.413 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
-2026-09-14 00:35:33.743 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
-2026-09-14 00:35:33.983 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:35:34.067 [INF] HTTP GET /api/prospects responded 200 in 4814.8504 ms
-2026-09-14 00:38:08.535 [INF] Starting database seeding process...
-2026-09-14 00:38:09.721 [INF] Seeding Super Admin user: codedev90@gmail.com
-2026-09-14 00:38:09.844 [INF] Super Admin user already exists.
-2026-09-14 00:38:10.240 [INF] Super Application Role already has all permisson
-2026-09-14 00:38:10.329 [INF] Super Admin user created successfully.
-2026-09-14 00:38:10.413 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
-2026-09-14 00:38:40.947 [INF] HTTP GET /api/auth/csrf responded 404 in 31.2335 ms
-2026-09-14 00:38:42.584 [INF] Gernerate new refresh token- 
-2026-09-14 00:38:42.623 [INF] HTTP POST /api/auth/refresh responded 200 in 919.0744 ms
-2026-09-14 00:38:43.312 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
-2026-09-14 00:38:43.326 [INF] HTTP GET /api/auth/get-workspace responded 200 in 669.3202 ms
-2026-09-14 00:38:45.469 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:38:45.471 [INF] HTTP POST /api/auth/select-workspace responded 200 in 478.1840 ms
-2026-09-14 00:38:48.494 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
-2026-09-14 00:38:48.622 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
-2026-09-14 00:38:48.871 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:38:48.884 [INF] HTTP GET /api/prospects responded 200 in 403.2302 ms
-2026-09-14 00:45:31.836 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:45:31.837 [INF] HTTP GET /api/prospects responded 200 in 300.3000 ms
-2026-09-14 00:45:44.544 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1349 ms
-2026-09-14 00:45:45.633 [INF] Gernerate new refresh token- 
-2026-09-14 00:45:45.633 [INF] HTTP POST /api/auth/refresh responded 200 in 289.2493 ms
-2026-09-14 00:45:46.667 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
-2026-09-14 00:45:46.667 [INF] HTTP GET /api/auth/get-workspace responded 200 in 399.8805 ms
-2026-09-14 00:45:50.477 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:45:50.477 [INF] HTTP POST /api/auth/select-workspace responded 200 in 366.5009 ms
-2026-09-14 00:45:56.376 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:45:56.377 [INF] HTTP GET /api/prospects responded 200 in 110.6740 ms
-2026-09-14 00:54:45.249 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0752 ms
-2026-09-14 00:54:45.822 [INF] Gernerate new refresh token- 
-2026-09-14 00:54:45.822 [INF] HTTP POST /api/auth/refresh responded 200 in 545.4614 ms
-2026-09-14 00:54:46.032 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
-2026-09-14 00:54:46.033 [INF] HTTP GET /api/auth/get-workspace responded 200 in 188.2950 ms
-2026-09-14 00:54:47.648 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:54:47.649 [INF] HTTP POST /api/auth/select-workspace responded 200 in 177.2831 ms
-2026-09-14 00:56:26.129 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1629 ms
-2026-09-14 00:56:27.595 [INF] Gernerate new refresh token- 
-2026-09-14 00:56:27.596 [INF] HTTP POST /api/auth/refresh responded 200 in 596.6332 ms
-2026-09-14 00:56:28.194 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
-2026-09-14 00:56:28.194 [INF] HTTP GET /api/auth/get-workspace responded 200 in 229.0500 ms
-2026-09-14 00:56:30.481 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:56:30.482 [INF] HTTP POST /api/auth/select-workspace responded 200 in 438.8041 ms
-2026-09-14 00:57:22.167 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:57:22.168 [INF] HTTP GET /api/prospects responded 200 in 73.7319 ms
-2026-09-14 00:58:35.586 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1184 ms
-2026-09-14 00:58:35.942 [INF] Gernerate new refresh token- 
-2026-09-14 00:58:35.942 [INF] HTTP POST /api/auth/refresh responded 200 in 347.0050 ms
-2026-09-14 00:58:36.230 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
-2026-09-14 00:58:36.230 [INF] HTTP GET /api/auth/get-workspace responded 200 in 268.5217 ms
-2026-09-14 00:58:40.548 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 00:58:40.548 [INF] HTTP POST /api/auth/select-workspace responded 200 in 237.7410 ms
-2026-09-14 01:01:37.742 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1361 ms
-2026-09-14 01:01:39.001 [INF] Gernerate new refresh token- 
-2026-09-14 01:01:39.001 [INF] HTTP POST /api/auth/refresh responded 200 in 384.2067 ms
-2026-09-14 01:01:39.655 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
-2026-09-14 01:01:39.655 [INF] HTTP GET /api/auth/get-workspace responded 200 in 137.0627 ms
-2026-09-14 01:01:41.678 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 01:01:41.678 [INF] HTTP POST /api/auth/select-workspace responded 200 in 283.7158 ms
-2026-09-14 01:04:25.173 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
-2026-09-14 01:04:25.174 [INF] HTTP GET /api/prospects responded 200 in 50.9808 ms
+2026-09-14 12:26:01.338 [INF] Starting database seeding process...
+2026-09-14 12:26:01.506 [ERR] Hosting failed to start
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1063
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 425
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 932
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 938
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 419
+   at MySqlConnector.MySqlConnection.Open() in /_/src/MySqlConnector/MySqlConnection.cs:line 381
+   at Microsoft.EntityFrameworkCore.ServerVersion.AutoDetect(String connectionString)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__5(DbContextOptionsBuilder options) in /home/admin1/Projects/Adveshta/Adveshta.Services/Program.cs:line 83
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass12_0`2.<AddDbContextFactory>b__0(IServiceProvider _, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CreateDbContextOptions[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass17_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__17`1.<AddCoreServices>b__17_1(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Adveshta.Services.Services.ConfigSystemUser.StartAsync(CancellationToken cancellation) in /home/admin1/Projects/Adveshta/Adveshta.Services/Services/ConfigSystemUser.cs:line 33
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2026-09-14 12:31:06.868 [INF] Starting database seeding process...
+2026-09-14 12:31:08.261 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-14 12:31:08.359 [INF] Super Admin user already exists.
+2026-09-14 12:31:08.736 [INF] Super Application Role already has all permisson
+2026-09-14 12:31:08.847 [INF] Super Admin user created successfully.
+2026-09-14 12:31:09.038 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-14 12:31:35.290 [INF] HTTP GET /api/auth/csrf responded 404 in 64.7339 ms
+2026-09-14 12:31:35.557 [WRN] Refresh token Rotation failed: Token not found s32QTHSmyz8ZO_4dnH_HYjQXaFsRo0XTWgjd8lSoAHcmqov9dkyTqfamV7Xs9DnLdor7b5MVWcIzBF5PvMlD5Q
+2026-09-14 12:31:35.666 [INF] HTTP POST /api/auth/refresh responded 400 in 331.1846 ms
+2026-09-14 12:31:43.101 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-14 12:31:43.106 [INF] HTTP POST /api/auth/login responded 200 in 784.2115 ms
+2026-09-14 12:31:43.608 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 12:31:43.626 [INF] HTTP GET /api/auth/get-workspace responded 200 in 480.6921 ms
+2026-09-14 12:31:45.440 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 12:31:45.441 [INF] HTTP POST /api/auth/select-workspace responded 200 in 388.9218 ms
+2026-09-14 12:31:51.479 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 12:31:51.555 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 12:31:51.730 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 12:31:51.742 [INF] HTTP GET /api/prospects responded 200 in 276.4386 ms
+2026-09-14 12:37:36.017 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 12:37:36.018 [INF] HTTP GET /api/prospects responded 200 in 319.7207 ms
+2026-09-14 12:42:53.849 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 12:42:53.850 [INF] HTTP GET /api/prospects responded 200 in 237.4851 ms
+2026-09-14 12:50:16.595 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 12:50:16.596 [INF] HTTP GET /api/prospects responded 200 in 364.6781 ms
+2026-09-14 12:57:39.605 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 12:57:39.606 [INF] HTTP GET /api/prospects responded 200 in 282.3112 ms
+2026-09-14 13:03:45.580 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 13:03:45.581 [INF] HTTP GET /api/prospects responded 200 in 183.6786 ms
+2026-09-14 13:10:11.527 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 13:10:11.528 [INF] HTTP GET /api/prospects responded 200 in 193.3466 ms
+2026-09-14 15:19:49.719 [INF] HTTP GET /api/prospects responded 401 in 15.3294 ms
+2026-09-14 15:19:50.083 [INF] Gernerate new refresh token- 
+2026-09-14 15:19:50.085 [INF] HTTP POST /api/auth/refresh responded 200 in 359.3468 ms
+2026-09-14 15:19:50.180 [INF] Prospect List fetched successfully : Organization "00000000-0000-0000-0000-000000000000"
+2026-09-14 15:19:50.181 [INF] HTTP GET /api/prospects responded 200 in 92.2462 ms
+2026-09-14 15:20:50.685 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1731 ms
+2026-09-14 15:20:50.835 [WRN] Refresh token Rotation failed: Token not found VSScWYI6HL7MHbHyoQN22IVj5FhxUrhLzPbbVGM78s2Y4mtwAXDVhdmNZzfFDscuh4YVnEO3kBQtDxFtOay6Xw
+2026-09-14 15:20:50.835 [INF] HTTP POST /api/auth/refresh responded 400 in 112.3435 ms
+2026-09-14 15:20:52.416 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-14 15:20:52.416 [INF] HTTP POST /api/auth/login responded 200 in 217.7433 ms
+2026-09-14 15:20:52.679 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 15:20:52.679 [INF] HTTP GET /api/auth/get-workspace responded 200 in 234.9911 ms
+2026-09-14 15:20:53.785 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 15:20:53.785 [INF] HTTP POST /api/auth/select-workspace responded 200 in 244.8979 ms
+2026-09-14 15:20:55.421 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 15:20:55.422 [INF] HTTP GET /api/prospects responded 200 in 70.7322 ms
+2026-09-14 15:48:19.353 [INF] Starting database seeding process...
+2026-09-14 15:48:20.804 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-14 15:48:20.975 [INF] Super Admin user already exists.
+2026-09-14 15:48:21.606 [INF] Super Application Role already has all permisson
+2026-09-14 15:48:21.693 [INF] Super Admin user created successfully.
+2026-09-14 15:48:21.832 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-14 15:48:26.104 [INF] HTTP GET /api/auth/csrf responded 404 in 35.9234 ms
+2026-09-14 15:48:26.584 [INF] Gernerate new refresh token- 
+2026-09-14 15:48:26.627 [INF] HTTP POST /api/auth/refresh responded 200 in 497.5611 ms
+2026-09-14 15:48:27.384 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 15:48:27.398 [INF] HTTP GET /api/auth/get-workspace responded 200 in 750.0658 ms
+2026-09-14 15:53:17.492 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 15:53:17.492 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 15:53:17.771 [INF] Fetched {Count} Prospect sources 
+2026-09-14 15:53:17.813 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 15:53:17.820 [INF] HTTP GET /api/master/sources responded 200 in 400.0626 ms
+2026-09-14 15:53:17.820 [INF] HTTP GET /api/master/temperatures responded 200 in 378.4680 ms
+2026-09-14 15:59:12.297 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 15:59:12.298 [INF] HTTP GET /api/master/temperatures responded 200 in 322.5680 ms
+2026-09-14 15:59:12.300 [INF] Fetched {Count} Prospect sources 
+2026-09-14 15:59:12.301 [INF] HTTP GET /api/master/sources responded 200 in 330.7420 ms
+2026-09-14 16:03:14.647 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:03:14.647 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:03:14.647 [INF] HTTP GET /api/master/temperatures responded 200 in 628.8221 ms
+2026-09-14 16:03:14.647 [INF] HTTP GET /api/master/sources responded 200 in 618.5180 ms
+2026-09-14 16:03:14.769 [WRN] Project Stages fetched successfully
+2026-09-14 16:03:14.776 [INF] HTTP GET /api/master/project-stages responded 200 in 743.6916 ms
+2026-09-14 16:03:38.116 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1044 ms
+2026-09-14 16:03:38.398 [WRN] Refresh token Rotation failed: Token not found u8U2lMqRK4qSodK1QRlsZnMQ2uMGFC_xIPHVPnzW49CsCKwkw4zeS6Z_EMFZcukF9yXREEtKl0XksLEuVsn3xg
+2026-09-14 16:03:38.399 [INF] HTTP POST /api/auth/refresh responded 400 in 243.1096 ms
+2026-09-14 16:03:44.700 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-14 16:03:44.702 [INF] HTTP POST /api/auth/login responded 200 in 479.4394 ms
+2026-09-14 16:03:45.046 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 16:03:45.046 [INF] HTTP GET /api/auth/get-workspace responded 200 in 303.3350 ms
+2026-09-14 16:03:46.368 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 16:03:46.368 [INF] HTTP POST /api/auth/select-workspace responded 200 in 286.1971 ms
+2026-09-14 16:03:49.563 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-14 16:03:49.754 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 16:03:49.769 [INF] HTTP GET /api/prospects responded 200 in 325.9363 ms
+2026-09-14 16:03:51.685 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:03:51.753 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:03:51.795 [INF] HTTP GET /api/master/temperatures responded 200 in 221.3755 ms
+2026-09-14 16:03:51.841 [INF] HTTP GET /api/master/sources responded 200 in 266.5770 ms
+2026-09-14 16:03:51.899 [WRN] Project Stages fetched successfully
+2026-09-14 16:03:51.899 [INF] HTTP GET /api/master/project-stages responded 200 in 325.4593 ms
+2026-09-14 16:04:42.230 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:04:42.274 [INF] HTTP GET /api/master/temperatures responded 200 in 364.6382 ms
+2026-09-14 16:04:42.274 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:04:42.276 [INF] HTTP GET /api/master/sources responded 200 in 366.5907 ms
+2026-09-14 16:04:42.407 [WRN] Project Stages fetched successfully
+2026-09-14 16:04:42.408 [INF] HTTP GET /api/master/project-stages responded 200 in 366.8898 ms
+2026-09-14 16:05:18.434 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:05:18.526 [INF] HTTP GET /api/master/temperatures responded 200 in 202.3373 ms
+2026-09-14 16:05:18.549 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:05:18.616 [INF] HTTP GET /api/master/sources responded 200 in 293.0659 ms
+2026-09-14 16:05:18.615 [WRN] Project Stages fetched successfully
+2026-09-14 16:05:18.616 [INF] HTTP GET /api/master/project-stages responded 200 in 292.6335 ms
+2026-09-14 16:06:35.448 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:06:35.457 [INF] HTTP GET /api/master/sources responded 200 in 25.4930 ms
+2026-09-14 16:06:35.484 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:06:35.486 [INF] HTTP GET /api/master/temperatures responded 200 in 33.4631 ms
+2026-09-14 16:06:35.493 [WRN] Project Stages fetched successfully
+2026-09-14 16:06:35.495 [INF] HTTP GET /api/master/project-stages responded 200 in 8.9938 ms
+2026-09-14 16:07:41.150 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:07:41.192 [INF] HTTP GET /api/master/temperatures responded 200 in 172.4833 ms
+2026-09-14 16:07:41.195 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:07:41.195 [WRN] Project Stages fetched successfully
+2026-09-14 16:07:41.217 [INF] HTTP GET /api/master/sources responded 200 in 196.6696 ms
+2026-09-14 16:07:41.217 [INF] HTTP GET /api/master/project-stages responded 200 in 25.1346 ms
+2026-09-14 16:08:34.629 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:08:34.630 [WRN] Project Stages fetched successfully
+2026-09-14 16:08:34.672 [INF] HTTP GET /api/master/sources responded 200 in 318.1787 ms
+2026-09-14 16:08:34.675 [INF] HTTP GET /api/master/project-stages responded 200 in 318.2961 ms
+2026-09-14 16:08:34.898 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:08:34.899 [INF] HTTP GET /api/master/temperatures responded 200 in 497.0796 ms
+2026-09-14 16:09:34.135 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 16:09:34.136 [INF] HTTP GET /api/prospects responded 200 in 160.3848 ms
+2026-09-14 16:11:27.525 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:11:27.568 [INF] HTTP GET /api/master/temperatures responded 200 in 308.8582 ms
+2026-09-14 16:11:27.611 [WRN] Project Stages fetched successfully
+2026-09-14 16:11:27.613 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:11:27.613 [INF] HTTP GET /api/master/project-stages responded 200 in 353.2035 ms
+2026-09-14 16:11:27.613 [INF] HTTP GET /api/master/sources responded 200 in 354.4820 ms
+2026-09-14 16:13:03.222 [INF] HTTP POST /api/prospects responded 400 in 53.6615 ms
+2026-09-14 16:13:10.890 [INF] HTTP POST /api/prospects responded 400 in 1.7314 ms
+2026-09-14 16:13:37.425 [INF] HTTP POST /api/prospects responded 400 in 1.9325 ms
+2026-09-14 16:13:56.431 [INF] Prospect 'PRO-00002' created by employee 08df046f-470d-4db0-8286-3135ffb6f6ce.
+2026-09-14 16:13:56.434 [INF] HTTP POST /api/prospects responded 201 in 6848.4386 ms
+2026-09-14 16:13:56.597 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 16:13:56.640 [INF] HTTP GET /api/prospects responded 200 in 195.6779 ms
+2026-09-14 16:16:15.813 [WRN] Project Stages fetched successfully
+2026-09-14 16:16:15.904 [INF] HTTP GET /api/master/project-stages responded 200 in 285.1103 ms
+2026-09-14 16:16:16.001 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:16:16.002 [INF] HTTP GET /api/master/temperatures responded 200 in 383.7979 ms
+2026-09-14 16:16:16.146 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:16:16.146 [INF] HTTP GET /api/master/sources responded 200 in 529.3044 ms
+2026-09-14 16:19:19.701 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 16:19:19.701 [INF] HTTP GET /api/prospects responded 200 in 71.4941 ms
+2026-09-14 16:21:13.238 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 16:21:13.259 [INF] HTTP GET /api/master/temperatures responded 200 in 130.5375 ms
+2026-09-14 16:21:13.310 [WRN] Project Stages fetched successfully
+2026-09-14 16:21:13.352 [INF] HTTP GET /api/master/project-stages responded 200 in 221.6114 ms
+2026-09-14 16:21:13.364 [INF] Fetched {Count} Prospect sources 
+2026-09-14 16:21:13.364 [INF] HTTP GET /api/master/sources responded 200 in 236.4072 ms
+2026-09-14 16:23:08.271 [INF] Prospect 'PRO-00003' created by employee 08df046f-470d-4db0-8286-3135ffb6f6ce.
+2026-09-14 16:23:08.272 [INF] HTTP POST /api/prospects responded 201 in 2556.0432 ms
+2026-09-14 16:23:08.415 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 16:23:08.415 [INF] HTTP GET /api/prospects responded 200 in 129.8511 ms
+2026-09-14 17:58:26.834 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0940 ms
+2026-09-14 17:58:27.119 [INF] Gernerate new refresh token- 
+2026-09-14 17:58:27.120 [INF] HTTP POST /api/auth/refresh responded 200 in 259.7825 ms
+2026-09-14 17:58:27.261 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-14 17:58:27.261 [INF] HTTP GET /api/auth/get-workspace responded 200 in 122.3197 ms
+2026-09-14 17:58:28.278 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 17:58:28.278 [INF] HTTP POST /api/auth/select-workspace responded 200 in 92.5055 ms
+2026-09-14 17:58:31.981 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 17:58:31.981 [INF] HTTP GET /api/prospects responded 200 in 130.0883 ms
+2026-09-14 17:58:42.633 [INF] Fetched {Count} Prospect sources 
+2026-09-14 17:58:42.719 [INF] HTTP GET /api/master/sources responded 200 in 257.4086 ms
+2026-09-14 17:58:42.791 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 17:58:42.834 [INF] HTTP GET /api/master/temperatures responded 200 in 370.7696 ms
+2026-09-14 17:58:42.845 [WRN] Project Stages fetched successfully
+2026-09-14 17:58:42.845 [INF] HTTP GET /api/master/project-stages responded 200 in 339.4997 ms
+2026-09-14 18:00:20.570 [INF] Fetched {Count} Prospect sources 
+2026-09-14 18:00:20.570 [WRN] Project Stages fetched successfully
+2026-09-14 18:00:20.591 [INF] HTTP GET /api/master/sources responded 200 in 211.3301 ms
+2026-09-14 18:00:20.592 [INF] HTTP GET /api/master/project-stages responded 200 in 211.4435 ms
+2026-09-14 18:00:20.606 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 18:00:20.607 [INF] HTTP GET /api/master/temperatures responded 200 in 205.3297 ms
+2026-09-14 18:03:33.495 [INF] Fetched {Count} Prospect sources 
+2026-09-14 18:03:33.623 [INF] HTTP GET /api/master/sources responded 200 in 262.1502 ms
+2026-09-14 18:03:33.623 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 18:03:33.626 [INF] HTTP GET /api/master/temperatures responded 200 in 264.8143 ms
+2026-09-14 18:03:33.657 [WRN] Project Stages fetched successfully
+2026-09-14 18:03:33.700 [INF] HTTP GET /api/master/project-stages responded 200 in 314.2600 ms
+2026-09-14 18:27:32.435 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-14 18:27:32.436 [INF] HTTP GET /api/prospects responded 200 in 342.7710 ms
+2026-09-14 18:30:32.500 [INF] Fetched {Count} Prospect sources 
+2026-09-14 18:30:32.505 [INF] HTTP GET /api/master/sources responded 200 in 187.0928 ms
+2026-09-14 18:30:32.562 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-14 18:30:32.584 [INF] HTTP GET /api/master/temperatures responded 200 in 243.4905 ms
+2026-09-14 18:30:32.590 [WRN] Project Stages fetched successfully
+2026-09-14 18:30:32.591 [INF] HTTP GET /api/master/project-stages responded 200 in 250.3133 ms

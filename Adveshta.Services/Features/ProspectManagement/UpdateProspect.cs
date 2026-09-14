@@ -39,8 +39,6 @@ namespace Adveshta.Services.Features.ProspectManagement
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _prospectStatusHelper = prospectStatusHelper ?? throw new ArgumentNullException(nameof(prospectStatusHelper));
         }
-
-
         public async Task<ApiResponse<object>> Handle(UpdateProspectCommand request, CancellationToken cancellationToken)
         {
 
@@ -63,27 +61,26 @@ namespace Adveshta.Services.Features.ProspectManagement
 
 
 
-                if (prospect.StatusId != dto.StatusId)
-                {
-                    var nextstatus = _prospectStatusHelper.NextStatus(prospect.StatusId);
-                    if (!nextstatus.Contains(dto.StatusId))
-                    {
-                        _logger.LogWarning("Prospect Updation Failed: Invalid status pass {prospect} - statu : {status}", dto.Id, dto.StatusId);
+                // if (prospect.StatusId != dto.StatusId)
+                // {
+                //     var nextstatus = _prospectStatusHelper.NextStatus(prospect.StatusId);
+                //     if (!nextstatus.Contains(dto.StatusId))
+                //     {
+                //         _logger.LogWarning("Prospect Updation Failed: Invalid status pass {prospect} - statu : {status}", dto.Id, dto.StatusId);
 
-                        return ApiResponse<object>.ErrorResponse("Invalid status!", null, StatusCodes.Status400BadRequest);
-                    }
-                }
+                //         return ApiResponse<object>.ErrorResponse("Invalid status!", null, StatusCodes.Status400BadRequest);
+                //     }
+                // }
 
                 // update data
 
                 prospect.Name = dto.Name;
                 prospect.BusinessName = dto.BusinessName;
                 prospect.EstimatedValue = dto.EstimatedValue;
-                prospect.StatusId = dto.StatusId;
                 prospect.ExpectedDecisionDate = dto.ExpectedDecisionDate;
                 prospect.Description = dto.Description;
-                prospect.ProspectSourceId = dto.ProspectSourceId;
-                prospect.ProspectTemperatureId = dto.ProspectTemperatureId;
+                prospect.ProspectSourceId = dto.SourceId;
+                prospect.ProspectTemperatureId = dto.TemperatureId;
 
                 prospect.UpdateAt = DateTime.UtcNow;
                 prospect.UpdatedById = request.LoggedEmployee.Id;

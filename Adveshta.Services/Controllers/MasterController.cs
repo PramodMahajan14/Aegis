@@ -12,6 +12,8 @@ using static Adveshta.Services.Features.MasterManagement.DeleteJobRole.DeleteJob
 using Adveshta.Model.Master;
 using Adveshta.Model.DTO;
 using Adveshta.Services.Features.MasterManagement;
+using Adveshta.Services.Features.MasterManagement.GetSourceList;
+using Adveshta.Services.Features.MasterManagement.GetTemperaturesList;
 namespace Adveshta.Services.Controllers
 {
     [ApiController]
@@ -68,10 +70,10 @@ namespace Adveshta.Services.Controllers
         }
 
         [HttpPut("update-jobrole/{id}")]
-        public async Task<IActionResult> UpdateJobRoleAsync([FromBody] ManageJobRoleDto model,[FromRoute] Guid Id)
+        public async Task<IActionResult> UpdateJobRoleAsync([FromBody] ManageJobRoleDto model, [FromRoute] Guid Id)
         {
             var employee = await _userHelper.GetCurrentEmployeeAsync();
-            var command = new UpdateJobRoleCommand( model, _organizationId,Id);
+            var command = new UpdateJobRoleCommand(model, _organizationId, Id);
             var response = await _mediator.Send(command);
             return StatusCode(response.StatusCode, response);
         }
@@ -88,38 +90,62 @@ namespace Adveshta.Services.Controllers
         }
 
         #endregion
-         
+
         #region Project Stage
-         [HttpPost("create-project-stage")]
-         public async Task<IActionResult> CreateProjectState([FromBody] ProjectStatgeDto model)
+        [HttpPost("create-project-stage")]
+        public async Task<IActionResult> CreateProjectState([FromBody] ProjectStatgeDto model)
         {
-             var command = new CreateProjectStageCommand(_organizationId,model);
-             var response = await _mediator.Send(command);
-             return StatusCode(response.StatusCode, response);
+            var command = new CreateProjectStageCommand(_organizationId, model);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
         }
 
-         [HttpPut("project-stage-update/{id}")]
-         public async Task<IActionResult> UpdateProjectState([FromBody] ProjectStatgeDto model,[FromRoute] Guid id)
+        [HttpPut("project-stage-update/{id}")]
+        public async Task<IActionResult> UpdateProjectState([FromBody] ProjectStatgeDto model, [FromRoute] Guid id)
         {
-             var command = new UpdateProjectStageCommand(_organizationId,model,id);
-             var response = await _mediator.Send(command);
-             return StatusCode(response.StatusCode, response);
+            var command = new UpdateProjectStageCommand(_organizationId, model, id);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
         }
 
-         [HttpDelete("project-stage-delete/{id}")]
-         public async Task<IActionResult> DeleteProjectState([FromRoute] Guid id)
+        [HttpDelete("project-stage-delete/{id}")]
+        public async Task<IActionResult> DeleteProjectState([FromRoute] Guid id)
         {
-             var command = new DeleteProjectStageCommand(_organizationId,id);
-             var response = await _mediator.Send(command);
-             return StatusCode(response.StatusCode, response);
+            var command = new DeleteProjectStageCommand(_organizationId, id);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
         }
 
-          [HttpGet("project-stages")]
-         public async Task<IActionResult> GetProjectStage()
+        [HttpGet("project-stages")]
+        public async Task<IActionResult> GetProjectStage()
         {
-             var command = new GetProjectStageListQuery(_organizationId);
-             var response = await _mediator.Send(command);
-             return StatusCode(response.StatusCode, response);
+            var command = new GetProjectStageListQuery(_organizationId);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+        }
+        #endregion
+
+
+
+        #region Sourcs
+        [HttpGet("sources")]
+        public async Task<IActionResult> GetProspectSourceList()
+        {
+            var command = new GetSourceListQuery();
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+        }
+        #endregion
+
+
+
+        #region Sourcs
+        [HttpGet("temperatures")]
+        public async Task<IActionResult> GetTemperaturesList()
+        {
+            var command = new GetTemperaturesListQuery();
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
         }
         #endregion
     }

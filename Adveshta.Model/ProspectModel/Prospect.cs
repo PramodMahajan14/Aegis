@@ -26,7 +26,7 @@ namespace Adveshta.Model.ProspectModel
 
         public DateTime? ExpectedDecisionDate { get; set; }
 
-        public string Location { get; set; } = string.Empty;
+        public string ProjectLocation { get; set; } = string.Empty;
 
         public string? OfficeLocation { get; set; }
 

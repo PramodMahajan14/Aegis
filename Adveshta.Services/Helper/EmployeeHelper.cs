@@ -13,12 +13,10 @@ namespace Adveshta.Services.Helper
             _context = context;
         }
 
-
         public async Task<Employee?> GetEmployeeByUserId(string userId)
         {
             return await _context.Employees.Include(e=>e.Organization).Include(e => e.User).SingleOrDefaultAsync(a => a.UserId == userId && a.IsActive == true);
         }
-
         public async Task<List<Guid>> GetOrganizationsByEmployeeAsync(Guid employeeId)
         {
             return await _context.EmployeeOrganizations

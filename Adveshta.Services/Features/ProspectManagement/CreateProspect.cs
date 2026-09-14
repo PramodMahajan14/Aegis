@@ -66,16 +66,15 @@ namespace Adveshta.Services.Features.ProspectManagement.CreateProspect
                     BusinessName = dto.BusinessName.Trim(),
                     Description = dto.Description?.Trim(),
 
-                    StatusId = dto.StatusId,
+                    StatusId = ProspectsStatusMaster.NEW,
                     EstimatedValue = dto.EstimatedValue,
                     ExpectedDecisionDate = dto.ExpectedDecisionDate,
 
-                    Location = dto.Location.Trim(),
+                    ProjectLocation = dto.ProjectLocation.Trim(),
                     OfficeLocation = dto.OfficeLocation?.Trim(),
 
-                    ProspectTemperatureId = dto.ProspectTemperatureId,
-                    ProspectSourceId = dto.ProspectSourceId,
-
+                    ProspectTemperatureId = dto.TemperatureId,
+                    ProspectSourceId = dto.SourceId,
                     IsActive = true,
                     CreatedAt = DateTime.UtcNow,
                     CreatedById = request.LoggedEmployee.Id,

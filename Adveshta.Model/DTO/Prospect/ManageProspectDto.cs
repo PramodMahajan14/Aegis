@@ -12,20 +12,19 @@ namespace Adveshta.Model.DTO.Prospect
 
         public string? Description { get; set; } = string.Empty;
 
-        public Guid StatusId { get; set; }
 
         public Decimal? EstimatedValue { get; set; }
 
         public DateTime? ExpectedDecisionDate { get; set; }
 
-        public string Location { get; set; } = string.Empty;
+        public string ProjectLocation { get; set; } = string.Empty;
 
         public string? OfficeLocation { get; set; }
 
 
-        public Guid ProspectTemperatureId { get; set; }
+        public Guid TemperatureId { get; set; }
 
-        public Guid ProspectSourceId { get; set; }
+        public Guid SourceId { get; set; }
 
     }
 }

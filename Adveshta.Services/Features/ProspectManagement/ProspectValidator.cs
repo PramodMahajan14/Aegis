@@ -31,11 +31,6 @@ namespace Adveshta.Services.Features.ProspectManagement.ProspectValidator
                 .WithMessage("Description must not exceed 1000 characters.")
                 .When(x => !string.IsNullOrWhiteSpace(x.Description));
 
-            // Status
-            RuleFor(x => x.StatusId)
-                .NotEmpty()
-                .WithMessage("Please select a valid prospect status.");
-
             // Estimated Value - Optional
             RuleFor(x => x.EstimatedValue)
                 .GreaterThan(0)
@@ -49,7 +44,7 @@ namespace Adveshta.Services.Features.ProspectManagement.ProspectValidator
                 .When(x => x.ExpectedDecisionDate.HasValue);
 
             // Location
-            RuleFor(x => x.Location)
+            RuleFor(x => x.ProjectLocation)
                 .NotEmpty()
                 .WithMessage("Location is required.")
                 .MaximumLength(250)
@@ -62,12 +57,12 @@ namespace Adveshta.Services.Features.ProspectManagement.ProspectValidator
                 .When(x => !string.IsNullOrWhiteSpace(x.OfficeLocation));
 
             // Prospect Temperature
-            RuleFor(x => x.ProspectTemperatureId)
+            RuleFor(x => x.TemperatureId)
                 .NotEmpty()
                 .WithMessage("Please select a prospect temperature (Hot / Warm / Cold).");
 
             // Prospect Source
-            RuleFor(x => x.ProspectSourceId)
+            RuleFor(x => x.SourceId)
                 .NotEmpty()
                 .WithMessage("Please select a prospect source.");
         }

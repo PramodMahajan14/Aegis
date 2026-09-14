@@ -33,4 +33,12 @@ namespace Adveshta.Model.Master
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
     }
+
+
+    public class ProspectSourceVm
+    {
+        public Guid Id { get; set; }
+        public string Code { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+    }
 }

@@ -1,0 +1,441 @@
+2026-09-18 00:20:39.981 [INF] Starting database seeding process...
+2026-09-18 00:20:41.805 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-18 00:20:41.987 [INF] Super Admin user already exists.
+2026-09-18 00:20:42.484 [INF] Super Application Role already has all permisson
+2026-09-18 00:20:42.582 [INF] Super Admin user created successfully.
+2026-09-18 00:20:42.710 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-18 00:24:59.774 [INF] HTTP GET /api/auth/csrf responded 404 in 49.0471 ms
+2026-09-18 00:24:59.901 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-18 00:24:59.936 [INF] HTTP POST /api/auth/refresh responded 400 in 129.6186 ms
+2026-09-18 00:25:12.539 [INF] HTTP GET /api/auth/csrf responded 404 in 2.8650 ms
+2026-09-18 00:25:12.567 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-18 00:25:12.568 [INF] HTTP POST /api/auth/refresh responded 400 in 7.7882 ms
+2026-09-18 00:25:17.446 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1832 ms
+2026-09-18 00:25:17.522 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-18 00:25:17.522 [INF] HTTP POST /api/auth/refresh responded 400 in 18.5052 ms
+2026-09-18 00:28:36.718 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-18 00:28:36.726 [INF] HTTP POST /api/auth/login responded 200 in 1060.8611 ms
+2026-09-18 00:28:37.268 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-18 00:28:37.286 [INF] HTTP GET /api/auth/get-workspace responded 200 in 525.1069 ms
+2026-09-18 00:28:38.859 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:28:38.860 [INF] HTTP POST /api/auth/select-workspace responded 200 in 452.8339 ms
+2026-09-18 00:28:40.517 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:28:40.612 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:28:40.771 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:28:40.782 [INF] HTTP GET /api/prospects/list responded 200 in 280.5225 ms
+2026-09-18 00:31:53.514 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:31:53.514 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 346.0140 ms
+2026-09-18 00:31:54.777 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:31:54.778 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 254.2133 ms
+2026-09-18 00:32:09.629 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:32:09.630 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 210.1256 ms
+2026-09-18 00:32:10.827 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:32:10.827 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 188.8068 ms
+2026-09-18 00:32:20.887 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1116 ms
+2026-09-18 00:32:22.236 [INF] Gernerate new refresh token- 
+2026-09-18 00:32:22.239 [INF] HTTP POST /api/auth/refresh responded 200 in 385.8536 ms
+2026-09-18 00:32:23.032 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-18 00:32:23.033 [INF] HTTP GET /api/auth/get-workspace responded 200 in 142.1064 ms
+2026-09-18 00:32:27.315 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:32:27.316 [INF] HTTP POST /api/auth/select-workspace responded 200 in 408.1679 ms
+2026-09-18 00:32:30.996 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:32:30.998 [INF] HTTP GET /api/prospects/list responded 200 in 256.2176 ms
+2026-09-18 00:33:09.484 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:33:09.484 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 78.5010 ms
+2026-09-18 00:33:10.726 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:33:10.726 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 226.2319 ms
+2026-09-18 00:33:52.920 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:33:52.920 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 378.7567 ms
+2026-09-18 00:33:54.641 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:33:54.642 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 214.8780 ms
+2026-09-18 00:34:15.149 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:15.150 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 154.7446 ms
+2026-09-18 00:34:17.324 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:17.324 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 203.5700 ms
+2026-09-18 00:34:18.373 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:18.373 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 206.0127 ms
+2026-09-18 00:34:20.328 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:20.328 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 98.2882 ms
+2026-09-18 00:34:23.707 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:23.707 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 111.5125 ms
+2026-09-18 00:34:25.840 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:25.840 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 133.4696 ms
+2026-09-18 00:34:38.211 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:38.212 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 86.6592 ms
+2026-09-18 00:34:40.213 [FTL] Error Occured during fetching Prospect details "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:40.214 [ERR] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 500 in 146.6745 ms
+2026-09-18 00:34:42.107 [FTL] Error Occured during fetching Prospect details "c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:34:42.108 [ERR] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 500 in 130.2263 ms
+2026-09-18 00:36:12.409 [INF] Starting database seeding process...
+2026-09-18 00:36:13.751 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-18 00:36:13.915 [INF] Super Admin user already exists.
+2026-09-18 00:36:14.344 [INF] Super Application Role already has all permisson
+2026-09-18 00:36:14.411 [INF] Super Admin user created successfully.
+2026-09-18 00:36:14.522 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-18 00:36:17.525 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:36:17.887 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:36:18.094 [FTL] Error Occured during fetching Prospect details "bfeaf259-5ba0-4022-b747-67834bd2f093" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:36:18.157 [ERR] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 500 in 727.7310 ms
+2026-09-18 00:36:33.827 [FTL] Error Occured during fetching Prospect details "c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:36:33.829 [ERR] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 500 in 413.7070 ms
+2026-09-18 00:36:37.255 [INF] HTTP GET /api/auth/csrf responded 404 in 2.6223 ms
+2026-09-18 00:36:38.701 [INF] Gernerate new refresh token- 
+2026-09-18 00:36:38.708 [INF] HTTP POST /api/auth/refresh responded 200 in 466.6276 ms
+2026-09-18 00:36:39.702 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-18 00:36:39.715 [INF] HTTP GET /api/auth/get-workspace responded 200 in 312.1825 ms
+2026-09-18 00:36:42.130 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:36:42.132 [INF] HTTP POST /api/auth/select-workspace responded 200 in 343.8916 ms
+2026-09-18 00:36:44.858 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:36:44.883 [INF] HTTP GET /api/prospects/list responded 200 in 120.3377 ms
+2026-09-18 00:42:13.914 [INF] Starting database seeding process...
+2026-09-18 00:42:15.582 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-18 00:42:15.691 [INF] Super Admin user already exists.
+2026-09-18 00:42:16.041 [INF] Super Application Role already has all permisson
+2026-09-18 00:42:16.139 [INF] Super Admin user created successfully.
+2026-09-18 00:42:16.266 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-18 00:42:23.661 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:42:23.734 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:42:23.966 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:42:24.043 [INF] HTTP GET /api/prospects/list responded 200 in 492.1364 ms
+2026-09-18 00:42:29.428 [FTL] Error Occured during fetching Prospect details "d1c5f12d-2088-46bf-98e9-87ef80cde006" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:42:29.429 [ERR] HTTP GET /api/prospects/d1c5f12d-2088-46bf-98e9-87ef80cde006 responded 500 in 3795.7072 ms
+2026-09-18 00:44:52.184 [INF] Starting database seeding process...
+2026-09-18 00:44:53.525 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-18 00:44:53.664 [INF] Super Admin user already exists.
+2026-09-18 00:44:54.049 [INF] Super Application Role already has all permisson
+2026-09-18 00:44:54.121 [INF] Super Admin user created successfully.
+2026-09-18 00:44:54.251 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-18 00:45:01.078 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:45:04.132 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:45:04.355 [FTL] Error Occured during fetching Prospect details "d1c5f12d-2088-46bf-98e9-87ef80cde006" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:45:04.441 [ERR] HTTP GET /api/prospects/d1c5f12d-2088-46bf-98e9-87ef80cde006 responded 500 in 3474.9341 ms
+2026-09-18 00:47:45.814 [INF] Starting database seeding process...
+2026-09-18 00:47:47.412 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-18 00:47:47.577 [INF] Super Admin user already exists.
+2026-09-18 00:47:48.102 [INF] Super Application Role already has all permisson
+2026-09-18 00:47:48.225 [INF] Super Admin user created successfully.
+2026-09-18 00:47:48.356 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-18 00:47:49.253 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:47:49.321 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:47:49.461 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:47:49.543 [INF] HTTP GET /api/prospects/list responded 200 in 391.7174 ms
+2026-09-18 00:47:53.800 [FTL] Error Occured during fetching Prospect details "d1c5f12d-2088-46bf-98e9-87ef80cde006" :  Error Error mapping types.
+
+Mapping types:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Type Map configuration:
+Prospect -> ProspectDetailsVm
+Adveshta.Model.ProspectModel.Prospect -> Adveshta.Model.Vm.Prospect.ProspectDetailsVm
+
+Destination Member:
+CreatedBy
+
+2026-09-18 00:47:53.801 [ERR] HTTP GET /api/prospects/d1c5f12d-2088-46bf-98e9-87ef80cde006 responded 500 in 3194.2127 ms
+2026-09-18 00:47:59.031 [INF] HTTP GET /api/auth/csrf responded 404 in 4.1472 ms
+2026-09-18 00:48:00.443 [INF] Gernerate new refresh token- 
+2026-09-18 00:48:00.459 [INF] HTTP POST /api/auth/refresh responded 200 in 509.2647 ms
+2026-09-18 00:48:01.532 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-18 00:48:01.540 [INF] HTTP GET /api/auth/get-workspace responded 200 in 429.5029 ms
+2026-09-18 00:48:03.777 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:48:03.781 [INF] HTTP POST /api/auth/select-workspace responded 200 in 353.1050 ms
+2026-09-18 00:48:07.522 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:48:07.523 [INF] HTTP GET /api/prospects/list responded 200 in 194.7058 ms
+2026-09-18 00:50:34.486 [INF] Starting database seeding process...
+2026-09-18 00:50:36.101 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-18 00:50:36.252 [INF] Super Admin user already exists.
+2026-09-18 00:50:36.711 [INF] Super Application Role already has all permisson
+2026-09-18 00:50:36.854 [INF] Super Admin user created successfully.
+2026-09-18 00:50:37.000 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-18 00:50:41.920 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:50:44.851 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-18 00:50:45.024 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:50:45.145 [INF] HTTP GET /api/prospects/d1c5f12d-2088-46bf-98e9-87ef80cde006 responded 200 in 3333.0837 ms
+2026-09-18 00:51:23.883 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:51:23.884 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 2795.7337 ms
+2026-09-18 00:52:01.280 [INF] HTTP GET /api/prospects/p-pinnacle responded 400 in 45.1438 ms
+2026-09-18 00:53:14.249 [INF] HTTP GET /api/prospects/p-pinnacle responded 400 in 2.3005 ms
+2026-09-18 00:53:30.957 [INF] HTTP GET /api/prospects/p-pinnacle responded 400 in 3.1551 ms
+2026-09-18 00:55:37.487 [INF] HTTP GET /api/prospects/p-pinnacle responded 400 in 2.6827 ms
+2026-09-18 00:55:46.393 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:55:46.401 [INF] HTTP GET /api/prospects/list responded 200 in 371.4163 ms
+2026-09-18 00:56:51.902 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:56:51.903 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 11480.9576 ms
+2026-09-18 00:58:39.615 [INF] HTTP GET /api/prospects/p-pinnacle responded 400 in 2.1721 ms
+2026-09-18 00:59:06.567 [INF] HTTP GET /api/prospects/p-pinnacle responded 400 in 1.7683 ms
+2026-09-18 00:59:17.311 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 00:59:17.312 [INF] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 200 in 3016.8920 ms
+2026-09-18 01:05:32.676 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 01:05:32.677 [INF] HTTP GET /api/prospects/list responded 200 in 258.8639 ms
+2026-09-18 01:05:41.026 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 01:05:41.026 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 7676.8248 ms
+2026-09-18 01:05:46.198 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 01:05:46.199 [INF] HTTP GET /api/prospects/d1c5f12d-2088-46bf-98e9-87ef80cde006 responded 200 in 125.8606 ms
+2026-09-18 01:06:00.084 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-18 01:06:00.084 [INF] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 200 in 253.5503 ms
+2026-09-18 01:06:13.721 [WRN] Project Stages fetched successfully
+2026-09-18 01:06:13.766 [INF] Fetched {Count} Prospect sources 
+2026-09-18 01:06:13.766 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-18 01:06:13.777 [INF] HTTP GET /api/master/temperatures responded 200 in 451.1799 ms
+2026-09-18 01:06:13.777 [INF] HTTP GET /api/master/sources responded 200 in 451.1803 ms
+2026-09-18 01:06:13.779 [INF] HTTP GET /api/master/project-stages responded 200 in 453.1205 ms
+2026-09-18 01:07:35.740 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-18 01:07:35.741 [WRN] Project Stages fetched successfully
+2026-09-18 01:07:35.741 [INF] Fetched {Count} Prospect sources 
+2026-09-18 01:07:35.806 [INF] HTTP GET /api/master/temperatures responded 200 in 399.8780 ms
+2026-09-18 01:07:35.806 [INF] HTTP GET /api/master/project-stages responded 200 in 399.6242 ms
+2026-09-18 01:07:35.806 [INF] HTTP GET /api/master/sources responded 200 in 399.9620 ms
+2026-09-18 01:07:46.757 [INF] HTTP GET /api/prospects/p-skyline responded 400 in 1.3658 ms

@@ -1,0 +1,55 @@
+2026-09-17 22:55:52.864 [INF] Starting database seeding process...
+2026-09-17 22:55:55.671 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-17 22:55:55.816 [INF] Super Admin user already exists.
+2026-09-17 22:55:56.047 [INF] Super Application Role already has all permisson
+2026-09-17 22:55:56.182 [INF] Super Admin user created successfully.
+2026-09-17 22:55:56.376 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-17 22:58:56.527 [INF] Starting database seeding process...
+2026-09-17 22:58:58.032 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-17 22:58:58.166 [INF] Super Admin user already exists.
+2026-09-17 22:58:58.464 [INF] Super Application Role already has all permisson
+2026-09-17 22:58:58.605 [INF] Super Admin user created successfully.
+2026-09-17 22:58:58.737 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-17 22:59:14.657 [INF] HTTP GET /api/auth/csrf responded 404 in 51.0404 ms
+2026-09-17 22:59:14.802 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-17 22:59:14.833 [INF] HTTP POST /api/auth/refresh responded 400 in 125.4620 ms
+2026-09-17 22:59:21.877 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-17 22:59:21.887 [INF] HTTP POST /api/auth/login responded 200 in 855.1148 ms
+2026-09-17 22:59:22.644 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-17 22:59:22.662 [INF] HTTP GET /api/auth/get-workspace responded 200 in 733.9661 ms
+2026-09-17 22:59:24.743 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-17 22:59:24.744 [INF] HTTP POST /api/auth/select-workspace responded 200 in 421.5931 ms
+2026-09-17 22:59:32.503 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-17 22:59:32.611 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-17 22:59:32.724 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-17 22:59:32.739 [INF] HTTP GET /api/prospects responded 200 in 249.7167 ms
+2026-09-17 23:00:51.817 [WRN] Project Stages fetched successfully
+2026-09-17 23:00:51.958 [INF] Fetched {Count} Prospect sources 
+2026-09-17 23:00:51.958 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-17 23:00:51.961 [INF] HTTP GET /api/master/sources responded 200 in 374.3181 ms
+2026-09-17 23:00:51.962 [INF] HTTP GET /api/master/temperatures responded 200 in 332.2757 ms
+2026-09-17 23:00:51.965 [INF] HTTP GET /api/master/project-stages responded 200 in 335.1896 ms
+2026-09-17 23:02:33.875 [ERR] Error creating prospect.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Adveshta.Services.Features.ProspectManagement.CreateProspect.CreateProspectHander.Handle(CreateProspectCommand request, CancellationToken cancellationToken) in /home/admin1/Projects/Adveshta/Adveshta.Services/Features/ProspectManagement/CreateProspect.cs:line 97
+2026-09-17 23:02:33.877 [ERR] HTTP POST /api/prospects responded 500 in 3868.6896 ms
+2026-09-17 23:03:05.492 [ERR] Error creating prospect.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Adveshta.Services.Features.ProspectManagement.CreateProspect.CreateProspectHander.Handle(CreateProspectCommand request, CancellationToken cancellationToken) in /home/admin1/Projects/Adveshta/Adveshta.Services/Features/ProspectManagement/CreateProspect.cs:line 97
+2026-09-17 23:03:05.493 [ERR] HTTP POST /api/prospects responded 500 in 2382.3514 ms
+2026-09-17 23:09:04.345 [ERR] Error creating prospect.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Adveshta.Services.Features.ProspectManagement.CreateProspect.CreateProspectHander.Handle(CreateProspectCommand request, CancellationToken cancellationToken) in /home/admin1/Projects/Adveshta/Adveshta.Services/Features/ProspectManagement/CreateProspect.cs:line 97
+2026-09-17 23:09:04.347 [ERR] HTTP POST /api/prospects responded 500 in 334774.9236 ms
+2026-09-17 23:15:06.270 [INF] Starting database seeding process...
+2026-09-17 23:15:07.608 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-17 23:15:07.724 [INF] Super Admin user already exists.
+2026-09-17 23:15:08.149 [INF] Super Application Role already has all permisson
+2026-09-17 23:15:08.279 [INF] Super Admin user created successfully.
+2026-09-17 23:15:08.389 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-17 23:16:57.662 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-17 23:17:34.715 [INF] Prospect 'PRO-00004' created by employee 08df046f-470d-4db0-8286-3135ffb6f6ce.
+2026-09-17 23:17:49.352 [INF] HTTP POST /api/prospects responded 201 in 51801.9732 ms
+2026-09-17 23:17:49.596 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-17 23:17:49.855 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-17 23:17:49.874 [INF] HTTP GET /api/prospects responded 200 in 433.1864 ms

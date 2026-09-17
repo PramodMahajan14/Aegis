@@ -1,7 +1,9 @@
 using Adveshta.Model.DTO.Prospect;
+using Adveshta.Model.EmployeeModels;
 using Adveshta.Services.Features.MasterManagement;
 using Adveshta.Services.Features.ProspectManagement;
 using Adveshta.Services.Features.ProspectManagement.CreateProspect;
+using Adveshta.Services.Features.ProspectManagement.GetProspectDetails;
 using Adveshta.Services.Features.ProspectManagement.ProspectList;
 using Adveshta.Services.Helper;
 using MediatR;
@@ -58,12 +60,22 @@ namespace Adveshta.Services.Controllers
         /// <summary>
         /// Create a new prospect.
         /// </summary>
-        [HttpGet]
+        [HttpGet("list")]
         public async Task<IActionResult> GetProspects()
         {
-              var command = new ProspectListQuery(_organizationId);
-              var response = await _mediator.Send(command);
-             return StatusCode(response.StatusCode, response);
+            var command = new ProspectListQuery(_organizationId);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+        }
+
+
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetProspectDetails([FromRoute] Guid Id)
+        {
+            var LoggedEmployee = await _userHelper.GetCurrentEmployeeAsync();
+            var command = new GetProspectDetailsQeury(_organizationId, LoggedEmployee, Id);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
         }
     }
 }

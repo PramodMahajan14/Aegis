@@ -27,4 +27,13 @@ namespace Adveshta.Model.Vm.Employee
 
         public bool IsRoot {get;set;}
     }
+
+    public class BasicEmployeeVm
+    {
+        public Guid Id {get;set;}
+
+        public string FirstName {get;set;} = string.Empty;
+
+        public string LastName {get;set;} = string.Empty;
+    }
 }

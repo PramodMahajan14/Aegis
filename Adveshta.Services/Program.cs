@@ -184,11 +184,12 @@ builder.Services.AddScoped<IEmployee, EmployeeService>();
 // builder.Services.AddScoped<ILoggingService, LoggingService>();
 builder.Services.AddScoped<UserHelper>();
 builder.Services.AddScoped<EmployeeHelper>();
-
+builder.Services.AddScoped<ITimeLineLogs, TimeLineLogsService>();
 
 builder.Services.AddScoped<ProspectStatusHelper>();
 
 builder.Services.AddSingleton<ILoggingService, LoggingService>();
+
 #endregion
 
 #region ===================== Swagger

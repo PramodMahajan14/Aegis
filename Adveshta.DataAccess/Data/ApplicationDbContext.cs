@@ -50,6 +50,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<ProspectSource> ProspectSources { get; set; }
     public DbSet<ProspectTemperature> ProspectTemperatures { get; set; }
+
+    public DbSet<ProspectTimeLine> ProspectTimeLines {get;set;}
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

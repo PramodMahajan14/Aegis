@@ -8,6 +8,7 @@ using Adveshta.Services.Features.ProspectManagement.ProspectList;
 using Adveshta.Services.Helper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Adveshta.Services.Controllers
@@ -68,9 +69,19 @@ namespace Adveshta.Services.Controllers
             return StatusCode(response.StatusCode, response);
         }
 
-
         [HttpGet("{Id}")]
         public async Task<IActionResult> GetProspectDetails([FromRoute] Guid Id)
+        {
+            var LoggedEmployee = await _userHelper.GetCurrentEmployeeAsync();
+            var command = new GetProspectDetailsQeury(_organizationId, LoggedEmployee, Id);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+        }
+
+
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> UpdateStatusOrTemp([FromRoute] Guid Id,JsonPatchDocument<ProspectPatchDto> patchd )
         {
             var LoggedEmployee = await _userHelper.GetCurrentEmployeeAsync();
             var command = new GetProspectDetailsQeury(_organizationId, LoggedEmployee, Id);

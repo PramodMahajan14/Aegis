@@ -228,3 +228,35 @@
 2026-09-20 02:23:53.927 [INF] HTTP PUT /api/prospects responded 200 in 415.0330 ms
 2026-09-20 02:23:54.081 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
 2026-09-20 02:23:54.081 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 143.3880 ms
+2026-09-20 02:27:23.905 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-20 02:27:23.906 [INF] HTTP GET /api/prospects/list responded 200 in 210.3756 ms
+2026-09-20 02:27:50.888 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-20 02:27:50.889 [INF] HTTP GET /api/prospects/d1c5f12d-2088-46bf-98e9-87ef80cde006 responded 200 in 275.3017 ms
+2026-09-20 02:27:54.897 [INF] Fetched {Count} Prospect sources 
+2026-09-20 02:27:54.941 [INF] HTTP GET /api/master/sources responded 200 in 138.2330 ms
+2026-09-20 02:27:55.126 [WRN] Project Stages fetched successfully
+2026-09-20 02:27:55.126 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-20 02:27:55.127 [INF] HTTP GET /api/master/temperatures responded 200 in 323.6371 ms
+2026-09-20 02:27:55.127 [INF] HTTP GET /api/master/project-stages responded 200 in 324.5189 ms
+2026-09-20 02:28:03.462 [INF] Prospect Updaed successfully : "d1c5f12d-2088-46bf-98e9-87ef80cde006"
+2026-09-20 02:28:03.462 [INF] HTTP PUT /api/prospects responded 200 in 246.2913 ms
+2026-09-20 02:28:03.618 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-20 02:28:03.619 [INF] HTTP GET /api/prospects/d1c5f12d-2088-46bf-98e9-87ef80cde006 responded 200 in 142.5794 ms
+2026-09-20 02:28:12.600 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-20 02:28:12.601 [INF] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 200 in 56.7297 ms
+2026-09-20 02:28:16.806 [INF] Prospect Updaed successfully : "c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b"
+2026-09-20 02:28:16.806 [INF] HTTP PUT /api/prospects responded 200 in 179.5758 ms
+2026-09-20 02:28:16.958 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-20 02:28:16.959 [INF] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 200 in 142.7138 ms
+2026-09-20 02:28:24.626 [INF] Prospect Updaed successfully : "c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b"
+2026-09-20 02:28:24.626 [INF] HTTP PUT /api/prospects responded 200 in 72.4861 ms
+2026-09-20 02:28:24.799 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-20 02:28:24.799 [INF] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 200 in 160.9461 ms
+2026-09-20 02:28:33.617 [WRN] Project Stages fetched successfully
+2026-09-20 02:28:33.617 [INF] HTTP GET /api/master/project-stages responded 200 in 203.5715 ms
+2026-09-20 02:28:33.662 [INF] Fetched {Count} Prospect sources 
+2026-09-20 02:28:33.662 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-20 02:28:33.663 [INF] HTTP GET /api/master/temperatures responded 200 in 249.7680 ms
+2026-09-20 02:28:33.663 [INF] HTTP GET /api/master/sources responded 200 in 249.1709 ms
+2026-09-20 02:37:59.638 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-20 02:37:59.638 [INF] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 200 in 369.8063 ms

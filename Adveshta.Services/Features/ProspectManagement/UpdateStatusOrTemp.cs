@@ -50,8 +50,10 @@ namespace Adveshta.Services.Features.ProspectManagement.UpdateStatusOrTemp
                 if(prospect == null)
                 {
                      _logger.LogError("Prospect Not found : Prospect {prospect} Due to Update Status or Temp.");
-                return ApiResponse<object>.ErrorResponse("Prospect not found!",null,StatusCodes.Status400BadRequest);
+                    return ApiResponse<object>.ErrorResponse("Prospect not found!",null,StatusCodes.Status400BadRequest);
                 }
+
+                request.Model.ApplyTo(prospect);
                 
             }catch(Exception ex)
             {

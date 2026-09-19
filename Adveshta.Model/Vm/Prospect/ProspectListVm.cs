@@ -67,6 +67,9 @@ namespace Adveshta.Model.Vm.Prospect
         
         public ProspectTemperatureVm Temperature {get;set;} = null!;
 
+        public ProjectStageVm Progress {get;set;} = null!;
+        public ProspectSourceVm Source {get;set;} = null!;
+
         public string? NextAction {get;set;} = null;
 
         public string? LastAction  {get;set;} = null;

@@ -50,8 +50,9 @@ namespace Adveshta.Services.Features.ProspectManagement.GetProspectDetails
                                      .Include(x => x.ProjectStage)
                                      .Include(x => x.ProspectStatus)
                                      .Include(x => x.ProspectTemperature)
-                                    .Include(x => x.CreatedBy)
-                                    .Include(x => x.UpdatedBy)
+                                     .Include(x => x.ProspectSource)
+                                     .Include(x => x.CreatedBy)
+                                     .Include(x => x.UpdatedBy)
                                      .FirstOrDefaultAsync(x =>
                                                           x.Id == request.ProspectId &&
                                                           x.OrganizationId == request.OrganizationId);

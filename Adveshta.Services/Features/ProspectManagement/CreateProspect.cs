@@ -59,7 +59,7 @@ namespace Adveshta.Services.Features.ProspectManagement.CreateProspect
             try
             {
 
-                
+
 
                 var dto = request.Request;
 
@@ -84,6 +84,7 @@ namespace Adveshta.Services.Features.ProspectManagement.CreateProspect
                     ProjectLocation = dto.ProjectLocation.Trim(),
                     OfficeLocation = dto.OfficeLocation?.Trim(),
 
+                    ProjectStageId = dto.ProgressId,
                     ProspectTemperatureId = dto.TemperatureId,
                     ProspectSourceId = dto.SourceId,
                     IsActive = true,
@@ -93,7 +94,7 @@ namespace Adveshta.Services.Features.ProspectManagement.CreateProspect
 
 
                 _context.Prospects.Add(prospect);
-             
+
 
                 // 2. Add timeline entry
                 _timeline.Log(
@@ -121,7 +122,7 @@ namespace Adveshta.Services.Features.ProspectManagement.CreateProspect
             catch (Exception ex)
             {
 
-                 await transaction.RollbackAsync(cancellationToken);
+                await transaction.RollbackAsync(cancellationToken);
                 _logger.LogError(ex, $"Error creating prospect.");
 
                 return ApiResponse<object>.ErrorResponse(

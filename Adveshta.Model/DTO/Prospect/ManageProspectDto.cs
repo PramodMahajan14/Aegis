@@ -16,12 +16,12 @@ namespace Adveshta.Model.DTO.Prospect
         public Decimal? EstimatedValue { get; set; }
 
         public DateTime? ExpectedDecisionDate { get; set; }
-
+        
         public string ProjectLocation { get; set; } = string.Empty;
 
         public string? OfficeLocation { get; set; }
 
-
+        public Guid? ProgressId {get;set;}
         public Guid TemperatureId { get; set; }
 
         public Guid SourceId { get; set; }

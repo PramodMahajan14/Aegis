@@ -1,0 +1,304 @@
+2026-09-22 00:35:55.109 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 401 in 49.7118 ms
+2026-09-22 00:35:57.401 [INF] Gernerate new refresh token- 
+2026-09-22 00:35:57.403 [INF] HTTP POST /api/auth/refresh responded 200 in 513.3646 ms
+2026-09-22 00:35:57.528 [ERR]  Prospect not found by "6f88cef5-9ba5-4607-b54b-a45e3f61448d"
+2026-09-22 00:35:57.529 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 117.3110 ms
+2026-09-22 00:37:27.120 [ERR]  Prospect not found by "6f88cef5-9ba5-4607-b54b-a45e3f61448d"
+2026-09-22 00:37:27.120 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 143.8004 ms
+2026-09-22 00:37:49.445 [ERR]  Prospect not found by "6f88cef5-9ba5-4607-b54b-a45e3f61448d"
+2026-09-22 00:37:49.446 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 183.5854 ms
+2026-09-22 00:38:11.152 [ERR]  Prospect not found by "6f88cef5-9ba5-4607-b54b-a45e3f61448d"
+2026-09-22 00:38:11.153 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 269.4741 ms
+2026-09-22 00:38:47.433 [ERR]  Prospect not found by "6f88cef5-9ba5-4607-b54b-a45e3f61448d"
+2026-09-22 00:38:47.433 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 356.9553 ms
+2026-09-22 00:39:00.897 [ERR]  Prospect not found by "6f88cef5-9ba5-4607-b54b-a45e3f61448d"
+2026-09-22 00:39:00.898 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 180.6963 ms
+2026-09-22 00:43:06.848 [ERR] Prospect Not found : Prospect {prospect} Due to Update Status or Temp.
+2026-09-22 00:43:06.876 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 183103.6549 ms
+2026-09-22 00:58:53.635 [INF] Starting database seeding process...
+2026-09-22 00:58:54.756 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-22 00:58:54.888 [INF] Super Admin user already exists.
+2026-09-22 00:58:55.345 [INF] Super Application Role already has all permisson
+2026-09-22 00:58:55.443 [INF] Super Admin user created successfully.
+2026-09-22 00:58:55.540 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-22 01:02:21.539 [INF] HTTP GET /api/auth/csrf responded 404 in 27.0655 ms
+2026-09-22 01:02:22.683 [WRN] Refresh token Rotation failed: Token not found 2RnGbkGoWA95L8W3SMd7m_cK_hq0i7zuJ7uSnD3HAwNx1BwjKolBoQrL1xMJosKFKiKOV_d5ZOCQoxqY5SRi3g
+2026-09-22 01:02:22.723 [INF] HTTP POST /api/auth/refresh responded 400 in 298.3136 ms
+2026-09-22 01:02:26.561 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-22 01:02:26.565 [INF] HTTP POST /api/auth/login responded 200 in 810.4570 ms
+2026-09-22 01:02:27.262 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-22 01:02:27.273 [INF] HTTP GET /api/auth/get-workspace responded 200 in 667.6648 ms
+2026-09-22 01:02:28.793 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:02:28.794 [INF] HTTP POST /api/auth/select-workspace responded 200 in 463.9604 ms
+2026-09-22 01:02:32.001 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-22 01:02:32.115 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-22 01:02:32.290 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:02:32.297 [INF] HTTP GET /api/prospects/list responded 200 in 331.4080 ms
+2026-09-22 01:03:44.183 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:03:44.317 [INF] HTTP GET /api/master/prospect-status responded 200 in 546.9870 ms
+2026-09-22 01:03:44.476 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:03:44.482 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 713.1968 ms
+2026-09-22 01:07:12.336 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:07:12.336 [INF] HTTP GET /api/master/prospect-status responded 200 in 296.0844 ms
+2026-09-22 01:10:39.390 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:10:39.391 [INF] HTTP GET /api/master/prospect-status responded 200 in 567.6070 ms
+2026-09-22 01:10:39.436 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:10:39.437 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 613.7835 ms
+2026-09-22 01:11:23.613 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:11:23.634 [INF] HTTP GET /api/master/prospect-status responded 200 in 230.5802 ms
+2026-09-22 01:12:06.322 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1343 ms
+2026-09-22 01:12:06.701 [INF] Gernerate new refresh token- 
+2026-09-22 01:12:06.702 [INF] HTTP POST /api/auth/refresh responded 200 in 353.1031 ms
+2026-09-22 01:12:07.690 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-22 01:12:07.690 [INF] HTTP GET /api/auth/get-workspace responded 200 in 404.3916 ms
+2026-09-22 01:12:11.451 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:12:11.452 [INF] HTTP POST /api/auth/select-workspace responded 200 in 327.9782 ms
+2026-09-22 01:12:20.448 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:12:20.449 [INF] HTTP GET /api/prospects/list responded 200 in 191.8627 ms
+2026-09-22 01:12:22.468 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:12:22.570 [INF] HTTP GET /api/master/prospect-status responded 200 in 276.8969 ms
+2026-09-22 01:12:22.577 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:12:22.578 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 287.2336 ms
+2026-09-22 01:13:04.110 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:13:04.110 [INF] HTTP GET /api/master/prospect-status responded 200 in 70.6618 ms
+2026-09-22 01:13:50.242 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:13:50.265 [INF] HTTP GET /api/master/prospect-status responded 200 in 201.4040 ms
+2026-09-22 01:14:47.954 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 33055.3936 ms
+2026-09-22 01:15:02.886 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 3153.8550 ms
+2026-09-22 01:15:18.091 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 2511.4751 ms
+2026-09-22 01:15:26.244 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0908 ms
+2026-09-22 01:15:26.703 [INF] Gernerate new refresh token- 
+2026-09-22 01:15:26.703 [INF] HTTP POST /api/auth/refresh responded 200 in 403.9605 ms
+2026-09-22 01:15:28.296 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-22 01:15:28.296 [INF] HTTP GET /api/auth/get-workspace responded 200 in 182.7880 ms
+2026-09-22 01:15:30.476 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:15:30.476 [INF] HTTP POST /api/auth/select-workspace responded 200 in 315.3400 ms
+2026-09-22 01:15:35.043 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:15:35.044 [INF] HTTP GET /api/prospects/list responded 200 in 129.1558 ms
+2026-09-22 01:15:41.041 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:15:41.230 [INF] HTTP GET /api/master/prospect-status responded 200 in 257.0559 ms
+2026-09-22 01:15:41.336 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:15:41.336 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 315.9874 ms
+2026-09-22 01:15:47.128 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 2396.0067 ms
+2026-09-22 01:17:41.492 [INF] Starting database seeding process...
+2026-09-22 01:17:42.661 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-22 01:17:42.795 [INF] Super Admin user already exists.
+2026-09-22 01:17:43.238 [INF] Super Application Role already has all permisson
+2026-09-22 01:17:43.382 [INF] Super Admin user created successfully.
+2026-09-22 01:17:43.471 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-22 01:17:53.359 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-22 01:21:24.485 [INF] Starting database seeding process...
+2026-09-22 01:21:25.622 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-22 01:21:25.728 [INF] Super Admin user already exists.
+2026-09-22 01:21:26.026 [INF] Super Application Role already has all permisson
+2026-09-22 01:21:26.124 [INF] Super Admin user created successfully.
+2026-09-22 01:21:26.251 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-22 01:21:38.975 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-22 01:22:26.959 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 48097.7065 ms
+2026-09-22 01:25:39.512 [INF] Starting database seeding process...
+2026-09-22 01:25:40.743 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-22 01:25:40.887 [INF] Super Admin user already exists.
+2026-09-22 01:25:41.317 [INF] Super Application Role already has all permisson
+2026-09-22 01:25:41.438 [INF] Super Admin user created successfully.
+2026-09-22 01:25:41.531 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-22 01:25:47.883 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-22 01:28:45.550 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 400 in 177755.7015 ms
+2026-09-22 01:29:35.831 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:29:35.874 [INF] HTTP GET /api/master/prospect-status responded 200 in 411.0579 ms
+2026-09-22 01:29:35.976 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-22 01:29:36.116 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:29:36.130 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 673.8860 ms
+2026-09-22 01:30:48.690 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 01:30:48.701 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 68394.0605 ms
+2026-09-22 01:30:48.827 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:30:48.829 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 117.8101 ms
+2026-09-22 01:31:27.009 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:31:27.012 [INF] HTTP GET /api/prospects/list responded 200 in 193.0659 ms
+2026-09-22 01:31:28.633 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:31:28.719 [INF] HTTP GET /api/master/prospect-status responded 200 in 617.2964 ms
+2026-09-22 01:31:28.785 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:31:28.786 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 686.9260 ms
+2026-09-22 01:34:34.773 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:34:34.774 [INF] HTTP GET /api/master/prospect-status responded 200 in 71.0318 ms
+2026-09-22 01:48:23.173 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:48:23.217 [INF] HTTP GET /api/master/prospect-status responded 200 in 325.2679 ms
+2026-09-22 01:48:23.522 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:48:23.523 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 694.6950 ms
+2026-09-22 01:51:47.222 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 01:51:47.224 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 353.5825 ms
+2026-09-22 01:51:47.437 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:51:47.438 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 209.4408 ms
+2026-09-22 01:52:01.512 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "1d3cb190-8420-4abd-af1f-1d1fb051be83"
+2026-09-22 01:52:01.515 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 332.4588 ms
+2026-09-22 01:52:01.662 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:52:01.663 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 144.4597 ms
+2026-09-22 01:52:23.569 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 01:52:23.573 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 375.6616 ms
+2026-09-22 01:52:23.719 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:52:23.720 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 142.2037 ms
+2026-09-22 01:55:21.504 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:55:21.505 [INF] HTTP GET /api/master/prospect-status responded 200 in 192.7652 ms
+2026-09-22 01:56:36.689 [INF] Fetched {Count} Prospect Status 
+2026-09-22 01:56:36.690 [INF] HTTP GET /api/master/prospect-status responded 200 in 152.0407 ms
+2026-09-22 01:59:56.862 [INF] HTTP GET /api/auth/csrf responded 404 in 0.3629 ms
+2026-09-22 01:59:57.333 [INF] Gernerate new refresh token- 
+2026-09-22 01:59:57.336 [INF] HTTP POST /api/auth/refresh responded 200 in 443.0172 ms
+2026-09-22 01:59:57.614 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-22 01:59:57.618 [INF] HTTP GET /api/auth/get-workspace responded 200 in 261.2335 ms
+2026-09-22 01:59:59.090 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 01:59:59.091 [INF] HTTP POST /api/auth/select-workspace responded 200 in 288.0608 ms
+2026-09-22 02:00:02.210 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:00:02.210 [INF] HTTP GET /api/prospects/list responded 200 in 132.1117 ms
+2026-09-22 02:01:45.569 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:01:45.570 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 366.1672 ms
+2026-09-22 02:01:45.677 [INF] Fetched {Count} Prospect Status 
+2026-09-22 02:01:45.698 [INF] HTTP GET /api/master/prospect-status responded 200 in 486.5516 ms
+2026-09-22 02:01:45.709 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:01:45.814 [INF] HTTP GET /api/master/temperatures responded 200 in 473.8394 ms
+2026-09-22 02:03:52.845 [INF] Fetched {Count} Prospect Status 
+2026-09-22 02:03:52.846 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:03:52.846 [INF] HTTP GET /api/master/prospect-status responded 200 in 323.5923 ms
+2026-09-22 02:03:52.846 [INF] HTTP GET /api/master/temperatures responded 200 in 319.1324 ms
+2026-09-22 02:04:04.070 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1940 ms
+2026-09-22 02:04:04.265 [INF] Gernerate new refresh token- 
+2026-09-22 02:04:04.266 [INF] HTTP POST /api/auth/refresh responded 200 in 175.3310 ms
+2026-09-22 02:04:05.993 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-22 02:04:05.993 [INF] HTTP GET /api/auth/get-workspace responded 200 in 142.9752 ms
+2026-09-22 02:04:09.397 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:04:09.397 [INF] HTTP POST /api/auth/select-workspace responded 200 in 383.8203 ms
+2026-09-22 02:04:11.912 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:04:11.913 [INF] HTTP GET /api/prospects/list responded 200 in 4.6307 ms
+2026-09-22 02:04:15.073 [INF] Fetched {Count} Prospect Status 
+2026-09-22 02:04:15.181 [INF] HTTP GET /api/master/prospect-status responded 200 in 302.3063 ms
+2026-09-22 02:04:15.248 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:04:15.317 [INF] HTTP GET /api/master/temperatures responded 200 in 457.2309 ms
+2026-09-22 02:04:15.318 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:04:15.319 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 464.8942 ms
+2026-09-22 02:08:30.593 [INF] HTTP GET /api/auth/csrf responded 404 in 0.3108 ms
+2026-09-22 02:08:32.278 [INF] Gernerate new refresh token- 
+2026-09-22 02:08:32.279 [INF] HTTP POST /api/auth/refresh responded 200 in 569.1908 ms
+2026-09-22 02:08:32.894 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-22 02:08:32.895 [INF] HTTP GET /api/auth/get-workspace responded 200 in 185.1165 ms
+2026-09-22 02:08:36.830 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:08:36.830 [INF] HTTP POST /api/auth/select-workspace responded 200 in 296.8941 ms
+2026-09-22 02:08:39.756 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:08:39.757 [INF] HTTP GET /api/prospects/list responded 200 in 47.6797 ms
+2026-09-22 02:08:41.340 [INF] Fetched {Count} Prospect Status 
+2026-09-22 02:08:41.388 [INF] HTTP GET /api/master/prospect-status responded 200 in 240.0568 ms
+2026-09-22 02:08:41.399 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:08:41.443 [INF] HTTP GET /api/master/temperatures responded 200 in 231.1991 ms
+2026-09-22 02:08:41.516 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:08:41.517 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 369.7281 ms
+2026-09-22 02:10:37.608 [INF] Fetched {Count} Prospect Status 
+2026-09-22 02:10:37.711 [INF] HTTP GET /api/master/prospect-status responded 200 in 478.7445 ms
+2026-09-22 02:10:37.797 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:10:37.860 [INF] HTTP GET /api/master/temperatures responded 200 in 500.2418 ms
+2026-09-22 02:15:05.818 [INF] Fetched {Count} Prospect Status 
+2026-09-22 02:15:05.881 [INF] HTTP GET /api/master/prospect-status responded 200 in 538.1414 ms
+2026-09-22 02:15:05.963 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:15:05.984 [INF] HTTP GET /api/master/temperatures responded 200 in 598.7852 ms
+2026-09-22 02:15:06.031 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:15:06.032 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 689.8865 ms
+2026-09-22 02:17:37.910 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:17:37.913 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 121.6598 ms
+2026-09-22 02:17:38.102 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:17:38.102 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 181.4635 ms
+2026-09-22 02:17:42.361 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:17:42.364 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 291.3596 ms
+2026-09-22 02:17:42.487 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:17:42.488 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 118.4724 ms
+2026-09-22 02:18:28.094 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:18:28.098 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 283.0233 ms
+2026-09-22 02:18:28.283 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:18:28.283 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 179.6434 ms
+2026-09-22 02:18:57.512 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:18:57.515 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 285.6358 ms
+2026-09-22 02:18:57.636 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:18:57.637 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 115.2995 ms
+2026-09-22 02:18:59.839 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:18:59.842 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 378.6261 ms
+2026-09-22 02:19:00.099 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:19:00.100 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 249.0437 ms
+2026-09-22 02:19:10.956 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:19:10.959 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 194.3618 ms
+2026-09-22 02:19:11.105 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:19:11.106 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 141.8910 ms
+2026-09-22 02:19:13.268 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:19:13.271 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 239.8371 ms
+2026-09-22 02:19:13.505 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:19:13.506 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 228.2119 ms
+2026-09-22 02:19:14.436 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:19:14.438 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 280.1858 ms
+2026-09-22 02:19:14.605 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:19:14.605 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 161.0797 ms
+2026-09-22 02:19:17.908 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:19:17.910 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 189.2739 ms
+2026-09-22 02:19:18.079 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:19:18.079 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 160.9318 ms
+2026-09-22 02:25:30.909 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0796 ms
+2026-09-22 02:25:32.156 [INF] Gernerate new refresh token- 
+2026-09-22 02:25:32.156 [INF] HTTP POST /api/auth/refresh responded 200 in 522.4474 ms
+2026-09-22 02:25:32.831 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-22 02:25:32.832 [INF] HTTP GET /api/auth/get-workspace responded 200 in 240.0500 ms
+2026-09-22 02:25:34.833 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:34.833 [INF] HTTP POST /api/auth/select-workspace responded 200 in 104.9672 ms
+2026-09-22 02:25:36.313 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:36.375 [INF] HTTP GET /api/prospects/list responded 200 in 148.8575 ms
+2026-09-22 02:25:37.865 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:25:37.887 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:37.887 [INF] HTTP GET /api/master/temperatures responded 200 in 258.2839 ms
+2026-09-22 02:25:37.887 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 323.2007 ms
+2026-09-22 02:25:37.892 [INF] Fetched {Count} Prospect Status 
+2026-09-22 02:25:37.892 [INF] HTTP GET /api/master/prospect-status responded 200 in 263.5066 ms
+2026-09-22 02:25:39.601 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:25:39.603 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 79.6456 ms
+2026-09-22 02:25:39.830 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:39.831 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 223.8308 ms
+2026-09-22 02:25:42.649 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:25:42.670 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 192.9597 ms
+2026-09-22 02:25:42.855 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:42.856 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 180.6983 ms
+2026-09-22 02:25:47.331 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:47.331 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 57.3568 ms
+2026-09-22 02:25:49.027 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:25:49.030 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 133.3148 ms
+2026-09-22 02:25:49.109 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:49.109 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 74.9675 ms
+2026-09-22 02:25:53.612 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:25:53.614 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 149.7336 ms
+2026-09-22 02:25:53.645 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:53.645 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 27.9084 ms
+2026-09-22 02:25:57.419 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:25:57.424 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 173.7739 ms
+2026-09-22 02:25:57.520 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:25:57.521 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 91.8381 ms
+2026-09-22 02:26:01.098 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "1d3cb190-8420-4abd-af1f-1d1fb051be83"
+2026-09-22 02:26:01.119 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 210.6515 ms
+2026-09-22 02:26:01.264 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:26:01.265 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 140.1469 ms
+2026-09-22 02:26:09.120 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-22 02:26:09.121 [INF] HTTP GET /api/master/temperatures responded 200 in 136.0658 ms
+2026-09-22 02:26:09.178 [INF] Fetched {Count} Prospect sources 
+2026-09-22 02:26:09.241 [INF] HTTP GET /api/master/sources responded 200 in 255.6826 ms
+2026-09-22 02:26:09.283 [WRN] Project Stages fetched successfully
+2026-09-22 02:26:09.311 [INF] HTTP GET /api/master/project-stages responded 200 in 325.4993 ms
+2026-09-22 02:26:17.625 [INF] Prospect Updaed successfully : "bfeaf259-5ba0-4022-b747-67834bd2f093"
+2026-09-22 02:26:17.625 [INF] HTTP PUT /api/prospects responded 200 in 256.9200 ms
+2026-09-22 02:26:17.791 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:26:17.792 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 159.6182 ms
+2026-09-22 02:26:20.320 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "1d3cb190-8420-4abd-af1f-1d1fb051be83"
+2026-09-22 02:26:20.342 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 300.6616 ms
+2026-09-22 02:26:20.408 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:26:20.408 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 61.7689 ms
+2026-09-22 02:27:06.494 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "1d3cb190-8420-4abd-af1f-1d1fb051be83"
+2026-09-22 02:27:06.497 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 247.1283 ms
+2026-09-22 02:27:06.666 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:27:06.666 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 161.4806 ms
+2026-09-22 02:27:10.780 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:27:10.843 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 336.8864 ms
+2026-09-22 02:27:11.032 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:27:11.033 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 182.2300 ms
+2026-09-22 02:27:28.365 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-22 02:27:28.386 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 192.8479 ms
+2026-09-22 02:27:28.482 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-22 02:27:28.482 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 92.5313 ms

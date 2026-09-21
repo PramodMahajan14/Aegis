@@ -14,6 +14,7 @@ using Adveshta.Model.DTO;
 using Adveshta.Services.Features.MasterManagement;
 using Adveshta.Services.Features.MasterManagement.GetSourceList;
 using Adveshta.Services.Features.MasterManagement.GetTemperaturesList;
+using Adveshta.Services.Features.MasterManagement.GetProspectStatus;
 namespace Adveshta.Services.Controllers
 {
     [ApiController]
@@ -139,7 +140,7 @@ namespace Adveshta.Services.Controllers
 
 
 
-        #region Sourcs
+        #region Temperature
         [HttpGet("temperatures")]
         public async Task<IActionResult> GetTemperaturesList()
         {
@@ -148,5 +149,18 @@ namespace Adveshta.Services.Controllers
             return StatusCode(response.StatusCode, response);
         }
         #endregion
+
+
+
+        #region Status
+        [HttpGet("prospect-status")]
+        public async Task<IActionResult> GetProspectStatus()
+        {
+            var command = new GetProspectStatsQuery();
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+        }
+        #endregion
+
     }
 }

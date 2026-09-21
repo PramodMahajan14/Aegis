@@ -32,7 +32,7 @@ namespace Adveshta.Model.DTO.Prospect
     public class ProspectPatchDto
     {
         public Guid? StatusId { get; set; }
-        public Guid? TemperatureId { get; set; }
+        public Guid? ProspectTemperatureId { get; set; }
 
     }
 }

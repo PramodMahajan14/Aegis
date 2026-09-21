@@ -1,0 +1,71 @@
+2026-09-21 00:14:43.854 [INF] Starting database seeding process...
+2026-09-21 00:14:46.181 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-21 00:14:46.317 [INF] Super Admin user already exists.
+2026-09-21 00:14:46.485 [INF] Super Application Role already has all permisson
+2026-09-21 00:14:46.575 [INF] Super Admin user created successfully.
+2026-09-21 00:14:46.727 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-21 00:14:54.466 [INF] HTTP GET /api/auth/csrf responded 404 in 54.3454 ms
+2026-09-21 00:14:54.589 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-21 00:14:54.620 [INF] HTTP POST /api/auth/refresh responded 400 in 122.4022 ms
+2026-09-21 00:15:06.702 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-21 00:15:06.709 [INF] HTTP POST /api/auth/login responded 200 in 719.6366 ms
+2026-09-21 00:15:07.278 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-21 00:15:07.298 [INF] HTTP GET /api/auth/get-workspace responded 200 in 547.4471 ms
+2026-09-21 00:15:08.928 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 00:15:08.929 [INF] HTTP POST /api/auth/select-workspace responded 200 in 339.2676 ms
+2026-09-21 00:15:11.897 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-21 00:15:11.988 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-21 00:15:12.116 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 00:15:12.129 [INF] HTTP GET /api/prospects/list responded 200 in 244.7487 ms
+2026-09-21 00:15:13.519 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 00:15:13.525 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 221.2999 ms
+2026-09-21 00:15:22.365 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1840 ms
+2026-09-21 00:15:22.566 [INF] Gernerate new refresh token- 
+2026-09-21 00:15:22.570 [INF] HTTP POST /api/auth/refresh responded 200 in 195.2115 ms
+2026-09-21 00:15:22.723 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-21 00:15:22.724 [INF] HTTP GET /api/auth/get-workspace responded 200 in 126.5863 ms
+2026-09-21 00:18:56.781 [INF] Starting database seeding process...
+2026-09-21 00:18:58.158 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-21 00:18:58.278 [INF] Super Admin user already exists.
+2026-09-21 00:18:58.652 [INF] Super Application Role already has all permisson
+2026-09-21 00:18:58.762 [INF] Super Admin user created successfully.
+2026-09-21 00:18:58.887 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-21 23:07:42.491 [INF] Starting database seeding process...
+2026-09-21 23:07:44.913 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-21 23:07:45.098 [INF] Super Admin user already exists.
+2026-09-21 23:07:45.347 [INF] Super Application Role already has all permisson
+2026-09-21 23:07:45.492 [INF] Super Admin user created successfully.
+2026-09-21 23:07:45.663 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-21 23:15:34.954 [INF] Starting database seeding process...
+2026-09-21 23:15:36.375 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-21 23:15:36.557 [INF] Super Admin user already exists.
+2026-09-21 23:15:37.098 [INF] Super Application Role already has all permisson
+2026-09-21 23:15:37.208 [INF] Super Admin user created successfully.
+2026-09-21 23:15:37.379 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-21 23:17:29.898 [INF] HTTP GET /api/auth/csrf responded 404 in 61.3519 ms
+2026-09-21 23:17:30.137 [WRN] Refresh token Rotation failed: Token not found vq7GtgFcjjN991LczZcGd7U70IO6SN7pkOx8GtR0XbGK33pQ8MHCq_1jY6hzQqs_Go2BO_kjsDpVlMLTI1fBEA
+2026-09-21 23:17:30.177 [INF] HTTP POST /api/auth/refresh responded 400 in 231.6235 ms
+2026-09-21 23:17:39.781 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-21 23:17:39.787 [INF] HTTP POST /api/auth/login responded 200 in 764.6690 ms
+2026-09-21 23:17:40.409 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-21 23:17:40.422 [INF] HTTP GET /api/auth/get-workspace responded 200 in 597.6456 ms
+2026-09-21 23:17:42.249 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 23:17:42.250 [INF] HTTP POST /api/auth/select-workspace responded 200 in 435.5314 ms
+2026-09-21 23:17:44.687 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-21 23:17:44.775 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-21 23:17:44.897 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 23:17:44.906 [INF] HTTP GET /api/prospects/list responded 200 in 234.4203 ms
+2026-09-21 23:17:46.565 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 23:17:46.572 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 281.8648 ms
+2026-09-21 23:25:42.319 [INF] Fetched {Count} Prospect sources 
+2026-09-21 23:25:42.319 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-21 23:25:42.409 [WRN] Project Stages fetched successfully
+2026-09-21 23:25:42.430 [INF] HTTP GET /api/master/sources responded 200 in 835.8118 ms
+2026-09-21 23:25:42.430 [INF] HTTP GET /api/master/temperatures responded 200 in 835.6523 ms
+2026-09-21 23:25:42.606 [INF] HTTP GET /api/master/project-stages responded 200 in 1011.6372 ms
+2026-09-21 23:25:42.609 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 23:25:42.610 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 1170.2360 ms
+2026-09-21 23:46:02.370 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 23:46:02.371 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 499.9526 ms
+2026-09-21 23:54:00.068 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-21 23:54:00.068 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 518.4761 ms

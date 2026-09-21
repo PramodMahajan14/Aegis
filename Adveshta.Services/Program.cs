@@ -1,7 +1,5 @@
 using System.Reflection;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Adveshta.DataAccess.Data;
 using Adveshta.Helpers.Prospect;
 using Adveshta.Model.Auth;
@@ -17,6 +15,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -68,10 +68,11 @@ builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 #region Add Services
 
 // Controllers
-builder.Services.AddControllers().AddJsonOptions((option) =>
+builder.Services.AddControllers().AddNewtonsoftJson((option) =>
 {
-    option.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-    option.JsonSerializerOptions.Converters.Add(new DateTimeUtcJsonConverter());
+    // Newtonsoft is required for JsonPatchDocument<T> model binding
+    option.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+    option.SerializerSettings.Converters.Add(new DateTimeUtcJsonConverter());
 });
 
 
@@ -196,6 +197,7 @@ builder.Services.AddSingleton<ILoggingService, LoggingService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGenNewtonsoftSupport(); // lets Swagger describe JsonPatchDocument correctly
 
 #endregion
 
@@ -233,10 +235,10 @@ app.Run();
 #region Helper
 public class DateTimeUtcJsonConverter : JsonConverter<DateTime>
 {
-    public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-        reader.GetDateTime().ToUniversalTime();
+    public override DateTime ReadJson(JsonReader reader, Type objectType, DateTime existingValue, bool hasExistingValue, JsonSerializer serializer) =>
+        Convert.ToDateTime(reader.Value).ToUniversalTime();
 
-    public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options) =>
-        writer.WriteStringValue(value.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ"));
+    public override void WriteJson(JsonWriter writer, DateTime value, JsonSerializer serializer) =>
+        writer.WriteValue(value.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ"));
 }
 #endregion

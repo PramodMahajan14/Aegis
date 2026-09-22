@@ -70,6 +70,8 @@ namespace Adveshta.Services.Controllers
             return StatusCode(response.StatusCode, response);
         }
 
+
+
         [HttpGet("{Id}")]
         public async Task<IActionResult> GetProspectDetails([FromRoute] Guid Id)
         {

@@ -59,6 +59,13 @@ namespace Adveshta.Services.Mapper
             CreateMap<Employee, BasicEmployeeVm>();
 
             #endregion
+
+
+            #region Contact
+
+            // CreateMap<
+
+            #endregion
         }
     }
 }

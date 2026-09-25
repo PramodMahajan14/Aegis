@@ -15,7 +15,7 @@ namespace Adveshta.Model.ContactModel
         public string LastName { get; set; } = string.Empty;
 
         // Person's actual designation
-        public string JobRole { get; set; } = string.Empty;
+        public string Designation { get; set; } = string.Empty;
 
         public string? PhoneNumber { get; set; }
 
@@ -32,8 +32,8 @@ namespace Adveshta.Model.ContactModel
 
 
         // Role/importance for our project
-        public Guid ProjectContactRoleId { get; set; }
-        [ForeignKey(nameof(ProjectContactRoleId))]
+        public Guid JobRoleId { get; set; }
+        [ForeignKey(nameof(JobRoleId))]
         public JobRole ProjectContactRole { get; set; } = null!;
         
 

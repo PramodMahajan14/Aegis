@@ -1,3 +1,5 @@
+using Adveshta.Model.DTO.Contacts;
+using Adveshta.Services.Features.ContactManagement.CreateContact;
 using Adveshta.Services.Helper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -10,10 +12,9 @@ namespace Adveshta.Services.Controllers
     [Authorize]
     public class ContactController : ControllerBase
     {
-
-        private readonly UserHelper _helper;
         private readonly IMediator _mediator;
         private readonly Guid OrganizationId;
+        private readonly UserHelper _helper;
         public ContactController(UserHelper helper, IMediator mediator)
         {
             _helper = helper;
@@ -25,9 +26,23 @@ namespace Adveshta.Services.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> CreatedContact()
+        public async Task<IActionResult> CreatedContact([FromBody] ManageContactDto model)
         {
             var LoggedEmployee = await _helper.GetCurrentEmployeeAsync();
+            var command = new CreateContactCommand(OrganizationId, LoggedEmployee, model);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+
+        }
+
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateContact([FromBody] ManageContactDto model)
+        {
+            var LoggedEmployee = await _helper.GetCurrentEmployeeAsync();
+            var command = new CreateContactCommand(OrganizationId, LoggedEmployee, model);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
 
         }
     }

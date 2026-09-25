@@ -1,0 +1,44 @@
+2026-09-24 23:51:37.745 [INF] Starting database seeding process...
+2026-09-24 23:51:40.329 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-24 23:51:40.457 [INF] Super Admin user already exists.
+2026-09-24 23:51:40.643 [INF] Super Application Role already has all permisson
+2026-09-24 23:51:40.758 [INF] Super Admin user created successfully.
+2026-09-24 23:51:40.897 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-24 23:51:47.195 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-24 23:51:47.237 [INF] HTTP POST /api/auth/login responded 200 in 876.5224 ms
+2026-09-24 23:51:47.704 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-24 23:51:47.711 [INF] HTTP GET /api/auth/get-workspace responded 200 in 438.4050 ms
+2026-09-24 23:51:49.444 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-24 23:51:49.445 [INF] HTTP POST /api/auth/select-workspace responded 200 in 475.7463 ms
+2026-09-24 23:52:10.811 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-24 23:52:10.904 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-24 23:52:11.125 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-24 23:52:11.134 [INF] HTTP GET /api/prospects/list responded 200 in 335.7881 ms
+2026-09-24 23:52:13.687 [INF] Fetched {Count} Prospect Status 
+2026-09-24 23:52:13.909 [INF] HTTP GET /api/master/prospect-status responded 200 in 725.5353 ms
+2026-09-24 23:52:14.079 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-24 23:52:14.081 [INF] HTTP GET /api/master/temperatures responded 200 in 897.2622 ms
+2026-09-24 23:52:14.289 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-24 23:52:14.298 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 1203.1437 ms
+2026-09-24 23:53:05.072 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-24 23:53:05.076 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 539.4128 ms
+2026-09-24 23:53:05.268 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-24 23:53:05.269 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 186.9524 ms
+2026-09-24 23:53:14.011 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-24 23:53:14.034 [INF] HTTP GET /api/master/temperatures responded 200 in 242.7394 ms
+2026-09-24 23:53:14.237 [INF] Fetched {Count} Prospect sources 
+2026-09-24 23:53:14.320 [INF] HTTP GET /api/master/sources responded 200 in 529.1058 ms
+2026-09-24 23:53:14.389 [WRN] Project Stages fetched successfully
+2026-09-24 23:53:14.395 [INF] HTTP GET /api/master/project-stages responded 200 in 603.3814 ms
+2026-09-24 23:55:53.234 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-24 23:55:53.240 [INF] Fetched {Count} Prospect sources 
+2026-09-24 23:55:53.345 [INF] HTTP GET /api/master/temperatures responded 200 in 347.6123 ms
+2026-09-24 23:55:53.345 [INF] HTTP GET /api/master/sources responded 200 in 347.6111 ms
+2026-09-24 23:55:53.449 [WRN] Project Stages fetched successfully
+2026-09-24 23:55:53.449 [INF] HTTP GET /api/master/project-stages responded 200 in 451.2493 ms
+2026-09-24 23:56:02.274 [INF] Fetched {Count} Prospect Status 
+2026-09-24 23:56:02.296 [INF] HTTP GET /api/master/prospect-status responded 200 in 135.2925 ms
+2026-09-24 23:56:53.179 [WRN] Project Stages fetched successfully
+2026-09-24 23:56:53.180 [INF] HTTP GET /api/master/project-stages responded 200 in 146.6183 ms
+2026-09-24 23:56:53.222 [INF] Fetched 9 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-24 23:56:53.226 [INF] HTTP GET /api/master/get-jobroles responded 200 in 193.7308 ms

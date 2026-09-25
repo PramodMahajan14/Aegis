@@ -1,5 +1,6 @@
 using Adveshta.DataAccess.DataSeeder;
 using Adveshta.Model.Auth;
+using Adveshta.Model.ContactModel;
 using Adveshta.Model.EmployeeModels;
 using Adveshta.Model.Master;
 using Adveshta.Model.OrganizationModel;
@@ -50,8 +51,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<ProspectSource> ProspectSources { get; set; }
     public DbSet<ProspectTemperature> ProspectTemperatures { get; set; }
-
     public DbSet<ProspectTimeLine> ProspectTimeLines {get;set;}
+    #endregion
+
+
+    #region Contact
+    public DbSet<Contact> Contacts {get;set;}
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

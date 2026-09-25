@@ -14,12 +14,15 @@ namespace Adveshta.Services.Features.ContactManagement
             .WithMessage("name must not exceed 30 characters")
             .MinimumLength(3).WithMessage("Fisrt name must be at least 3 characters.");
 
-            RuleFor(x=>x.JobRole).NotEmpty()
-            .WithMessage("Job role is required")
+             RuleFor(x=>x.JobRoleId).NotEmpty()
+              .WithMessage("Jobe Role required.");
+
+            RuleFor(x=>x.Designation).NotEmpty()
+            .WithMessage("Designation  is required")
             .MinimumLength(2)
             .WithMessage("Invalid job name, Job role at least 2 charactors")
             .MaximumLength(20)
-            .WithMessage(x=>$"{x.JobRole} should not exceed 20 charactors");
+            .WithMessage(x=>$"{x.Designation} should not exceed 20 charactors");
 
             RuleFor(x=>x.Notes).NotEmpty()
             .WithMessage("JNotes is required")

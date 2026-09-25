@@ -4,6 +4,7 @@ using Adveshta.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Adveshta.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260924193105_added_contact")]
+    partial class added_contact
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -165,9 +168,6 @@ namespace Adveshta.DataAccess.Migrations
                     b.Property<bool>("IsPrimary")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<Guid>("JobRoleId")
-                        .HasColumnType("char(36)");
-
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -182,6 +182,9 @@ namespace Adveshta.DataAccess.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("longtext");
 
+                    b.Property<Guid>("ProjectContactRoleId")
+                        .HasColumnType("char(36)");
+
                     b.Property<Guid>("ProspectId")
                         .HasColumnType("char(36)");
 
@@ -195,9 +198,9 @@ namespace Adveshta.DataAccess.Migrations
 
                     b.HasIndex("CreatedById");
 
-                    b.HasIndex("JobRoleId");
-
                     b.HasIndex("OrganizationId");
+
+                    b.HasIndex("ProjectContactRoleId");
 
                     b.HasIndex("ProspectId");
 
@@ -1614,7 +1617,7 @@ namespace Adveshta.DataAccess.Migrations
                             IsSystemTenant = true,
                             Locale = "en-IN",
                             Name = "Code Dev",
-                            OnboardingDate = new DateTime(2026, 9, 24, 19, 38, 41, 737, DateTimeKind.Utc).AddTicks(2921),
+                            OnboardingDate = new DateTime(2026, 9, 24, 19, 31, 5, 54, DateTimeKind.Utc).AddTicks(9844),
                             OrganizationTypeId = new Guid("1f22266a-9a9d-4768-a9b8-c328dc9bdd7b"),
                             Status = 1,
                             TimeZone = "Asia/Kolkata"
@@ -2035,15 +2038,15 @@ namespace Adveshta.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Adveshta.Model.Master.JobRole", "ProjectContactRole")
-                        .WithMany("Contacts")
-                        .HasForeignKey("JobRoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Adveshta.Model.OrganizationModel.Organization", "Organization")
                         .WithMany()
                         .HasForeignKey("OrganizationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Adveshta.Model.Master.JobRole", "ProjectContactRole")
+                        .WithMany("Contacts")
+                        .HasForeignKey("ProjectContactRoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -8,7 +8,7 @@ namespace Adveshta.Model.DTO.Contacts
 
         public string LastName { get; set; } = string.Empty;
 
-        public string JobRole { get; set; } = string.Empty;
+        public string Designation { get; set; } = string.Empty;
 
         public string? PhoneNumber { get; set; }
 
@@ -20,7 +20,7 @@ namespace Adveshta.Model.DTO.Contacts
 
         public Guid ProspectId { get; set; }
 
-        public Guid ProjectContactRole { get; set; }
+        public Guid JobRoleId { get; set; }
 
     }
 }

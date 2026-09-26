@@ -1,6 +1,8 @@
+using Adveshta.Model.ContactModel;
 using Adveshta.Model.EmployeeModels;
 using Adveshta.Model.Master;
 using Adveshta.Model.ProspectModel;
+using Adveshta.Model.Vm.Contacts;
 using Adveshta.Model.Vm.Employee;
 using Adveshta.Model.Vm.Prospect;
 using AutoMapper;
@@ -22,7 +24,7 @@ namespace Adveshta.Services.Mapper
                       dest => dest.Status,
                       opt => opt.MapFrom(src => src.ProspectStatus)
                     )
-     .             ForMember(
+     .ForMember(
                        dest => dest.Temperature,
                        opt => opt.MapFrom(src => src.ProspectTemperature)
                     )
@@ -42,14 +44,13 @@ namespace Adveshta.Services.Mapper
                        dest => dest.UpdatedAt,
                        opt => opt.MapFrom(src => src.UpdateAt)
                     )
-                    .ForMember(
-                        dest=>dest.Source,
-                        opt =>opt.MapFrom(src=>src.ProspectSource)
+                        dest => dest.Source,
+                        opt => opt.MapFrom(src => src.ProspectSource)
                     )
                     .ForMember(
-                        dest=>dest.Progress,
-                        opt =>opt.MapFrom(src=>src.ProjectStage)
-                    );;
+                        dest => dest.Progress,
+                        opt => opt.MapFrom(src => src.ProjectStage)
+                    ); ;
 
             CreateMap<ProjectStage, ProjectStageVm>();
             CreateMap<ProspectStatus, ProspectStatusVm>();
@@ -63,7 +64,7 @@ namespace Adveshta.Services.Mapper
 
             #region Contact
 
-            // CreateMap<
+            CreateMap<Contact, ContactListVm>();
 
             #endregion
         }

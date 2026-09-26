@@ -7,8 +7,8 @@ namespace Adveshta.Model.Vm.Prospect
     public class ProspectListVm
     {
         public Guid Id { get; set; }
-        
-        public string ProspectNo {get;set;} = null!;
+
+        public string ProspectNo { get; set; } = null!;
         public string Name { get; set; } = string.Empty;
 
         public string BusinessName { get; set; } = string.Empty;
@@ -21,13 +21,13 @@ namespace Adveshta.Model.Vm.Prospect
 
         public DateTime? ExpectedDecisionDate { get; set; }
 
-        
-        public ProspectTemperatureVm Temperature {get;set;} = null!;
 
-        public string? NextAction {get;set;} = null;
+        public ProspectTemperatureVm Temperature { get; set; } = null!;
 
-        public string? LastAction  {get;set;} = null;
-  
+        public string? NextAction { get; set; } = null;
+
+        public string? LastAction { get; set; } = null;
+
 
         // public ProjectStageVm? ProjectStage {get;set;}
 
@@ -39,8 +39,8 @@ namespace Adveshta.Model.Vm.Prospect
     public class ProspectDetailsVm
     {
         public Guid Id { get; set; }
-        
-        public string ProspectNo {get;set;} = null!;
+
+        public string ProspectNo { get; set; } = null!;
         public string Name { get; set; } = string.Empty;
 
         public string BusinessName { get; set; } = string.Empty;
@@ -53,25 +53,35 @@ namespace Adveshta.Model.Vm.Prospect
 
         public DateTime? ExpectedDecisionDate { get; set; }
 
-        public string Description {get;set;} = string.Empty;
+        public string Description { get; set; } = string.Empty;
 
-        public DateTime CreatedAt {get;set;}
+        public DateTime CreatedAt { get; set; }
 
-        public DateTime UpdatedAt {get;set;}
+        public DateTime UpdatedAt { get; set; }
 
-        public string OfficeLocation {get;set;} = string.Empty;
+        public string OfficeLocation { get; set; } = string.Empty;
 
-        public BasicEmployeeVm CreatedBy {get;set;} = null!;
+        public BasicEmployeeVm CreatedBy { get; set; } = null!;
 
-        public BasicEmployeeVm? UpdatedBy {get;set;}
-        
-        public ProspectTemperatureVm Temperature {get;set;} = null!;
+        public BasicEmployeeVm? UpdatedBy { get; set; }
 
-        public ProjectStageVm Progress {get;set;} = null!;
-        public ProspectSourceVm Source {get;set;} = null!;
+        public ProspectTemperatureVm Temperature { get; set; } = null!;
 
-        public string? NextAction {get;set;} = null;
+        public ProjectStageVm Progress { get; set; } = null!;
+        public ProspectSourceVm Source { get; set; } = null!;
 
-        public string? LastAction  {get;set;} = null;
+        public string? NextAction { get; set; } = null;
+
+        public string? LastAction { get; set; } = null;
+    }
+
+
+
+    public class BasicProspectVm
+    {
+        public Guid Id { get; set; }
+
+        public string Name { get; set; } = string.Empty;
+
     }
 }

@@ -36,7 +36,5 @@ namespace Adveshta.Utility.Common
 
         }
 
-
-
     }
 }

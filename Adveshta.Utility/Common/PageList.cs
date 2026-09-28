@@ -4,7 +4,7 @@ namespace Adveshta.Utility.Common
 {
     public class PageList<T>
     {
-        public List<T> Items { get; }
+        public List<T> data { get; }
 
         public int Page { get; }
 
@@ -19,7 +19,7 @@ namespace Adveshta.Utility.Common
 
         private PageList(List<T> items, int page, int pagesize, int totalCount)
         {
-            Items = items;
+            data = items;
             Page = page;
             PageSize = pagesize;
             TotalCount = totalCount;
@@ -30,11 +30,18 @@ namespace Adveshta.Utility.Common
         {
             var totalCount = await query.CountAsync();
 
-            var listItem = await query.Skip((page - 1) * pagesize).Take(pagesize).ToListAsync();
+            var listdata = await query.Skip((page - 1) * pagesize).Take(pagesize).ToListAsync();
 
-            return new PageList<T>(listItem, page, pagesize, totalCount);
+            return new PageList<T>(listdata, page, pagesize, totalCount);
 
         }
 
+    }
+
+
+    public class PaginationQueryParameter
+    {
+        public int Page {get;} = 1;
+        public int Limit {get;}  = 10;
     }
 }

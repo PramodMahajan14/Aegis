@@ -1,5 +1,6 @@
 using Adveshta.Model.DTO.Prospect;
 using Adveshta.Model.EmployeeModels;
+using Adveshta.Services.Features.GetProspectDropdown;
 using Adveshta.Services.Features.MasterManagement;
 using Adveshta.Services.Features.ProspectManagement;
 using Adveshta.Services.Features.ProspectManagement.CreateProspect;
@@ -91,5 +92,19 @@ namespace Adveshta.Services.Controllers
             var response = await _mediator.Send(command);
             return StatusCode(response.StatusCode, response);
         }
+
+
+        /// <summary>
+        /// Create a new prospect.
+        /// </summary>
+        [HttpGet("dropdown")]
+        public async Task<IActionResult> GetProspectsDropdwon()
+        {
+            var command = new ProspectDropdownQuery(_organizationId);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+        }
+
+
     }
 }

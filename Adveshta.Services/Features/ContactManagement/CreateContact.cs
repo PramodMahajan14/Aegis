@@ -92,7 +92,7 @@ namespace Adveshta.Services.Features.ContactManagement.CreateContact
                   $"New contact created for prospect {prospect.Name}",
                   newcontact.CreatedAt, TimeLineSouceType.ProspectContact, newcontact.Id, null);
 
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
 
                 await transaction.CommitAsync(cancellationToken);
 

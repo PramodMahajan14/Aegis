@@ -1,4 +1,5 @@
 using Adveshta.Model.ContactModel;
+using Adveshta.Model.DTO.Contacts;
 using Adveshta.Model.EmployeeModels;
 using Adveshta.Model.Master;
 using Adveshta.Model.ProspectModel;
@@ -24,7 +25,7 @@ namespace Adveshta.Services.Mapper
                       dest => dest.Status,
                       opt => opt.MapFrom(src => src.ProspectStatus)
                     )
-     .ForMember(
+                   .ForMember(
                        dest => dest.Temperature,
                        opt => opt.MapFrom(src => src.ProspectTemperature)
                     )
@@ -36,35 +37,48 @@ namespace Adveshta.Services.Mapper
                        dest => dest.CreatedBy,
                        opt => opt.MapFrom(src => src.CreatedBy)
                     )
-                  .ForMember(
+                   .ForMember(
                        dest => dest.UpdatedBy,
                        opt => opt.MapFrom(src => src.UpdatedBy)
                     )
-                  .ForMember(
+                   .ForMember(
                        dest => dest.UpdatedAt,
                        opt => opt.MapFrom(src => src.UpdateAt)
                     )
-                        dest => dest.Source,
+                   .ForMember(dest => dest.Source,
                         opt => opt.MapFrom(src => src.ProspectSource)
                     )
-                    .ForMember(
+                   .ForMember(
                         dest => dest.Progress,
                         opt => opt.MapFrom(src => src.ProjectStage)
-                    ); ;
+                    );
 
             CreateMap<ProjectStage, ProjectStageVm>();
             CreateMap<ProspectStatus, ProspectStatusVm>();
             CreateMap<ProspectTemperature, ProspectTemperatureVm>();
             CreateMap<ProspectSource, ProspectSourceVm>();
+            CreateMap<JobRole,BasicJobRoleVm>();
 
             CreateMap<Employee, BasicEmployeeVm>();
+            CreateMap<Prospect, BasicProspectVm>();
 
             #endregion
 
 
             #region Contact
 
-            CreateMap<Contact, ContactListVm>();
+            CreateMap<Contact, ContactListVm>()
+              .ForMember(dest => dest.JobRole, opt => opt.MapFrom(src => src.ProjectContactRole));
+
+
+            CreateMap<ManageContactDto,Contact>()
+             .ForMember(dest=>dest.Id,obt=>obt.Ignore())
+             .ForMember(dest=>dest.CreatedById,obt=>obt.Ignore())
+             .ForMember(dest=>dest.CreatedAt, obt=>obt.Ignore())
+             .ForMember(dest=>dest.ProspectId,obt=>obt.Ignore())
+             .ForMember(dest=>dest.OrganizationId,obt=>obt.Ignore())
+             .ForMember(dest=>dest.UpdateAt,obt=>obt.Ignore())
+             .ForMember(dest=>dest.UpdateAt,obt=>obt.Ignore());
 
             #endregion
         }

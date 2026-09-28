@@ -5,7 +5,7 @@ using Adveshta.Model.Vm.Prospect;
 
 namespace Adveshta.Model.Vm.Contacts
 {
-    public class ContactListVm : OrganizationRelation
+    public class ContactListVm 
     {
         public Guid Id { get; set; }
 

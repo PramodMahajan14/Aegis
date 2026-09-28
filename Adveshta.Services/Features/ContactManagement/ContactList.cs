@@ -37,7 +37,7 @@ namespace Adveshta.Services.Features.ContactManagement.ContactList
             {
                 IQueryable<Contact> query = _context.Contacts.AsNoTracking();
 
-                query = query.Where(x => x.OrganizationId == request.OrganizationId);
+                query = query.Where(x => x.OrganizationId == request.OrganizationId && x.IsActive == true);
 
                 if (request.ProspectId.HasValue)
                 {

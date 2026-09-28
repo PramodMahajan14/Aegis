@@ -1,6 +1,7 @@
 using Adveshta.Model.DTO.Contacts;
 using Adveshta.Services.Features.ContactManagement.ContactList;
 using Adveshta.Services.Features.ContactManagement.CreateContact;
+using Adveshta.Services.Features.ContactManagement.DeleteContact;
 using Adveshta.Services.Features.ContactManagement.UpdateContact;
 using Adveshta.Services.Features.GetContactDetail;
 using Adveshta.Services.Helper;
@@ -65,6 +66,16 @@ namespace Adveshta.Services.Controllers
         {
             var LoggedEmployee = await _helper.GetCurrentEmployeeAsync();
             var command = new ContactDetailQuery(Id, OrganizationId);
+            var response = await _mediator.Send(command);
+            return StatusCode(response.StatusCode, response);
+
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteContact([FromRoute] Guid Id)
+        {
+            var LoggedEmployee = await _helper.GetCurrentEmployeeAsync();
+            var command = new DeleteContactCommand(OrganizationId,LoggedEmployee.Id,Id);
             var response = await _mediator.Send(command);
             return StatusCode(response.StatusCode, response);
 

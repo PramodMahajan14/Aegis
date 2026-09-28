@@ -224,3 +224,57 @@
 2026-09-28 19:46:13.878 [INF] HTTP GET /api/master/get-jobroles responded 200 in 3.1573 ms
 2026-09-28 19:46:21.433 [INF] HTTP GET /api/employee/get-employees responded 200 in 15.9180 ms
 2026-09-28 19:46:43.667 [INF] HTTP GET /api/contact/12c4da2e-b589-4f18-af75-144594ec2f4a responded 200 in 7.8829 ms
+2026-09-28 22:14:04.662 [INF] Starting database seeding process...
+2026-09-28 22:14:05.763 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-28 22:14:05.883 [INF] Super Admin user already exists.
+2026-09-28 22:14:06.021 [INF] Super Application Role already has all permisson
+2026-09-28 22:14:06.108 [INF] Super Admin user created successfully.
+2026-09-28 22:14:31.852 [INF] HTTP GET /api/auth/csrf responded 404 in 14.6847 ms
+2026-09-28 22:14:32.072 [INF] Gernerate new refresh token- 
+2026-09-28 22:14:32.103 [INF] HTTP POST /api/auth/refresh responded 200 in 232.3354 ms
+2026-09-28 22:14:32.306 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-28 22:14:32.310 [INF] HTTP GET /api/auth/get-workspace responded 200 in 174.9748 ms
+2026-09-28 22:14:33.498 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-28 22:14:33.500 [INF] HTTP POST /api/auth/select-workspace responded 200 in 64.3639 ms
+2026-09-28 22:14:34.944 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-28 22:14:35.025 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-28 22:14:35.064 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-28 22:14:35.065 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-28 22:14:35.084 [INF] HTTP GET /api/contact responded 200 in 148.9805 ms
+2026-09-28 22:15:03.460 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-28 22:15:03.467 [INF] HTTP GET /api/prospects/list responded 200 in 33.2968 ms
+2026-09-28 22:15:10.575 [INF] HTTP GET /api/contact responded 200 in 9.9344 ms
+2026-09-28 22:15:34.190 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1750 ms
+2026-09-28 22:15:35.310 [INF] Gernerate new refresh token- 
+2026-09-28 22:15:35.310 [INF] HTTP POST /api/auth/refresh responded 200 in 9.5739 ms
+2026-09-28 22:15:35.405 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-28 22:15:35.405 [INF] HTTP GET /api/auth/get-workspace responded 200 in 8.0433 ms
+2026-09-28 22:15:37.511 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-28 22:15:37.511 [INF] HTTP POST /api/auth/select-workspace responded 200 in 12.8661 ms
+2026-09-28 22:15:40.227 [INF] HTTP GET /api/contact responded 200 in 8.3430 ms
+2026-09-28 22:20:56.115 [INF] HTTP GET /api/contact responded 200 in 126.4368 ms
+2026-09-28 22:23:55.784 [INF] HTTP GET /api/employee/get-employees responded 200 in 18.0352 ms
+2026-09-28 22:23:57.852 [WRN] Project Stages fetched successfully
+2026-09-28 22:23:57.855 [INF] HTTP GET /api/master/project-stages responded 200 in 13.3604 ms
+2026-09-28 22:23:57.859 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-28 22:23:57.861 [INF] HTTP GET /api/master/get-jobroles responded 200 in 18.9346 ms
+2026-09-28 22:31:18.782 [INF] HTTP GET /api/contact responded 200 in 121.8538 ms
+2026-09-28 22:32:05.488 [INF] HTTP GET /api/contact responded 200 in 12.8596 ms
+2026-09-28 22:33:53.689 [INF] HTTP GET /api/contact responded 200 in 5.7865 ms
+2026-09-28 22:36:31.595 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1399 ms
+2026-09-28 22:36:32.691 [INF] Gernerate new refresh token- 
+2026-09-28 22:36:32.692 [INF] HTTP POST /api/auth/refresh responded 200 in 18.1336 ms
+2026-09-28 22:36:33.854 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-28 22:36:33.854 [INF] HTTP GET /api/auth/get-workspace responded 200 in 8.8745 ms
+2026-09-28 22:36:36.345 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-28 22:36:36.345 [INF] HTTP POST /api/auth/select-workspace responded 200 in 10.3431 ms
+2026-09-28 22:36:38.002 [INF] HTTP GET /api/contact responded 200 in 10.5794 ms
+2026-09-28 22:36:43.286 [INF] Contact in-active successfully, "48d984c4-60d6-426d-bf21-0982efa3992b"
+2026-09-28 22:36:43.286 [INF] HTTP DELETE /api/contact/48d984c4-60d6-426d-bf21-0982efa3992b responded 200 in 85.7609 ms
+2026-09-28 22:36:43.301 [INF] HTTP GET /api/contact responded 200 in 8.2435 ms
+2026-09-28 22:36:57.672 [INF] Contact in-active successfully, "32564ea4-cbd0-46e9-a303-58730f11a971"
+2026-09-28 22:36:57.673 [INF] HTTP DELETE /api/contact/32564ea4-cbd0-46e9-a303-58730f11a971 responded 200 in 14.6598 ms
+2026-09-28 22:36:57.701 [INF] HTTP GET /api/contact responded 200 in 19.6807 ms
+2026-09-28 22:37:11.288 [INF] Contact in-active successfully, "2314b42d-1e7a-494f-afcf-7d8e95ad97db"
+2026-09-28 22:37:11.288 [INF] HTTP DELETE /api/contact/2314b42d-1e7a-494f-afcf-7d8e95ad97db responded 200 in 11.2375 ms
+2026-09-28 22:37:11.302 [INF] HTTP GET /api/contact responded 200 in 6.7235 ms

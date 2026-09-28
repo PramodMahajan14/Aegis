@@ -54,5 +54,7 @@ namespace Adveshta.Model.ContactModel
 
         public DateTime? UpdateAt { get; set; }
 
+        public bool IsActive {get;set;} = true;
+
     }
 }

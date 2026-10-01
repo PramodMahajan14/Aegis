@@ -1,0 +1,141 @@
+2026-10-01 18:50:35.995 [INF] Starting database seeding process...
+2026-10-01 18:50:36.101 [ERR] Hosting failed to start
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1063
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 425
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 932
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 938
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 419
+   at MySqlConnector.MySqlConnection.Open() in /_/src/MySqlConnector/MySqlConnection.cs:line 381
+   at Microsoft.EntityFrameworkCore.ServerVersion.AutoDetect(String connectionString)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__5(DbContextOptionsBuilder options) in /home/admin1/Projects/Adveshta/Adveshta.Services/Program.cs:line 84
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass12_0`2.<AddDbContextFactory>b__0(IServiceProvider _, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CreateDbContextOptions[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass17_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__17`1.<AddCoreServices>b__17_1(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Adveshta.Services.Services.ConfigSystemUser.StartAsync(CancellationToken cancellation) in /home/admin1/Projects/Adveshta/Adveshta.Services/Services/ConfigSystemUser.cs:line 33
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2026-10-01 18:51:12.888 [INF] Starting database seeding process...
+2026-10-01 18:51:13.930 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-10-01 18:51:14.015 [INF] Super Admin user already exists.
+2026-10-01 18:51:14.136 [INF] Super Application Role already has all permisson
+2026-10-01 18:51:14.181 [INF] Super Admin user created successfully.
+2026-10-01 18:52:42.633 [INF] HTTP GET /api/auth/csrf responded 404 in 35.2535 ms
+2026-10-01 18:52:42.724 [WRN] Refresh token Rotation failed: Token not found 
+2026-10-01 18:52:42.747 [INF] HTTP POST /api/auth/refresh responded 400 in 96.1205 ms
+2026-10-01 18:52:44.927 [INF] HTTP POST /api/auth/login responded 400 in 26.6512 ms
+2026-10-01 18:52:50.287 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-10-01 18:52:50.290 [INF] HTTP POST /api/auth/login responded 200 in 264.8876 ms
+2026-10-01 18:52:50.389 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-10-01 18:52:50.393 [INF] HTTP GET /api/auth/get-workspace responded 200 in 73.0962 ms
+2026-10-01 18:52:51.674 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-01 18:52:51.674 [INF] HTTP POST /api/auth/select-workspace responded 200 in 34.8257 ms
+2026-10-01 18:53:06.694 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-01 18:53:06.694 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-01 18:53:06.697 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-01 18:53:06.707 [WRN] Project Stages fetched successfully
+2026-10-01 18:53:06.714 [INF] HTTP GET /api/master/project-stages responded 200 in 31.3782 ms
+2026-10-01 18:53:06.718 [INF] Fetched {Count} Prospect sources 
+2026-10-01 18:53:06.718 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-01 18:53:06.722 [INF] HTTP GET /api/master/temperatures responded 200 in 39.7604 ms
+2026-10-01 18:53:06.722 [INF] HTTP GET /api/master/sources responded 200 in 41.6566 ms
+2026-10-01 18:53:12.742 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-01 18:53:12.776 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 18:53:12.777 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 18:53:12.802 [INF] HTTP GET /api/contact responded 200 in 134.3220 ms
+2026-10-01 18:53:45.701 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-01 18:53:45.706 [INF] HTTP GET /api/prospects/list responded 200 in 38.5558 ms
+2026-10-01 18:53:51.683 [INF] Fetched {Count} Prospect sources 
+2026-10-01 18:53:51.683 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-01 18:53:51.683 [WRN] Project Stages fetched successfully
+2026-10-01 18:53:51.683 [INF] HTTP GET /api/master/project-stages responded 200 in 3.9223 ms
+2026-10-01 18:53:51.683 [INF] HTTP GET /api/master/temperatures responded 200 in 3.9220 ms
+2026-10-01 18:53:51.683 [INF] HTTP GET /api/master/sources responded 200 in 3.9222 ms
+2026-10-01 18:54:18.065 [INF] Fetched {Count} Prospect Status 
+2026-10-01 18:54:18.065 [INF] HTTP GET /api/master/prospect-status responded 200 in 9.2171 ms
+2026-10-01 18:54:18.089 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-01 18:54:18.092 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 35.0984 ms
+2026-10-01 18:55:00.306 [INF] Prospect status updated : "bfeaf259-5ba0-4022-b747-67834bd2f093" :  "1d3cb190-8420-4abd-af1f-1d1fb051be83"
+2026-10-01 18:55:00.309 [INF] HTTP PATCH /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 154.9088 ms
+2026-10-01 18:55:00.324 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-01 18:55:00.324 [INF] HTTP GET /api/prospects/bfeaf259-5ba0-4022-b747-67834bd2f093 responded 200 in 10.5853 ms
+2026-10-01 18:55:11.498 [INF] Fetched {Count} Prospect Status 
+2026-10-01 18:55:11.498 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-01 18:55:11.498 [INF] HTTP GET /api/master/prospect-status responded 200 in 2.9445 ms
+2026-10-01 18:55:11.498 [INF] HTTP GET /api/master/temperatures responded 200 in 2.7104 ms
+2026-10-01 18:55:11.507 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 11.8073 ms
+2026-10-01 18:55:21.416 [INF] HTTP GET /api/contact responded 200 in 8.1425 ms
+2026-10-01 18:55:22.815 [WRN] Project Stages fetched successfully
+2026-10-01 18:55:22.815 [INF] HTTP GET /api/master/project-stages responded 200 in 3.4581 ms
+2026-10-01 18:55:22.825 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-01 18:55:22.827 [INF] HTTP GET /api/master/get-jobroles responded 200 in 15.5650 ms
+2026-10-01 18:55:30.512 [INF] HTTP GET /api/employee/get-employees responded 200 in 12.8498 ms
+2026-10-01 19:26:48.366 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1737 ms
+2026-10-01 19:26:48.575 [INF] Gernerate new refresh token- 
+2026-10-01 19:26:48.577 [INF] HTTP POST /api/auth/refresh responded 200 in 191.7596 ms
+2026-10-01 19:26:48.624 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-10-01 19:26:48.624 [INF] HTTP GET /api/auth/get-workspace responded 200 in 10.7615 ms
+2026-10-01 19:47:08.203 [INF] HTTP GET /api/auth/csrf responded 404 in 0.0805 ms
+2026-10-01 19:47:08.401 [WRN] Refresh token Rotation failed: Token not found 4sVlmpAFGDPK6x_6_aF5hhkJshMSLQHc2K_owHTtxdmCIC0CKJt6ymu3SiXuDW0XDVoZwujDm4uePtZ_bj6hwA
+2026-10-01 19:47:08.401 [INF] HTTP POST /api/auth/refresh responded 400 in 179.3895 ms
+2026-10-01 19:51:43.533 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1162 ms
+2026-10-01 19:51:43.552 [WRN] Refresh token Rotation failed: Token not found 
+2026-10-01 19:51:43.553 [INF] HTTP POST /api/auth/refresh responded 400 in 1.5931 ms
+2026-10-01 20:24:20.144 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2599 ms
+2026-10-01 20:24:20.162 [WRN] Refresh token Rotation failed: Token not found 
+2026-10-01 20:24:20.162 [INF] HTTP POST /api/auth/refresh responded 400 in 1.0158 ms
+2026-10-01 20:28:11.027 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-10-01 20:28:11.027 [INF] HTTP POST /api/auth/login responded 200 in 236.8951 ms
+2026-10-01 20:28:11.080 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-10-01 20:28:11.080 [INF] HTTP GET /api/auth/get-workspace responded 200 in 7.6641 ms
+2026-10-01 20:28:12.780 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-01 20:28:12.780 [INF] HTTP POST /api/auth/select-workspace responded 200 in 13.8795 ms
+2026-10-01 20:28:43.281 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 2.0779 ms
+2026-10-01 20:28:43.289 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-01 20:28:43.289 [INF] HTTP GET /api/master/temperatures responded 200 in 3.4958 ms
+2026-10-01 20:28:43.299 [INF] Fetched {Count} Prospect Status 
+2026-10-01 20:28:43.300 [INF] HTTP GET /api/master/prospect-status responded 200 in 14.0292 ms
+2026-10-01 20:28:45.289 [INF] HTTP GET /api/contact responded 200 in 8.8838 ms
+2026-10-01 20:28:48.804 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-01 20:28:48.804 [INF] HTTP GET /api/master/get-jobroles responded 200 in 3.9401 ms
+2026-10-01 20:28:48.820 [INF] HTTP GET /api/prospects/dropdown responded 200 in 16.4399 ms

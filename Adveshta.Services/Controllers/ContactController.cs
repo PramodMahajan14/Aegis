@@ -28,8 +28,6 @@ namespace Adveshta.Services.Controllers
         }
 
 
-
-
         [HttpPost]
         public async Task<IActionResult> CreatedContact([FromBody] ManageContactDto model)
         {
@@ -39,7 +37,6 @@ namespace Adveshta.Services.Controllers
             return StatusCode(response.StatusCode, response);
 
         }
-
 
         [HttpPut]
         public async Task<IActionResult> UpdateContact([FromBody] ManageContactDto model)

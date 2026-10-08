@@ -1,0 +1,43 @@
+2026-10-03 00:03:56.036 [INF] Starting database seeding process...
+2026-10-03 00:03:58.202 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-10-03 00:03:58.428 [INF] Super Admin user already exists.
+2026-10-03 00:03:59.033 [INF] Super Application Role already has all permisson
+2026-10-03 00:03:59.164 [INF] Super Admin user created successfully.
+2026-10-03 00:03:59.310 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-10-03 00:04:12.382 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-03 00:04:13.059 [ERR] HTTP GET /api/employee/lookup responded 500 in 877.1828 ms
+2026-10-03 00:04:15.482 [ERR] HTTP GET /api/employee/lookup responded 500 in 386.9929 ms
+2026-10-03 00:04:21.604 [ERR] HTTP GET /api/employee/lookup responded 500 in 364.0384 ms
+2026-10-03 00:04:24.143 [ERR] HTTP GET /api/employee/lookup responded 500 in 258.5290 ms
+2026-10-03 00:08:49.432 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-03 00:08:49.432 [INF] Fetched {Count} Prospect Status 
+2026-10-03 00:08:49.439 [INF] HTTP GET /api/master/temperatures responded 200 in 491.8897 ms
+2026-10-03 00:08:49.439 [INF] HTTP GET /api/master/prospect-status responded 200 in 491.9436 ms
+2026-10-03 00:08:49.443 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 499.2046 ms
+2026-10-03 00:08:51.466 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-03 00:08:51.663 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-03 00:08:51.674 [INF] HTTP GET /api/prospects/list responded 200 in 291.8261 ms
+2026-10-03 00:11:05.315 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-03 00:11:05.317 [INF] HTTP GET /api/master/temperatures responded 200 in 137.7821 ms
+2026-10-03 00:11:05.524 [INF] Fetched {Count} Prospect sources 
+2026-10-03 00:11:05.610 [INF] HTTP GET /api/master/sources responded 200 in 431.2259 ms
+2026-10-03 00:11:05.685 [WRN] Project Stages fetched successfully
+2026-10-03 00:11:05.692 [INF] HTTP GET /api/master/project-stages responded 200 in 511.8308 ms
+2026-10-03 00:11:21.099 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-03 00:11:21.100 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-03 00:11:21.171 [INF] HTTP GET /api/contact responded 200 in 312.0431 ms
+2026-10-03 00:11:25.349 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-03 00:11:25.351 [INF] HTTP GET /api/prospects/dropdown responded 200 in 851.1319 ms
+2026-10-03 00:11:25.356 [INF] HTTP GET /api/master/get-jobroles responded 200 in 856.5273 ms
+2026-10-03 00:11:25.412 [INF] HTTP GET /api/contact/7d1fd9e5-007f-45d7-9835-ab29447f7d25 responded 200 in 912.6972 ms
+2026-10-03 00:11:36.181 [INF] HTTP PUT /api/contact responded 200 in 6684.5461 ms
+2026-10-03 00:11:36.679 [INF] HTTP GET /api/contact/7d1fd9e5-007f-45d7-9835-ab29447f7d25 responded 200 in 468.5872 ms
+2026-10-03 00:11:36.683 [INF] HTTP GET /api/contact responded 200 in 473.1079 ms
+2026-10-03 00:11:56.675 [INF] HTTP GET /api/auth/csrf responded 404 in 0.5762 ms
+2026-10-03 00:11:56.888 [INF] Gernerate new refresh token- 
+2026-10-03 00:11:56.892 [INF] HTTP POST /api/auth/refresh responded 200 in 203.9997 ms
+2026-10-03 00:11:57.178 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-10-03 00:11:57.180 [INF] HTTP GET /api/auth/get-workspace responded 200 in 268.4148 ms
+2026-10-03 02:28:22.798 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1979 ms
+2026-10-03 02:28:23.095 [WRN] Refresh token Rotation failed: Token not found O5seWRGpvLOygodud9ldJLHP8SAskJRgyVqILU8m9LLcTTCx3tuRqfI6YxW1jVhZg1V1ACSJsOr9Q3Q0qqQDxw
+2026-10-03 02:28:23.096 [INF] HTTP POST /api/auth/refresh responded 400 in 270.6765 ms

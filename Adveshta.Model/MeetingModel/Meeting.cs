@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Adveshta.Model.EmployeeModels;
 using Adveshta.Model.OrganizationModel;
 using Adveshta.Model.ProspectModel;
+using Adveshta.Utility.Enum.MeetingEnum;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Adveshta.Model.MeetingModel
@@ -20,15 +21,19 @@ namespace Adveshta.Model.MeetingModel
         public Guid ProspectId {get;set;}
         [ForeignKey(nameof(ProspectId))]
         public Prospect Prospect {get;set;} = null!;
+
+        public MeetingStatus Status {get;set;}
         
         public string? Output {get;set;} 
 
+        public DateTime CreatedAt {get;set;}
+        public Guid? CreatedById {get;set;}
+        
+        [ForeignKey(nameof(CreatedById))]
+        public Employee? CreatedBy {get;set;}
+
+
         public ICollection<MeetingParticipant> Participants {get;set;} = new List<MeetingParticipant>();
 
-
-        public DateTime CreatedAt {get;set;}
-        public Guid? UpdatedById {get;set;}
-
-        public Employee? UpdatedBy {get;set;}
     }
 }

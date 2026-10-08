@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Adveshta.Services.Features.EmployeeManagement.LookupList
 {
-    public record LookupListQuery(Guid organizationId, Guid loggedEmployedId, Guid ProspectId, string searchQuery) : IRequest<ApiResponse<object>>;
+    public record LookupListQuery(Guid organizationId, Guid loggedEmployedId, Guid? ProspectId, string? searchQuery) : IRequest<ApiResponse<object>>;
 
     public class LookupListHandler : IRequestHandler<LookupListQuery, ApiResponse<object>>
     {
@@ -42,7 +42,7 @@ namespace Adveshta.Services.Features.EmployeeManagement.LookupList
                                                         .Where(x => x.OrganizationId == request.organizationId);
 
                 IQueryable<ContactEmployeeVm> contactsquery;
-                if (request.ProspectId != Guid.Empty)
+                if (request.ProspectId.HasValue)
                 {
                     contactsquery = contacts.Where(x => x.ProspectId == request.ProspectId).Select(x => new ContactEmployeeVm
                     {
@@ -78,9 +78,9 @@ namespace Adveshta.Services.Features.EmployeeManagement.LookupList
 
                 }
 
-                List<ContactEmployeeVm> response = await query.OrderBy(x => x.FirstName).ThenBy(x => x.LastName).ToListAsync(cancellationToken);
+                List<ContactEmployeeVm> response = await query.OrderBy(x => x.FirstName).ThenBy(x => x.LastName).Take(5).ToListAsync(cancellationToken);
 
-                return ApiResponse<object>.SuccessResponse(response, "Lookup list fetch successfully", StatusCodes.Status500InternalServerError);
+                return ApiResponse<object>.SuccessResponse(response, "Lookup list fetch successfully", StatusCodes.Status200OK);
 
             }
             catch (Exception ex)

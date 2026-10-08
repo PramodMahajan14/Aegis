@@ -25,10 +25,10 @@ public class AuthController : ControllerBase
 
 
 
-    [HttpGet("profile")]
-    public async Task<IActionResult> Profile()
+    [HttpGet("get-profile")]
+    public async Task<IActionResult> Profile(CancellationToken cancellationToken)
     {
-        var response = await _authService.Profile();
+        var response = await _authService.Profile(cancellationToken);
 
         if (response.Success)
         {

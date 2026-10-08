@@ -8,6 +8,8 @@ using Adveshta.Model.OrganizationModel;
 using Adveshta.Services.Helper;
 using Adveshta.Services.Services.Interfaces;
 using Adveshta.Utility.Common;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,9 +27,11 @@ namespace Adveshta.Services.Services
         private readonly ILoggingService _logger;
         private readonly ApplicationDbContext _context;
 
+        private readonly IMapper _mapper;
+
 
         public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager,
-        RefreshTokenService refreshTokenService, UserHelper userHelper, EmployeeHelper emphelper, ApplicationDbContext context, ILoggingService logger)
+        RefreshTokenService refreshTokenService, UserHelper userHelper, EmployeeHelper emphelper, ApplicationDbContext context, ILoggingService logger, IMapper mapper)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -37,6 +41,7 @@ namespace Adveshta.Services.Services
             _employeeHelper = emphelper;
             _context = context;
             _logger = logger;
+            _mapper = mapper;
         }
 
 
@@ -261,7 +266,7 @@ namespace Adveshta.Services.Services
             {
                 var token = await _refreshTokenService.ValidateRefreshTokenAsync(refreshToken);
 
-               
+
 
                 if (token == null)
                 {
@@ -270,7 +275,7 @@ namespace Adveshta.Services.Services
                 }
                 var user = await _userManager.FindByIdAsync(token.UserId);
 
-                 if (token == null)
+                if (token == null)
                 {
                     _logger.LogWarning("Refresh token Rotation failed: User not found {user}", user);
                     return ApiResponse<object>.ErrorResponse("Session is expired, Please login !", null, 401);
@@ -286,7 +291,7 @@ namespace Adveshta.Services.Services
                     refreshtoken = refreshtoken
                 };
 
-                _logger.LogInfo("Gernerate new refresh token- " );
+                _logger.LogInfo("Gernerate new refresh token- ");
                 return ApiResponse<object>.SuccessResponse(response, "aaaRefresh token", 200);
 
             }
@@ -297,29 +302,37 @@ namespace Adveshta.Services.Services
 
             }
         }
-        public async Task<ApiResponse<object>> Profile()
+        public async Task<ApiResponse<object>> Profile(CancellationToken cancellationToken)
         {
-            var currentuser = await _userHelper.GetCurrentUserAsync();
-
-            if (currentuser == null)
-                return ApiResponse<object>.ErrorResponse("Invalid request", "Please login again - 1", 404);
-
-            var user = await _userManager.FindByIdAsync(currentuser.Id);
-
-            if (user == null)
+            try
             {
-                return ApiResponse<object>.ErrorResponse("User not found", "Please login again - 2", 404);
+                var currentuser = await _userHelper.GetCurrentUserAsync();
+
+                if (currentuser == null)
+                    return ApiResponse<object>.ErrorResponse("Invalid request", "Please login again - 1", 404);
+
+                var user = await _userManager.FindByIdAsync(currentuser.Id);
+
+                if (user == null)
+                {
+                    return ApiResponse<object>.ErrorResponse("User not founf", null, StatusCodes.Status400BadRequest);
+                }
+
+                var response = await _context.Employees.AsNoTracking().Include(x => x.JobRole)
+                                .Where(x => x.UserId == user.Id).ProjectTo<UserProfileVm>(_mapper.ConfigurationProvider)
+                                .FirstOrDefaultAsync();
+
+                if (response == null)
+                {
+                    return ApiResponse<object>.ErrorResponse("User not found", "Please login again - 2", 404);
+                }
+
+                return ApiResponse<object>.SuccessResponse(response, "user Fetch successfully", StatusCodes.Status200OK);
             }
-
-            var response = new UserProfileVm()
+            catch (Exception ex)
             {
-                Id = GuidUtility.ToGuid(user.Id),
-                FirstName = user.FirstName,
-                LastName = user.LastName,
-                Email = user.Email ?? string.Empty,
-            };
-
-            return ApiResponse<object>.SuccessResponse(response, "user Fetch successfully", 200);
+                return ApiResponse<object>.ErrorResponse("Internal server error", ex, StatusCodes.Status500InternalServerError);
+            }
         }
 
 

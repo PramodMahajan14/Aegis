@@ -1,5 +1,6 @@
 using Adveshta.Model.DTO.Employee;
 using Adveshta.Services.Features.EmployeeManagement;
+using Adveshta.Services.Features.EmployeeManagement.LookupList;
 using Adveshta.Services.Helper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -102,6 +103,21 @@ namespace Adveshta.Services.Controllers.EmployeeController
         }
 
 
-        
+        // Look Up list
+        [HttpGet("lookup")]
+        public async Task<IActionResult> GetLookupList([FromQuery] Guid? ProspectId, [FromQuery] string? searchQuery)
+        {
+            var LoggedEmployee = await _helper.GetCurrentEmployeeAsync();
+            var organizationId = _helper.GetCurrentTenant();
+            var query = new LookupListQuery(organizationId, LoggedEmployee.Id, ProspectId, searchQuery);
+
+            var response = await _mediator.Send(query);
+
+            return StatusCode(response.StatusCode, response);
+
+        }
+
+
+
     }
 }

@@ -18,6 +18,6 @@ namespace Adveshta.Services.Services.Interfaces
 
         Task<ApiResponse<object>> RefreshToken(string refreshToken);
 
-        Task<ApiResponse<object>> Profile();
+        Task<ApiResponse<object>> Profile(CancellationToken cancellationToken);
     }
 }

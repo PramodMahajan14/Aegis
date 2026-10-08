@@ -1,7 +1,10 @@
+using Adveshta.Model.Auth;
 using Adveshta.Model.ContactModel;
 using Adveshta.Model.DTO.Contacts;
+using Adveshta.Model.DTO.MeetingDto;
 using Adveshta.Model.EmployeeModels;
 using Adveshta.Model.Master;
+using Adveshta.Model.MeetingModel;
 using Adveshta.Model.ProspectModel;
 using Adveshta.Model.Vm.Contacts;
 using Adveshta.Model.Vm.Employee;
@@ -80,6 +83,21 @@ namespace Adveshta.Services.Mapper
              .ForMember(dest=>dest.UpdateAt,obt=>obt.Ignore())
              .ForMember(dest=>dest.UpdateAt,obt=>obt.Ignore());
 
+            #endregion
+
+
+
+            #region  Employee
+
+
+            CreateMap<Employee,UserProfileVm>();
+
+            #endregion
+
+
+            #region Meeting
+            CreateMap<ManageMeetingDto,Meeting>();
+            CreateMap<MeetingParticipantList,MeetingParticipant>();
             #endregion
         }
     }

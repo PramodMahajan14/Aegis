@@ -3,6 +3,7 @@ using Adveshta.Model.Auth;
 using Adveshta.Model.ContactModel;
 using Adveshta.Model.EmployeeModels;
 using Adveshta.Model.Master;
+using Adveshta.Model.MeetingModel;
 using Adveshta.Model.OrganizationModel;
 using Adveshta.Model.ProspectModel;
 using Adveshta.Utility.Common;
@@ -57,6 +58,14 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     #region Contact
     public DbSet<Contact> Contacts {get;set;}
+    #endregion
+
+
+    #region  Meeting
+     public DbSet<Meeting> Meetings {get;set;}
+     public DbSet<MeetingParticipant> MeetingParticipants {get;set;}
+
+     public DbSet<MeetingScheduleHistory> MeetingScheduleHistories {get;set;}
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

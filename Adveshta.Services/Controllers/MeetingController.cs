@@ -3,10 +3,14 @@ using Adveshta.Model.OrganizationModel;
 using Adveshta.Services.Features.MeetingManagement.CreateMeeting;
 using Adveshta.Services.Helper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Adveshta.Services.Controllers
-{
+{  
+    [ApiController]
+    [Route("api/[controller]")]
+    [Authorize]
     public class  MeetingController : ControllerBase
     {
 
@@ -20,7 +24,7 @@ namespace Adveshta.Services.Controllers
             organizationId = _helper.GetCurrentTenant();
         }
 
-
+         [HttpPost]
         public async Task<IActionResult> CreateMeeting([FromBody] ManageMeetingDto model)
         {
             var LoggedEmployee = await _helper.GetCurrentEmployeeAsync();

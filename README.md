@@ -1,6 +1,6 @@
-# Aegis
+# Adveshta
 
-Aegis is a .NET 8 Web API project built using a multi-project architecture. The goal of this project is to learn and implement enterprise-level backend development with Authentication, JWT, File Upload, Role-Based Authorization, and MySQL.
+Adveshta is a .NET 8 Web API project built using a multi-project architecture. The goal of this project is to learn and implement enterprise-level backend development with Authentication, JWT, File Upload, Role-Based Authorization, and MySQL.
 
 ---
 
@@ -18,15 +18,15 @@ Aegis is a .NET 8 Web API project built using a multi-project architecture. The 
 # Project Structure
 
 ```text
-Aegis
+Adveshta
 │
-├── Aegis.sln
+├── Adveshta.sln
 │
-├── Aegis.Services
-├── Aegis.DataAccess
-├── Aegis.Model
-├── Aegis.Helpers
-└── Aegis.Utility
+├── Adveshta.Services
+├── Adveshta.DataAccess
+├── Adveshta.Model
+├── Adveshta.Helpers
+└── Adveshta.Utility
 ```
 
 ---
@@ -34,10 +34,10 @@ Aegis
 # Step 1 - Create Solution
 
 ```bash
-mkdir Aegis
-cd Aegis
+mkdir Adveshta
+cd Adveshta
 
-dotnet new sln -n Aegis
+dotnet new sln -n Adveshta
 ```
 
 ---
@@ -45,15 +45,15 @@ dotnet new sln -n Aegis
 # Step 2 - Create Projects
 
 ```bash
-dotnet new webapi -n Aegis.Services
+dotnet new webapi -n Adveshta.Services
 
-dotnet new classlib -n Aegis.DataAccess
+dotnet new classlib -n Adveshta.DataAccess
 
-dotnet new classlib -n Aegis.Model
+dotnet new classlib -n Adveshta.Model
 
-dotnet new classlib -n Aegis.Helpers
+dotnet new classlib -n Adveshta.Helpers
 
-dotnet new classlib -n Aegis.Utility
+dotnet new classlib -n Adveshta.Utility
 ```
 
 ---
@@ -61,11 +61,11 @@ dotnet new classlib -n Aegis.Utility
 # Step 3 - Add Projects to Solution
 
 ```bash
-dotnet sln add Aegis.Services/Aegis.Services.csproj
-dotnet sln add Aegis.DataAccess/Aegis.DataAccess.csproj
-dotnet sln add Aegis.Model/Aegis.Model.csproj
-dotnet sln add Aegis.Helpers/Aegis.Helpers.csproj
-dotnet sln add Aegis.Utility/Aegis.Utility.csproj
+dotnet sln add Adveshta.Services/Adveshta.Services.csproj
+dotnet sln add Adveshta.DataAccess/Adveshta.DataAccess.csproj
+dotnet sln add Adveshta.Model/Adveshta.Model.csproj
+dotnet sln add Adveshta.Helpers/Adveshta.Helpers.csproj
+dotnet sln add Adveshta.Utility/Adveshta.Utility.csproj
 ```
 
 ---
@@ -73,14 +73,14 @@ dotnet sln add Aegis.Utility/Aegis.Utility.csproj
 # Step 4 - Add Project References
 
 ```bash
-dotnet add Aegis.Services reference Aegis.DataAccess
-dotnet add Aegis.Services reference Aegis.Model
-dotnet add Aegis.Services reference Aegis.Helpers
-dotnet add Aegis.Services reference Aegis.Utility
+dotnet add Adveshta.Services reference Adveshta.DataAccess
+dotnet add Adveshta.Services reference Adveshta.Model
+dotnet add Adveshta.Services reference Adveshta.Helpers
+dotnet add Adveshta.Services reference Adveshta.Utility
 
-dotnet add Aegis.DataAccess reference Aegis.Model
-dotnet add Aegis.DataAccess reference Aegis.Helpers
-dotnet add Aegis.DataAccess reference Aegis.Utility
+dotnet add Adveshta.DataAccess reference Adveshta.Model
+dotnet add Adveshta.DataAccess reference Adveshta.Helpers
+dotnet add Adveshta.DataAccess reference Adveshta.Utility
 ```
 
 ---
@@ -98,13 +98,13 @@ code .
 From the solution folder:
 
 ```bash
-dotnet run --project Aegis.Services
+dotnet run --project Adveshta.Services
 ```
 
 or
 
 ```bash
-cd Aegis.Services
+cd Adveshta.Services
 dotnet run
 ```
 
@@ -119,34 +119,34 @@ http://localhost:<port>/swagger
 # Solution Architecture
 
 ```
-Aegis
+Adveshta
 │
-├── Aegis.Services
+├── Adveshta.Services
 │   ├── Controllers
 │   ├── Middleware
 │   ├── Filters
 │   ├── Program.cs
 │   └── appsettings.json
 │
-├── Aegis.DataAccess
+├── Adveshta.DataAccess
 │   ├── Data
 │   ├── Initializer
 │   └── Migrations
 │
-├── Aegis.Model
+├── Adveshta.Model
 │   ├── Entity
 │   ├── DTO
 │   ├── Request
 │   ├── Response
 │   └── Enum
 │
-├── Aegis.Helpers
+├── Adveshta.Helpers
 │   ├── JWT
 │   ├── Password
 │   ├── File
 │   └── Email
 │
-└── Aegis.Utility
+└── Adveshta.Utility
     ├── Constants
     ├── Extensions
     └── Common

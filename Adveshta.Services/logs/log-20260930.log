@@ -1,0 +1,370 @@
+2026-09-30 19:01:02.543 [INF] Starting database seeding process...
+2026-09-30 19:01:02.692 [ERR] Hosting failed to start
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1063
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 425
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 932
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 938
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 419
+   at MySqlConnector.MySqlConnection.Open() in /_/src/MySqlConnector/MySqlConnection.cs:line 381
+   at Microsoft.EntityFrameworkCore.ServerVersion.AutoDetect(String connectionString)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__5(DbContextOptionsBuilder options) in /home/admin1/Projects/Adveshta/Adveshta.Services/Program.cs:line 84
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass12_0`2.<AddDbContextFactory>b__0(IServiceProvider _, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CreateDbContextOptions[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass17_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__17`1.<AddCoreServices>b__17_1(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Adveshta.Services.Services.ConfigSystemUser.StartAsync(CancellationToken cancellation) in /home/admin1/Projects/Adveshta/Adveshta.Services/Services/ConfigSystemUser.cs:line 33
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2026-09-30 19:01:56.033 [INF] Starting database seeding process...
+2026-09-30 19:01:57.327 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-30 19:01:57.404 [INF] Super Admin user already exists.
+2026-09-30 19:01:57.720 [INF] Super Application Role already has all permisson
+2026-09-30 19:01:57.806 [INF] Super Admin user created successfully.
+2026-09-30 19:01:57.897 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-30 19:02:25.285 [INF] HTTP GET /api/auth/csrf responded 404 in 64.3479 ms
+2026-09-30 19:02:25.869 [INF] Gernerate new refresh token- 
+2026-09-30 19:02:25.900 [INF] HTTP POST /api/auth/refresh responded 200 in 545.4384 ms
+2026-09-30 19:02:26.618 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-30 19:02:26.633 [INF] HTTP GET /api/auth/get-workspace responded 200 in 712.9127 ms
+2026-09-30 19:02:28.596 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:02:28.601 [INF] HTTP POST /api/auth/select-workspace responded 200 in 583.9156 ms
+2026-09-30 19:02:37.435 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 19:02:37.435 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 19:02:37.435 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 19:02:37.777 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:02:37.930 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:02:37.933 [INF] HTTP GET /api/master/temperatures responded 200 in 552.9997 ms
+2026-09-30 19:02:37.933 [INF] HTTP GET /api/master/prospect-status responded 200 in 553.2024 ms
+2026-09-30 19:02:37.937 [INF] HTTP GET /api/prospects/p-greenfield responded 400 in 563.7755 ms
+2026-09-30 19:02:45.114 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 19:02:45.272 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:02:45.279 [INF] HTTP GET /api/prospects/list responded 200 in 231.4413 ms
+2026-09-30 19:02:50.213 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:02:50.220 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 348.9328 ms
+2026-09-30 19:06:08.063 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-30 19:06:08.065 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-30 19:06:08.088 [INF] HTTP GET /api/contact responded 200 in 388.2847 ms
+2026-09-30 19:06:21.960 [WRN] Project Stages fetched successfully
+2026-09-30 19:06:22.092 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:06:22.094 [INF] HTTP GET /api/master/project-stages responded 200 in 467.6954 ms
+2026-09-30 19:06:22.097 [INF] HTTP GET /api/master/get-jobroles responded 200 in 470.5649 ms
+2026-09-30 19:06:41.599 [INF] HTTP GET /api/employee/get-employees responded 200 in 61.7148 ms
+2026-09-30 19:07:00.116 [INF] HTTP GET /api/contact responded 200 in 154.3891 ms
+2026-09-30 19:11:10.925 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:11:10.926 [INF] HTTP GET /api/master/get-jobroles responded 200 in 831.6657 ms
+2026-09-30 19:11:11.012 [INF] HTTP GET /api/prospects/dropdown responded 200 in 913.1810 ms
+2026-09-30 19:11:11.134 [INF] HTTP GET /api/contact/12c4da2e-b589-4f18-af75-144594ec2f4a responded 200 in 1034.8912 ms
+2026-09-30 19:15:33.661 [INF] HTTP GET /api/contact responded 200 in 336.1258 ms
+2026-09-30 19:17:56.966 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:17:56.967 [INF] HTTP GET /api/master/get-jobroles responded 200 in 162.0878 ms
+2026-09-30 19:17:57.053 [WRN] Project Stages fetched successfully
+2026-09-30 19:17:57.054 [INF] HTTP GET /api/master/project-stages responded 200 in 247.4852 ms
+2026-09-30 19:17:58.927 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:17:58.929 [INF] HTTP GET /api/prospects/list responded 200 in 237.3381 ms
+2026-09-30 19:20:11.103 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:20:11.147 [INF] HTTP GET /api/master/temperatures responded 200 in 337.9254 ms
+2026-09-30 19:20:11.222 [INF] Fetched {Count} Prospect sources 
+2026-09-30 19:20:11.223 [INF] HTTP GET /api/master/sources responded 200 in 414.4514 ms
+2026-09-30 19:20:11.339 [WRN] Project Stages fetched successfully
+2026-09-30 19:20:11.339 [INF] HTTP GET /api/master/project-stages responded 200 in 523.8185 ms
+2026-09-30 19:21:23.196 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:21:23.263 [INF] HTTP GET /api/master/get-jobroles responded 200 in 195.1116 ms
+2026-09-30 19:21:23.349 [WRN] Project Stages fetched successfully
+2026-09-30 19:21:23.413 [INF] HTTP GET /api/master/project-stages responded 200 in 345.6601 ms
+2026-09-30 19:22:01.489 [INF] HTTP GET /api/employee/get-employees responded 200 in 152.8552 ms
+2026-09-30 19:22:10.490 [INF] HTTP GET /api/contact responded 200 in 276.6926 ms
+2026-09-30 19:22:25.120 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:22:25.184 [INF] HTTP GET /api/master/get-jobroles responded 200 in 137.0407 ms
+2026-09-30 19:22:25.163 [WRN] Project Stages fetched successfully
+2026-09-30 19:22:25.226 [INF] HTTP GET /api/master/project-stages responded 200 in 179.3494 ms
+2026-09-30 19:22:56.117 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:22:56.223 [INF] HTTP GET /api/master/temperatures responded 200 in 311.6149 ms
+2026-09-30 19:22:56.295 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:22:56.296 [INF] HTTP GET /api/master/prospect-status responded 200 in 385.9146 ms
+2026-09-30 19:22:56.346 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:22:56.347 [INF] HTTP GET /api/prospects/c86a08b2-a1c5-4617-9d7b-5f8460a5ca2b responded 200 in 436.7630 ms
+2026-09-30 19:23:15.980 [WRN] Project Stages fetched successfully
+2026-09-30 19:23:16.045 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:23:16.045 [INF] HTTP GET /api/master/get-jobroles responded 200 in 155.7079 ms
+2026-09-30 19:23:16.045 [INF] HTTP GET /api/master/project-stages responded 200 in 155.7075 ms
+2026-09-30 19:23:47.357 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:23:47.357 [INF] HTTP GET /api/prospects/list responded 200 in 94.9719 ms
+2026-09-30 19:23:53.879 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:23:53.901 [INF] HTTP GET /api/master/get-jobroles responded 200 in 95.0619 ms
+2026-09-30 19:23:53.924 [WRN] Project Stages fetched successfully
+2026-09-30 19:23:53.969 [INF] HTTP GET /api/master/project-stages responded 200 in 162.5817 ms
+2026-09-30 19:23:54.550 [INF] HTTP GET /api/contact responded 200 in 228.9870 ms
+2026-09-30 19:24:20.176 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:24:20.262 [INF] HTTP GET /api/master/temperatures responded 200 in 261.0653 ms
+2026-09-30 19:24:20.284 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:24:20.327 [INF] HTTP GET /api/master/prospect-status responded 200 in 325.6993 ms
+2026-09-30 19:24:20.356 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:24:20.356 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 354.6172 ms
+2026-09-30 19:25:12.609 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-30 19:25:12.609 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-30 19:25:12.636 [INF] HTTP GET /api/contact responded 200 in 200.5444 ms
+2026-09-30 19:25:21.099 [INF] HTTP GET /api/employee/get-employees responded 200 in 166.2570 ms
+2026-09-30 19:25:29.983 [WRN] Project Stages fetched successfully
+2026-09-30 19:25:29.983 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:25:30.025 [INF] HTTP GET /api/master/get-jobroles responded 200 in 66.8128 ms
+2026-09-30 19:25:30.048 [INF] HTTP GET /api/master/project-stages responded 200 in 89.2064 ms
+2026-09-30 19:25:34.036 [INF] HTTP GET /api/contact responded 200 in 168.7832 ms
+2026-09-30 19:26:03.083 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 42.5298 ms
+2026-09-30 19:26:03.168 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:26:03.168 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:26:03.191 [INF] HTTP GET /api/master/prospect-status responded 200 in 129.9248 ms
+2026-09-30 19:26:03.234 [INF] HTTP GET /api/master/temperatures responded 200 in 172.8364 ms
+2026-09-30 19:26:18.788 [INF] HTTP GET /api/contact responded 200 in 207.9848 ms
+2026-09-30 19:26:40.529 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:26:40.530 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:26:40.572 [INF] HTTP GET /api/master/temperatures responded 200 in 119.4181 ms
+2026-09-30 19:26:40.594 [INF] HTTP GET /api/master/prospect-status responded 200 in 141.9707 ms
+2026-09-30 19:26:54.746 [INF] HTTP GET /api/contact responded 200 in 166.1669 ms
+2026-09-30 19:27:45.223 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:27:45.251 [WRN] Project Stages fetched successfully
+2026-09-30 19:27:45.316 [INF] HTTP GET /api/master/temperatures responded 200 in 181.5726 ms
+2026-09-30 19:27:45.463 [INF] Fetched {Count} Prospect sources 
+2026-09-30 19:27:45.462 [INF] HTTP GET /api/master/project-stages responded 200 in 368.7597 ms
+2026-09-30 19:27:45.488 [INF] HTTP GET /api/master/sources responded 200 in 416.2339 ms
+2026-09-30 19:27:49.840 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "acb3fe0e-ab51-4303-87e9-26cb6806e81a"
+2026-09-30 19:27:49.843 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 301.3350 ms
+2026-09-30 19:27:50.066 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:27:50.067 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 219.5198 ms
+2026-09-30 19:29:48.804 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 87.7026 ms
+2026-09-30 19:29:48.910 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:29:48.932 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:29:48.996 [INF] HTTP GET /api/master/temperatures responded 200 in 279.0212 ms
+2026-09-30 19:29:48.996 [INF] HTTP GET /api/master/prospect-status responded 200 in 279.3388 ms
+2026-09-30 19:29:54.259 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1711 ms
+2026-09-30 19:29:54.493 [INF] Gernerate new refresh token- 
+2026-09-30 19:29:54.494 [INF] HTTP POST /api/auth/refresh responded 200 in 220.3091 ms
+2026-09-30 19:29:54.579 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-30 19:29:54.582 [INF] HTTP GET /api/auth/get-workspace responded 200 in 19.6820 ms
+2026-09-30 19:29:56.141 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:29:56.141 [INF] HTTP POST /api/auth/select-workspace responded 200 in 264.0931 ms
+2026-09-30 19:30:41.369 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:30:41.369 [INF] HTTP GET /api/prospects/list responded 200 in 132.3859 ms
+2026-09-30 19:30:46.529 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:30:46.551 [INF] HTTP GET /api/master/temperatures responded 200 in 162.1566 ms
+2026-09-30 19:30:46.575 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:30:46.576 [INF] HTTP GET /api/master/prospect-status responded 200 in 187.1717 ms
+2026-09-30 19:30:46.760 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:30:46.761 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 372.2183 ms
+2026-09-30 19:30:55.056 [INF] HTTP GET /api/contact responded 200 in 103.6977 ms
+2026-09-30 19:32:48.906 [INF] HTTP GET /api/contact responded 200 in 172.6668 ms
+2026-09-30 19:33:04.254 [INF] HTTP GET /api/prospects/p-greenfield responded 400 in 65.6913 ms
+2026-09-30 19:33:04.282 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:33:04.303 [INF] HTTP GET /api/master/temperatures responded 200 in 72.6942 ms
+2026-09-30 19:33:04.283 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:33:04.303 [INF] HTTP GET /api/master/prospect-status responded 200 in 72.8579 ms
+2026-09-30 19:33:10.884 [WRN] Project Stages fetched successfully
+2026-09-30 19:33:10.884 [INF] HTTP GET /api/master/project-stages responded 200 in 4.7900 ms
+2026-09-30 19:33:10.888 [INF] Fetched {Count} Prospect sources 
+2026-09-30 19:33:10.892 [INF] HTTP GET /api/master/sources responded 200 in 12.8641 ms
+2026-09-30 19:33:14.983 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 0.8276 ms
+2026-09-30 19:33:59.509 [INF] HTTP GET /api/auth/csrf responded 404 in 20.7046 ms
+2026-09-30 19:33:59.772 [INF] Gernerate new refresh token- 
+2026-09-30 19:33:59.773 [INF] HTTP POST /api/auth/refresh responded 200 in 240.5252 ms
+2026-09-30 19:33:59.951 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-30 19:33:59.951 [INF] HTTP GET /api/auth/get-workspace responded 200 in 159.6858 ms
+2026-09-30 19:36:20.359 [INF] HTTP GET /api/auth/csrf responded 404 in 0.3596 ms
+2026-09-30 19:36:20.432 [WRN] Refresh token Rotation failed: Token not found oMnuayMPI7sygXQvYfhQJCWolTIek4KdbAzeK4wp2Gcw7jDZehHpZSD8dqwPNtTmgbnsCpLdP4SXfbr46rCARA
+2026-09-30 19:36:20.434 [INF] HTTP POST /api/auth/refresh responded 400 in 53.1493 ms
+2026-09-30 19:36:47.977 [INF] HTTP POST /api/auth/login responded 400 in 120.6908 ms
+2026-09-30 19:37:03.800 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-30 19:37:03.800 [INF] HTTP POST /api/auth/login responded 200 in 313.4963 ms
+2026-09-30 19:37:04.048 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-30 19:37:04.049 [INF] HTTP GET /api/auth/get-workspace responded 200 in 225.8945 ms
+2026-09-30 19:37:05.477 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:37:05.477 [INF] HTTP POST /api/auth/select-workspace responded 200 in 246.0733 ms
+2026-09-30 19:37:24.371 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:37:24.371 [INF] HTTP GET /api/prospects/list responded 200 in 25.9155 ms
+2026-09-30 19:37:33.740 [INF] HTTP GET /api/contact responded 200 in 120.5204 ms
+2026-09-30 19:38:19.599 [INF] HTTP GET /api/employee/get-employees responded 200 in 29.9393 ms
+2026-09-30 19:38:22.112 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:38:22.135 [INF] HTTP GET /api/master/get-jobroles responded 200 in 165.9628 ms
+2026-09-30 19:38:22.304 [WRN] Project Stages fetched successfully
+2026-09-30 19:38:22.304 [INF] HTTP GET /api/master/project-stages responded 200 in 271.3427 ms
+2026-09-30 19:39:57.150 [INF] HTTP GET /api/prospects/p-summit responded 400 in 0.7742 ms
+2026-09-30 19:39:57.195 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:39:57.217 [INF] HTTP GET /api/master/temperatures responded 200 in 67.0179 ms
+2026-09-30 19:39:57.263 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:39:57.307 [INF] HTTP GET /api/master/prospect-status responded 200 in 157.0991 ms
+2026-09-30 19:40:00.718 [INF] HTTP GET /api/contact responded 200 in 139.1176 ms
+2026-09-30 19:40:02.751 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:40:02.751 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 28.2695 ms
+2026-09-30 19:40:10.746 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "1d3cb190-8420-4abd-af1f-1d1fb051be83"
+2026-09-30 19:40:10.749 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 254.3276 ms
+2026-09-30 19:40:10.844 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:40:10.845 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 92.2892 ms
+2026-09-30 19:40:13.616 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "41474b0b-659a-4086-af0e-52a3d885dce0"
+2026-09-30 19:40:13.659 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 350.0485 ms
+2026-09-30 19:40:13.850 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:40:13.851 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 185.1231 ms
+2026-09-30 19:40:16.328 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "41474b0b-659a-4086-af0e-52a3d885dce0"
+2026-09-30 19:40:16.330 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 408.1605 ms
+2026-09-30 19:40:16.392 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:40:16.392 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 58.4375 ms
+2026-09-30 19:40:17.347 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "41474b0b-659a-4086-af0e-52a3d885dce0"
+2026-09-30 19:40:17.351 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 230.2444 ms
+2026-09-30 19:40:17.480 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:40:17.480 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 121.1209 ms
+2026-09-30 19:40:18.041 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "41474b0b-659a-4086-af0e-52a3d885dce0"
+2026-09-30 19:40:18.084 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 274.4421 ms
+2026-09-30 19:40:18.188 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:40:18.189 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 100.5076 ms
+2026-09-30 19:40:25.757 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 0.9952 ms
+2026-09-30 19:41:03.108 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 0.7690 ms
+2026-09-30 19:41:03.276 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:41:03.283 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:41:03.283 [INF] HTTP GET /api/master/prospect-status responded 200 in 175.0174 ms
+2026-09-30 19:41:03.285 [INF] HTTP GET /api/master/temperatures responded 200 in 154.0645 ms
+2026-09-30 19:41:19.855 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 1.1089 ms
+2026-09-30 19:41:21.189 [INF] HTTP GET /api/prospects/p-abc-tower responded 400 in 0.6897 ms
+2026-09-30 19:41:45.258 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:41:45.279 [INF] HTTP GET /api/master/get-jobroles responded 200 in 158.5104 ms
+2026-09-30 19:41:45.281 [WRN] Project Stages fetched successfully
+2026-09-30 19:41:45.303 [INF] HTTP GET /api/master/project-stages responded 200 in 181.8479 ms
+2026-09-30 19:43:28.276 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:43:28.276 [INF] HTTP GET /api/prospects/list responded 200 in 135.8077 ms
+2026-09-30 19:44:12.225 [INF] Fetched {Count} Prospect sources 
+2026-09-30 19:44:12.273 [INF] HTTP GET /api/master/sources responded 200 in 138.6831 ms
+2026-09-30 19:44:12.278 [WRN] Project Stages fetched successfully
+2026-09-30 19:44:12.340 [INF] HTTP GET /api/master/project-stages responded 200 in 164.0780 ms
+2026-09-30 19:44:12.471 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:44:12.471 [INF] HTTP GET /api/master/temperatures responded 200 in 315.2597 ms
+2026-09-30 19:44:45.867 [INF] HTTP GET /api/contact responded 200 in 184.5488 ms
+2026-09-30 19:45:53.231 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:45:53.298 [INF] HTTP GET /api/master/get-jobroles responded 200 in 307.2306 ms
+2026-09-30 19:45:53.369 [INF] HTTP GET /api/prospects/dropdown responded 200 in 378.4636 ms
+2026-09-30 19:45:53.379 [INF] HTTP GET /api/contact/12c4da2e-b589-4f18-af75-144594ec2f4a responded 200 in 388.0037 ms
+2026-09-30 19:46:06.319 [INF] HTTP GET /api/contact responded 200 in 53.3249 ms
+2026-09-30 19:46:14.185 [WRN] Project Stages fetched successfully
+2026-09-30 19:46:14.185 [INF] HTTP GET /api/master/project-stages responded 200 in 4.0055 ms
+2026-09-30 19:46:21.319 [INF] HTTP GET /api/employee/get-employees responded 200 in 26.6363 ms
+2026-09-30 19:46:30.392 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:46:30.437 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:46:30.440 [INF] HTTP GET /api/master/prospect-status responded 200 in 224.3099 ms
+2026-09-30 19:46:30.464 [INF] HTTP GET /api/master/temperatures responded 200 in 248.2118 ms
+2026-09-30 19:46:30.493 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:46:30.494 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 277.9503 ms
+2026-09-30 19:46:32.298 [INF] HTTP GET /api/contact responded 200 in 150.1891 ms
+2026-09-30 19:46:38.878 [INF] HTTP GET /api/contact responded 200 in 165.1172 ms
+2026-09-30 19:46:41.762 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:46:41.762 [INF] HTTP GET /api/master/get-jobroles responded 200 in 25.4506 ms
+2026-09-30 19:46:56.475 [INF] Contact created successful : "6f88cef5-9ba5-4607-b54b-a45e3f61448d"
+2026-09-30 19:46:56.475 [INF] HTTP POST /api/contact responded 200 in 364.6064 ms
+2026-09-30 19:46:56.588 [INF] HTTP GET /api/contact responded 200 in 95.4918 ms
+2026-09-30 19:47:13.561 [INF] HTTP GET /api/contact responded 200 in 206.5056 ms
+2026-09-30 19:47:29.473 [INF] Fetched 10 job roles for organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:47:29.473 [WRN] Project Stages fetched successfully
+2026-09-30 19:47:29.517 [INF] HTTP GET /api/master/project-stages responded 200 in 157.4068 ms
+2026-09-30 19:47:29.515 [INF] HTTP GET /api/master/get-jobroles responded 200 in 155.1232 ms
+2026-09-30 19:47:39.032 [INF] HTTP GET /api/contact responded 200 in 124.6435 ms
+2026-09-30 19:49:22.321 [WRN] Project Stages fetched successfully
+2026-09-30 19:49:22.342 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:49:22.345 [INF] HTTP GET /api/master/project-stages responded 200 in 113.8566 ms
+2026-09-30 19:49:22.350 [INF] HTTP GET /api/master/temperatures responded 200 in 118.7714 ms
+2026-09-30 19:49:22.372 [INF] Fetched {Count} Prospect sources 
+2026-09-30 19:49:22.373 [INF] HTTP GET /api/master/sources responded 200 in 141.8697 ms
+2026-09-30 19:49:28.305 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:49:28.347 [INF] HTTP GET /api/prospects/list responded 200 in 65.3495 ms
+2026-09-30 19:50:59.508 [INF] HTTP GET /api/auth/csrf responded 404 in 0.1197 ms
+2026-09-30 19:50:59.696 [INF] Gernerate new refresh token- 
+2026-09-30 19:50:59.696 [INF] HTTP POST /api/auth/refresh responded 200 in 163.3000 ms
+2026-09-30 19:50:59.891 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-30 19:50:59.892 [INF] HTTP GET /api/auth/get-workspace responded 200 in 162.3048 ms
+2026-09-30 19:51:01.147 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:51:01.147 [INF] HTTP POST /api/auth/select-workspace responded 200 in 87.6890 ms
+2026-09-30 19:51:27.731 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:51:27.732 [INF] HTTP GET /api/prospects/list responded 200 in 7.4960 ms
+2026-09-30 19:51:34.799 [INF] HTTP GET /api/contact responded 200 in 234.4016 ms
+2026-09-30 19:51:41.009 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 19:51:41.030 [INF] Fetched {Count} Prospect Status 
+2026-09-30 19:51:41.053 [INF] HTTP GET /api/master/prospect-status responded 200 in 225.1253 ms
+2026-09-30 19:51:41.053 [INF] HTTP GET /api/master/temperatures responded 200 in 225.1048 ms
+2026-09-30 19:51:41.064 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:51:41.064 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 239.8279 ms
+2026-09-30 19:51:45.563 [INF] HTTP GET /api/contact responded 200 in 121.0061 ms
+2026-09-30 19:52:02.947 [INF] Prospect status updated : "6f88cef5-9ba5-4607-b54b-a45e3f61448d" :  "41474b0b-659a-4086-af0e-52a3d885dce0"
+2026-09-30 19:52:02.951 [INF] HTTP PATCH /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 158.3017 ms
+2026-09-30 19:52:03.010 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 19:52:03.011 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 54.2627 ms
+2026-09-30 19:52:05.144 [INF] Fetched {Count} Prospect sources 
+2026-09-30 19:52:05.186 [INF] HTTP GET /api/master/sources responded 200 in 49.6066 ms
+2026-09-30 19:52:05.186 [WRN] Project Stages fetched successfully
+2026-09-30 19:52:05.227 [INF] HTTP GET /api/master/project-stages responded 200 in 90.8818 ms
+2026-09-30 22:15:55.306 [INF] Starting database seeding process...
+2026-09-30 22:15:57.380 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-09-30 22:15:57.517 [INF] Super Admin user already exists.
+2026-09-30 22:15:57.742 [INF] Super Application Role already has all permisson
+2026-09-30 22:15:57.846 [INF] Super Admin user created successfully.
+2026-09-30 22:15:58.372 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-09-30 22:16:30.683 [INF] HTTP GET /api/auth/csrf responded 404 in 52.4206 ms
+2026-09-30 22:16:30.877 [WRN] Refresh token Rotation failed: Token not found 
+2026-09-30 22:16:30.912 [INF] HTTP POST /api/auth/refresh responded 400 in 196.3080 ms
+2026-09-30 22:16:33.609 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-09-30 22:16:33.615 [INF] HTTP POST /api/auth/login responded 200 in 563.9658 ms
+2026-09-30 22:16:34.361 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-09-30 22:16:34.368 [INF] HTTP GET /api/auth/get-workspace responded 200 in 720.5709 ms
+2026-09-30 22:16:36.080 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 22:16:36.081 [INF] HTTP POST /api/auth/select-workspace responded 200 in 450.4675 ms
+2026-09-30 22:17:13.792 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 22:17:13.792 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 22:17:13.792 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 22:17:14.164 [WRN] Project Stages fetched successfully
+2026-09-30 22:17:14.259 [INF] Fetched {Count} Prospect sources 
+2026-09-30 22:17:14.261 [INF] Fetched {Count} Prospect Temperatures 
+2026-09-30 22:17:14.288 [INF] HTTP GET /api/master/temperatures responded 200 in 538.8077 ms
+2026-09-30 22:17:14.288 [INF] HTTP GET /api/master/sources responded 200 in 603.3748 ms
+2026-09-30 22:17:14.288 [INF] HTTP GET /api/master/project-stages responded 200 in 560.4520 ms
+2026-09-30 22:17:20.532 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-30 22:17:20.601 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 22:17:20.611 [INF] HTTP GET /api/prospects/list responded 200 in 176.9632 ms
+2026-09-30 22:17:41.104 [INF] Fetched {Count} Prospect Status 
+2026-09-30 22:17:41.106 [INF] HTTP GET /api/master/prospect-status responded 200 in 399.6460 ms
+2026-09-30 22:17:41.337 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-09-30 22:17:41.344 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 637.0210 ms
+2026-09-30 22:17:45.548 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-30 22:17:45.548 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-09-30 22:17:45.603 [INF] HTTP GET /api/contact responded 200 in 321.9616 ms

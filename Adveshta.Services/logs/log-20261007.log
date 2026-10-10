@@ -1,0 +1,49 @@
+2026-10-07 22:31:20.572 [INF] Starting database seeding process...
+2026-10-07 22:31:22.376 [INF] Seeding Super Admin user: codedev90@gmail.com
+2026-10-07 22:31:22.516 [INF] Super Admin user already exists.
+2026-10-07 22:31:22.710 [INF] Super Application Role already has all permisson
+2026-10-07 22:31:22.772 [INF] Super Admin user created successfully.
+2026-10-07 22:31:22.806 [WRN] No XML encryptor configured. Key {ca121368-9694-475a-a38c-d6723ed02884} may be persisted to storage in unencrypted form.
+2026-10-07 22:31:22.903 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-10-07 22:31:26.585 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-07 22:31:27.340 [INF] Login Successfully, Employee : "08df046f-470d-4db0-8286-3135ffb6f6ce" , UserId :c8bf23af-b2a7-4b83-a995-8a86dcf7217c
+2026-10-07 22:31:27.375 [INF] HTTP POST /api/auth/login responded 200 in 921.6227 ms
+2026-10-07 22:31:27.981 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-10-07 22:31:27.990 [INF] HTTP GET /api/auth/get-workspace responded 200 in 591.3820 ms
+2026-10-07 22:31:29.714 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-07 22:31:29.715 [INF] HTTP POST /api/auth/select-workspace responded 200 in 637.8425 ms
+2026-10-07 22:32:24.935 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-10-07 22:32:25.350 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-07 22:32:25.351 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-07 22:32:25.463 [INF] HTTP GET /api/contact responded 200 in 543.4664 ms
+2026-10-07 22:32:34.691 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-07 22:32:34.698 [INF] HTTP GET /api/prospects/list responded 200 in 244.3389 ms
+2026-10-07 22:32:36.593 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-07 22:32:36.640 [INF] HTTP GET /api/master/temperatures responded 200 in 664.3424 ms
+2026-10-07 22:32:36.664 [INF] Fetched {Count} Prospect Status 
+2026-10-07 22:32:36.665 [INF] HTTP GET /api/master/prospect-status responded 200 in 689.2632 ms
+2026-10-07 22:32:36.730 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-07 22:32:36.735 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 829.2740 ms
+2026-10-07 22:32:40.432 [INF] HTTP GET /api/auth/get-profile responded 200 in 392.7455 ms
+2026-10-07 22:32:40.558 [INF] HTTP GET /api/employee/lookup responded 200 in 518.7733 ms
+2026-10-07 22:36:46.719 [INF] HTTP GET /api/auth/get-profile responded 200 in 499.4095 ms
+2026-10-07 22:36:46.773 [INF] HTTP GET /api/employee/lookup responded 200 in 553.6842 ms
+2026-10-07 22:36:51.907 [INF] HTTP GET /api/auth/csrf responded 404 in 0.2724 ms
+2026-10-07 22:36:52.258 [INF] Gernerate new refresh token- 
+2026-10-07 22:36:52.260 [INF] HTTP POST /api/auth/refresh responded 200 in 344.1651 ms
+2026-10-07 22:36:52.481 [INF] Workspace List fetched successfully : For Emplyee "08df046f-470d-4db0-8286-3135ffb6f6ce"
+2026-10-07 22:36:52.482 [INF] HTTP GET /api/auth/get-workspace responded 200 in 205.8313 ms
+2026-10-07 22:36:54.103 [INF] Workspace selection successfuly open - "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-07 22:36:54.104 [INF] HTTP POST /api/auth/select-workspace responded 200 in 252.4010 ms
+2026-10-07 22:36:57.343 [INF] Prospect List fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-07 22:36:57.344 [INF] HTTP GET /api/prospects/list responded 200 in 115.0964 ms
+2026-10-07 22:36:58.830 [INF] Fetched {Count} Prospect Temperatures 
+2026-10-07 22:36:58.956 [INF] HTTP GET /api/master/temperatures responded 200 in 377.1994 ms
+2026-10-07 22:36:58.983 [INF] Fetched {Count} Prospect Status 
+2026-10-07 22:36:59.108 [INF] HTTP GET /api/master/prospect-status responded 200 in 570.3095 ms
+2026-10-07 22:36:59.153 [INF] Prospect  fetched successfully : Organization "c84c9fae-750c-4327-b3fd-338517be8161"
+2026-10-07 22:36:59.153 [INF] HTTP GET /api/prospects/6f88cef5-9ba5-4607-b54b-a45e3f61448d responded 200 in 743.3052 ms
+2026-10-07 22:37:01.300 [INF] HTTP GET /api/auth/get-profile responded 200 in 446.5677 ms
+2026-10-07 22:37:01.300 [INF] HTTP GET /api/employee/lookup responded 200 in 511.9683 ms
+2026-10-07 22:49:35.471 [INF] HTTP GET /api/auth/get-profile responded 200 in 570.6323 ms
+2026-10-07 22:49:35.481 [INF] HTTP GET /api/employee/lookup responded 200 in 578.1473 ms

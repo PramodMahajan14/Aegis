@@ -27,4 +27,7 @@ namespace Adveshta.Model.DTO.MeetingDto
 
         public ICollection<MeetingParticipantList> MeetingParticipantList {get;set;} = new List<MeetingParticipantList>();
     }
+
+
+    
 }
